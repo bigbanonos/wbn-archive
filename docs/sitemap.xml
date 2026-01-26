@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://worldbaseballnetwork.github.io/movie-archive/categories/</loc>
+    <loc>https://classicbaseball.world/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://worldbaseballnetwork.github.io/movie-archive/tags/</loc>
+    <loc>https://classicbaseball.world/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://worldbaseballnetwork.github.io/movie-archive/</loc>
+    <loc>https://classicbaseball.world/tags/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

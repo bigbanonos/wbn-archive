@@ -1,9 +1,19 @@
-baseURL = 'https://worldbaseballnetwork.github.io/movie-archive/'
-publishDir = "docs"
+baseURL = 'https://classicbaseball.world/'
 languageCode = 'en-us'
-title = 'WBN Archive'
+title = 'Classic Baseball World'
 theme = 'PaperMod'
+publishDir = "docs"
 
 [params]
-  defaultTheme = "dark" 
+  defaultTheme = "dark"
   disableThemeToggle = true
+  description = "The Criterion Collection of the Diamond. A complete archive of baseball cinema."
+
+[services]
+  [services.googleAnalytics]
+    id = "" 
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
