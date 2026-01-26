@@ -1,0 +1,95 @@
+{{ define "main" }}
+<div class="dashboard-wrapper">
+    <div class="hero-section">
+        <div class="logo-area">WBN</div>
+        <h1 class="main-title">THE ARCHIVE</h1>
+        <p class="sub-title">The Complete Chronological Database of Baseball Cinema.</p>
+        
+        <div class="stats-row">
+            <div class="stat-box"><span class="stat-num" id="total-count">0</span><span class="stat-label">FILMS</span></div>
+            <div class="stat-box"><span class="stat-num">1898</span><span class="stat-label">START</span></div>
+            <div class="stat-box"><span class="stat-num">2026</span><span class="stat-label">END</span></div>
+        </div>
+    </div>
+
+    <div class="control-panel">
+        <input type="text" id="searchInput" onkeyup="filterGrid()" placeholder="Search Archive (e.g. 'Moneyball', 'Biopic')...">
+    </div>
+
+    <div class="grid-container" id="movieGrid">
+        {{ range .Site.Data.movies }}
+        
+        <div class="movie-card" data-filter="{{ index . "Display Title" }} {{ index . "Year (Almanac)" }} {{ index . "Tags (auto)" }}">
+            <div class="card-header">
+                <span class="year-badge">{{ index . "Year (Almanac)" }}</span>
+                {{ if and (index . "Stream (FAST)") (ne (index . "Stream (FAST)") "-") }}
+                <span class="free-badge">FREE STREAM</span>
+                {{ end }}
+            </div>
+            
+            <h3 class="movie-title">{{ index . "Display Title" }}</h3>
+            
+            <div class="tags-row">
+                {{ $tags := split (index . "Tags (auto)") "|" }}
+                {{ range $tags }}
+                <span class="tag">{{ . }}</span>
+                {{ end }}
+            </div>
+
+            <p class="movie-notes">{{ index . "Summary" }}</p>
+
+            <div class="card-footer">
+                {{ if index . "Stream (Library)" }}
+                    {{ if ne (index . "Stream (Library)") "-" }}
+                    <div class="watch-option library">🏛 {{ index . "Stream (Library)" }}</div>
+                    {{ end }}
+                {{ end }}
+
+                {{ if index . "Stream (FAST)" }}
+                    {{ if ne (index . "Stream (FAST)") "-" }}
+                    <div class="watch-option fast">📺 {{ index . "Stream (FAST)" }}</div>
+                    {{ end }}
+                {{ end }}
+                
+                <a href="https://www.justwatch.com/us/search?q={{ index . "Display Title" }}" target="_blank" class="finder-link">Where to Watch ↗</a>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+    :root { --clay: #D50032; --bg: #0f172a; --card-bg: #1e293b; --text-main: #f8fafc; }
+    body { background-color: var(--bg); color: var(--text-main); font-family: sans-serif; margin: 0; }
+    .dashboard-wrapper { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+    .hero-section { text-align: center; padding: 60px 0 40px; }
+    .main-title { font-size: 4rem; font-weight: 800; color: white; margin: 0; }
+    .stats-row { display: flex; justify-content: center; gap: 40px; margin-top: 30px; }
+    .stat-num { display: block; font-size: 2rem; font-weight: 700; color: var(--clay); }
+    .stat-label { font-size: 0.8rem; color: #94a3b8; }
+    .control-panel input { width: 100%; padding: 20px; font-size: 1.2rem; background: #1e293b; border: 1px solid #334155; color: white; border-radius: 8px; margin-bottom: 40px; }
+    .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .movie-card { background: var(--card-bg); border-radius: 12px; padding: 25px; display: flex; flex-direction: column; }
+    .card-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
+    .year-badge { color: var(--clay); font-weight: bold; }
+    .free-badge { background: #22c55e; color: black; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; }
+    .movie-title { margin: 0 0 10px; font-size: 1.5rem; }
+    .tag { display: inline-block; background: #334155; padding: 4px 8px; border-radius: 4px; margin-right: 5px; font-size: 0.8rem; }
+    .movie-notes { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; flex-grow: 1; }
+    .card-footer { margin-top: 20px; border-top: 1px solid #334155; padding-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .watch-option { opacity: 0.8; font-size: 0.9rem; }
+    .finder-link { color: var(--clay); text-decoration: none; font-weight: bold; margin-left: auto; }
+</style>
+
+<script>
+    document.getElementById('total-count').innerText = document.getElementsByClassName('movie-card').length;
+    function filterGrid() {
+        let input = document.getElementById("searchInput").value.toUpperCase();
+        let cards = document.getElementsByClassName("movie-card");
+        for (let i = 0; i < cards.length; i++) {
+            let filterText = cards[i].getAttribute('data-filter').toUpperCase();
+            cards[i].style.display = filterText.indexOf(input) > -1 ? "" : "none";
+        }
+    }
+</script>
+{{ end }}

@@ -1,0 +1,9 @@
+baseURL = 'https://worldbaseballnetwork.github.io/movie-archive/'
+publishDir = "docs"
+languageCode = 'en-us'
+title = 'WBN Archive'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "dark" 
+  disableThemeToggle = true
