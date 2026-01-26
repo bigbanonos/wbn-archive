@@ -1,806 +1,915 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="dark">
-
+<html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.149.1"><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Classic Baseball World</title>
+	<meta name="generator" content="Hugo 0.149.1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Baseball World</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
-<meta name="description" content="The Criterion Collection of the Diamond. A complete archive of baseball cinema.">
-<meta name="author" content="">
-<link rel="canonical" href="https://classicbaseball.world/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a29c24210eb31d9ce56f669c66a35c9c51b17376b7764e336a49af7dec914cf0.css" integrity="sha256-opwkIQ6zHZzlb2acZqNcnFGxc3a3dk4zakmvfeyRTPA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://classicbaseball.world/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://classicbaseball.world/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://classicbaseball.world/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://classicbaseball.world/apple-touch-icon.png">
-<link rel="mask-icon" href="https://classicbaseball.world/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://classicbaseball.world/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://classicbaseball.world/">
-<noscript>
     <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
+         
+        :root {
+            --bg-color: #0f172a;        
+            --card-bg: #1e293b;         
+            --text-main: #f8fafc;       
+            --text-muted: #94a3b8;      
+            --accent: #D50032;          
+            --neon: #00ff9d;            
+            --border: #334155;          
         }
 
+         
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+         
+        .dashboard-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+         
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+        
+        .logo-area { font-weight: 900; letter-spacing: 1px; font-size: 1.2rem; }
+
+        .hq-link {
+            color: var(--neon);
+            border: 1px solid var(--neon);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .hq-link:hover {
+            background: rgba(0, 255, 157, 0.1);
+            box-shadow: 0 0 15px rgba(0, 255, 157, 0.4);
+        }
+        .dot {
+            height: 8px; width: 8px;
+            background-color: var(--neon);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 5px var(--neon);
+        }
+
+         
+        .hero-section { text-align: center; margin-bottom: 50px; }
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+        .sub-title {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            font-family: monospace;
+        }
+        .stat-box { text-align: center; }
+        .stat-num { display: block; font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+        .stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
+
+         
+        .control-panel { margin-bottom: 40px; }
+        .tab-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--text-main);
+            color: var(--bg-color);
+            border-color: var(--text-main);
+        }
+
+        input#searchInput {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 0 auto;
+            padding: 15px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            color: white;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+
+         
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+         
+        .movie-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid transparent;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .movie-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-family: monospace;
+            font-size: 0.8rem;
+        }
+        .year-badge { color: var(--accent); font-weight: bold; font-size: 1rem; }
+        
+        .free-badge { background: #22c55e; color: black; padding: 2px 6px; border-radius: 4px; font-weight: 800; }
+        .trailer-badge { background: #334155; color: white; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+
+        .movie-title {
+            font-size: 1.5rem;
+            margin: 0 0 5px 0;
+            line-height: 1.3;
+        }
+
+        .type-pill {
+            display: inline-block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .movie-notes {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+
+         
+        .card-footer { margin-top: auto; }
+        
+        .watch-btn {
+            width: 100%;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            transition: 0.2s;
+        }
+        .watch-btn:hover { background: #b91c1c; }
+
+        .btn-group { display: flex; gap: 10px; width: 100%; }
+        
+        .trailer-btn {
+            flex: 2;
+            background: #334155;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .trailer-btn:hover { background: #475569; }
+
+        .finder-link, .finder-link-small {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        .finder-link { width: 100%; padding: 10px 0; }
+        .finder-link-small { flex: 1; font-size: 0.8rem; }
+        .finder-link:hover, .finder-link-small:hover { border-color: white; color: white; }
+
+
+         
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 9999; 
+            left: 0; top: 0; 
+            width: 100%; height: 100%; 
+            background-color: rgba(0,0,0,0.95); 
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            margin: 5vh auto;
+            width: 90%;
+            max-width: 900px;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-top: 20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border-radius: 8px;
+        }
+        .close-modal {
+            float: right;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+            line-height: 0.8;
+        }
+
+         
+        @media (max-width: 600px) {
+            .main-title { font-size: 2.5rem; }
+            .grid-container { grid-template-columns: 1fr; }
+            .tab-row { gap: 8px; }
+            .tab-btn { padding: 6px 12px; font-size: 0.75rem; }
+        }
     </style>
-</noscript><meta property="og:url" content="https://classicbaseball.world/">
-  <meta property="og:site_name" content="Classic Baseball World">
-  <meta property="og:title" content="Classic Baseball World">
-  <meta property="og:description" content="The Criterion Collection of the Diamond. A complete archive of baseball cinema.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Classic Baseball World">
-<meta name="twitter:description" content="The Criterion Collection of the Diamond. A complete archive of baseball cinema.">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Classic Baseball World",
-  "url": "https://classicbaseball.world/",
-  "description": "The Criterion Collection of the Diamond. A complete archive of baseball cinema.",
-  "logo": "https://classicbaseball.world/favicon.ico",
-  "sameAs": [
-      
-  ]
-}
-</script>
 </head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://classicbaseball.world/" accesskey="h" title="Classic Baseball World (Alt + H)">Classic Baseball World</a>
-            <div class="logo-switches">
+<body>
+
+    <div class="dashboard-wrapper">
+        
+        <div class="top-nav">
+            <div class="logo-area">WBN ARCHIVE</div>
+            <a href="https://worldbaseball.com" target="_blank" class="hq-link">
+                <span class="dot"></span> WORLD BASEBALL HQ
+            </a>
+        </div>
+
+        <div class="hero-section">
+            <h1 class="main-title">THE ARCHIVE</h1>
+            <p class="sub-title">Docs. Trailers. Streams. History.</p>
+            
+            <div class="stats-row">
+                <div class="stat-box"><span class="stat-num" id="total-count">0</span><span class="stat-label">ASSETS</span></div>
+                <div class="stat-box"><span class="stat-num">1898</span><span class="stat-label">START</span></div>
+                <div class="stat-box"><span class="stat-num">2026</span><span class="stat-label">END</span></div>
             </div>
         </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main">
-<div class="dashboard-wrapper">
-    
-    <div class="top-nav">
-        <div class="logo-area">WBN ARCHIVE</div>
-        <a href="https://worldbaseball.com" target="_blank" class="hq-link">
-            <span class="dot"></span> WORLD BASEBALL HQ
-        </a>
+
+        <div class="control-panel">
+            <div class="tab-row">
+                <button class="tab-btn active" onclick="filterType('all')">ALL</button>
+                <button class="tab-btn" onclick="filterType('Feature')">MOVIES</button>
+                <button class="tab-btn" onclick="filterType('Doc')">DOCS</button>
+                <button class="tab-btn" onclick="filterType('Short')">SHORTS</button>
+                <button class="tab-btn" onclick="filterType('Stream')">WATCH FREE</button>
+            </div>
+            <input type="text" id="searchInput" onkeyup="filterGrid()" placeholder="Search title, year, or player...">
+        </div>
+
+        <div class="grid-container" id="movieGrid">
+            
+            <div class="movie-card is-stream" data-type="Short" data-filter="The Ball Game 1898 Documentary">
+                <div class="card-header">
+                    <span class="year-badge">1898</span>
+                    <span class="free-badge">FULL STREAM</span>
+                    
+                </div>
+                
+                <h3 class="movie-title">The Ball Game</h3>
+                <span class="type-pill">Short</span>
+
+                <p class="movie-notes">The first known baseball footage ever recorded by Thomas Edison. A short film depicting an 1898 game between Reading and Newark.</p>
+
+                <div class="card-footer">
+                    
+                        <button class="watch-btn" onclick="openCinema('qj1-sC0_vHg', 'The Ball Game')">
+                            ▶ WATCH NOW
+                        </button>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Short" data-filter="Baseball and Bloomers 1911 Comedy">
+                <div class="card-header">
+                    <span class="year-badge">1911</span>
+                    
+                    
+                </div>
+                
+                <h3 class="movie-title">Baseball and Bloomers</h3>
+                <span class="type-pill">Short</span>
+
+                <p class="movie-notes">An all-girl baseball team uses two Harvard boys in disguise to win the big game.</p>
+
+                <div class="card-footer">
+                    
+                        <a href="https://en.wikipedia.org/wiki/Baseball_and_Bloomers" target="_blank" class="finder-link">Where to Watch ↗</a>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card is-stream" data-type="Feature" data-filter="Headin&#39; Home 1920 Biopic">
+                <div class="card-header">
+                    <span class="year-badge">1920</span>
+                    <span class="free-badge">FULL STREAM</span>
+                    
+                </div>
+                
+                <h3 class="movie-title">Headin&#39; Home</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">A silent film starring the actual Babe Ruth playing himself. A fictionalized comedy about his rise to fame.</p>
+
+                <div class="card-footer">
+                    
+                        <button class="watch-btn" onclick="openCinema('7s_7v_7', 'Headin\u0027 Home')">
+                            ▶ WATCH NOW
+                        </button>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="The Pride of the Yankees 1942 Biopic">
+                <div class="card-header">
+                    <span class="year-badge">1942</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">The Pride of the Yankees</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">The legendary story of Lou Gehrig, starring Gary Cooper. &#39;Today, I consider myself the luckiest man on the face of the earth.&#39;</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('1W1bB7rZ1yY', 'The Pride of the Yankees (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/the-pride-of-the-yankees" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="Bang the Drum Slowly 1973 Drama">
+                <div class="card-header">
+                    <span class="year-badge">1973</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">Bang the Drum Slowly</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">Robert De Niro stars as a catcher with a terminal illness in this heart-wrenching classic.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('sT9C8sJk4QA', 'Bang the Drum Slowly (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/bang-the-drum-slowly" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="The Bad News Bears 1976 Comedy">
+                <div class="card-header">
+                    <span class="year-badge">1976</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">The Bad News Bears</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">Walter Matthau coaches a team of misfits. The definitive Little League movie.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('51gU_51sT3c', 'The Bad News Bears (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/the-bad-news-bears" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="The Bingo Long Traveling All-Stars &amp; Motor Kings 1976 Comedy">
+                <div class="card-header">
+                    <span class="year-badge">1976</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">The Bingo Long Traveling All-Stars &amp; Motor Kings</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">James Earl Jones and Billy Dee Williams star in this classic about a barnstorming Negro League team.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('v=y-e-0T_s1zM', 'The Bingo Long Traveling All-Stars \u0026 Motor Kings (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/the-bingo-long-traveling-all-stars-and-motor-kings" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="Bull Durham 1988 Romance">
+                <div class="card-header">
+                    <span class="year-badge">1988</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">Bull Durham</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">Kevin Costner is Crash Davis. The greatest minor league movie ever made.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('v=w334iSgS9B4', 'Bull Durham (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/bull-durham" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="Eight Men Out 1988 Drama">
+                <div class="card-header">
+                    <span class="year-badge">1988</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">Eight Men Out</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">The story of the 1919 Black Sox scandal. &#39;Say it ain&#39;t so, Joe.&#39;</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('v=Mp-4d3gVf_U', 'Eight Men Out (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/eight-men-out" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="Field of Dreams 1989 Drama">
+                <div class="card-header">
+                    <span class="year-badge">1989</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">Field of Dreams</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">If you build it, they will come. Kevin Costner builds a diamond in an Iowa cornfield.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('Ut06d4dptKc', 'Field of Dreams (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/field-of-dreams" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="Major League 1989 Comedy">
+                <div class="card-header">
+                    <span class="year-badge">1989</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">Major League</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">The Cleveland Indians are built to lose, but Charlie Sheen and Wesley Snipes have other plans.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('v=6Y9k_O_1vSc', 'Major League (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/major-league" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="A League of Their Own 1992 Comedy">
+                <div class="card-header">
+                    <span class="year-badge">1992</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">A League of Their Own</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">There&#39;s no crying in baseball. Tom Hanks and Geena Davis tell the story of the AAGPBL.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('Wcn73VvF7gI', 'A League of Their Own (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/a-league-of-their-own" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="The Sandlot 1993 Comedy">
+                <div class="card-header">
+                    <span class="year-badge">1993</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">The Sandlot</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">You&#39;re killing me, Smalls. A coming-of-age classic about baseball in the summer of 1962.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('_7-J85Q0z8A', 'The Sandlot (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/the-sandlot" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Doc" data-filter="Ken Burns: Baseball 1994 Documentary">
+                <div class="card-header">
+                    <span class="year-badge">1994</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">Ken Burns: Baseball</h3>
+                <span class="type-pill">Doc</span>
+
+                <p class="movie-notes">The definitive 18-hour history of the game, chronicled by Ken Burns.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('85s5kM4', 'Ken Burns: Baseball (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.pbs.org/kenburns/baseball/" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="61* 2001 Drama">
+                <div class="card-header">
+                    <span class="year-badge">2001</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">61*</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">Billy Crystal directs the story of Mickey Mantle and Roger Maris chasing the home run record.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('v=3Y1g_7_1z_U', '61* (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/61" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="Sugar 2008 Drama">
+                <div class="card-header">
+                    <span class="year-badge">2008</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">Sugar</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">A Dominican prospect struggles to adjust to life in the United States. A critical darling.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('v=9_1_1_1_1', 'Sugar (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/sugar" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="Moneyball 2011 Drama">
+                <div class="card-header">
+                    <span class="year-badge">2011</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">Moneyball</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">Billy Beane (Brad Pitt) changes the game forever with mathematics and budget constraints.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('-4QPVo0UIzc', 'Moneyball (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/moneyball" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Feature" data-filter="42 2013 Biopic">
+                <div class="card-header">
+                    <span class="year-badge">2013</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">42</h3>
+                <span class="type-pill">Feature</span>
+
+                <p class="movie-notes">Chadwick Boseman is Jackie Robinson. Harrison Ford is Branch Rickey. The story of breaking the color barrier.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('I9RHqdZDCF0', '42 (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/42" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Doc" data-filter="No No: A Dockumentary 2014 Documentary">
+                <div class="card-header">
+                    <span class="year-badge">2014</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">No No: A Dockumentary</h3>
+                <span class="type-pill">Doc</span>
+
+                <p class="movie-notes">The psychedelic story of Dock Ellis, who pitched a no-hitter on LSD.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('v=1_1_1_1_1', 'No No: A Dockumentary (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/no-no-a-dockumentary" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Doc" data-filter="The Battered Bastards of Baseball 2014 Documentary">
+                <div class="card-header">
+                    <span class="year-badge">2014</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">The Battered Bastards of Baseball</h3>
+                <span class="type-pill">Doc</span>
+
+                <p class="movie-notes">The true story of the Portland Mavericks, a scrappy independent team owned by Bing Russell.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('v=1_1_1_1_1', 'The Battered Bastards of Baseball (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.netflix.com/title/70299904" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Doc" data-filter="Fastball 2016 Documentary">
+                <div class="card-header">
+                    <span class="year-badge">2016</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">Fastball</h3>
+                <span class="type-pill">Doc</span>
+
+                <p class="movie-notes">Kevin Costner narrates the scientific and historical quest to find the fastest pitch ever thrown.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('v=1_1_1_1_1', 'Fastball (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.justwatch.com/us/movie/fastball" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="movie-card " data-type="Doc" data-filter="Shohei Ohtani: Beyond the Dream 2023 Documentary">
+                <div class="card-header">
+                    <span class="year-badge">2023</span>
+                    
+                    <span class="trailer-badge">TRAILER</span>
+                </div>
+                
+                <h3 class="movie-title">Shohei Ohtani: Beyond the Dream</h3>
+                <span class="type-pill">Doc</span>
+
+                <p class="movie-notes">The definitive look at the rise of the modern Babe Ruth, narrated by Pedro Martinez.</p>
+
+                <div class="card-footer">
+                    
+                        <div class="btn-group">
+                            <button class="trailer-btn" onclick="openCinema('v=1_1_1_1_1', 'Shohei Ohtani: Beyond the Dream (Trailer)')">
+                                ▷ TRAILER
+                            </button>
+                            <a href="https://www.disneyplus.com" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                        </div>
+                    
+                </div>
+            </div>
+            
+        </div>
     </div>
 
-    <div class="hero-section">
-        <h1 class="main-title">THE ARCHIVE</h1>
-        <p class="sub-title">Docs. Trailers. Streams. History.</p>
-        
-        <div class="stats-row">
-            <div class="stat-box"><span class="stat-num" id="total-count">0</span><span class="stat-label">ASSETS</span></div>
-            <div class="stat-box"><span class="stat-num">1898</span><span class="stat-label">START</span></div>
-            <div class="stat-box"><span class="stat-num">2026</span><span class="stat-label">END</span></div>
+    <div id="cinemaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCinema()">&times;</span>
+            <h2 id="modalTitle">Screening</h2>
+            <div class="video-container">
+                <iframe id="cinemaScreen" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
-    <div class="control-panel">
-        <div class="tab-row">
-            <button class="tab-btn active" onclick="filterType('all')">ALL</button>
-            <button class="tab-btn" onclick="filterType('Feature')">MOVIES</button>
-            <button class="tab-btn" onclick="filterType('Doc')">DOCS</button>
-            <button class="tab-btn" onclick="filterType('Short')">SHORTS</button>
-            <button class="tab-btn" onclick="filterType('Stream')">WATCH FREE</button>
-        </div>
-        <input type="text" id="searchInput" onkeyup="filterGrid()" placeholder="Search title, year, or player...">
-    </div>
+    <script>
+        document.getElementById('total-count').innerText = document.getElementsByClassName('movie-card').length;
 
-    <div class="grid-container" id="movieGrid">
-        
-        <div class="movie-card is-stream" data-type="Short" data-filter="The Ball Game 1898 Documentary">
-            <div class="card-header">
-                <span class="year-badge">1898</span>
-                <span class="free-badge">FULL STREAM</span>
-                
-            </div>
+        function filterType(category) {
+            let cards = document.getElementsByClassName("movie-card");
+            let btns = document.getElementsByClassName("tab-btn");
             
-            <h3 class="movie-title">The Ball Game</h3>
-            <span class="type-pill">Short</span>
-
-            <p class="movie-notes">The first known baseball footage ever recorded by Thomas Edison. A short film depicting an 1898 game between Reading and Newark.</p>
-
-            <div class="card-footer">
-                
-                    <button class="watch-btn" onclick="openCinema('qj1-sC0_vHg', 'The Ball Game')">
-                        ▶ WATCH NOW
-                    </button>
-                
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Short" data-filter="Baseball and Bloomers 1911 Comedy">
-            <div class="card-header">
-                <span class="year-badge">1911</span>
-                
-                
-            </div>
-            
-            <h3 class="movie-title">Baseball and Bloomers</h3>
-            <span class="type-pill">Short</span>
-
-            <p class="movie-notes">An all-girl baseball team uses two Harvard boys in disguise to win the big game.</p>
-
-            <div class="card-footer">
-                
-                    <a href="https://en.wikipedia.org/wiki/Baseball_and_Bloomers" target="_blank" class="finder-link">Where to Watch ↗</a>
-                
-            </div>
-        </div>
-        
-        <div class="movie-card is-stream" data-type="Feature" data-filter="Headin&#39; Home 1920 Biopic">
-            <div class="card-header">
-                <span class="year-badge">1920</span>
-                <span class="free-badge">FULL STREAM</span>
-                
-            </div>
-            
-            <h3 class="movie-title">Headin&#39; Home</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">A silent film starring the actual Babe Ruth playing himself. A fictionalized comedy about his rise to fame.</p>
-
-            <div class="card-footer">
-                
-                    <button class="watch-btn" onclick="openCinema('7s_7v_7', 'Headin\u0027 Home')">
-                        ▶ WATCH NOW
-                    </button>
-                
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="The Pride of the Yankees 1942 Biopic">
-            <div class="card-header">
-                <span class="year-badge">1942</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">The Pride of the Yankees</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">The legendary story of Lou Gehrig, starring Gary Cooper. &#39;Today, I consider myself the luckiest man on the face of the earth.&#39;</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('1W1bB7rZ1yY', 'The Pride of the Yankees (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/the-pride-of-the-yankees" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="Bang the Drum Slowly 1973 Drama">
-            <div class="card-header">
-                <span class="year-badge">1973</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">Bang the Drum Slowly</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">Robert De Niro stars as a catcher with a terminal illness in this heart-wrenching classic.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('sT9C8sJk4QA', 'Bang the Drum Slowly (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/bang-the-drum-slowly" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="The Bad News Bears 1976 Comedy">
-            <div class="card-header">
-                <span class="year-badge">1976</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">The Bad News Bears</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">Walter Matthau coaches a team of misfits. The definitive Little League movie.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('51gU_51sT3c', 'The Bad News Bears (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/the-bad-news-bears" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="The Bingo Long Traveling All-Stars &amp; Motor Kings 1976 Comedy">
-            <div class="card-header">
-                <span class="year-badge">1976</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">The Bingo Long Traveling All-Stars &amp; Motor Kings</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">James Earl Jones and Billy Dee Williams star in this classic about a barnstorming Negro League team.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('v=y-e-0T_s1zM', 'The Bingo Long Traveling All-Stars \u0026 Motor Kings (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/the-bingo-long-traveling-all-stars-and-motor-kings" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="Bull Durham 1988 Romance">
-            <div class="card-header">
-                <span class="year-badge">1988</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">Bull Durham</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">Kevin Costner is Crash Davis. The greatest minor league movie ever made.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('v=w334iSgS9B4', 'Bull Durham (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/bull-durham" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="Eight Men Out 1988 Drama">
-            <div class="card-header">
-                <span class="year-badge">1988</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">Eight Men Out</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">The story of the 1919 Black Sox scandal. &#39;Say it ain&#39;t so, Joe.&#39;</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('v=Mp-4d3gVf_U', 'Eight Men Out (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/eight-men-out" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="Field of Dreams 1989 Drama">
-            <div class="card-header">
-                <span class="year-badge">1989</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">Field of Dreams</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">If you build it, they will come. Kevin Costner builds a diamond in an Iowa cornfield.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('Ut06d4dptKc', 'Field of Dreams (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/field-of-dreams" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="Major League 1989 Comedy">
-            <div class="card-header">
-                <span class="year-badge">1989</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">Major League</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">The Cleveland Indians are built to lose, but Charlie Sheen and Wesley Snipes have other plans.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('v=6Y9k_O_1vSc', 'Major League (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/major-league" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="A League of Their Own 1992 Comedy">
-            <div class="card-header">
-                <span class="year-badge">1992</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">A League of Their Own</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">There&#39;s no crying in baseball. Tom Hanks and Geena Davis tell the story of the AAGPBL.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('Wcn73VvF7gI', 'A League of Their Own (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/a-league-of-their-own" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="The Sandlot 1993 Comedy">
-            <div class="card-header">
-                <span class="year-badge">1993</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">The Sandlot</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">You&#39;re killing me, Smalls. A coming-of-age classic about baseball in the summer of 1962.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('_7-J85Q0z8A', 'The Sandlot (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/the-sandlot" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Doc" data-filter="Ken Burns: Baseball 1994 Documentary">
-            <div class="card-header">
-                <span class="year-badge">1994</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">Ken Burns: Baseball</h3>
-            <span class="type-pill">Doc</span>
-
-            <p class="movie-notes">The definitive 18-hour history of the game, chronicled by Ken Burns.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('85s5kM4', 'Ken Burns: Baseball (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.pbs.org/kenburns/baseball/" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="61* 2001 Drama">
-            <div class="card-header">
-                <span class="year-badge">2001</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">61*</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">Billy Crystal directs the story of Mickey Mantle and Roger Maris chasing the home run record.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('v=3Y1g_7_1z_U', '61* (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/61" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="Sugar 2008 Drama">
-            <div class="card-header">
-                <span class="year-badge">2008</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">Sugar</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">A Dominican prospect struggles to adjust to life in the United States. A critical darling.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('v=9_1_1_1_1', 'Sugar (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/sugar" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="Moneyball 2011 Drama">
-            <div class="card-header">
-                <span class="year-badge">2011</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">Moneyball</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">Billy Beane (Brad Pitt) changes the game forever with mathematics and budget constraints.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('-4QPVo0UIzc', 'Moneyball (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/moneyball" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Feature" data-filter="42 2013 Biopic">
-            <div class="card-header">
-                <span class="year-badge">2013</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">42</h3>
-            <span class="type-pill">Feature</span>
-
-            <p class="movie-notes">Chadwick Boseman is Jackie Robinson. Harrison Ford is Branch Rickey. The story of breaking the color barrier.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('I9RHqdZDCF0', '42 (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/42" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Doc" data-filter="No No: A Dockumentary 2014 Documentary">
-            <div class="card-header">
-                <span class="year-badge">2014</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">No No: A Dockumentary</h3>
-            <span class="type-pill">Doc</span>
-
-            <p class="movie-notes">The psychedelic story of Dock Ellis, who pitched a no-hitter on LSD.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('v=1_1_1_1_1', 'No No: A Dockumentary (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/no-no-a-dockumentary" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Doc" data-filter="The Battered Bastards of Baseball 2014 Documentary">
-            <div class="card-header">
-                <span class="year-badge">2014</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">The Battered Bastards of Baseball</h3>
-            <span class="type-pill">Doc</span>
-
-            <p class="movie-notes">The true story of the Portland Mavericks, a scrappy independent team owned by Bing Russell.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('v=1_1_1_1_1', 'The Battered Bastards of Baseball (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.netflix.com/title/70299904" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Doc" data-filter="Fastball 2016 Documentary">
-            <div class="card-header">
-                <span class="year-badge">2016</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">Fastball</h3>
-            <span class="type-pill">Doc</span>
-
-            <p class="movie-notes">Kevin Costner narrates the scientific and historical quest to find the fastest pitch ever thrown.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('v=1_1_1_1_1', 'Fastball (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.justwatch.com/us/movie/fastball" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-        <div class="movie-card " data-type="Doc" data-filter="Shohei Ohtani: Beyond the Dream 2023 Documentary">
-            <div class="card-header">
-                <span class="year-badge">2023</span>
-                
-                <span class="trailer-badge">TRAILER</span>
-            </div>
-            
-            <h3 class="movie-title">Shohei Ohtani: Beyond the Dream</h3>
-            <span class="type-pill">Doc</span>
-
-            <p class="movie-notes">The definitive look at the rise of the modern Babe Ruth, narrated by Pedro Martinez.</p>
-
-            <div class="card-footer">
-                
-                    <div class="btn-group">
-                        <button class="trailer-btn" onclick="openCinema('v=1_1_1_1_1', 'Shohei Ohtani: Beyond the Dream (Trailer)')">
-                            ▷ TRAILER
-                        </button>
-                        <a href="https://www.disneyplus.com" target="_blank" class="finder-link-small">FIND IT ↗</a>
-                    </div>
-
-                
-            </div>
-        </div>
-        
-    </div>
-</div>
-
-<div id="cinemaModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal" onclick="closeCinema()">&times;</span>
-        <h2 id="modalTitle">Screening</h2>
-        <div class="video-container">
-            <iframe id="cinemaScreen" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
-
-<style>
-     
-    .top-nav { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid #1e293b; }
-    .hq-link { color: #00ff9d; text-decoration: none; font-weight: bold; border: 1px solid #00ff9d; padding: 8px 16px; border-radius: 4px; font-size: 0.8rem; letter-spacing: 1px; display: flex; align-items: center; gap: 8px; transition: 0.2s; }
-    .hq-link:hover { background: rgba(0, 255, 157, 0.1); box-shadow: 0 0 15px rgba(0, 255, 157, 0.2); }
-    .dot { height: 8px; width: 8px; background-color: #00ff9d; border-radius: 50%; display: inline-block; box-shadow: 0 0 5px #00ff9d; }
-
-     
-    .type-pill { color: #64748b; font-size: 0.75rem; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; margin-bottom: 10px; display: block; }
-    .trailer-badge { background: #334155; color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
-
-     
-    .watch-btn { width: 100%; background: var(--clay); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: 800; cursor: pointer; letter-spacing: 0.5px; }
-    .watch-btn:hover { background: #b91c1c; }
-    
-    .btn-group { display: flex; gap: 10px; width: 100%; }
-    .trailer-btn { flex: 2; background: #334155; color: white; border: none; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; }
-    .trailer-btn:hover { background: #475569; }
-    .finder-link-small { flex: 1; display: flex; align-items: center; justify-content: center; border: 1px solid #334155; color: #94a3b8; text-decoration: none; border-radius: 6px; font-size: 0.8rem; font-weight: bold; }
-    .finder-link-small:hover { color: white; border-color: white; }
-
-     
-    .tab-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
-    .tab-btn { background: transparent; color: #94a3b8; border: 1px solid #334155; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 0.9rem; }
-    .tab-btn.active { background: white; color: black; border-color: white; }
-    .tab-btn:hover { border-color: white; color: white; }
-    .tab-btn.active:hover { color: black; }
-
-     
-    .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); backdrop-filter: blur(5px); }
-    .modal-content { margin: 5vh auto; width: 90%; max-width: 900px; background: #0f172a; padding: 20px; border-radius: 12px; border: 1px solid #334155; }
-    .video-container { position: relative; padding-bottom: 56.25%; height: 0; margin-top: 20px; }
-    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
-    .close-modal { float: right; font-size: 2rem; cursor: pointer; color: white; }
-</style>
-
-<script>
-    document.getElementById('total-count').innerText = document.getElementsByClassName('movie-card').length;
-
-    function filterType(category) {
-        let cards = document.getElementsByClassName("movie-card");
-        let btns = document.getElementsByClassName("tab-btn");
-        
-        
-        for(let b of btns) b.classList.remove('active');
-        event.target.classList.add('active');
-
-        for (let i = 0; i < cards.length; i++) {
-            let cardType = cards[i].getAttribute('data-type');
-            let isStream = cards[i].classList.contains('is-stream');
-
-            if (category === 'all') {
-                cards[i].style.display = "";
-            } else if (category === 'Stream') {
-                cards[i].style.display = isStream ? "" : "none";
-            } else {
-                cards[i].style.display = (cardType === category) ? "" : "none";
+            for(let b of btns) b.classList.remove('active');
+            event.target.classList.add('active');
+
+            for (let i = 0; i < cards.length; i++) {
+                let cardType = cards[i].getAttribute('data-type');
+                let isStream = cards[i].classList.contains('is-stream');
+
+                if (category === 'all') {
+                    cards[i].style.display = "";
+                } else if (category === 'Stream') {
+                    cards[i].style.display = isStream ? "" : "none";
+                } else {
+                    
+                    cards[i].style.display = (cardType && cardType.includes(category)) ? "" : "none";
+                }
             }
         }
-    }
 
-    function filterGrid() {
-        let input = document.getElementById("searchInput").value.toUpperCase();
-        let cards = document.getElementsByClassName("movie-card");
-        for (let i = 0; i < cards.length; i++) {
-            let text = cards[i].getAttribute('data-filter').toUpperCase();
-            cards[i].style.display = text.indexOf(input) > -1 ? "" : "none";
+        function filterGrid() {
+            let input = document.getElementById("searchInput").value.toUpperCase();
+            let cards = document.getElementsByClassName("movie-card");
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].getAttribute('data-filter').toUpperCase();
+                cards[i].style.display = text.indexOf(input) > -1 ? "" : "none";
+            }
         }
-    }
 
-    function openCinema(id, title) {
-        document.getElementById('cinemaModal').style.display = 'block';
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('cinemaScreen').src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
-    }
+        function openCinema(id, title) {
+            document.getElementById('cinemaModal').style.display = 'block';
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('cinemaScreen').src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+        }
 
-    function closeCinema() {
-        document.getElementById('cinemaModal').style.display = 'none';
-        document.getElementById('cinemaScreen').src = "";
-    }
-    
-    
-    window.onclick = function(e) {
-        if (e.target == document.getElementById('cinemaModal')) closeCinema();
-    }
-</script>
-
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://classicbaseball.world/">Classic Baseball World</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
+        function closeCinema() {
+            document.getElementById('cinemaModal').style.display = 'none';
+            document.getElementById('cinemaScreen').src = "";
         }
         
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        window.onclick = function(e) {
+            if (e.target == document.getElementById('cinemaModal')) closeCinema();
         }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
+    </script>
 </body>
-
 </html>
