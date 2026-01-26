@@ -1,95 +1,166 @@
 {{ define "main" }}
 <div class="dashboard-wrapper">
+    
+    <div class="top-nav">
+        <div class="logo-area">WBN ARCHIVE</div>
+        <a href="https://worldbaseball.com" target="_blank" class="hq-link">
+            <span class="dot"></span> WORLD BASEBALL HQ
+        </a>
+    </div>
+
     <div class="hero-section">
-        <div class="logo-area">WBN</div>
         <h1 class="main-title">THE ARCHIVE</h1>
-        <p class="sub-title">The Complete Chronological Database of Baseball Cinema.</p>
+        <p class="sub-title">Docs. Trailers. Streams. History.</p>
         
         <div class="stats-row">
-            <div class="stat-box"><span class="stat-num" id="total-count">0</span><span class="stat-label">FILMS</span></div>
+            <div class="stat-box"><span class="stat-num" id="total-count">0</span><span class="stat-label">ASSETS</span></div>
             <div class="stat-box"><span class="stat-num">1898</span><span class="stat-label">START</span></div>
             <div class="stat-box"><span class="stat-num">2026</span><span class="stat-label">END</span></div>
         </div>
     </div>
 
     <div class="control-panel">
-        <input type="text" id="searchInput" onkeyup="filterGrid()" placeholder="Search Archive (e.g. 'Moneyball', 'Biopic')...">
+        <div class="tab-row">
+            <button class="tab-btn active" onclick="filterType('all')">ALL</button>
+            <button class="tab-btn" onclick="filterType('Feature')">MOVIES</button>
+            <button class="tab-btn" onclick="filterType('Doc')">DOCS</button>
+            <button class="tab-btn" onclick="filterType('Short')">SHORTS</button>
+            <button class="tab-btn" onclick="filterType('Stream')">WATCH FREE</button>
+        </div>
+        <input type="text" id="searchInput" onkeyup="filterGrid()" placeholder="Search title, year, or player...">
     </div>
 
     <div class="grid-container" id="movieGrid">
         {{ range .Site.Data.movies }}
-        
-        <div class="movie-card" data-filter="{{ index . "Display Title" }} {{ index . "Year (Almanac)" }} {{ index . "Tags (auto)" }}">
+        <div class="movie-card {{ if .VideoID }}is-stream{{ end }}" data-type="{{ .Type }}" data-filter="{{ .Title }} {{ .Year }} {{ .Genre }}">
             <div class="card-header">
-                <span class="year-badge">{{ index . "Year (Almanac)" }}</span>
-                {{ if and (index . "Stream (FAST)") (ne (index . "Stream (FAST)") "-") }}
-                <span class="free-badge">FREE STREAM</span>
-                {{ end }}
+                <span class="year-badge">{{ .Year }}</span>
+                {{ if .VideoID }}<span class="free-badge">FULL STREAM</span>{{ end }}
+                {{ if .TrailerID }}<span class="trailer-badge">TRAILER</span>{{ end }}
             </div>
             
-            <h3 class="movie-title">{{ index . "Display Title" }}</h3>
-            
-            <div class="tags-row">
-                {{ $tags := split (index . "Tags (auto)") "|" }}
-                {{ range $tags }}
-                <span class="tag">{{ . }}</span>
-                {{ end }}
-            </div>
+            <h3 class="movie-title">{{ .Title }}</h3>
+            <span class="type-pill">{{ .Type }}</span>
 
-            <p class="movie-notes">{{ index . "Summary" }}</p>
+            <p class="movie-notes">{{ .Summary }}</p>
 
             <div class="card-footer">
-                {{ if index . "Stream (Library)" }}
-                    {{ if ne (index . "Stream (Library)") "-" }}
-                    <div class="watch-option library">🏛 {{ index . "Stream (Library)" }}</div>
-                    {{ end }}
-                {{ end }}
-
-                {{ if index . "Stream (FAST)" }}
-                    {{ if ne (index . "Stream (FAST)") "-" }}
-                    <div class="watch-option fast">📺 {{ index . "Stream (FAST)" }}</div>
-                    {{ end }}
-                {{ end }}
+                {{ if .VideoID }}
+                    <button class="watch-btn" onclick="openCinema('{{ .VideoID }}', '{{ .Title }}')">
+                        ▶ WATCH NOW
+                    </button>
                 
-                <a href="https://www.justwatch.com/us/search?q={{ index . "Display Title" }}" target="_blank" class="finder-link">Where to Watch ↗</a>
+                {{ else if .TrailerID }}
+                    <div class="btn-group">
+                        <button class="trailer-btn" onclick="openCinema('{{ .TrailerID }}', '{{ .Title }} (Trailer)')">
+                            ▷ TRAILER
+                        </button>
+                        <a href="{{ .Link }}" target="_blank" class="finder-link-small">FIND IT ↗</a>
+                    </div>
+
+                {{ else }}
+                    <a href="{{ .Link }}" target="_blank" class="finder-link">Where to Watch ↗</a>
+                {{ end }}
             </div>
         </div>
         {{ end }}
     </div>
 </div>
 
+<div id="cinemaModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeCinema()">&times;</span>
+        <h2 id="modalTitle">Screening</h2>
+        <div class="video-container">
+            <iframe id="cinemaScreen" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
 <style>
-    :root { --clay: #D50032; --bg: #0f172a; --card-bg: #1e293b; --text-main: #f8fafc; }
-    body { background-color: var(--bg); color: var(--text-main); font-family: sans-serif; margin: 0; }
-    .dashboard-wrapper { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
-    .hero-section { text-align: center; padding: 60px 0 40px; }
-    .main-title { font-size: 4rem; font-weight: 800; color: white; margin: 0; }
-    .stats-row { display: flex; justify-content: center; gap: 40px; margin-top: 30px; }
-    .stat-num { display: block; font-size: 2rem; font-weight: 700; color: var(--clay); }
-    .stat-label { font-size: 0.8rem; color: #94a3b8; }
-    .control-panel input { width: 100%; padding: 20px; font-size: 1.2rem; background: #1e293b; border: 1px solid #334155; color: white; border-radius: 8px; margin-bottom: 40px; }
-    .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-    .movie-card { background: var(--card-bg); border-radius: 12px; padding: 25px; display: flex; flex-direction: column; }
-    .card-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
-    .year-badge { color: var(--clay); font-weight: bold; }
-    .free-badge { background: #22c55e; color: black; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; }
-    .movie-title { margin: 0 0 10px; font-size: 1.5rem; }
-    .tag { display: inline-block; background: #334155; padding: 4px 8px; border-radius: 4px; margin-right: 5px; font-size: 0.8rem; }
-    .movie-notes { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; flex-grow: 1; }
-    .card-footer { margin-top: 20px; border-top: 1px solid #334155; padding-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .watch-option { opacity: 0.8; font-size: 0.9rem; }
-    .finder-link { color: var(--clay); text-decoration: none; font-weight: bold; margin-left: auto; }
+    /* HEADER FLEX */
+    .top-nav { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid #1e293b; }
+    .hq-link { color: #00ff9d; text-decoration: none; font-weight: bold; border: 1px solid #00ff9d; padding: 8px 16px; border-radius: 4px; font-size: 0.8rem; letter-spacing: 1px; display: flex; align-items: center; gap: 8px; transition: 0.2s; }
+    .hq-link:hover { background: rgba(0, 255, 157, 0.1); box-shadow: 0 0 15px rgba(0, 255, 157, 0.2); }
+    .dot { height: 8px; width: 8px; background-color: #00ff9d; border-radius: 50%; display: inline-block; box-shadow: 0 0 5px #00ff9d; }
+
+    /* BADGES */
+    .type-pill { color: #64748b; font-size: 0.75rem; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; margin-bottom: 10px; display: block; }
+    .trailer-badge { background: #334155; color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+
+    /* BUTTONS */
+    .watch-btn { width: 100%; background: var(--clay); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: 800; cursor: pointer; letter-spacing: 0.5px; }
+    .watch-btn:hover { background: #b91c1c; }
+    
+    .btn-group { display: flex; gap: 10px; width: 100%; }
+    .trailer-btn { flex: 2; background: #334155; color: white; border: none; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    .trailer-btn:hover { background: #475569; }
+    .finder-link-small { flex: 1; display: flex; align-items: center; justify-content: center; border: 1px solid #334155; color: #94a3b8; text-decoration: none; border-radius: 6px; font-size: 0.8rem; font-weight: bold; }
+    .finder-link-small:hover { color: white; border-color: white; }
+
+    /* TABS */
+    .tab-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+    .tab-btn { background: transparent; color: #94a3b8; border: 1px solid #334155; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 0.9rem; }
+    .tab-btn.active { background: white; color: black; border-color: white; }
+    .tab-btn:hover { border-color: white; color: white; }
+    .tab-btn.active:hover { color: black; }
+
+    /* MODAL */
+    .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); backdrop-filter: blur(5px); }
+    .modal-content { margin: 5vh auto; width: 90%; max-width: 900px; background: #0f172a; padding: 20px; border-radius: 12px; border: 1px solid #334155; }
+    .video-container { position: relative; padding-bottom: 56.25%; height: 0; margin-top: 20px; }
+    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
+    .close-modal { float: right; font-size: 2rem; cursor: pointer; color: white; }
 </style>
 
 <script>
     document.getElementById('total-count').innerText = document.getElementsByClassName('movie-card').length;
+
+    function filterType(category) {
+        let cards = document.getElementsByClassName("movie-card");
+        let btns = document.getElementsByClassName("tab-btn");
+        
+        // Highlight active tab
+        for(let b of btns) b.classList.remove('active');
+        event.target.classList.add('active');
+
+        for (let i = 0; i < cards.length; i++) {
+            let cardType = cards[i].getAttribute('data-type');
+            let isStream = cards[i].classList.contains('is-stream');
+
+            if (category === 'all') {
+                cards[i].style.display = "";
+            } else if (category === 'Stream') {
+                cards[i].style.display = isStream ? "" : "none";
+            } else {
+                cards[i].style.display = (cardType === category) ? "" : "none";
+            }
+        }
+    }
+
     function filterGrid() {
         let input = document.getElementById("searchInput").value.toUpperCase();
         let cards = document.getElementsByClassName("movie-card");
         for (let i = 0; i < cards.length; i++) {
-            let filterText = cards[i].getAttribute('data-filter').toUpperCase();
-            cards[i].style.display = filterText.indexOf(input) > -1 ? "" : "none";
+            let text = cards[i].getAttribute('data-filter').toUpperCase();
+            cards[i].style.display = text.indexOf(input) > -1 ? "" : "none";
         }
+    }
+
+    function openCinema(id, title) {
+        document.getElementById('cinemaModal').style.display = 'block';
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('cinemaScreen').src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+    }
+
+    function closeCinema() {
+        document.getElementById('cinemaModal').style.display = 'none';
+        document.getElementById('cinemaScreen').src = "";
+    }
+    
+    // Close on background click
+    window.onclick = function(e) {
+        if (e.target == document.getElementById('cinemaModal')) closeCinema();
     }
 </script>
 {{ end }}
