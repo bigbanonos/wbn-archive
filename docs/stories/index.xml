@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Classic Baseball World</title>
-    <link>https://classicbaseball.world/</link>
-    <description>Recent content on Classic Baseball World</description>
+    <title>The Reads on Classic Baseball World</title>
+    <link>https://classicbaseball.world/stories/</link>
+    <description>Recent content in The Reads on Classic Baseball World</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://classicbaseball.world/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://classicbaseball.world/stories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Joe Carter Paternity Plot</title>
       <link>https://classicbaseball.world/stories/big-daddy-plot/</link>

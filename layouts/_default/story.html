@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | Classic Baseball World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #0f172a; --text: #f8fafc; --accent: #D50032; --gold: #fbbf24; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        
+        .back-btn { text-decoration: none; color: #94a3b8; font-weight: bold; font-size: 0.9rem; }
+        .back-btn:hover { color: white; }
+
+        header { margin: 40px 0; border-bottom: 1px solid #334155; padding-bottom: 20px; }
+        h1 { font-size: 3rem; margin: 0 0 10px 0; color: var(--gold); line-height: 1.1; }
+        .meta { color: #94a3b8; font-family: monospace; }
+
+        article { font-size: 1.2rem; line-height: 1.8; color: #cbd5e1; }
+        article h2 { color: white; margin-top: 40px; font-size: 1.8rem; }
+        article blockquote { border-left: 4px solid var(--accent); padding-left: 20px; margin: 30px 0; font-style: italic; color: white; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 0 8px 8px 0; }
+        
+        img { max-width: 100%; border-radius: 12px; margin: 20px 0; border: 1px solid #334155; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-btn">← BACK TO ARCHIVE</a>
+        
+        <header>
+            <h1>{{ .Title }}</h1>
+            <div class="meta">WBN ORIGINAL • {{ .Date.Format "Jan 2, 2006" }}</div>
+        </header>
+
+        <article>
+            {{ .Content }}
+        </article>
+    </div>
+</body>
+</html>

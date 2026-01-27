@@ -1,199 +1,4181 @@
 [
-  {
+ {
+    "Title": "Big Daddy",
+    "Year": "1999",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A slacker adopts a kid to impress a girl, but the entire plot hinges on a drunken trip to the 1993 World Series. Secretly the greatest Blue Jays movie ever made.",
+    "TrailerID": "jGkUfK7Hn_g",
+    "Link": "https://www.justwatch.com/us/movie/big-daddy"
+  },
+   {
     "Title": "The Ball Game",
     "Year": "1898",
-    "Type": "Short",
+    "Type": "Doc",
     "Genre": "Documentary",
-    "Summary": "The first known baseball footage ever recorded by Thomas Edison. A short film depicting an 1898 game between Reading and Newark.",
-    "VideoID": "qj1-sC0_vHg",
-    "Link": "https://en.wikipedia.org/wiki/The_Ball_Game"
+    "Summary": "Short film depicting an 1898 baseball game between Reading and Newark. [ 1 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Ball_Game",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "Baseball and Bloomers",
     "Year": "1911",
     "Type": "Short",
+    "Genre": "Short",
+    "Summary": "An all-girl baseball team uses two Harvard boys in disguise. [ 2 ]",
+    "Link": "https://en.wikipedia.org/wiki/Baseball_and_Bloomers",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Little Sunset",
+    "Year": "1915",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Right Off the Bat",
+    "Year": "1915",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A bio-pic of sorts starring professional baseball player Mike Donlin . [ 3 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Spit Ball Sadie",
+    "Year": "1915",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Beatrice Fairfax (Episode 10: Play Ball)",
+    "Year": "1916",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Casey at the Bat",
+    "Year": "1916",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A lost five-reeler based on Ernest Thayer 's poem and starring DeWolf Hopper . [ 4 ]",
+    "Link": "https://en.wikipedia.org/wiki/Casey_at_the_Bat_(1916_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Somewhere in Georgia",
+    "Year": "1916",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Ty Cobb as a ball-playing bank clerk in a story by Grantland Rice . [ 5 ]",
+    "Link": "https://en.wikipedia.org/wiki/Somewhere_in_Georgia",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball Madness",
+    "Year": "1917",
+    "Type": "Feature",
     "Genre": "Comedy",
-    "Summary": "An all-girl baseball team uses two Harvard boys in disguise to win the big game.",
-    "Link": "https://en.wikipedia.org/wiki/Baseball_and_Bloomers"
+    "Summary": "A silent film starring Gloria Swanson . [ 6 ]",
+    "Link": "https://en.wikipedia.org/wiki/Baseball_Madness",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "One Touch Of Nature",
+    "Year": "1917",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Pinch Hitter",
+    "Year": "1917",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball: An Analysis of Motion",
+    "Year": "1919",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Busher",
+    "Year": "1919",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Small-town ballplayer gets a big head after joining the St. Paul Pink Sox. [ 7 ] [ 8 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Busher",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "Headin' Home",
     "Year": "1920",
     "Type": "Feature",
-    "Genre": "Biopic",
-    "Summary": "A silent film starring the actual Babe Ruth playing himself. A fictionalized comedy about his rise to fame.",
-    "VideoID": "7s_7v_7",
-    "Link": "https://en.wikipedia.org/wiki/Headin%27_Home"
+    "Genre": "Biographical",
+    "Summary": "A silent film about young Babe Ruth , who stars as himself. [ 9 ]",
+    "Link": "https://en.wikipedia.org/wiki/Headin%27_Home",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "As The World Rolls On",
+    "Year": "1921",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Trifling With Honor",
+    "Year": "1923",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Hit And Run",
+    "Year": "1924",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Life's Greatest Game",
+    "Year": "1924",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Chicago Cubs pitcher Jack Donovan refuses to throw a game. [ 10 ]",
+    "Link": "https://en.wikipedia.org/wiki/Life%27s_Greatest_Game",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Battling Orioles",
+    "Year": "1924",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A barber enlists the help of his father and his old professional baseball teammates to solve a problem. [ 11 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Battling_Orioles",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Play Ball",
+    "Year": "1925",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Pinch Hitter",
+    "Year": "1925",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Out Of The West",
+    "Year": "1926",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The New Klondike",
+    "Year": "1926",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A pitcher and his manager clash over a Florida land purchase. [ 12 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_New_Klondike",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Babe Comes Home",
+    "Year": "1927",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Babe Ruth stars as a baseball player who falls for the laundry woman who cleans his uniform. [ 9 ]",
+    "Link": "https://en.wikipedia.org/wiki/Babe_Comes_Home",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Casey at the Bat",
+    "Year": "1927",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Wallace Beery in slugger's fable based on Ernest Thayer poem. [ 13 ]",
+    "Link": "https://en.wikipedia.org/wiki/Casey_at_the_Bat_(1927_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Catch-As-Catch-Can",
+    "Year": "1927",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "College",
+    "Year": "1927",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Slide, Kelly, Slide",
+    "Year": "1927",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A cocky newcomer thinks he's the New York Yankees' new star. [ 14 ] [ 15 ]",
+    "Link": "https://en.wikipedia.org/wiki/Slide,_Kelly,_Slide",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Bush Leaguer",
+    "Year": "1927",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "An eccentric inventor is also the local team's star pitcher. [ 16 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Bush_Leaguer",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Speedy",
+    "Year": "1928",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Cameraman",
+    "Year": "1928",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Warming Up",
+    "Year": "1928",
+    "Type": "Feature",
+    "Genre": "Romance",
+    "Summary": "New player competes with team's star for owner's daughter. [ 17 ]",
+    "Link": "https://en.wikipedia.org/wiki/Warming_Up_(1928_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Fast Company",
+    "Year": "1929",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Elmer Kane ( Jack Oakie ) hopes the Yankees and an actress are interested in him. [ 18 ] [ 19 ]",
+    "Link": "https://en.wikipedia.org/wiki/Fast_Company_(1929_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Hot Curves",
+    "Year": "1930",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Pittsburgh pitcher finds romance with manager's daughter. [ 20 ]",
+    "Link": "https://en.wikipedia.org/wiki/Hot_Curves",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "They Learned About Women",
+    "Year": "1930",
+    "Type": "Feature",
+    "Genre": "Musical",
+    "Summary": "Two pals play ball by day, perform in vaudeville by night. [ 21 ]",
+    "Link": "https://en.wikipedia.org/wiki/They_Learned_About_Women",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Up the River",
+    "Year": "1930",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A prison baseball game prompts Spencer Tracy and Humphrey Bogart to break into the pen. [ 22 ]",
+    "Link": "https://en.wikipedia.org/wiki/Up_the_River",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Fancy Curves",
+    "Year": "1932",
+    "Type": "Short",
+    "Genre": "Short",
+    "Summary": "Babe Ruth coaches a women's baseball team, and ends up in drag as one of the players. [ 9 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Fireman, Save My Child",
+    "Year": "1932",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Joe E. Brown as a small-town fireman who is also the town's star ballplayer. [ 23 ]",
+    "Link": "https://en.wikipedia.org/wiki/Fireman,_Save_My_Child_(1932_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Just Pals",
+    "Year": "1932",
+    "Type": "Short",
+    "Genre": "Short",
+    "Summary": "Babe Ruth umpires a baseball game at an orphanage. [ 9 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Over the Fence",
+    "Year": "1932",
+    "Type": "Short",
+    "Genre": "Short",
+    "Summary": "Babe Ruth convinces a schoolteacher to allow the class to play baseball instead of having their math lesson. [ 9 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Perfect Control",
+    "Year": "1932",
+    "Type": "Short",
+    "Genre": "Short",
+    "Summary": "A schoolboy dreams that his classmates play a sandlot game with Babe Ruth. [ 9 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Slide, Babe, Slide",
+    "Year": "1932",
+    "Type": "Short",
+    "Genre": "Short",
+    "Summary": "Babe Ruth plays baseball with a group of kids who refuse to believe he is who he says he is. [ 9 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Elmer, the Great",
+    "Year": "1933",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Joe E. Brown as an egotistical Chicago Cubs baseball star. Remake of 1929 film . [ 24 ]",
+    "Link": "https://en.wikipedia.org/wiki/Elmer,_the_Great",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Death on the Diamond",
+    "Year": "1934",
+    "Type": "Feature",
+    "Genre": "Mystery",
+    "Summary": "Ballplayer ( Robert Young ) tries to find who's killing his fellow St. Louis Cardinals . [ 25 ]",
+    "Link": "https://en.wikipedia.org/wiki/Death_on_the_Diamond",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Alibi Ike",
+    "Year": "1935",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Joe E. Brown as a pitcher with a million excuses. [ 26 ]",
+    "Link": "https://en.wikipedia.org/wiki/Alibi_Ike",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Swell-Head",
+    "Year": "1935",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Adventures Of Frank Merriwell",
+    "Year": "1936",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Girls Can Play",
+    "Year": "1937",
+    "Type": "Feature",
+    "Genre": "Mystery",
+    "Summary": "A women's softball team owner murders a player ( Rita Hayworth ) by poisoning her catcher's mitt. [ 27 ]",
+    "Link": "https://en.wikipedia.org/wiki/Girls_Can_Play",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Home Run on the Keys",
+    "Year": "1937",
+    "Type": "Short",
+    "Genre": "Short",
+    "Summary": "Musicians Zez Confrey and Byron Gay sit with Babe Ruth and write a song about baseball. [ 9 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Manhattan Merry-Go-Round",
+    "Year": "1937",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Brother Rat",
+    "Year": "1938",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Rawhide",
+    "Year": "1938",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "How to Play Baseball",
+    "Year": "1942",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "It Happened in Flatbush",
+    "Year": "1942",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Hard-hearted manager ( Lloyd Nolan ) falls for Brooklyn team's owner. [ 28 ]",
+    "Link": "https://en.wikipedia.org/wiki/It_Happened_in_Flatbush",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "The Pride of the Yankees",
     "Year": "1942",
     "Type": "Feature",
-    "Genre": "Biopic",
-    "Summary": "The legendary story of Lou Gehrig, starring Gary Cooper. 'Today, I consider myself the luckiest man on the face of the earth.'",
-    "TrailerID": "1W1bB7rZ1yY",
-    "Link": "https://www.justwatch.com/us/movie/the-pride-of-the-yankees"
+    "Genre": "Biographical",
+    "Summary": "The life and career of Lou Gehrig , with Gary Cooper as Gehrig and Babe Ruth as himself. [ 9 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Pride_of_the_Yankees",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Woman Of The Year",
+    "Year": "1942",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Ladies' Day",
+    "Year": "1943",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Sox pitcher Wacky Waters ( Eddie Albert ) is distracted by a hot Hollywood movie star, Pepita Zorita ( Lupe Vélez ). [ 29 ]",
+    "Link": "https://en.wikipedia.org/wiki/Ladies%27_Day_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Whistling In Brooklyn",
+    "Year": "1943",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Naughty Nineties",
+    "Year": "1945",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Make Mine Music",
+    "Year": "1946",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Babe Ruth Story",
+    "Year": "1948",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "The life and career of Babe Ruth , starring William Bendix . [ 30 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Babe_Ruth_Story",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "It Happens Every Spring",
+    "Year": "1949",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Ray Milland as a scientist whose secret formula turns him into a great pitcher. [ 31 ]",
+    "Link": "https://en.wikipedia.org/wiki/It_Happens_Every_Spring",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Take Me Out To The Ballgame",
+    "Year": "1949",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Take Me Out to the Ball Game",
+    "Year": "1949",
+    "Type": "Feature",
+    "Genre": "Musical",
+    "Summary": "Frank Sinatra and Gene Kelly as singing, dancing ballplayers. [ 33 ]",
+    "Link": "https://en.wikipedia.org/wiki/Take_Me_Out_to_the_Ball_Game_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Kid from Cleveland",
+    "Year": "1949",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "The '48 World Series champion Cleveland Indians come to the aid of a young fan. [ 34 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Kid_from_Cleveland",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Stratton Story",
+    "Year": "1949",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "The career and fateful accident of pitcher Monty Stratton , starring James Stewart . [ 32 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Stratton_Story",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Kill the Umpire",
+    "Year": "1950",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "William Bendix as a baseball fan who becomes an umpire. [ 35 ]",
+    "Link": "https://en.wikipedia.org/wiki/Kill_the_Umpire",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Jackie Robinson Story",
+    "Year": "1950",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "Baseball pioneer Jackie Robinson as himself, with Ruby Dee as his wife . [ 36 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Jackie_Robinson_Story",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Angels in the Outfield",
+    "Year": "1951",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A Pittsburgh Pirates manager ( Paul Douglas ) gets some help from above. [ 37 ]",
+    "Link": "https://en.wikipedia.org/wiki/Angels_in_the_Outfield_(1951_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "On Moonlight Bay",
+    "Year": "1951",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Rhubarb",
+    "Year": "1951",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Ray Milland in a cute tale about a cat who inherits a baseball team. [ 38 ]",
+    "Link": "https://en.wikipedia.org/wiki/Rhubarb_(1951_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Pride of St. Louis",
+    "Year": "1952",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "Dan Dailey as the colorful pitcher Dizzy Dean . [ 39 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Pride_of_St._Louis",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Winning Team",
+    "Year": "1952",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "Based on pitcher Grover Cleveland Alexander , played by Ronald Reagan . [ 40 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Winning_Team",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Big Leaguer",
+    "Year": "1953",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Hans Lobert ( Edward G. Robinson ) runs a training camp for baseball's New York Giants. [ 42 ]",
+    "Link": "https://en.wikipedia.org/wiki/Big_Leaguer",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Jackie & Joe (The Jackie Robinson Story, The History of Joe Louis)",
+    "Year": "1953",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Kid from Left Field",
+    "Year": "1953",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "The son of a peanut vendor ( Dan Dailey ) becomes the leader of a big-league team. [ 41 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Kid_from_Left_Field_(1953_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Casey Bats Again",
+    "Year": "1954",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Play Ball With the Orioles",
+    "Year": "1954",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Roogie's Bump",
+    "Year": "1954",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A mysterious bump somehow gives a boy a big-league arm. [ 43 ]",
+    "Link": "https://en.wikipedia.org/wiki/Roogie%27s_Bump",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Strategic Air Command",
+    "Year": "1955",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Three Stripes In The Sun",
+    "Year": "1955",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "\"Bang the Drum Slowly\" ( The United States Steel Hour )",
+    "Year": "1956",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A pitcher develops a friendship with a catcher who has a terminal disease. Broadcast on The United States Steel Hour . Based on the novel of the same name by Mark Harris . [ 44 ]",
+    "Link": "https://en.wikipedia.org/wiki/Bang_the_Drum_Slowly_(The_United_States_Steel_Hour)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "I'll Buy You",
+    "Year": "1956",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Great American Pastime",
+    "Year": "1956",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A man ( Tom Ewell ) decides to coach a Little League team, then regrets it. [ 45 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Great_American_Pastime",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Fear Strikes Out",
+    "Year": "1957",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "The life and career of Jimmy Piersall , played by Anthony Perkins . [ 46 ]",
+    "Link": "https://en.wikipedia.org/wiki/Fear_Strikes_Out",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Damn Yankees",
+    "Year": "1958",
+    "Type": "Feature",
+    "Genre": "Musical",
+    "Summary": "A man sells his soul to the devil on behalf of the Washington Senators . [ 47 ]",
+    "Link": "https://en.wikipedia.org/wiki/Damn_Yankees_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Geisha Boy",
+    "Year": "1958",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Moochie of the Little League",
+    "Year": "1959",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Experiment in Terror",
+    "Year": "1962",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Safe at Home!",
+    "Year": "1962",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "With Mickey Mantle and Roger Maris as themselves . [ 48 ]",
+    "Link": "https://en.wikipedia.org/wiki/Safe_at_Home!",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "That Touch Of Mink",
+    "Year": "1962",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Damn Yankees",
+    "Year": "1967",
+    "Type": "Feature",
+    "Genre": "Musical",
+    "Summary": "A man sells his soul to the devil on behalf of the Washington Senators . [ 47 ]",
+    "Link": "https://en.wikipedia.org/wiki/Damn_Yankees_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "One-Legged Ace",
+    "Year": "1971",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Ceremony",
+    "Year": "1971",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "Bang the Drum Slowly",
     "Year": "1973",
     "Type": "Feature",
     "Genre": "Drama",
-    "Summary": "Robert De Niro stars as a catcher with a terminal illness in this heart-wrenching classic.",
-    "TrailerID": "sT9C8sJk4QA",
-    "Link": "https://www.justwatch.com/us/movie/bang-the-drum-slowly"
+    "Summary": "Robert De Niro and Michael Moriarty star in Mark Harris 's adaptation of his own novel about a pitcher who develops a friendship with a catcher who has a terminal disease. [ 49 ]",
+    "Link": "https://en.wikipedia.org/wiki/Bang_the_Drum_Slowly_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "It's Good To Be Alive",
+    "Year": "1974",
+    "Type": "Short",
+    "Genre": "Biographical",
+    "Summary": "TV movie about former Brooklyn Dodgers catcher Roy Campanella , whose career was cut short when he lost the use of his legs in an auto accident in January 1958. [ 50 ]",
+    "Link": "https://en.wikipedia.org/wiki/It%27s_Good_to_Be_Alive_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Two Ball Games",
+    "Year": "1975",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "The Bad News Bears",
     "Year": "1976",
     "Type": "Feature",
     "Genre": "Comedy",
-    "Summary": "Walter Matthau coaches a team of misfits. The definitive Little League movie.",
-    "TrailerID": "51gU_51sT3c",
-    "Link": "https://www.justwatch.com/us/movie/the-bad-news-bears"
+    "Summary": "Walter Matthau 's bad Little League team gets help from a girl pitcher ( Tatum O'Neal ) and a motorcycle-riding slugger ( Jackie Earle Haley ). [ 51 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Bad_News_Bears",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "The Bingo Long Traveling All-Stars & Motor Kings",
     "Year": "1976",
     "Type": "Feature",
     "Genre": "Comedy",
-    "Summary": "James Earl Jones and Billy Dee Williams star in this classic about a barnstorming Negro League team.",
-    "TrailerID": "v=y-e-0T_s1zM",
-    "Link": "https://www.justwatch.com/us/movie/the-bingo-long-traveling-all-stars-and-motor-kings"
+    "Summary": "A barnstorming team of Negro leagues players, with James Earl Jones , Billy Dee Williams , Richard Pryor . [ 52 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Bingo_Long_Traveling_All-Stars_%26_Motor_Kings",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Just The Beginning",
+    "Year": "1977",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Murder at the World Series",
+    "Year": "1977",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "TV film starring Karen Valentine and Janet Leigh . [ 53 ]",
+    "Link": "https://en.wikipedia.org/wiki/Murder_at_the_World_Series",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Bad News Bears in Breaking Training",
+    "Year": "1977",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Sequel to 1976 film , with William Devane as the team's coach. [ 54 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Bad_News_Bears_in_Breaking_Training",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "A Boy Called Third Base",
+    "Year": "1978",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "A Love Affair: The Eleanor and Lou Gehrig Story",
+    "Year": "1978",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "TV film on Yankee immortal's marriage and tragedy, featuring Blythe Danner and Edward Herrmann . [ 56 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Goodbye, Franklin High",
+    "Year": "1978",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Here Come The Tigers",
+    "Year": "1978",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "One in a Million: The Ron LeFlore Story",
+    "Year": "1978",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "TV film on the life and career of Ron LeFlore , starring LeVar Burton . [ 55 ]",
+    "Link": "https://en.wikipedia.org/wiki/One_in_a_Million:_The_Ron_LeFlore_Story",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Bad News Bears Go to Japan",
+    "Year": "1978",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Second sequel to 1976 film , this time starring Tony Curtis . [ 54 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Bad_News_Bears_Go_to_Japan",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Aunt Mary",
+    "Year": "1979",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A disabled women sets up a baseball team of street kids to save them from juvenile delinquency. [ 58 ] [ 59 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Kid from Left Field",
+    "Year": "1979",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Made-for-TV remake of the 1953 film , starring Gary Coleman . [ 57 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Kid_from_Left_Field_(1979_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "It's My Turn",
+    "Year": "1980",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Comeback Kid",
+    "Year": "1980",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Former minor leaguer ( John Ritter ) begins coaching underprivileged kids. [ 61 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Comeback_Kid_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Don't Look Back : The Story of \"Satchel\" Paige",
+    "Year": "1981",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Don't Look Back: The Story of Leroy 'Satchel' Paige",
+    "Year": "1981",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "TV film with Louis Gossett Jr. as Satchel Paige . [ 62 ]",
+    "Link": "https://en.wikipedia.org/wiki/Don%27t_Look_Back:_The_Story_of_Leroy_%27Satchel%27_Paige",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Million Dollar Infields",
+    "Year": "1982",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Squeeze Play!",
+    "Year": "1982",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Sexy women form a softball team. [ 60 ]",
+    "Link": "https://en.wikipedia.org/wiki/Squeeze_Play!",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Zapped!",
+    "Year": "1982",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Blue Skies Again",
+    "Year": "1983",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Denver Devils' potential second baseman isn't a man, it's a young woman. [ 64 ]",
+    "Link": "https://en.wikipedia.org/wiki/Blue_Skies_Again_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Max Dugan Returns",
+    "Year": "1983",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Tiger Town",
+    "Year": "1983",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Early Disney Channel film about an aging Detroit Tigers ( Roy Scheider ). [ 65 ]",
+    "Link": "https://en.wikipedia.org/wiki/Tiger_Town",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "A Soldier's Story",
+    "Year": "1984",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Natural",
+    "Year": "1984",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Robert Redford in a fable about an unlikely, unlucky hero, Roy Hobbs. [ 66 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Natural_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Brewster's Millions",
+    "Year": "1985",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Richard Pryor as a minor-leaguer with a chance to inherit 300 million dollars. [ 67 ]",
+    "Link": "https://en.wikipedia.org/wiki/Brewster%27s_Millions_(1985_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Heck of a Year",
+    "Year": "1985",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Insignificance",
+    "Year": "1985",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "MacArthur's Children",
+    "Year": "1985",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Slugger's Wife",
+    "Year": "1985",
+    "Type": "Feature",
+    "Genre": "Romance",
+    "Summary": "An Atlanta Braves player tries to break Roger Maris ' record and make a marriage work. [ 68 ] [ 69 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Slugger%27s_Wife",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "A Winner Never Quits",
+    "Year": "1986",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "A television film on one-armed pro ballplayer Pete Gray , played by Keith Carradine . [ 70 ]",
+    "Link": "https://en.wikipedia.org/wiki/A_Winner_Never_Quits",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Chasing Dreams",
+    "Year": "1986",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Ferris Bueller's Day Off",
+    "Year": "1986",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Amazing Grace and Chuck",
+    "Year": "1987",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A Montana boy refuses to pitch Little League until the world bans nuclear weapons. With Gregory Peck as President of the United States. [ 73 ]",
+    "Link": "https://en.wikipedia.org/wiki/Amazing_Grace_and_Chuck",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Long Gone",
+    "Year": "1987",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Early cable television film about a minor-league ballclub starring William Petersen . [ 71 ]",
+    "Link": "https://en.wikipedia.org/wiki/Long_Gone_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "New York Yankees (The Movie)",
+    "Year": "1987",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Interviews and footage covering the then-84 year history of the New York Yankees. [ 74 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Stogies",
+    "Year": "1987",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Trading Hearts",
+    "Year": "1987",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Has-been player ( Raúl Juliá ) and his romance with a Florida single mom. [ 72 ]",
+    "Link": "https://en.wikipedia.org/wiki/Trading_Hearts",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "Bull Durham",
     "Year": "1988",
     "Type": "Feature",
-    "Genre": "Romance",
-    "Summary": "Kevin Costner is Crash Davis. The greatest minor league movie ever made.",
-    "TrailerID": "v=w334iSgS9B4",
-    "Link": "https://www.justwatch.com/us/movie/bull-durham"
+    "Genre": "Rom-Com",
+    "Summary": "Ron Shelton 's screwball comedy of a woman's ( Susan Sarandon ) summer with two minor-leaguers ( Kevin Costner and Tim Robbins ). [ 75 ]",
+    "Link": "https://en.wikipedia.org/wiki/Bull_Durham",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "Eight Men Out",
     "Year": "1988",
     "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "Based on the 1919 Black Sox Scandal . [ 76 ]",
+    "Link": "https://en.wikipedia.org/wiki/Eight_Men_Out",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Stealing Home",
+    "Year": "1988",
+    "Type": "Feature",
     "Genre": "Drama",
-    "Summary": "The story of the 1919 Black Sox scandal. 'Say it ain't so, Joe.'",
-    "TrailerID": "v=Mp-4d3gVf_U",
-    "Link": "https://www.justwatch.com/us/movie/eight-men-out"
+    "Summary": "Mark Harmon and Jodie Foster in a fictional tale of lost love. [ 77 ]",
+    "Link": "https://en.wikipedia.org/wiki/Stealing_Home",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Naked Gun: From the Files of Police Squad!",
+    "Year": "1988",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Someone's out to kill the Queen of England during a California Angels baseball game, and it's up to bumbling detective Frank Drebin ( Leslie Nielsen ) to foil the plot. [ 78 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Naked_Gun:_From_the_Files_of_Police_Squad!",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "Field of Dreams",
     "Year": "1989",
     "Type": "Feature",
     "Genre": "Drama",
-    "Summary": "If you build it, they will come. Kevin Costner builds a diamond in an Iowa cornfield.",
-    "TrailerID": "Ut06d4dptKc",
-    "Link": "https://www.justwatch.com/us/movie/field-of-dreams"
+    "Summary": "Voices tell an Iowa farmer ( Kevin Costner ) to build a baseball stadium in his cornfield. [ 79 ]",
+    "Link": "https://en.wikipedia.org/wiki/Field_of_Dreams",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "Major League",
     "Year": "1989",
     "Type": "Feature",
     "Genre": "Comedy",
-    "Summary": "The Cleveland Indians are built to lose, but Charlie Sheen and Wesley Snipes have other plans.",
-    "TrailerID": "v=6Y9k_O_1vSc",
-    "Link": "https://www.justwatch.com/us/movie/major-league"
+    "Summary": "Fictional story of a team of misfit Cleveland Indians . [ 80 ]",
+    "Link": "https://en.wikipedia.org/wiki/Major_League_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Night Game",
+    "Year": "1989",
+    "Type": "Feature",
+    "Genre": "Crime drama",
+    "Summary": "A ballpark murder mystery starring Roy Scheider . [ 81 ]",
+    "Link": "https://en.wikipedia.org/wiki/Night_Game_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "There Was Always Sun Shining Someplace: Life in the Negro Leagues",
+    "Year": "1989",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Babe Ruth : Man Myth Legend",
+    "Year": "1990",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Mr. Destiny",
+    "Year": "1990",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A man ( James Belushi ) blames his misfortune on a long-ago baseball game. [ 82 ]",
+    "Link": "https://en.wikipedia.org/wiki/Mr._Destiny",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Taking Care of Business",
+    "Year": "1990",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A man ( James Belushi ) escapes jail to see the Chicago Cubs play in a World Series. [ 83 ]",
+    "Link": "https://en.wikipedia.org/wiki/Taking_Care_of_Business_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Court-Martial of Jackie Robinson",
+    "Year": "1990",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Andre Braugher in TV biopic of Robinson's court-martial in U.S. Army. [ 85 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Court-Martial_of_Jackie_Robinson",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Babe Ruth",
+    "Year": "1991",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "City Slickers",
+    "Year": "1991",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Pastime",
+    "Year": "1991",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A pair of minor leaguers, one 17, one 40, form a bond. [ 84 ]",
+    "Link": "https://en.wikipedia.org/wiki/Pastime_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Talent for the Game",
+    "Year": "1991",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A fictional Los Angeles Angels baseball scout ( Edward James Olmos ) finds a fantastic young pitcher. [ 86 ]",
+    "Link": "https://en.wikipedia.org/wiki/Talent_for_the_Game",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "When It Was a Game",
+    "Year": "1991",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "A League of Their Own",
     "Year": "1992",
     "Type": "Feature",
     "Genre": "Comedy",
-    "Summary": "There's no crying in baseball. Tom Hanks and Geena Davis tell the story of the AAGPBL.",
-    "TrailerID": "Wcn73VvF7gI",
-    "Link": "https://www.justwatch.com/us/movie/a-league-of-their-own"
+    "Summary": "A fictionalized account of the All-American Girls Professional Baseball League of the 1940s, starring Geena Davis and Tom Hanks . [ 89 ]",
+    "Link": "https://en.wikipedia.org/wiki/A_League_of_Their_Own",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Mr. Baseball",
+    "Year": "1992",
+    "Type": "Feature",
+    "Genre": "Rom-Com",
+    "Summary": "Tom Selleck as a baseball star who ends up in Japan. [ 90 ]",
+    "Link": "https://en.wikipedia.org/wiki/Mr._Baseball",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Babe",
+    "Year": "1992",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "Based on the life and career of Babe Ruth , starring John Goodman . [ 87 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Babe_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Comrades of Summer",
+    "Year": "1992",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A television film about a manager ( Joe Mantegna ) asked to take over a Soviet ballclub. [ 88 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Comrades_of_Summer",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "When It Was a Game 2",
+    "Year": "1992",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Cooperstown",
+    "Year": "1993",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A former pitcher is visited by the ghost of his catcher. [ 94 ]",
+    "Link": "https://en.wikipedia.org/wiki/Cooperstown_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Rookie of the Year",
+    "Year": "1993",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A boy develops a magical right arm and becomes a big-league pitcher for the Cubs. [ 91 ]",
+    "Link": "https://en.wikipedia.org/wiki/Rookie_of_the_Year_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Man From Left Field",
+    "Year": "1993",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A television film about a homeless man ( Burt Reynolds ) coaching a Little League team. [ 92 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Man_From_Left_Field",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "The Sandlot",
     "Year": "1993",
     "Type": "Feature",
     "Genre": "Comedy",
-    "Summary": "You're killing me, Smalls. A coming-of-age classic about baseball in the summer of 1962.",
-    "TrailerID": "_7-J85Q0z8A",
-    "Link": "https://www.justwatch.com/us/movie/the-sandlot"
+    "Summary": "A man reminisces about his childhood friends and the games they played. [ 93 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Sandlot",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
-    "Title": "Ken Burns: Baseball",
+    "Title": "Angels in the Outfield",
+    "Year": "1994",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Disney remake of the 1951 film of the same name. [ 96 ]",
+    "Link": "https://en.wikipedia.org/wiki/Angels_in_the_Outfield_(1994_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball",
     "Year": "1994",
     "Type": "Doc",
     "Genre": "Documentary",
-    "Summary": "The definitive 18-hour history of the game, chronicled by Ken Burns.",
-    "TrailerID": "85s5kM4",
-    "Link": "https://www.pbs.org/kenburns/baseball/"
+    "Summary": "Comprehensive history of the game, 18 hours-plus, as chronicled by Ken Burns . [ 95 ]",
+    "Link": "https://en.wikipedia.org/wiki/Baseball_(TV_series)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball - A Film by Ken Burns",
+    "Year": "1994",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Cobb",
+    "Year": "1994",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "The career and last days of Ty Cobb , played by Tommy Lee Jones . [ 97 ]",
+    "Link": "https://en.wikipedia.org/wiki/Cobb_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Little Big League",
+    "Year": "1994",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A child becomes owner of the Minnesota Twins . [ 98 ]",
+    "Link": "https://en.wikipedia.org/wiki/Little_Big_League",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Major League II",
+    "Year": "1994",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Second film in the Major League series about the Cleveland Indians . [ 99 ]",
+    "Link": "https://en.wikipedia.org/wiki/Major_League_II",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Scout",
+    "Year": "1994",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A New York Yankees scout ( Albert Brooks ) finds a phenomenal but psychologically troubled prospect. [ 100 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Scout_(1994_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Cooperstown : Baseball's Main Street",
+    "Year": "1995",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Hank Aaron: Chasing the Dream",
+    "Year": "1995",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Aaron's pursuit of Babe Ruth 's all-time homer record, directed by Michael Tollin . [ 102 ]",
+    "Link": "https://en.wikipedia.org/wiki/Hank_Aaron:_Chasing_the_Dream",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Past The Bleachers",
+    "Year": "1995",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball Girls",
+    "Year": "1996",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "A history of women's baseball. [ 101 ]",
+    "Link": "https://en.wikipedia.org/wiki/Baseball_Girls",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Dorf on the Diamond",
+    "Year": "1996",
+    "Type": "Short",
+    "Genre": "Comedy",
+    "Summary": "Direct-to-video short film in the Dorf series starring Tim Conway . [ 103 ]",
+    "Link": "https://en.wikipedia.org/wiki/Dorf_on_the_Diamond",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Ed",
+    "Year": "1996",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Matt LeBlanc befriends a baseball-playing chimpanzee. [ 104 ]",
+    "Link": "https://en.wikipedia.org/wiki/Ed_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Soul of the Game",
+    "Year": "1996",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "Story of baseball trailblazers including Jackie Robinson , Satchel Paige , Josh Gibson . [ 106 ]",
+    "Link": "https://en.wikipedia.org/wiki/Soul_of_the_Game",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Space Jam",
+    "Year": "1996",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Fan",
+    "Year": "1996",
+    "Type": "Feature",
+    "Genre": "Thriller",
+    "Summary": "A deranged San Francisco fan ( Robert De Niro ) kills a player, kidnaps another's son. [ 105 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Fan_(1996_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Joe Torre: Curveballs Along the Way",
+    "Year": "1997",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "Paul Sorvino as the former New York Yankees manager. [ 107 ]",
+    "Link": "https://en.wikipedia.org/wiki/Joe_Torre:_Curveballs_Along_the_Way",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Where Have You Gone, Joe DiMaggio?",
+    "Year": "1997",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "BASEketball",
+    "Year": "1998",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Babe Ruth - The Life Behind the Legend",
+    "Year": "1998",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "If the Sun Rises in the West",
+    "Year": "1998",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "South Korean story of an umpire. [ 109 ]",
+    "Link": "https://en.wikipedia.org/wiki/If_the_Sun_Rises_in_the_West",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Major League 3 : Back To The Minors",
+    "Year": "1998",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Major League: Back to the Minors",
+    "Year": "1998",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Third film in the Major League series. [ 110 ]",
+    "Link": "https://en.wikipedia.org/wiki/Major_League:_Back_to_the_Minors",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Simon Birch",
+    "Year": "1998",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Life and Times of Hank Greenberg",
+    "Year": "1998",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "The life and career of a former Detroit Tigers star and war hero. [ 108 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Life_and_Times_of_Hank_Greenberg",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "World Series Fix: Black Sox Scandal",
+    "Year": "1998",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "For Love of the Game",
+    "Year": "1999",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "In possibly his last start, a Detroit pitcher ( Kevin Costner ) goes after a perfect game. [ 111 ]",
+    "Link": "https://en.wikipedia.org/wiki/For_Love_of_the_Game_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Major League Baseball All Century Team",
+    "Year": "1999",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Angels in the Infield",
+    "Year": "2000",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Patrick Warburton in second made-for-TV sequel to the 1994 film . [ 113 ]",
+    "Link": "https://en.wikipedia.org/wiki/Angels_in_the_Infield",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Finding Buck McHenry",
+    "Year": "2000",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Frequency",
+    "Year": "2000",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Greener Grass - Cuba, Baseball and the U.S.",
+    "Year": "2000",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "MLB Superstars Show You Their Game",
+    "Year": "2000",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Modern Marvels - Baseball Parks (History Channel)",
+    "Year": "2000",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "My Dog Skip",
+    "Year": "2000",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Only The Ball Was White",
+    "Year": "2000",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "A tribute to the topflight players of the Negro leagues . [ 63 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Perfect Game",
+    "Year": "2000",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Television film starring Ed Asner . [ 112 ]",
+    "Link": "https://en.wikipedia.org/wiki/Perfect_Game_(2000_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Broken Hearts Club",
+    "Year": "2000",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "When It Was a Game",
+    "Year": "2000",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "When It Was a Game 3",
+    "Year": "2000",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "61*",
     "Year": "2001",
     "Type": "Feature",
     "Genre": "Drama",
-    "Summary": "Billy Crystal directs the story of Mickey Mantle and Roger Maris chasing the home run record.",
-    "TrailerID": "v=3Y1g_7_1z_U",
-    "Link": "https://www.justwatch.com/us/movie/61"
+    "Summary": "HBO film directed by Billy Crystal about the 1961 season of Roger Maris and Mickey Mantle . [ 114 ]",
+    "Link": "https://en.wikipedia.org/wiki/61*",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "A Little Inside",
+    "Year": "2001",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "All Over Again (Against Time)",
+    "Year": "2001",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Boston Red Sox: 100 Years of Baseball History",
+    "Year": "2001",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Hardball",
+    "Year": "2001",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Keanu Reeves as a young man who takes charge of an inner-city team. [ 115 ]",
+    "Link": "https://en.wikipedia.org/wiki/Hardball_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Summer Catch",
+    "Year": "2001",
+    "Type": "Feature",
+    "Genre": "Romance",
+    "Summary": "Fictional love story starring Freddie Prinze, Jr. . [ 116 ]",
+    "Link": "https://en.wikipedia.org/wiki/Summer_Catch",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The 30 Most Memorable Moments in Baseball History",
+    "Year": "2001",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "When It Was a Game - Triple Play Collection",
+    "Year": "2001",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "When It Was a Game 2",
+    "Year": "2001",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Wrigley Field: Beyond the Ivy",
+    "Year": "2001",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Air Bud: Seventh Inning Fetch",
+    "Year": "2002",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Fourth entry in the Air Bud series. [ 117 ]",
+    "Link": "https://en.wikipedia.org/wiki/Air_Bud:_Seventh_Inning_Fetch",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Bleacher Bums",
+    "Year": "2002",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "TV version of the 1970s stage play about diehard fans in the outfield bleachers. [ 119 ]",
+    "Link": "https://en.wikipedia.org/wiki/Bleacher_Bums",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Rookie",
+    "Year": "2002",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "Based on true story of a high school coach, pitcher Jim Morris , portrayed by Dennis Quaid . [ 118 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Rookie_(2002_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "100 Years of the New York Yankees",
+    "Year": "2003",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Ball of Wax",
+    "Year": "2003",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Battlefield Baseball",
+    "Year": "2003",
+    "Type": "Feature",
+    "Genre": "Action",
+    "Summary": "Japanese film. [ 120 ]",
+    "Link": "https://en.wikipedia.org/wiki/Battlefield_Baseball",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Boston Red Sox - Cowboy Up! The Wild Ride of",
+    "Year": "2003",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Day of Independence",
+    "Year": "2003",
+    "Type": "Short",
+    "Genre": "Drama",
+    "Summary": "Short film about baseball in a Japanese-American internment camp during World War II. [ 121 ]",
+    "Link": "https://en.wikipedia.org/wiki/Day_of_Independence",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "MLB - All Access Sound",
+    "Year": "2003",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Major League Baseball - 100 Years of the World Series",
+    "Year": "2003",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Mickey - A Family Story by John Grisham",
+    "Year": "2003",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Curse of the Bambino",
+    "Year": "2003",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Yankee Immortals",
+    "Year": "2003",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Awesome All-Star Action",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball's Greatest Rivalries",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Faith Rewarded - The Historic Season of the 2004 Red Sox",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Hu$tle",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Hustle",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "ESPN dramatization on success and scandal of Pete Rose , starring Tom Sizemore . [ 122 ]",
+    "Link": "https://en.wikipedia.org/wiki/Hustle_(2004_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Mickey",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "John Grisham story about a Little Leaguer and his father. [ 123 ]",
+    "Link": "https://en.wikipedia.org/wiki/Mickey_(2004_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Mr.",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Mr. 3000",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A potential Hall of Famer ( Bernie Mac ) is told he's actually three hits shy of 3,000. [ 124 ]",
+    "Link": "https://en.wikipedia.org/wiki/Mr._3000",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Nine Innings From Ground Zero",
+    "Year": "2004",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "How the 2001 World Series helped America cope with 9/11 . [ 125 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Nine Innings From Ground Zero: The 2001 World Series",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Reverse of the Curse of the Bambino",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Still We Believe: The Boston Red Sox Movie",
+    "Year": "2004",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "A chronicle of the 2003 Boston Red Sox season . [ 74 ]",
+    "Link": "https://en.wikipedia.org/wiki/Still_We_Believe:_The_Boston_Red_Sox_Movie",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Winning Season",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A child from 1985 wakes up in 1909 and meets hero Honus Wagner ( Matthew Modine ). [ 128 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Winning_Season_(2004_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "This Old Cub",
+    "Year": "2004",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Chronicles life of Ron Santo , focusing on his struggle with type 1 diabetes . [ 126 ]",
+    "Link": "https://en.wikipedia.org/wiki/This_Old_Cub",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "This Old Cub: The Inspiring Story of Chicago Legend Ron Santo",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Touching the Game, The Story of The Cape Cod Baseball League",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Up for Grabs",
+    "Year": "2004",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "A battle over who owns ball hit in 2001 by Barry Bonds for his 73rd home run. [ 127 ]",
+    "Link": "https://en.wikipedia.org/wiki/Up_for_Grabs_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Yankeeography, Vol. 1",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Yankeeography, Vol. 2",
+    "Year": "2004",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Bad News Bears",
+    "Year": "2005",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Remake of 1976 film of same name, starring Billy Bob Thornton . [ 131 ]",
+    "Link": "https://en.wikipedia.org/wiki/Bad_News_Bears",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Fever Pitch",
+    "Year": "2005",
+    "Type": "Feature",
+    "Genre": "Rom-Com",
+    "Summary": "Loosely based on Nick Hornby soccer story, in this case a Boston Red Sox fan ( Jimmy Fallon ). [ 129 ]",
+    "Link": "https://en.wikipedia.org/wiki/Fever_Pitch_(2005_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Game 6",
+    "Year": "2005",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A playwright ( Michael Keaton ) has a wild night during a Red Sox playoff series. [ 130 ]",
+    "Link": "https://en.wikipedia.org/wiki/Game_6",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "History Rings True: Red Sox Opening Day Ring Ceremony",
+    "Year": "2005",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Pitcher and the Pin-Up",
+    "Year": "2005",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Pure Heat - Ultimate MLB Flamethrowers",
+    "Year": "2005",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Sandlot 2",
+    "Year": "2005",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Direct-to-video sequel to The Sandlot . [ 93 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Sandlot_2",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "World Series 2005 - Chicago White Sox",
+    "Year": "2005",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Beer League",
+    "Year": "2006",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "A town drunk plays in a big softball game. [ 134 ]",
+    "Link": "https://en.wikipedia.org/wiki/Beer_League",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Everyone's Hero",
+    "Year": "2006",
+    "Type": "Feature",
+    "Genre": "Animation",
+    "Summary": "Cartoon family film with baseball theme. [ 133 ]",
+    "Link": "https://en.wikipedia.org/wiki/Everyone%27s_Hero",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Here Come the Tigers",
+    "Year": "2006",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Kokoyakyu: High School Baseball",
+    "Year": "2006",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Broadcast on the U.S. PBS series POV . Explores the phenomenon of high school baseball in Japan . [ 136 ]",
+    "Link": "https://en.wikipedia.org/wiki/Kokoyakyu:_High_School_Baseball",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "MLB Vintage World Series Films - New York Yankees 17 Championship Seasons",
+    "Year": "2006",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Off the Black",
+    "Year": "2006",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "An umpire ( Nick Nolte ) befriends a high school player who hated him. [ 135 ]",
+    "Link": "https://en.wikipedia.org/wiki/Off_the_Black",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Benchwarmers",
+    "Year": "2006",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "David Spade and Rob Schneider as middle-aged nerds who want to play ball. [ 132 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Benchwarmers",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Cincinnati Reds 1975 World Series Collector's Edition",
+    "Year": "2006",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "American Pastime",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Based on true events, depicts life inside internment camps , where baseball was one of the major diversions from the reality of the internees' lives. [ 142 ]",
+    "Link": "https://en.wikipedia.org/wiki/American_Pastime_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Black Irish",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Boston teen tries to escape family problems through his pitching. [ 141 ]",
+    "Link": "https://en.wikipedia.org/wiki/Black_Irish_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Chasin October A Fan's Crusade",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Dummy Hoy: A Deaf Hero",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "MLB Vintage World Series Films - Cincinnati Reds 1975, 1976 &",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "MLB Vintage World Series Films - Detroit Tigers 1945, 1968 &",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "New York Yankees 1977 World Series Collector's Edition",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Reel Baseball: Baseball Films from the Silent Era",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Season of the Samurai",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Bronx Is Burning",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "A docudrama of the events surrounding the 1977 New York Yankees season , with John Turturro as Billy Martin . [ 140 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Bronx_Is_Burning",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Final Season",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Based on 1991 season of Norway High School in Norway, Iowa , before it was closed and consolidated into its county school district , starring Sean Astin . [ 137 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Final_Season",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Sandlot: Heading Home",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Second direct-to-video sequel to The Sandlot . [ 138 ] [ 139 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Sandlot:_Heading_Home",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "War Eagle, Arkansas",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Yankeeography Megaset",
+    "Year": "2007",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "City Without Baseball",
+    "Year": "2008",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Chinese film. [ 143 ]",
+    "Link": "https://en.wikipedia.org/wiki/City_Without_Baseball",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Diminished Capacity",
+    "Year": "2008",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Los Angeles Dodgers 1988 World Series Collector's Edition",
+    "Year": "2008",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Signs of the Time",
+    "Year": "2008",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Hour-long film which focuses on the origin of hand signals in baseball. [ 144 ]",
+    "Link": "https://en.wikipedia.org/wiki/Signs_of_the_Time_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Signs of the Times",
+    "Year": "2008",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "Sugar",
     "Year": "2008",
     "Type": "Feature",
     "Genre": "Drama",
-    "Summary": "A Dominican prospect struggles to adjust to life in the United States. A critical darling.",
-    "TrailerID": "v=9_1_1_1_1",
-    "Link": "https://www.justwatch.com/us/movie/sugar"
+    "Summary": "Story about a Dominican prospect and his adjustment to life in the U.S. [ 145 ]",
+    "Link": "https://en.wikipedia.org/wiki/Sugar_(2008_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Girls of Summer",
+    "Year": "2008",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Touching Home",
+    "Year": "2008",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Brothers with pro-ball ambitions deal with their homeless father ( Ed Harris ). [ 146 ]",
+    "Link": "https://en.wikipedia.org/wiki/Touching_Home_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "2009 New York Yankees - The Official World Series Film",
+    "Year": "2009",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Blutopia: The Los Angeles Dodgers Movie",
+    "Year": "2009",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Calvin Marshall",
+    "Year": "2009",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Talentless baseball player Alex Frost tries to make Steve Zahn coached college team. [ 149 ]",
+    "Link": "https://en.wikipedia.org/wiki/Calvin_Marshall",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Renegades: A Beep Ball Story",
+    "Year": "2009",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The New York Yankees 2009 World Series Collector's Edition",
+    "Year": "2009",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Official World Series Film Collection",
+    "Year": "2009",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Open Road",
+    "Year": "2009",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Minor leaguer Justin Timberlake has issues with baseball-legend dad Jeff Bridges . [ 148 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Open_Road",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Yankeeography: The Captains Collection",
+    "Year": "2009",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "4192: The Crowning of the Hit King",
+    "Year": "2010",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Reviewing the achievements, controversies of all-time hit leader Pete Rose . [ 150 ]",
+    "Link": "https://en.wikipedia.org/wiki/4192:_The_Crowning_of_the_Hit_King",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball's Greatest Games: 1960 World Series Game 7",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Chasing",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Chasing 3000",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Two boys go a long way to witness 3,000th career hit of Roberto Clemente . [ 151 ]",
+    "Link": "https://en.wikipedia.org/wiki/Chasing_3000",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Essential Games of the Detroit Tigers",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Fernando Nation",
+    "Year": "2010",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Made for TV as a part of ESPN's 30 for 30 series. Chronicles impact of Fernando Valenzuela 's 1981 rookie season with Los Angeles Dodgers . [ 152 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Four Days in October",
+    "Year": "2010",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Made for TV as a part of ESPN's 30 for 30 series. On the Boston Red Sox ' comeback from 3–0 series deficit against Yankees in 2004 ALCS . [ 153 ]",
+    "Link": "https://en.wikipedia.org/wiki/Four_Days_in_October",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Four Days in October (ESPN 30 for 30 Series)",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "How Do You Know",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "Rom-Com",
+    "Summary": "A romantic triangle involving a softball player ( Reese Witherspoon ) and a Washington Nationals pitcher ( Owen Wilson ). [ 154 ]",
+    "Link": "https://en.wikipedia.org/wiki/How_Do_You_Know",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Jews and Baseball: An American Love Story",
+    "Year": "2010",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Documentary film on the connection and history between American Jews and baseball. [ 156 ]",
+    "Link": "https://en.wikipedia.org/wiki/Jews_and_Baseball:_An_American_Love_Story",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Jordan Rides The Bus (ESPN 30 for 30 Series)",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Jordan Rides the Bus",
+    "Year": "2010",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Made for TV as a part of ESPN's 30 for 30 series. Explores Michael Jordan 's brief career in minor league baseball after his first retirement from basketball. [ 157 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Little Big Men",
+    "Year": "2010",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Made for TV as a part of ESPN's 30 for 30 series. On a Kirkland National Little League team's stunning victory in 1982 Little League World Series , and players' lives in the decades that followed. [ 158 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Little Big Men (ESPN 30 for 30 Series)",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Reds Memories: The Greatest Moments in Cincinnati Reds History",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Silly Little Game",
+    "Year": "2010",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Made for TV as a part of ESPN's 30 for 30 series. About the New York City writers and academics who created Rotisserie fantasy baseball , and how their creation eventually left them behind. [ 159 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Silly Little Game (ESPN 30 for 30 Series)",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The House of Steinbrenner",
+    "Year": "2010",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Made for TV as a part of ESPN's 30 for 30 series. Explores the legacy of George Steinbrenner 's ownership of the New York Yankees . [ 155 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Perfect Game",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Based on true story of Mexico team that won 1957 Little League World Series . [ 147 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Perfect_Game",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Yankeeography: The Core Four Collection",
+    "Year": "2010",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "2011 World Series Collectors Edition",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "4192: The Crowning of the Hit King ( Pete Rose )",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "A Mile in His Shoes",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A minor-league manager stumbles on a hidden talent who throws apples on a farm. [ 161 ]",
+    "Link": "https://en.wikipedia.org/wiki/A_Mile_in_His_Shoes",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Angels Memories: The Greatest Moments in Angels Baseball History",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Ballplayer: Pelotero",
+    "Year": "2011",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "A behind-the-scenes glimpse into the remarkably organized and well-managed system in the Dominican Republic that has produced an inordinate amount of elite athletes. [ 163 ]",
+    "Link": "https://en.wikipedia.org/wiki/Ballplayer:_Pelotero",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball's Greatest Games: 1979 Wrigley Field Slugfest",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball's Greatest Games: 1986 World Series Game 6",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball's Greatest Games: 1992 NLCS Game 7",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball's Greatest Games: 1993 World Series Game 6",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball's Greatest Games: Collector's Edition",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball's Greatest Games: Derek Jeter's 3000th Hit",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Catching Hell",
+    "Year": "2011",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Made for TV as a follow-up to ESPN's 30 for 30 series. Explores relationship between Steve Bartman and other Chicago Cubs fans since foul-ball incident in Game 6 of 2003 NLCS . [ 160 ]",
+    "Link": "https://en.wikipedia.org/wiki/Catching_Hell",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Catching Hell (ESPN 30 for 30 Series)",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Chicago Cubs: The Heart & Soul of Chicago",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Fernando Nation (ESPN 30 for 30 Series)",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "La Hazaña Del 41",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Milltown Pride",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "Moneyball",
     "Year": "2011",
     "Type": "Feature",
     "Genre": "Drama",
-    "Summary": "Billy Beane (Brad Pitt) changes the game forever with mathematics and budget constraints.",
-    "TrailerID": "-4QPVo0UIzc",
-    "Link": "https://www.justwatch.com/us/movie/moneyball"
+    "Summary": "Based on a true story , the Michael Lewis best-seller about Oakland A's exec Billy Beane , played by Brad Pitt , and assistant general manager Peter Brand (based on Paul DePodesta , played by Jonah Hill ). [ 162 ]",
+    "Link": "https://en.wikipedia.org/wiki/Moneyball_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Prime 9: MLB Heroics",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Steve Bartman: Catching Hell",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Anaheim Angels 2002 World Series Collection",
+    "Year": "2011",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball's Greatest Games: 2011 World Series Game 6",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball's Greatest Games: Verlander's 2007 No-Hitter",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Essential Games of the Chicago Cubs",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Essential Games of the Philadelphia Phillies",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Essential Games of the Texas Rangers",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Harvard Park",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Hitting for the Cycle",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Houston Astros 50th Anniversary Collector's Edition",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Knuckleball!",
+    "Year": "2012",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "A season following pitchers Tim Wakefield and R. A. Dickey . [ 165 ]",
+    "Link": "https://en.wikipedia.org/wiki/Knuckleball!",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Not Exactly Cooperstown",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "One Hit From Home",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Reel Baseball: Baseball's Golden Era",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Screwball: The Ted Whitfield Story",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The House of Steinbrenner (ESPN 30 for 30 Series)",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Trouble with the Curve",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Clint Eastwood as a veteran Atlanta Braves scout whose vision is fading. [ 164 ]",
+    "Link": "https://en.wikipedia.org/wiki/Trouble_with_the_Curve",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Universal Babe",
+    "Year": "2012",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "You Don't Know Bo",
+    "Year": "2012",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Made for TV as a part of ESPN's 30 for 30 series about baseball and football star Bo Jackson . [ 166 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "42",
     "Year": "2013",
     "Type": "Feature",
-    "Genre": "Biopic",
-    "Summary": "Chadwick Boseman is Jackie Robinson. Harrison Ford is Branch Rickey. The story of breaking the color barrier.",
-    "TrailerID": "I9RHqdZDCF0",
-    "Link": "https://www.justwatch.com/us/movie/42"
+    "Genre": "Biographical",
+    "Summary": "Story of Jackie Robinson 's ( Chadwick Boseman ) historic signing with Brooklyn Dodgers under guidance of team executive Branch Rickey (played by Harrison Ford ). [ 168 ]",
+    "Link": "https://en.wikipedia.org/wiki/42_(film)",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
-    "Title": "No No: A Dockumentary",
+    "Title": "42 (The True Story of an American Legend / Jackie Robinson )",
+    "Year": "2013",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Gibsonburg",
+    "Year": "2013",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Story of the 2005 Gibsonburg High School baseball team, the first Ohio high school team in any sport to win a state championship with a losing record. [ 169 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Home Run",
+    "Year": "2013",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A ballplayer dealing with substance abuse returns to his hometown. [ 167 ]",
+    "Link": "https://en.wikipedia.org/wiki/Home_Run_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "I'll Knock A Homer For You: The Timeless Story of Johnny Sylvester and Babe Ruth",
+    "Year": "2013",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Season of Miracles",
+    "Year": "2013",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Only Real Game",
+    "Year": "2013",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "You Don't Know Bo (ESPN 30 for 30 Series)",
+    "Year": "2013",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "108 Stitches",
     "Year": "2014",
-    "Type": "Doc",
-    "Genre": "Documentary",
-    "Summary": "The psychedelic story of Dock Ellis, who pitched a no-hitter on LSD.",
-    "TrailerID": "v=1_1_1_1_1",
-    "Link": "https://www.justwatch.com/us/movie/no-no-a-dockumentary"
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Henry & Me",
+    "Year": "2014",
+    "Type": "Feature",
+    "Genre": "Animation",
+    "Summary": "Guardian angel introduces an ill 12-year-old to New York Yankees of different eras. [ 174 ]",
+    "Link": "https://en.wikipedia.org/wiki/Henry_%26_Me",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Hero",
+    "Year": "2014",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Christian film about fathers and sons. [ 170 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Million Dollar Arm",
+    "Year": "2014",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A sports agent ( Jon Hamm ) arranges a baseball tryout for two cricket players from India. [ 171 ]",
+    "Link": "https://en.wikipedia.org/wiki/Million_Dollar_Arm",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "No No: A Dockumentary ( Dock Ellis )",
+    "Year": "2014",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "The Battered Bastards of Baseball",
     "Year": "2014",
     "Type": "Doc",
     "Genre": "Documentary",
-    "Summary": "The true story of the Portland Mavericks, a scrappy independent team owned by Bing Russell.",
-    "TrailerID": "v=1_1_1_1_1",
-    "Link": "https://www.netflix.com/title/70299904"
+    "Summary": "Look at a Portland minor-league team, featuring Bing (the team's owner) and Kurt Russell (who played for the team and later worked in its front office). [ 173 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Battered_Bastards_of_Baseball",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Vancouver Asahi",
+    "Year": "2014",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Set in Canada during the 1930s. [ 172 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Vancouver_Asahi",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Pitching Love and Catching Faith",
+    "Year": "2015",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Doc & Darryl",
+    "Year": "2016",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Made for TV as a part of ESPN's 30 for 30 series. Explores the lives, careers, and struggles with addiction of former New York Mets stars Dwight \"Doc\" Gooden and Darryl Strawberry . [ 177 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Everybody Wants Some!!",
+    "Year": "2016",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "Film by Richard Linklater about immature 1980 college baseball players in Texas. [ 176 ]",
+    "Link": "https://en.wikipedia.org/wiki/Everybody_Wants_Some!!_(film)",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "Fastball",
     "Year": "2016",
     "Type": "Doc",
     "Genre": "Documentary",
-    "Summary": "Kevin Costner narrates the scientific and historical quest to find the fastest pitch ever thrown.",
-    "TrailerID": "v=1_1_1_1_1",
-    "Link": "https://www.justwatch.com/us/movie/fastball"
+    "Summary": "With Kevin Costner narrating, lead a cast of baseball legends and scientists who explore the magic within the 396 milliseconds it takes a fastball to reach home plate, and decipher who threw the fastest pitch ever. [ 178 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Ken Burns: Jackie Robinson",
+    "Year": "2016",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Spaceman",
+    "Year": "2016",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "Josh Duhamel portrays a colorful left-handed pitcher, Bill Lee . [ 179 ]",
+    "Link": "https://en.wikipedia.org/wiki/Spaceman_(2016_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Spaceman ( Bill Lee )",
+    "Year": "2016",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Phenom",
+    "Year": "2016",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A talented young baseball player struggles professionally as he deals with his abusive father. [ 175 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Phenom_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Undrafted",
+    "Year": "2016",
+    "Type": "Feature",
+    "Genre": "Comedy",
+    "Summary": "After a college baseball star doesn't make the Major League Baseball draft, an intramural game with friends becomes hugely important to him as he tries to accept his broken dreams. [ 180 ]",
+    "Link": "https://en.wikipedia.org/wiki/Undrafted_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Let's Play Two",
+    "Year": "2017",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "World Beaters",
+    "Year": "2017",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "ESPN Films production chronicling the Maine – Endwell Little League team that won the 2016 Little League World Series , becoming the smallest community ever to win that event. [ 181 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Brampton's Own",
+    "Year": "2018",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "A 30-year-old minor league prospect reconnects with his high school sweetheart during the off season. [ 182 ]",
+    "Link": "https://en.wikipedia.org/wiki/Brampton%27s_Own",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Heading Home",
+    "Year": "2018",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "About the underdog Israel national baseball team competing for the first time in the World Baseball Classic . [ 183 ]",
+    "Link": "https://en.wikipedia.org/wiki/Heading_Home_(2018_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Catcher Was a Spy ( Moe Berg )",
+    "Year": "2018",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "90 Feet From Home",
+    "Year": "2019",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Benchwarmers 2",
+    "Year": "2019",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Bottom of the 9th",
+    "Year": "2019",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "After serving 17 years in prison for a violent mistake he made in his youth, a once-aspiring baseball player returns to his Bronx neighborhood. [ 185 ]",
+    "Link": "https://en.wikipedia.org/wiki/Bottom_of_the_9th_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Chance",
+    "Year": "2019",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Extra Innings",
+    "Year": "2019",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "High & Outside",
+    "Year": "2019",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Koshien: Japan's Field of Dreams",
+    "Year": "2019",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "US–Japanese coproduction exploring Japanese high school baseball , focusing on two schools trying to reach the 100th Summer Koshien national tournament and the differing approaches of their coaches. [ 184 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Long Time Coming: A 1955 Baseball Story",
+    "Year": "2019",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Other Boys of Summer",
+    "Year": "2019",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Spy Behind Home Plate ( Moe Berg Documentary)",
+    "Year": "2019",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Unauthorized Bash Brothers Experience ( Jose Canseco & Mark McGwire )",
+    "Year": "2019",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Throw Like a Girl",
+    "Year": "2019",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Baseball Girl",
+    "Year": "2020",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "Story of a high school student who tries to join a professional team with the help of her coach. [ 186 ]",
+    "Link": "https://en.wikipedia.org/wiki/Baseball_Girl",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Long Gone Summer",
+    "Year": "2020",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Made for TV as a part of ESPN's 30 for 30 series. A look back at the 1998 home run chase between Mark McGwire and Sammy Sosa . [ 187 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Long Gone Summer (30 For 30: Jose Canseco & Mark McGwire )",
+    "Year": "2020",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Romance in the Outfield: Double Play",
+    "Year": "2020",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The SIlent Natural",
+    "Year": "2020",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Under the Grapefruit Tree: The CC Sabathia Story",
+    "Year": "2020",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Gem Mint",
+    "Year": "2021",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Home Plate",
+    "Year": "2021",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Love and Baseball",
+    "Year": "2021",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Once Upon a Time in Queens",
+    "Year": "2021",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Made for TV as a part of ESPN's 30 for 30 series. A four-part exploration of the 1986 New York Mets and their enduring place in sports culture. [ 188 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Still Pitching",
+    "Year": "2021",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Kid Who Only Hits Homers",
+    "Year": "2021",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Facing Nolan",
+    "Year": "2022",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Explores the life and career of Hall of Fame Pitcher Nolan Ryan . [ 190 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Game Changer",
+    "Year": "2022",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "It Ain't Over",
+    "Year": "2022",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Explores the life and career of New York Yankees Hall of Fame catcher Yogi Berra . [ 189 ]",
+    "Link": "https://en.wikipedia.org/wiki/It_Ain%27t_Over_(film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "It Ain't Over ( Yogi Berra )",
+    "Year": "2022",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Running the Bases",
+    "Year": "2022",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Young Again",
+    "Year": "2022",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Reggie",
+    "Year": "2023",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
   },
   {
     "Title": "Shohei Ohtani: Beyond the Dream",
     "Year": "2023",
     "Type": "Doc",
     "Genre": "Documentary",
-    "Summary": "The definitive look at the rise of the modern Babe Ruth, narrated by Pedro Martinez.",
-    "TrailerID": "v=1_1_1_1_1",
-    "Link": "https://www.disneyplus.com"
+    "Summary": "Documentary made by ESPN Films exploring Shohei Ohtani 's rise from his beginning in Japan to becoming a two-way superstar in Major League Baseball. Starring Pedro Martínez as narrator. [ 192 ]",
+    "Link": "https://en.wikipedia.org/wiki/Shohei_Ohtani:_Beyond_the_Dream",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Hill",
+    "Year": "2023",
+    "Type": "Feature",
+    "Genre": "Biographical",
+    "Summary": "The true-life story of Rickey Hill's improbable journey to play Major League Baseball. [ 193 ]",
+    "Link": "https://en.wikipedia.org/wiki/The_Hill_(2023_film)",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Tomorrow's Game",
+    "Year": "2023",
+    "Type": "Feature",
+    "Genre": "Children and family, Science fiction",
+    "Summary": "On the day of his uncle's ascendance into the Baseball Hall of Fame , Daniel is forced to embark on a journey through time that sees him restore his family's legacy and rewrite baseball history. With Paul Rodriguez. [ 191 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Always Believe: The Ozzie Albies Story",
+    "Year": "2024",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Eephus",
+    "Year": "2024",
+    "Type": "Feature",
+    "Genre": "Drama",
+    "Summary": "About the final game of an amateur New England baseball league before their stadium is demolished. [ 195 ]",
+    "Link": "https://en.wikipedia.org/wiki/Eephus",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Graceball: The Story of Bobby Richardson",
+    "Year": "2024",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Nos Amours: The Saga of the Montreal Expos",
+    "Year": "2024",
+    "Type": "Doc",
+    "Genre": "Documentary",
+    "Summary": "Canadian film telling the story of the Montreal Expos , including the continuing attempts to return MLB to the city. [ 194 ]",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "You Gotta Believe",
+    "Year": "2024",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "Caught Stealing",
+    "Year": "2025",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
+  },
+  {
+    "Title": "The Instigators",
+    "Year": "2025",
+    "Type": "Feature",
+    "Genre": "",
+    "Summary": "",
+    "Link": "",
+    "VideoID": "",
+    "TrailerID": ""
   }
 ]
