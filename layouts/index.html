@@ -31,7 +31,6 @@
         .tabs { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
         .tab-btn { background: transparent; border: 1px solid #334155; color: var(--muted); padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.2s; }
         .tab-btn.active { background: white; color: black; border-color: white; }
-        .tab-btn:hover { border-color: white; color: white; }
         
         #searchInput { width: 100%; max-width: 500px; padding: 12px; background: var(--card); border: 1px solid #334155; color: white; border-radius: 8px; font-size: 1rem; margin: 0 auto; display: block; }
 
@@ -42,8 +41,8 @@
         .card { background: var(--card); border-radius: 12px; padding: 25px; display: flex; flex-direction: column; border: 1px solid transparent; transition: 0.2s; }
         .card:hover { transform: translateY(-5px); border-color: #475569; }
 
-        /* STORY CARD OVERRIDE */
-        .card.story { border: 1px solid var(--gold); background: linear-gradient(180deg, #27272a 0%, #1e293b 100%); display: none; /* Hidden by default until tab clicked */ }
+        /* STORY CARD */
+        .card.story { border: 1px solid var(--gold); background: linear-gradient(180deg, #27272a 0%, #1e293b 100%); display: none; }
         .card.story .year-badge { color: var(--gold); }
         .card.story .watch-btn { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
         .card.story .watch-btn:hover { background: var(--gold); color: black; }
@@ -128,7 +127,6 @@
             </div>
         </div>
         {{ end }}
-
     </div>
 </div>
 
@@ -141,10 +139,9 @@
 </div>
 
 <script>
-    // Stats
     document.getElementById('total-count').innerText = document.getElementsByClassName('card').length;
 
-    // Filter Logic
+    // Filter
     function filter(type) {
         let cards = document.getElementsByClassName('card');
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -152,33 +149,13 @@
 
         for (let card of cards) {
             let cardType = card.getAttribute('data-type');
-            
-            if (type === 'all') {
-                // Show everything EXCEPT stories
-                if (cardType === 'story') {
-                    card.style.display = 'none'; 
-                } else {
-                    card.style.display = 'flex';
-                }
-            } else if (type === 'story') {
-                // Show ONLY stories
-                if (cardType === 'story') {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            } else {
-                // Normal Filter
-                if (cardType && cardType.includes(type) && cardType !== 'story') {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            }
+            if (type === 'all') card.style.display = (cardType === 'story') ? 'none' : 'flex';
+            else if (type === 'story') card.style.display = (cardType === 'story') ? 'flex' : 'none';
+            else card.style.display = (cardType && cardType.includes(type) && cardType !== 'story') ? 'flex' : 'none';
         }
     }
 
-    // Search Logic
+    // Search
     function search() {
         let val = document.getElementById('searchInput').value.toUpperCase();
         let cards = document.getElementsByClassName('card');
@@ -188,18 +165,33 @@
         }
     }
 
-    // Video Logic
-    function play(id, title) {
-        if (!id) return alert("Video ID missing!");
+    // AUTO-FIX PLAYER
+    function play(rawId, title) {
+        if (!rawId) return alert("Video ID missing!");
+        
+        // This is the AUTO-FIX logic:
+        let cleanId = rawId;
+        
+        // 1. If it's a full URL like "https://www.youtube.com/watch?v=XYZ..."
+        if (rawId.includes("v=")) {
+            cleanId = rawId.split("v=")[1]; // Take everything after v=
+            if (cleanId.includes("&")) {
+                cleanId = cleanId.split("&")[0]; // Remove extra tracking stuff
+            }
+        } 
+        // 2. If it's a short URL like "https://youtu.be/XYZ"
+        else if (rawId.includes("youtu.be/")) {
+            cleanId = rawId.split("youtu.be/")[1];
+        }
+
         document.getElementById('modal').style.display = 'block';
         document.getElementById('vidTitle').innerText = title;
-        // The ?autoplay=1 ensures it starts immediately
-        document.getElementById('screen').src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+        document.getElementById('screen').src = "https://www.youtube.com/embed/" + cleanId + "?autoplay=1&rel=0";
     }
     
     function closePlayer() {
         document.getElementById('modal').style.display = 'none';
-        document.getElementById('screen').src = ""; // Stops audio
+        document.getElementById('screen').src = "";
     }
 </script>
 

@@ -32,7 +32,6 @@
         .tabs { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
         .tab-btn { background: transparent; border: 1px solid #334155; color: var(--muted); padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.2s; }
         .tab-btn.active { background: white; color: black; border-color: white; }
-        .tab-btn:hover { border-color: white; color: white; }
         
         #searchInput { width: 100%; max-width: 500px; padding: 12px; background: var(--card); border: 1px solid #334155; color: white; border-radius: 8px; font-size: 1rem; margin: 0 auto; display: block; }
 
@@ -44,7 +43,7 @@
         .card:hover { transform: translateY(-5px); border-color: #475569; }
 
          
-        .card.story { border: 1px solid var(--gold); background: linear-gradient(180deg, #27272a 0%, #1e293b 100%); display: none;   }
+        .card.story { border: 1px solid var(--gold); background: linear-gradient(180deg, #27272a 0%, #1e293b 100%); display: none; }
         .card.story .year-badge { color: var(--gold); }
         .card.story .watch-btn { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
         .card.story .watch-btn:hover { background: var(--gold); color: black; }
@@ -5129,7 +5128,6 @@
             </div>
         </div>
         
-
     </div>
 </div>
 
@@ -5142,7 +5140,6 @@
 </div>
 
 <script>
-    
     document.getElementById('total-count').innerText = document.getElementsByClassName('card').length;
 
     
@@ -5153,29 +5150,9 @@
 
         for (let card of cards) {
             let cardType = card.getAttribute('data-type');
-            
-            if (type === 'all') {
-                
-                if (cardType === 'story') {
-                    card.style.display = 'none'; 
-                } else {
-                    card.style.display = 'flex';
-                }
-            } else if (type === 'story') {
-                
-                if (cardType === 'story') {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            } else {
-                
-                if (cardType && cardType.includes(type) && cardType !== 'story') {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            }
+            if (type === 'all') card.style.display = (cardType === 'story') ? 'none' : 'flex';
+            else if (type === 'story') card.style.display = (cardType === 'story') ? 'flex' : 'none';
+            else card.style.display = (cardType && cardType.includes(type) && cardType !== 'story') ? 'flex' : 'none';
         }
     }
 
@@ -5190,17 +5167,32 @@
     }
 
     
-    function play(id, title) {
-        if (!id) return alert("Video ID missing!");
+    function play(rawId, title) {
+        if (!rawId) return alert("Video ID missing!");
+        
+        
+        let cleanId = rawId;
+        
+        
+        if (rawId.includes("v=")) {
+            cleanId = rawId.split("v=")[1]; 
+            if (cleanId.includes("&")) {
+                cleanId = cleanId.split("&")[0]; 
+            }
+        } 
+        
+        else if (rawId.includes("youtu.be/")) {
+            cleanId = rawId.split("youtu.be/")[1];
+        }
+
         document.getElementById('modal').style.display = 'block';
         document.getElementById('vidTitle').innerText = title;
-        
-        document.getElementById('screen').src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+        document.getElementById('screen').src = "https://www.youtube.com/embed/" + cleanId + "?autoplay=1&rel=0";
     }
     
     function closePlayer() {
         document.getElementById('modal').style.display = 'none';
-        document.getElementById('screen').src = ""; 
+        document.getElementById('screen').src = "";
     }
 </script>
 
