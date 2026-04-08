@@ -1,909 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="generator" content="WBN 2026">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 World Baseball Classic Schedule — Classic Baseball World</title>
+  <title>2026 World Baseball Classic — Full Results | Classic Baseball World</title>
+  <meta name="description" content="2026 WBC complete results. Venezuela defeats USA 3-2 to win first World Baseball Classic title. Pool standings, bracket, scores, MVP, and streaming guide.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
-    /* ── Matches classicbaseball.world exactly ── */
     :root {
-      --bg:      #0f172a;
-      --card:    #1e293b;
-      --text:    #f8fafc;
-      --muted:   #94a3b8;
-      --accent:  #D50032; /* WBC red */
-      --neon:    #00ff9d; /* site neon green */
-      --gold:    #f59e0b;
-      --rule:    #334155;
-      --exh:     #818cf8;
+      --bg:    #0f172a; --card:  #1e293b; --card2: #162032;
+      --text:  #f8fafc; --muted: #94a3b8; --accent:#D50032;
+      --neon:  #00ff9d; --gold:  #fbbf24; --rule:  #334155;
+      --blue:  #38bdf8; --purple:#a78bfa; --green: #4ade80;
+      --ven:   #CF142B;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      margin: 0;
-      padding: 20px;
-      min-height: 100vh;
-    }
-
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6; padding: 20px; max-width: 1100px; margin: 0 auto; }
     a { text-decoration: none; color: inherit; }
 
-    /* ── TOP NAV — matches site ── */
-    .top-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 16px;
-      margin-bottom: 40px;
-    }
-
-    .hq-link {
-      color: var(--neon);
-      border: 1px solid var(--neon);
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 0.75rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: background 0.2s;
-    }
-
-    .hq-link:hover { background: rgba(0,255,157,0.1); }
-
-    .nav-archive-link {
-      color: var(--muted);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .nav-archive-link:hover { color: var(--text); }
-
-    /* ── DASHBOARD WRAPPER ── */
-    .dashboard-wrapper {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    /* ── HERO ── */
-    .hero {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .main-title {
-      font-size: 3rem;
-      font-weight: 900;
-      margin: 0;
-      letter-spacing: -2px;
-    }
-
-    .sub-title {
-      color: var(--muted);
-      font-size: 1rem;
-      margin-top: 10px;
-    }
-
-    .stats {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 20px;
-      font-family: monospace;
-      color: var(--muted);
-    }
-
-    .stat-num { color: var(--accent); font-weight: bold; font-size: 1.2rem; }
-
-    /* ── CONTROLS / TABS ── */
-    .controls { margin-bottom: 30px; text-align: center; }
-
-    .tab-row {
-      display: flex;
-      justify-content: center;
-      gap: 0;
-      border: 1px solid var(--rule);
-      border-radius: 6px;
-      overflow: hidden;
-      display: inline-flex;
-      margin-bottom: 16px;
-    }
-
-    .tab-btn {
-      background: none;
-      border: none;
-      border-right: 1px solid var(--rule);
-      color: var(--muted);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: all 0.15s;
-      white-space: nowrap;
-    }
-
-    .tab-btn:last-child { border-right: none; }
-    .tab-btn:hover { background: rgba(255,255,255,0.05); color: var(--text); }
-    .tab-btn.active { background: var(--accent); color: #fff; }
-    .tab-btn.active.exh { background: var(--exh); }
-
-    /* filter pills (tournament tab) */
-    .filter-row {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 8px;
-    }
-
-    .filter-btn {
-      background: none;
-      border: 1px solid var(--rule);
-      color: var(--muted);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-
-    .filter-btn:hover { border-color: var(--muted); color: var(--text); }
-    .filter-btn.active { border-color: var(--neon); color: var(--neon); background: rgba(0,255,157,0.07); }
-
-    /* ── PANELS ── */
-    .panel { display: none; }
-    .panel.active { display: block; }
-
-    /* ── STANDINGS ── */
-    .standings-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-bottom: 40px;
-    }
-
-    .standings-card {
-      background: var(--card);
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-      padding: 14px;
-    }
-
-    .sc-header {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--neon);
-      margin-bottom: 10px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--rule);
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .sc-venue { color: var(--muted); font-weight: 400; }
-
-    .sc-row {
-      display: grid;
-      grid-template-columns: 16px 1fr 22px 22px;
-      gap: 4px;
-      align-items: center;
-      padding: 4px 0;
-      font-size: 0.8rem;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-    }
-
-    .sc-row:last-child { border-bottom: none; }
-    .sc-pos { color: var(--muted); font-size: 0.65rem; font-family: monospace; }
-    .sc-team { font-weight: 700; display: flex; align-items: center; gap: 4px; }
-    .sc-w { text-align: center; color: #4ade80; font-weight: 700; font-family: monospace; font-size: 0.75rem; }
-    .sc-l { text-align: center; color: #f87171; font-weight: 700; font-family: monospace; font-size: 0.75rem; }
-    .sc-hdr { color: var(--muted); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; }
-
-    /* ── POOL SECTIONS ── */
-    .pool-section { margin-bottom: 48px; }
-
-    .pool-heading {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .pool-title {
-      font-size: 1.4rem;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-    }
-
-    .pool-venue-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .pool-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 6px;
-      flex-shrink: 0;
-    }
-
-    /* ── GAME ROW ── */
-    .game-row {
-      display: grid;
-      grid-template-columns: 80px 1fr 110px 90px;
-      align-items: center;
-      gap: 12px;
-      padding: 10px 12px;
-      border-radius: 6px;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-      transition: background 0.12s;
-      cursor: default;
-    }
-
-    .game-row:hover { background: rgba(255,255,255,0.03); }
-    .game-row.is-live { background: rgba(0,255,157,0.03); }
-    .game-row:last-child { border-bottom: none; }
-
-    .g-date-main { font-size: 0.85rem; font-weight: 700; color: var(--text); }
-    .g-date-day  { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 1px; }
-
-    .g-teams { display: flex; align-items: center; gap: 8px; }
-    .g-team  { display: flex; align-items: center; gap: 5px; }
-    .g-flag  { font-size: 1.1rem; line-height: 1; }
-    .g-code  { font-size: 0.95rem; font-weight: 900; letter-spacing: 0.03em; }
-    .g-name  { font-size: 0.6rem; color: var(--muted); margin-top: 1px; }
-    .g-vs    { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; color: #475569; flex-shrink: 0; }
-
-    .g-score-box {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      background: rgba(245,158,11,0.1);
-      border: 1px solid rgba(245,158,11,0.2);
-      border-radius: 4px;
-      padding: 4px 10px;
-      justify-content: center;
-    }
-
-    .g-score-num { font-size: 1.1rem; font-weight: 900; color: var(--gold); font-family: monospace; min-width: 14px; text-align: center; }
-    .g-score-sep { color: rgba(245,158,11,0.4); font-size: 0.8rem; }
-    .g-time-val  { font-size: 0.75rem; font-weight: 700; color: var(--muted); text-align: center; font-family: monospace; }
-
-    .g-status { display: flex; align-items: center; justify-content: flex-end; }
-
-    .pill {
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: 4px;
-    }
-
-    .pill-live  { background: rgba(0,255,157,0.15); color: var(--neon); border: 1px solid rgba(0,255,157,0.35); animation: glow 1.4s ease infinite; }
-    .pill-final { background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--rule); }
-    .pill-sched { background: rgba(99,149,255,0.08); color: #7aadff; border: 1px solid rgba(99,149,255,0.2); }
-    .pill-tbd   { background: transparent; color: #475569; border: 1px solid var(--rule); }
-    .pill-exh   { background: rgba(129,140,248,0.1); color: var(--exh); border: 1px solid rgba(129,140,248,0.25); }
-
-    @keyframes glow {
-      0%,100% { opacity:1; box-shadow: 0 0 6px rgba(0,255,157,0.3); }
-      50%      { opacity:0.5; box-shadow: none; }
-    }
-
-    .inn { font-size: 0.65rem; font-weight: 700; color: var(--neon); margin-left: 4px; font-family: monospace; }
-
-    /* ── BRACKET ── */
-    .bracket-wrap {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--rule);
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .bracket-col {
-      background: var(--card);
-      padding: 20px 16px;
-    }
-
-    .bracket-col-label {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .b-game {
-      background: var(--bg);
-      border: 1px solid var(--rule);
-      border-radius: 4px;
-      padding: 10px 12px;
-      margin-bottom: 8px;
-    }
-
-    .b-meta {
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .b-meta.champ { color: var(--gold); }
-
-    .b-tbd-label {
-      font-size: 0.75rem;
-      color: #475569;
-      font-style: italic;
-      text-align: center;
-      padding: 6px 0;
-    }
-
-    .b-matchup { display: flex; flex-direction: column; gap: 4px; }
-
-    .b-team {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 3px 0;
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-
-    .b-team-info { display: flex; align-items: center; gap: 5px; }
-    .b-score { font-family: monospace; font-size: 1rem; font-weight: 900; color: var(--gold); }
-
-    .b-divider {
-      height: 1px;
-      background: var(--rule);
-      margin: 1px 0;
-      position: relative;
-    }
-
-    .b-divider::after {
-      content: 'vs';
-      position: absolute;
-      left: 50%; top: 50%;
-      transform: translate(-50%,-50%);
-      background: var(--bg);
-      padding: 0 5px;
-      font-size: 0.55rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: #475569;
-      text-transform: uppercase;
-    }
-
-    .champ-game {
-      background: linear-gradient(135deg, #1a0800, #0f172a);
-      border-color: rgba(245,158,11,0.3) !important;
-    }
-
-    /* ── EXHIBITION PANEL ── */
-    .exh-day { margin-bottom: 48px; }
-
-    .exh-day-heading {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 12px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .exh-day-title {
-      font-size: 1.3rem;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-    }
-
-    .exh-badge {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--exh);
-      border: 1px solid rgba(129,140,248,0.3);
-      padding: 2px 8px;
-      border-radius: 3px;
-    }
-
-    .exh-note {
-      font-size: 0.7rem;
-      color: var(--muted);
-      margin-bottom: 16px;
-      padding: 6px 10px;
-      background: rgba(129,140,248,0.05);
-      border: 1px solid rgba(129,140,248,0.12);
-      border-radius: 4px;
-      display: inline-block;
-    }
-
-    .exh-row {
-      display: grid;
-      grid-template-columns: 90px 1fr 180px 80px;
-      align-items: center;
-      gap: 12px;
-      padding: 9px 12px;
-      border-radius: 5px;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-      transition: background 0.12s;
-      cursor: default;
-    }
-
-    .exh-row:hover { background: rgba(255,255,255,0.025); }
-    .exh-row:last-child { border-bottom: none; }
-
-    .exh-time { font-size: 0.8rem; font-weight: 700; color: var(--text); font-family: monospace; }
-    .exh-tz   { font-size: 0.6rem; color: var(--muted); margin-top: 1px; }
-
-    .exh-matchup { display: flex; align-items: center; gap: 8px; }
-    .exh-wbc  { display: flex; align-items: center; gap: 5px; }
-    .exh-flag { font-size: 1rem; }
-    .exh-code { font-size: 0.9rem; font-weight: 900; }
-    .exh-name { font-size: 0.6rem; color: var(--muted); margin-top: 1px; }
-    .exh-at   { font-size: 0.65rem; font-weight: 700; color: #475569; letter-spacing: 0.1em; }
-    .exh-mlb  { display: flex; align-items: center; gap: 5px; }
-    .exh-mlb-code { font-size: 0.9rem; font-weight: 700; color: var(--muted); }
-    .exh-mlb-name { font-size: 0.6rem; color: #475569; margin-top: 1px; }
-
-    .exh-venue { }
-    .exh-venue-name { font-size: 0.72rem; font-weight: 600; color: var(--muted); }
-    .exh-venue-city { font-size: 0.6rem; color: #475569; margin-top: 1px; }
-
-    .exh-tv { text-align: right; }
-    .tv-pill {
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 2px 6px;
-      border-radius: 3px;
-      background: rgba(129,140,248,0.1);
-      color: var(--exh);
-      border: 1px solid rgba(129,140,248,0.2);
-    }
-
-    /* ── FOOTER ── */
-    .site-footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid var(--rule);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.7rem;
-      color: var(--muted);
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .footer-links { display: flex; gap: 20px; }
-    .footer-links a { color: var(--muted); transition: color 0.15s; }
-    .footer-links a:hover { color: var(--neon); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .standings-grid { grid-template-columns: repeat(2, 1fr); }
-      .bracket-wrap { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 640px) {
-      body { padding: 12px; }
-      .game-row { grid-template-columns: 64px 1fr 70px; }
-      .g-status { display: none; }
-      .exh-row { grid-template-columns: 72px 1fr 100px; }
-      .exh-tv { display: none; }
-      .standings-grid { grid-template-columns: 1fr 1fr; }
-      .main-title { font-size: 2rem; }
+    /* NAV */
+    .top-nav { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--rule); padding-bottom: 16px; margin-bottom: 40px; flex-wrap: wrap; gap: 12px; }
+    .nav-left { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .logo-area a { font-weight: 900; font-size: 0.95rem; color: var(--text); }
+    .nav-pill { color: var(--muted); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; padding: 4px 12px; border: 1px solid var(--rule); border-radius: 20px; transition: 0.2s; }
+    .nav-pill:hover { color: var(--text); border-color: var(--text); }
+    .nav-pill.active { color: var(--accent); border-color: var(--accent); }
+    .hq-link { color: var(--neon); border: 1px solid var(--neon); padding: 8px 16px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+    .dot { width: 8px; height: 8px; background: var(--neon); border-radius: 50%; }
+
+    /* CHAMP HERO */
+    .champ-hero { background: linear-gradient(135deg, #1a0000 0%, #0f172a 70%); border: 1px solid rgba(207,20,43,0.5); border-radius: 14px; padding: 40px 32px; text-align: center; margin-bottom: 48px; position: relative; overflow: hidden; }
+    .champ-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 50% 0%, rgba(207,20,43,0.12) 0%, transparent 70%); pointer-events:none; }
+    .champ-eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .champ-flag { font-size: 4rem; line-height: 1; margin-bottom: 12px; }
+    .champ-title { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; letter-spacing: -1.5px; line-height: 1; margin-bottom: 8px; }
+    .champ-title .country { color: var(--gold); }
+    .champ-score { font-size: 1.4rem; font-weight: 900; font-family: monospace; color: var(--text); margin: 12px 0; letter-spacing: 2px; }
+    .champ-detail { color: var(--muted); font-size: 0.88rem; max-width: 640px; margin: 0 auto 16px; line-height: 1.7; }
+    .champ-detail strong { color: var(--text); }
+    .champ-chips { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+    .champ-chip { font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; padding: 3px 10px; border-radius: 20px; background: rgba(207,20,43,0.12); color: var(--accent); border: 1px solid rgba(207,20,43,0.3); }
+    .champ-chip.gold { background: rgba(251,191,36,0.1); color: var(--gold); border-color: rgba(251,191,36,0.3); }
+
+    /* SECTION */
+    .section { margin-bottom: 48px; }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); flex-wrap: wrap; }
+    .section-num { font-family: monospace; font-size: 0.75rem; color: var(--accent); font-weight: 700; letter-spacing: 2px; }
+    .section-title { font-size: 1.3rem; font-weight: 900; letter-spacing: -0.3px; }
+
+    /* BRACKET */
+    .bracket-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+    .bracket-card { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+    .bracket-head { padding: 10px 16px; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid var(--rule); }
+    .bracket-head.qf { background: rgba(56,189,248,0.08); color: var(--blue); }
+    .bracket-head.sf { background: rgba(167,139,250,0.08); color: var(--purple); }
+    .bracket-head.final { background: rgba(251,191,36,0.1); color: var(--gold); }
+    .bracket-body { padding: 14px 16px; }
+    .match { padding: 8px 0; border-bottom: 1px solid rgba(51,65,85,0.5); }
+    .match:last-child { border-bottom: none; }
+    .match-row { display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; padding: 3px 0; }
+    .match-team { display: flex; align-items: center; gap: 8px; }
+    .match-flag { font-size: 0.9rem; }
+    .match-name { font-weight: 600; }
+    .match-name.winner { color: var(--neon); font-weight: 900; }
+    .match-score { font-family: monospace; font-weight: 700; font-size: 0.9rem; }
+    .match-score.winner { color: var(--neon); }
+    .match-score.loser { color: var(--muted); }
+    .match-note { font-size: 0.7rem; color: var(--muted); margin-top: 3px; padding-left: 26px; }
+
+    /* POOL STANDINGS */
+    .pools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .pool-card { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+    .pool-head { padding: 12px 16px; font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid var(--rule); }
+    .ph-a { background: rgba(56,189,248,0.08); color: var(--blue); }
+    .ph-b { background: rgba(74,222,128,0.08); color: var(--green); }
+    .ph-c { background: rgba(251,191,36,0.08); color: var(--gold); }
+    .ph-d { background: rgba(213,0,50,0.08); color: var(--accent); }
+    .pool-body { padding: 4px 0; }
+    .pool-row { display: flex; align-items: center; justify-content: space-between; padding: 7px 16px; font-size: 0.8rem; border-bottom: 1px solid rgba(51,65,85,0.3); }
+    .pool-row:last-child { border-bottom: none; }
+    .pool-row.advanced { background: rgba(0,255,157,0.03); }
+    .pool-team { display: flex; align-items: center; gap: 8px; }
+    .pool-flag { font-size: 0.85rem; }
+    .pool-name { font-weight: 600; }
+    .pool-name.adv { color: var(--neon); }
+    .pool-rec { font-family: monospace; font-size: 0.78rem; color: var(--muted); }
+    .adv-label { font-size: 0.55rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: rgba(0,255,157,0.1); color: var(--neon); padding: 1px 5px; border-radius: 4px; }
+
+    /* STORYLINES */
+    .story-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+    .story-card { background: var(--card2); border: 1px solid var(--rule); border-radius: 8px; padding: 16px 18px; }
+    .story-eyebrow { font-size: 0.6rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .story-title { font-weight: 900; font-size: 0.95rem; margin-bottom: 6px; color: var(--text); }
+    .story-body { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+    .story-body strong { color: var(--text); }
+
+    /* STREAMING */
+    .stream-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .stream-item { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 12px 14px; }
+    .stream-platform { font-weight: 700; font-size: 0.85rem; margin-bottom: 3px; }
+    .stream-platform a { color: var(--blue); }
+    .stream-platform a:hover { color: var(--neon); }
+    .stream-detail { font-size: 0.72rem; color: var(--muted); }
+
+    /* FOOTER */
+    .footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.72rem; color: var(--muted); }
+    .footer a { color: var(--muted); }
+    .footer a:hover { color: var(--neon); }
+    .footer-brand { font-weight: 900; color: var(--text); font-size: 0.85rem; }
+
+    @media (max-width: 600px) {
+      .top-nav { flex-direction: column; align-items: flex-start; }
+      .champ-hero { padding: 28px 18px; }
     }
   </style>
 </head>
 <body>
-<div class="dashboard-wrapper">
 
-  <!-- TOP NAV -->
-  <nav class="top-nav">
-    <a href="https://classicbaseball.world" class="nav-archive-link">← THE ARCHIVE</a>
-    <a href="https://worldbaseball.com" class="hq-link">WBN HQ</a>
-  </nav>
+<!-- NAV -->
+<div class="top-nav">
+  <div class="nav-left">
+    <div class="logo-area"><a href="/">CLASSIC BASEBALL WORLD</a></div>
+    <a href="/streaming.html" class="nav-pill">Streaming Guide</a>
+    <a href="/schedules.html" class="nav-pill">When to Watch</a>
+    <a href="/movies.html" class="nav-pill">Movie DB</a>
+    <a href="/wbc2026.html" class="nav-pill active">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="dot"></span> WBN HQ</a>
+</div>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1 class="main-title">2026 WORLD BASEBALL CLASSIC</h1>
-    <p class="sub-title">March 5 – 17, 2026 &nbsp;·&nbsp; Tokyo · San Juan · Houston · Miami</p>
-    <div class="stats">
-      <span><span class="stat-num">20</span> NATIONS</span>
-      <span><span class="stat-num">47</span> GAMES</span>
-      <span><span class="stat-num">13</span> DAYS</span>
-      <span><span class="stat-num">4</span> VENUES</span>
+<!-- CHAMPION HERO -->
+<div class="champ-hero">
+  <div class="champ-eyebrow">2026 World Baseball Classic · March 5–17 · Miami Finale</div>
+  <div class="champ-flag">🇻🇪</div>
+  <div class="champ-title"><span class="country">Venezuela</span> — World Champions</div>
+  <div class="champ-score">VEN 3 · USA 2</div>
+  <p class="champ-detail">
+    Eugenio Suárez's RBI double in the top of the 9th gave Venezuela the lead they wouldn't surrender. Daniel Palencia closed it out on the mound. <strong>Bryce Harper's</strong> tying two-run blast in the 8th had electrified loanDepot Park — but Venezuela regrouped, and the 36,490 fans in Miami witnessed history: Venezuela's <strong>first ever World Baseball Classic title</strong>. Their first international baseball championship since the 1945 Amateur World Series.
+  </p>
+  <div class="champ-chips">
+    <span class="champ-chip gold">🏆 MVP: Maikel García</span>
+    <span class="champ-chip">First-time champions</span>
+    <span class="champ-chip">Japan eliminated QF</span>
+    <span class="champ-chip">Italy's Cinderella run</span>
+    <span class="champ-chip">10.8M US viewers (FOX)</span>
+    <span class="champ-chip">National holiday declared in Venezuela</span>
+  </div>
+</div>
+
+<!-- KNOCKOUT BRACKET -->
+<div class="section" id="bracket">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Knockout Stage Results</h2>
+  </div>
+  <div class="bracket-grid">
+
+    <!-- QF 1 -->
+    <div class="bracket-card">
+      <div class="bracket-head qf">Quarterfinal · Houston · Mar 13</div>
+      <div class="bracket-body">
+        <div class="match">
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇩🇴</span><span class="match-name winner">Dominican Republic</span></div>
+            <span class="match-score winner">10</span>
+          </div>
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇰🇷</span><span class="match-name">South Korea</span></div>
+            <span class="match-score loser">0</span>
+          </div>
+          <div class="match-note">7 innings (mercy rule)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QF 2 -->
+    <div class="bracket-card">
+      <div class="bracket-head qf">Quarterfinal · Houston · Mar 13</div>
+      <div class="bracket-body">
+        <div class="match">
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇺🇸</span><span class="match-name winner">United States</span></div>
+            <span class="match-score winner">5</span>
+          </div>
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇨🇦</span><span class="match-name">Canada</span></div>
+            <span class="match-score loser">3</span>
+          </div>
+          <div class="match-note">Canada's historic first pool-play advance</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QF 3 -->
+    <div class="bracket-card">
+      <div class="bracket-head qf">Quarterfinal · Miami · Mar 14</div>
+      <div class="bracket-body">
+        <div class="match">
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇻🇪</span><span class="match-name winner">Venezuela</span></div>
+            <span class="match-score winner">W</span>
+          </div>
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇯🇵</span><span class="match-name">Japan</span></div>
+            <span class="match-score loser">L</span>
+          </div>
+          <div class="match-note">Japan's worst-ever WBC finish · Defending champs eliminated</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QF 4 -->
+    <div class="bracket-card">
+      <div class="bracket-head qf">Quarterfinal · Miami · Mar 14</div>
+      <div class="bracket-body">
+        <div class="match">
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇮🇹</span><span class="match-name winner">Italy</span></div>
+            <span class="match-score winner">W</span>
+          </div>
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇦🇺</span><span class="match-name">Australia</span></div>
+            <span class="match-score loser">L</span>
+          </div>
+          <div class="match-note">Italy went undefeated through pool play</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF 1 -->
+    <div class="bracket-card">
+      <div class="bracket-head sf">Semifinal · Miami · Mar 15</div>
+      <div class="bracket-body">
+        <div class="match">
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇺🇸</span><span class="match-name winner">United States</span></div>
+            <span class="match-score winner">2</span>
+          </div>
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇩🇴</span><span class="match-name">Dominican Republic</span></div>
+            <span class="match-score loser">1</span>
+          </div>
+          <div class="match-note">Gunnar Henderson + Roman Anthony solo HRs · Jr. Caminero HR for DR</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF 2 -->
+    <div class="bracket-card">
+      <div class="bracket-head sf">Semifinal · Miami · Mar 16</div>
+      <div class="bracket-body">
+        <div class="match">
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇻🇪</span><span class="match-name winner">Venezuela</span></div>
+            <span class="match-score winner">4</span>
+          </div>
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇮🇹</span><span class="match-name">Italy</span></div>
+            <span class="match-score loser">2</span>
+          </div>
+          <div class="match-note">Suárez HR · Acuña, García, Arráez RBI singles · 6 relievers threw 7.2 scoreless IP</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINAL -->
+    <div class="bracket-card" style="grid-column: span 2; border-color: rgba(251,191,36,0.4);">
+      <div class="bracket-head final">Championship Game · loanDepot Park, Miami · March 17, 2026</div>
+      <div class="bracket-body">
+        <div class="match">
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇻🇪</span><span class="match-name winner" style="font-size:1rem;">Venezuela 🏆</span></div>
+            <span class="match-score winner" style="font-size:1.2rem;">3</span>
+          </div>
+          <div class="match-row">
+            <div class="match-team"><span class="match-flag">🇺🇸</span><span class="match-name">United States</span></div>
+            <span class="match-score loser" style="font-size:1.2rem;">2</span>
+          </div>
+          <div class="match-note" style="font-size:0.75rem;line-height:1.6;">
+            <strong style="color:var(--text)">1st:</strong> Maikel García sac fly (1–0) ·
+            <strong style="color:var(--text)">5th:</strong> Wilyer Abreu HR, 414 ft (2–0) ·
+            <strong style="color:var(--text)">8th:</strong> Bryce Harper 2-run HR ties it 2–2 ·
+            <strong style="color:var(--text)">9th:</strong> Eugenio Suárez RBI double (3–2) · Daniel Palencia closes — Venezuela wins
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:12px;font-size:0.75rem;">
+          <div style="background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.2);border-radius:4px;padding:7px 10px;">
+            <div style="color:var(--muted);font-size:0.6rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px;">Tournament MVP</div>
+            <div style="font-weight:700;color:var(--gold);">Maikel García 🇻🇪</div>
+            <div style="color:var(--muted);">10 H · 7 RBI · Key HR vs Japan QF</div>
+          </div>
+          <div style="background:rgba(0,255,157,0.04);border:1px solid rgba(0,255,157,0.15);border-radius:4px;padding:7px 10px;">
+            <div style="color:var(--muted);font-size:0.6rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px;">Attendance</div>
+            <div style="font-weight:700;color:var(--neon);">36,490</div>
+            <div style="color:var(--muted);">loanDepot Park · Miami</div>
+          </div>
+          <div style="background:rgba(56,189,248,0.04);border:1px solid rgba(56,189,248,0.15);border-radius:4px;padding:7px 10px;">
+            <div style="color:var(--muted);font-size:0.6rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px;">US TV Viewership</div>
+            <div style="font-weight:700;color:var(--blue);">10.8M avg</div>
+            <div style="color:var(--muted);">FOX + Fox Deportes · peaked 12.1M</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- POOL STANDINGS -->
+<div class="section" id="pools">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Pool Play Standings — Top 2 Advanced</h2>
+  </div>
+  <div class="pools-grid">
+
+    <!-- POOL A -->
+    <div class="pool-card">
+      <div class="pool-head ph-a">Pool A · San Juan, Puerto Rico</div>
+      <div class="pool-body">
+        <div class="pool-row advanced">
+          <div class="pool-team"><span class="pool-flag">🇨🇦</span><span class="pool-name adv">Canada</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="adv-label">ADV</span><span class="pool-rec">4-1</span></div>
+        </div>
+        <div class="pool-row advanced">
+          <div class="pool-team"><span class="pool-flag">🇵🇷</span><span class="pool-name adv">Puerto Rico</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="adv-label">ADV</span><span class="pool-rec">3-2</span></div>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇨🇺</span><span class="pool-name">Cuba</span></div>
+          <span class="pool-rec">2-3</span>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇨🇴</span><span class="pool-name">Colombia</span></div>
+          <span class="pool-rec">1-4</span>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇵🇦</span><span class="pool-name">Panama</span></div>
+          <span class="pool-rec">1-4</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- POOL B -->
+    <div class="pool-card">
+      <div class="pool-head ph-b">Pool B · Houston, Texas</div>
+      <div class="pool-body">
+        <div class="pool-row advanced">
+          <div class="pool-team"><span class="pool-flag">🇮🇹</span><span class="pool-name adv">Italy</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="adv-label">ADV</span><span class="pool-rec">5-0</span></div>
+        </div>
+        <div class="pool-row advanced">
+          <div class="pool-team"><span class="pool-flag">🇺🇸</span><span class="pool-name adv">United States</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="adv-label">ADV</span><span class="pool-rec">3-1</span></div>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇲🇽</span><span class="pool-name">Mexico</span></div>
+          <span class="pool-rec">2-3</span>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇧🇷</span><span class="pool-name">Brazil</span></div>
+          <span class="pool-rec">1-3</span>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇬🇧</span><span class="pool-name">Great Britain</span></div>
+          <span class="pool-rec">1-3</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- POOL C -->
+    <div class="pool-card">
+      <div class="pool-head ph-c">Pool C · Tokyo, Japan</div>
+      <div class="pool-body">
+        <div class="pool-row advanced">
+          <div class="pool-team"><span class="pool-flag">🇯🇵</span><span class="pool-name adv">Japan</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="adv-label">ADV</span><span class="pool-rec">—</span></div>
+        </div>
+        <div class="pool-row advanced">
+          <div class="pool-team"><span class="pool-flag">🇰🇷</span><span class="pool-name adv">South Korea</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="adv-label">ADV</span><span class="pool-rec">—</span></div>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇹🇼</span><span class="pool-name">Chinese Taipei</span></div>
+          <span class="pool-rec">—</span>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇦🇺</span><span class="pool-name">Australia</span></div>
+          <span class="pool-rec">—</span>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇨🇿</span><span class="pool-name">Czechia</span></div>
+          <span class="pool-rec">—</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- POOL D -->
+    <div class="pool-card">
+      <div class="pool-head ph-d">Pool D · Miami, Florida</div>
+      <div class="pool-body">
+        <div class="pool-row advanced">
+          <div class="pool-team"><span class="pool-flag">🇩🇴</span><span class="pool-name adv">Dominican Republic</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="adv-label">ADV</span><span class="pool-rec">—</span></div>
+        </div>
+        <div class="pool-row advanced">
+          <div class="pool-team"><span class="pool-flag">🇻🇪</span><span class="pool-name adv">Venezuela 🏆</span></div>
+          <div style="display:flex;align-items:center;gap:8px;"><span class="adv-label">ADV</span><span class="pool-rec">3-1</span></div>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇳🇱</span><span class="pool-name">Netherlands</span></div>
+          <span class="pool-rec">—</span>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇳🇮</span><span class="pool-name">Nicaragua</span></div>
+          <span class="pool-rec">—</span>
+        </div>
+        <div class="pool-row">
+          <div class="pool-team"><span class="pool-flag">🇮🇱</span><span class="pool-name">Israel</span></div>
+          <span class="pool-rec">—</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="font-size:0.72rem;color:var(--muted);margin-top:10px;">Venezuela lost to Dominican Republic in pool play before going on to win the championship. Australia and Canada both advanced out of pool play — Canada for the first time in WBC history.</div>
+</div>
+
+<!-- KEY STORYLINES -->
+<div class="section" id="stories">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Key Storylines</h2>
+  </div>
+  <div class="story-grid">
+
+    <div class="story-card">
+      <div class="story-eyebrow">The Final · 9th Inning</div>
+      <div class="story-title">Suárez delivers, Palencia closes it</div>
+      <div class="story-body">Venezuela trailed going into the 9th before Luís Arráez walked and pinch-runner Javier Sanoja stole second. <strong>Eugenio Suárez</strong> then lined a double to score Sanoja. Daniel Palencia struck out the side in the 9th to seal it. "Nobody believed in Venezuela. But now we win the championship." — Suárez on FOX.</div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-eyebrow">Bottom of the 8th</div>
+      <div class="story-title">Harper's 432-foot moonshot ties it</div>
+      <div class="story-body"><strong>Bryce Harper</strong> had struggled all tournament at the plate — then launched a 432-foot, game-tying two-run homer off Andrés Machado to dead center field, sending loanDepot Park into a frenzy. It wasn't enough. Venezuela regrouped and answered immediately.</div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-eyebrow">Tournament MVP · Kansas City Royals</div>
+      <div class="story-title">Maikel García — 10 hits, 7 RBI</div>
+      <div class="story-body"><strong>Maikel García</strong> was Venezuela's engine all tournament. His sacrifice fly opened the scoring in the final. His clutch home run in the quarterfinal against Japan was the defining moment of that upset. 10 hits and 7 RBI across the knockout stage.</div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-eyebrow">Cinderella Story · Pool B</div>
+      <div class="story-title">Italy goes 5-0 through pool play</div>
+      <div class="story-body">Italy's run was the tournament's great surprise — an unbeaten pool record, knocking out Japan-conquerors in the bracket, and making it all the way to the semifinal against Venezuela. Their 4–2 loss to Venezuela ended one of the WBC's great underdog runs. Team Italy's Francisco Cervelli managed brilliantly.</div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-eyebrow">Japan · Worst-Ever WBC Finish</div>
+      <div class="story-title">Defending champs out in the quarterfinals</div>
+      <div class="story-body">Japan entered 2026 as three-time champions and heavy favorites. <strong>Venezuela eliminated them in the quarterfinals</strong> — Japan's earliest ever exit. Wilyer Abreu's three-run HR was the death blow. It was the first time Japan failed to reach the semifinals in WBC history.</div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-eyebrow">Salvador Pérez · Four WBCs</div>
+      <div class="story-title">"I feel like I can retire"</div>
+      <div class="story-body">Venezuela captain <strong>Salvador Pérez</strong>, playing his fourth WBC since 2013, set the tone in the final with a leadoff single in the 3rd that started the scoring. His post-game quote became the tournament's most emotional moment: "To make all 30 million people happy — they deserved it."</div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-eyebrow">Back-to-Back Nights</div>
+      <div class="story-title">Three MLB teams texted Venezuela's manager before the final</div>
+      <div class="story-body">Venezuela played the SF and final on back-to-back nights, needing 23 bullpen outs against Italy. Manager <strong>Omar López</strong> said three MLB clubs texted him before the final requesting their relievers not pitch consecutive nights. Venezuela's bullpen held USA to a single two-run homer over 4⅔ innings anyway.</div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-eyebrow">Canada · Historic First</div>
+      <div class="story-title">Canada advances out of pool play for the first time ever</div>
+      <div class="story-body">Canada won Pool A, making it out of pool play for the first time in WBC history. Cal Quantrill pitched five strong innings. They fell to the USA in the quarterfinals 5–3, but the breakthrough was historic for Canadian baseball.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- WHERE TO WATCH ARCHIVE -->
+<div class="section" id="streaming">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">How It Was Broadcast</h2>
+  </div>
+  <div class="stream-grid">
+    <div class="stream-item">
+      <div class="stream-platform">FOX / Fox Deportes</div>
+      <div class="stream-detail">US English + Spanish · Championship game averaged 10.8M viewers · peaked 12.1M</div>
+    </div>
+    <div class="stream-item">
+      <div class="stream-platform">Netflix</div>
+      <div class="stream-detail">Exclusive marquee events · All 47 Japan WBC games in Japan</div>
+    </div>
+    <div class="stream-item">
+      <div class="stream-platform">ESPN / Disney+</div>
+      <div class="stream-detail">Venezuela domestic + international distribution</div>
+    </div>
+    <div class="stream-item">
+      <div class="stream-platform">1Baseball Network</div>
+      <div class="stream-detail">Venezuela domestic · Latin America</div>
+    </div>
+    <div class="stream-item">
+      <div class="stream-platform">MLB.TV</div>
+      <div class="stream-detail">International streaming archive · Full game replays</div>
+    </div>
+    <div class="stream-item">
+      <div class="stream-platform">WBC YouTube</div>
+      <div class="stream-detail">Free highlights + condensed games · @WBCBaseball</div>
     </div>
   </div>
-
-  <!-- CONTROLS -->
-  <div class="controls">
-    <!-- TAB ROW -->
-    <div class="tab-row">
-      <button class="tab-btn active" onclick="switchTab('tournament')" id="tab-tournament">⚾ Tournament Schedule</button>
-      <button class="tab-btn exh" onclick="switchTab('exhibition')" id="tab-exhibition">🏟 Exhibition · Mar 3–4</button>
-    </div>
-    <!-- Filter pills (only show in tournament tab) -->
-    <div class="filter-row" id="filterRow">
-      <button class="filter-btn active" onclick="filterPool('ALL')">All Pools</button>
-      <button class="filter-btn" onclick="filterPool('A')">Pool A · San Juan</button>
-      <button class="filter-btn" onclick="filterPool('B')">Pool B · Houston</button>
-      <button class="filter-btn" onclick="filterPool('C')">Pool C · Tokyo</button>
-      <button class="filter-btn" onclick="filterPool('D')">Pool D · Miami</button>
-      <button class="filter-btn" onclick="filterPool('BRACKET')">🏆 Bracket</button>
-    </div>
+  <div style="margin-top:16px;background:rgba(0,255,157,0.05);border:1px solid rgba(0,255,157,0.15);border-radius:6px;padding:12px 16px;font-size:0.8rem;color:var(--muted);">
+    🌍 <strong style="color:var(--neon);">Next WBC: 2030.</strong> Venezuela will defend as champions. The WBSC and MLB confirmed the next tournament maintains the four-year cycle. Venezuela's win also connects to the <a href="/schedules.html#lvbp" style="color:var(--neon);">LVBP winter league</a> — many of the Venezuelan national team stars play winter ball at home. Season starts October 2026.
   </div>
+</div>
 
-  <!-- ══════════════════ TOURNAMENT PANEL ══════════════════ -->
-  <div class="panel active" id="panel-tournament">
-
-    <!-- STANDINGS -->
-    <div id="standingsWrap">
-      <div class="standings-grid" id="standingsGrid"></div>
-    </div>
-
-    <!-- SCHEDULE -->
-    <div id="scheduleRoot"></div>
-
+<!-- FOOTER -->
+<div class="footer">
+  <div>
+    <span class="footer-brand">Classic Baseball World</span> · classicbaseball.world<br>
+    A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · FIBS Partner · SABR Member
   </div>
-
-  <!-- ══════════════════ EXHIBITION PANEL ══════════════════ -->
-  <div class="panel" id="panel-exhibition">
-    <div id="exhRoot"></div>
+  <div style="text-align:right;">
+    <div>Updated April 2026 · Results verified</div>
+    <div style="margin-top:4px;"><a href="/">Home</a> · <a href="/streaming.html">Streaming</a> · <a href="/schedules.html">Schedules</a> · <a href="/movies.html">Movie DB</a></div>
   </div>
+</div>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-links">
-      <a href="https://classicbaseball.world">The Archive</a>
-      <a href="https://worldbaseball.com">World Baseball Network</a>
-      <a href="https://worldbaseball.com/league/wbc/">WBC History</a>
-      <a href="https://mlb.com/world-baseball-classic">MLB.com</a>
-    </div>
-    <span>© 2026 World Baseball Network</span>
-  </footer>
-
-</div><!-- /dashboard-wrapper -->
-
-<script>
-/* ═══════════════════════════════════════════════════════════
-   UPDATE SCORES HERE DURING TOURNAMENT
-   ─────────────────────────────────────────────────────────
-   status:  'sched' | 'live' | 'final' | 'tbd'
-   scores:  add  roadScore:4, homeScore:2  when live/final
-   inning:  add  inning:'T7'  when live
-
-   Update team W/L in the teams arrays as results come in.
-═══════════════════════════════════════════════════════════ */
-
-var POOLS = {
-  A:{
-    name:'Pool A', venue:'Hiram Bithorn Stadium', city:'San Juan, PR', color:'#818cf8',
-    teams:[
-      {code:'PUR',name:'Puerto Rico',        flag:'🇵🇷',w:0,l:0},
-      {code:'CUB',name:'Cuba',               flag:'🇨🇺',w:0,l:0},
-      {code:'CAN',name:'Canada',             flag:'🇨🇦',w:0,l:0},
-      {code:'PAN',name:'Panama',             flag:'🇵🇦',w:0,l:0},
-      {code:'COL',name:'Colombia',           flag:'🇨🇴',w:0,l:0},
-    ],
-    games:[
-      {date:'Mar 6', day:'Fri', time:'11:00a', road:{code:'CUB',flag:'🇨🇺',name:'Cuba'},        home:{code:'PAN',flag:'🇵🇦',name:'Panama'},          status:'sched'},
-      {date:'Mar 6', day:'Fri', time:'6:00p',  road:{code:'PUR',flag:'🇵🇷',name:'Puerto Rico'}, home:{code:'COL',flag:'🇨🇴',name:'Colombia'},         status:'sched'},
-      {date:'Mar 7', day:'Sat', time:'11:00a', road:{code:'COL',flag:'🇨🇴',name:'Colombia'},    home:{code:'CAN',flag:'🇨🇦',name:'Canada'},           status:'sched'},
-      {date:'Mar 7', day:'Sat', time:'6:00p',  road:{code:'PAN',flag:'🇵🇦',name:'Panama'},      home:{code:'PUR',flag:'🇵🇷',name:'Puerto Rico'},      status:'sched'},
-      {date:'Mar 8', day:'Sun', time:'11:00a', road:{code:'CAN',flag:'🇨🇦',name:'Canada'},      home:{code:'PAN',flag:'🇵🇦',name:'Panama'},           status:'sched'},
-      {date:'Mar 8', day:'Sun', time:'6:00p',  road:{code:'COL',flag:'🇨🇴',name:'Colombia'},    home:{code:'CUB',flag:'🇨🇺',name:'Cuba'},             status:'sched'},
-      {date:'Mar 9', day:'Mon', time:'11:00a', road:{code:'COL',flag:'🇨🇴',name:'Colombia'},    home:{code:'PAN',flag:'🇵🇦',name:'Panama'},           status:'sched'},
-      {date:'Mar 9', day:'Mon', time:'7:00p',  road:{code:'CUB',flag:'🇨🇺',name:'Cuba'},        home:{code:'PUR',flag:'🇵🇷',name:'Puerto Rico'},      status:'sched'},
-      {date:'Mar 10',day:'Tue', time:'7:00p',  road:{code:'CAN',flag:'🇨🇦',name:'Canada'},      home:{code:'PUR',flag:'🇵🇷',name:'Puerto Rico'},      status:'sched'},
-      {date:'Mar 11',day:'Wed', time:'3:00p',  road:{code:'CAN',flag:'🇨🇦',name:'Canada'},      home:{code:'CUB',flag:'🇨🇺',name:'Cuba'},             status:'sched'},
-    ]
-  },
-  B:{
-    name:'Pool B', venue:'Daikin Park', city:'Houston, TX', color:'#fb923c',
-    teams:[
-      {code:'USA',name:'United States', flag:'🇺🇸',w:0,l:0},
-      {code:'MEX',name:'Mexico',        flag:'🇲🇽',w:0,l:0},
-      {code:'ITA',name:'Italy',         flag:'🇮🇹',w:0,l:0},
-      {code:'GBR',name:'Great Britain', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',w:0,l:0},
-      {code:'BRA',name:'Brazil',        flag:'🇧🇷',w:0,l:0},
-    ],
-    games:[
-      {date:'Mar 6', day:'Fri', time:'1:00p',  road:{code:'MEX',flag:'🇲🇽',name:'Mexico'},        home:{code:'GBR',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',name:'Great Britain'}, status:'sched'},
-      {date:'Mar 6', day:'Fri', time:'8:00p',  road:{code:'USA',flag:'🇺🇸',name:'USA'},            home:{code:'BRA',flag:'🇧🇷',name:'Brazil'},           status:'sched'},
-      {date:'Mar 7', day:'Sat', time:'1:00p',  road:{code:'BRA',flag:'🇧🇷',name:'Brazil'},         home:{code:'ITA',flag:'🇮🇹',name:'Italy'},            status:'sched'},
-      {date:'Mar 7', day:'Sat', time:'8:00p',  road:{code:'GBR',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',name:'Great Britain'}, home:{code:'USA',flag:'🇺🇸',name:'USA'},             status:'sched'},
-      {date:'Mar 8', day:'Sun', time:'1:00p',  road:{code:'GBR',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',name:'Great Britain'}, home:{code:'ITA',flag:'🇮🇹',name:'Italy'},           status:'sched'},
-      {date:'Mar 8', day:'Sun', time:'8:00p',  road:{code:'BRA',flag:'🇧🇷',name:'Brazil'},         home:{code:'MEX',flag:'🇲🇽',name:'Mexico'},           status:'sched'},
-      {date:'Mar 9', day:'Mon', time:'1:00p',  road:{code:'BRA',flag:'🇧🇷',name:'Brazil'},         home:{code:'GBR',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',name:'Great Britain'}, status:'sched'},
-      {date:'Mar 9', day:'Mon', time:'8:00p',  road:{code:'MEX',flag:'🇲🇽',name:'Mexico'},         home:{code:'USA',flag:'🇺🇸',name:'USA'},             status:'sched'},
-      {date:'Mar 10',day:'Tue', time:'9:00p',  road:{code:'ITA',flag:'🇮🇹',name:'Italy'},          home:{code:'USA',flag:'🇺🇸',name:'USA'},             status:'sched'},
-      {date:'Mar 11',day:'Wed', time:'7:00p',  road:{code:'ITA',flag:'🇮🇹',name:'Italy'},          home:{code:'MEX',flag:'🇲🇽',name:'Mexico'},           status:'sched'},
-    ]
-  },
-  C:{
-    name:'Pool C', venue:'Tokyo Dome', city:'Tokyo, Japan', color:'#34d399',
-    teams:[
-      {code:'JPN',name:'Japan',          flag:'🇯🇵',w:0,l:0},
-      {code:'KOR',name:'South Korea',    flag:'🇰🇷',w:0,l:0},
-      {code:'TPE',name:'Chinese Taipei', flag:'🇹🇼',w:0,l:0},
-      {code:'AUS',name:'Australia',      flag:'🇦🇺',w:0,l:0},
-      {code:'CZE',name:'Czechia',        flag:'🇨🇿',w:0,l:0},
-    ],
-    games:[
-      {date:'Mar 4', day:'Wed', time:'10:00p', road:{code:'TPE',flag:'🇹🇼',name:'Chinese Taipei'}, home:{code:'AUS',flag:'🇦🇺',name:'Australia'},   status:'sched'},
-      {date:'Mar 5', day:'Thu', time:'5:00a',  road:{code:'CZE',flag:'🇨🇿',name:'Czechia'},        home:{code:'KOR',flag:'🇰🇷',name:'South Korea'}, status:'sched'},
-      {date:'Mar 5', day:'Thu', time:'10:00p', road:{code:'AUS',flag:'🇦🇺',name:'Australia'},      home:{code:'CZE',flag:'🇨🇿',name:'Czechia'},     status:'sched'},
-      {date:'Mar 6', day:'Fri', time:'5:00a',  road:{code:'JPN',flag:'🇯🇵',name:'Japan'},          home:{code:'TPE',flag:'🇹🇼',name:'Chinese Taipei'},status:'sched'},
-      {date:'Mar 7', day:'Sat', time:'5:00a',  road:{code:'KOR',flag:'🇰🇷',name:'South Korea'},   home:{code:'JPN',flag:'🇯🇵',name:'Japan'},        status:'sched'},
-      {date:'Mar 7', day:'Sat', time:'10:00p', road:{code:'TPE',flag:'🇹🇼',name:'Chinese Taipei'},home:{code:'KOR',flag:'🇰🇷',name:'South Korea'}, status:'sched'},
-      {date:'Mar 8', day:'Sun', time:'6:00a',  road:{code:'AUS',flag:'🇦🇺',name:'Australia'},     home:{code:'JPN',flag:'🇯🇵',name:'Japan'},        status:'sched'},
-      {date:'Mar 9', day:'Mon', time:'6:00a',  road:{code:'KOR',flag:'🇰🇷',name:'South Korea'},   home:{code:'AUS',flag:'🇦🇺',name:'Australia'},    status:'sched'},
-      {date:'Mar 10',day:'Tue', time:'6:00a',  road:{code:'CZE',flag:'🇨🇿',name:'Czechia'},       home:{code:'JPN',flag:'🇯🇵',name:'Japan'},        status:'sched'},
-      {date:'Mar 10',day:'Tue', time:'10:00p', road:{code:'TPE',flag:'🇹🇼',name:'Chinese Taipei'},home:{code:'AUS',flag:'🇦🇺',name:'Australia'},   status:'sched'},
-    ]
-  },
-  D:{
-    name:'Pool D', venue:'loanDepot Park', city:'Miami, FL', color:'#f87171',
-    teams:[
-      {code:'VEN',name:'Venezuela',         flag:'🇻🇪',w:0,l:0},
-      {code:'DOM',name:'Dominican Republic',flag:'🇩🇴',w:0,l:0},
-      {code:'NED',name:'Netherlands',       flag:'🇳🇱',w:0,l:0},
-      {code:'NIC',name:'Nicaragua',         flag:'🇳🇮',w:0,l:0},
-      {code:'ISR',name:'Israel',            flag:'🇮🇱',w:0,l:0},
-    ],
-    games:[
-      {date:'Mar 6', day:'Fri', time:'12:00p', road:{code:'NED',flag:'🇳🇱',name:'Netherlands'},       home:{code:'VEN',flag:'🇻🇪',name:'Venezuela'},           status:'sched'},
-      {date:'Mar 6', day:'Fri', time:'7:00p',  road:{code:'NIC',flag:'🇳🇮',name:'Nicaragua'},         home:{code:'DOM',flag:'🇩🇴',name:'Dominican Republic'}, status:'sched'},
-      {date:'Mar 7', day:'Sat', time:'12:00p', road:{code:'NIC',flag:'🇳🇮',name:'Nicaragua'},         home:{code:'NED',flag:'🇳🇱',name:'Netherlands'},         status:'sched'},
-      {date:'Mar 7', day:'Sat', time:'7:00p',  road:{code:'ISR',flag:'🇮🇱',name:'Israel'},            home:{code:'VEN',flag:'🇻🇪',name:'Venezuela'},           status:'sched'},
-      {date:'Mar 8', day:'Sun', time:'12:00p', road:{code:'NED',flag:'🇳🇱',name:'Netherlands'},       home:{code:'DOM',flag:'🇩🇴',name:'Dominican Republic'}, status:'sched'},
-      {date:'Mar 8', day:'Sun', time:'7:00p',  road:{code:'NIC',flag:'🇳🇮',name:'Nicaragua'},         home:{code:'ISR',flag:'🇮🇱',name:'Israel'},              status:'sched'},
-      {date:'Mar 9', day:'Mon', time:'12:00p', road:{code:'DOM',flag:'🇩🇴',name:'Dominican Republic'},home:{code:'ISR',flag:'🇮🇱',name:'Israel'},              status:'sched'},
-      {date:'Mar 9', day:'Mon', time:'7:00p',  road:{code:'VEN',flag:'🇻🇪',name:'Venezuela'},         home:{code:'NIC',flag:'🇳🇮',name:'Nicaragua'},           status:'sched'},
-      {date:'Mar 10',day:'Tue', time:'12:00p', road:{code:'ISR',flag:'🇮🇱',name:'Israel'},            home:{code:'NED',flag:'🇳🇱',name:'Netherlands'},         status:'sched'},
-      {date:'Mar 11',day:'Wed', time:'8:00p',  road:{code:'DOM',flag:'🇩🇴',name:'Dominican Republic'},home:{code:'VEN',flag:'🇻🇪',name:'Venezuela'},           status:'sched'},
-    ]
-  }
-};
-
-var BRACKET=[
-  {round:'Quarterfinals',date:'Mar 13–14',venue:'Houston & Miami',games:[
-    {label:'QF · Houston',  date:'Mar 13',time:'8:00p',road:{code:'2nd-A',flag:'🏆'},home:{code:'1st-B',flag:'🏆'},status:'tbd'},
-    {label:'QF · Miami',    date:'Mar 13',time:'6:30p',road:{code:'2nd-C',flag:'🏆'},home:{code:'1st-D',flag:'🏆'},status:'tbd'},
-    {label:'QF · Houston',  date:'Mar 14',time:'3:00p',road:{code:'2nd-B',flag:'🏆'},home:{code:'1st-A',flag:'🏆'},status:'tbd'},
-    {label:'QF · Miami',    date:'Mar 14',time:'9:00p',road:{code:'2nd-D',flag:'🏆'},home:{code:'1st-C',flag:'🏆'},status:'tbd'},
-  ]},
-  {round:'Semifinals',date:'Mar 15–16',venue:'Miami',games:[
-    {label:'SF1 · Miami',date:'Mar 15',time:'8:00p',road:{code:'W-QF1',flag:'🏆'},home:{code:'W-QF2',flag:'🏆'},status:'tbd'},
-    {label:'SF2 · Miami',date:'Mar 16',time:'8:00p',road:{code:'W-QF3',flag:'🏆'},home:{code:'W-QF4',flag:'🏆'},status:'tbd'},
-  ]},
-  {round:'Championship',date:'Mar 17',venue:'loanDepot Park, Miami',isChamp:true,games:[
-    {label:'WBC Championship',date:'Mar 17',time:'8:00p',road:{code:'W-SF1',flag:'🥇'},home:{code:'W-SF2',flag:'🥇'},status:'tbd'},
-  ]}
-];
-
-/* ═══ EXHIBITION DATA ═══ */
-var EXH=[
-  {
-    date:'Tuesday, March 3, 2026', short:'Mar 3',
-    note:'Spring training exhibition games — WBC nations vs. MLB clubs',
-    games:[
-      {time:'1:05p',road:{code:'COL',flag:'🇨🇴',name:'Colombia'},        mlb:'PIT',mlbName:'Pirates',   venue:'LECOM Park',                       city:'Bradenton, FL',       tv:''},
-      {time:'1:05p',road:{code:'NED',flag:'🇳🇱',name:'Netherlands'},     mlb:'BAL',mlbName:'Orioles',   venue:'Ed Smith Stadium',                  city:'Sarasota, FL',        tv:''},
-      {time:'1:05p',road:{code:'PAN',flag:'🇵🇦',name:'Panama'},           mlb:'NYY',mlbName:'Yankees',   venue:'George M. Steinbrenner Field',      city:'Tampa, FL',           tv:''},
-      {time:'1:07p',road:{code:'CAN',flag:'🇨🇦',name:'Canada'},           mlb:'TOR',mlbName:'Blue Jays', venue:'TD Ballpark',                       city:'Dunedin, FL',         tv:'Sportsnet/MLBN'},
-      {time:'1:10p',road:{code:'ISR',flag:'🇮🇱',name:'Israel'},           mlb:'MIA',mlbName:'Marlins',   venue:'Roger Dean Chevrolet Stadium',      city:'Jupiter, FL',         tv:''},
-      {time:'1:10p',road:{code:'NIC',flag:'🇳🇮',name:'Nicaragua'},        mlb:'NYM',mlbName:'Mets',      venue:'Clover Park',                       city:'Port St. Lucie, FL',  tv:''},
-      {time:'3:05p',road:{code:'BRA',flag:'🇧🇷',name:'Brazil'},           mlb:'ATH',mlbName:'Athletics', venue:'Hohokam Stadium',                   city:'Mesa, AZ',            tv:''},
-      {time:'3:05p',road:{code:'CUB',flag:'🇨🇺',name:'Cuba'},             mlb:'KC', mlbName:'Royals',    venue:'Surprise Stadium',                  city:'Surprise, AZ',        tv:''},
-      {time:'3:05p',road:{code:'ITA',flag:'🇮🇹',name:'Italy'},            mlb:'CHC',mlbName:'Cubs',      venue:'Sloan Park',                        city:'Mesa, AZ',            tv:''},
-      {time:'3:05p',road:{code:'USA',flag:'🇺🇸',name:'USA'},              mlb:'SF', mlbName:'Giants',    venue:'Scottsdale Stadium',                city:'Scottsdale, AZ',      tv:'ESPN'},
-      {time:'3:10p',road:{code:'GBR',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',name:'Great Britain'},  mlb:'MIL',mlbName:'Brewers',  venue:'American Family Fields of Phoenix', city:'Phoenix, AZ',         tv:''},
-      {time:'3:10p',road:{code:'MEX',flag:'🇲🇽',name:'Mexico'},           mlb:'AZ', mlbName:'D-backs',   venue:'Salt River Fields at Talking Stick',city:'Scottsdale, AZ',      tv:'ARID'},
-      {time:'6:05p',road:{code:'DOM',flag:'🇩🇴',name:'Dominican Republic'},mlb:'DET',mlbName:'Tigers',   venue:'Estadio Quisqueya Juan Marichal',   city:'Santo Domingo, DR',   tv:'MLBN'},
-      {time:'6:05p',road:{code:'PUR',flag:'🇵🇷',name:'Puerto Rico'},      mlb:'BOS',mlbName:'Red Sox',   venue:'JetBlue Park',                      city:'Ft. Myers, FL',       tv:'NESN+'},
-      {time:'6:05p',road:{code:'VEN',flag:'🇻🇪',name:'Venezuela'},        mlb:'HOU',mlbName:'Astros',    venue:'CACTI Park of the Palm Beaches',    city:'West Palm Beach, FL', tv:'SCHN'},
-    ]
-  },
-  {
-    date:'Wednesday, March 4, 2026', short:'Mar 4',
-    note:'Final tune-ups before Tokyo pool play opens tonight',
-    games:[
-      {time:'1:05p',road:{code:'CAN',flag:'🇨🇦',name:'Canada'},           mlb:'PHI',mlbName:'Phillies',  venue:'BayCare Ballpark',                  city:'Clearwater, FL',      tv:'NBCSP+'},
-      {time:'1:05p',road:{code:'COL',flag:'🇨🇴',name:'Colombia'},         mlb:'ATL',mlbName:'Braves',    venue:'CoolToday Park',                    city:'North Port, FL',      tv:'GTV'},
-      {time:'1:05p',road:{code:'NED',flag:'🇳🇱',name:'Netherlands'},      mlb:'TB', mlbName:'Rays',      venue:'Charlotte Sports Park',             city:'Port Charlotte, FL',  tv:'RAYS'},
-      {time:'1:05p',road:{code:'NIC',flag:'🇳🇮',name:'Nicaragua'},        mlb:'STL',mlbName:'Cardinals', venue:'Roger Dean Chevrolet Stadium',      city:'Jupiter, FL',         tv:''},
-      {time:'1:05p',road:{code:'PAN',flag:'🇵🇦',name:'Panama'},           mlb:'DET',mlbName:'Tigers',    venue:'Publix Field at Joker Marchant',    city:'Lakeland, FL',        tv:''},
-      {time:'1:05p',road:{code:'PUR',flag:'🇵🇷',name:'Puerto Rico'},      mlb:'MIN',mlbName:'Twins',     venue:'Lee Health Sports Complex',         city:'Fort Myers, FL',      tv:'MNNT'},
-      {time:'1:10p',road:{code:'ISR',flag:'🇮🇱',name:'Israel'},           mlb:'NYM',mlbName:'Mets',      venue:'Clover Park',                       city:'Port St. Lucie, FL',  tv:''},
-      {time:'2:05p',road:{code:'DOM',flag:'🇩🇴',name:'Dominican Republic'},mlb:'DET',mlbName:'Tigers',   venue:'Estadio Quisqueya Juan Marichal',   city:'Santo Domingo, DR',   tv:'MLBN'},
-      {time:'3:05p',road:{code:'BRA',flag:'🇧🇷',name:'Brazil'},           mlb:'TEX',mlbName:'Rangers',   venue:'Surprise Stadium',                  city:'Surprise, AZ',        tv:''},
-      {time:'3:05p',road:{code:'CUB',flag:'🇨🇺',name:'Cuba'},             mlb:'CIN',mlbName:'Reds',      venue:'Goodyear Ballpark',                 city:'Goodyear, AZ',        tv:''},
-      {time:'3:05p',road:{code:'MEX',flag:'🇲🇽',name:'Mexico'},           mlb:'LAD',mlbName:'Dodgers',   venue:'Camelback Ranch',                   city:'Glendale, AZ',        tv:'SNLA'},
-      {time:'3:10p',road:{code:'GBR',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',name:'Great Britain'},  mlb:'SD', mlbName:'Padres',    venue:'Peoria Stadium',                    city:'Peoria, AZ',          tv:'SDPA'},
-      {time:'3:10p',road:{code:'ITA',flag:'🇮🇹',name:'Italy'},            mlb:'LAA',mlbName:'Angels',    venue:'Tempe Diablo Stadium',              city:'Tempe, AZ',           tv:''},
-      {time:'3:10p',road:{code:'USA',flag:'🇺🇸',name:'USA'},              mlb:'COL',mlbName:'Rockies',   venue:'Salt River Fields at Talking Stick',city:'Scottsdale, AZ',      tv:'COLR'},
-      {time:'6:05p',road:{code:'VEN',flag:'🇻🇪',name:'Venezuela'},        mlb:'WSH',mlbName:'Nationals', venue:'CACTI Park of the Palm Beaches',    city:'West Palm Beach, FL', tv:'NATS'},
-    ]
-  }
-];
-
-/* ═══ RENDER HELPERS ═══ */
-function pill(g) {
-  if(g.status==='live')  return '<span class="pill pill-live">Live</span>'+(g.inning?'<span class="inn">'+g.inning+'</span>':'');
-  if(g.status==='final') return '<span class="pill pill-final">Final</span>';
-  if(g.status==='tbd')   return '<span class="pill pill-tbd">TBD</span>';
-  return '<span class="pill pill-sched">'+g.time+' ET</span>';
-}
-
-function scoreOrTime(g) {
-  var hs=(g.status==='live'||g.status==='final')&&g.roadScore!==undefined;
-  if(hs) return '<div class="g-score-box"><span class="g-score-num">'+g.roadScore+'</span><span class="g-score-sep">–</span><span class="g-score-num">'+g.homeScore+'</span></div>';
-  return '<div class="g-time-val">'+g.time+' ET</div>';
-}
-
-function renderGameRow(g) {
-  return '<div class="game-row'+(g.status==='live'?' is-live':'')+'">'
-    +'<div><div class="g-date-main">'+g.date+'</div><div class="g-date-day">'+g.day+'</div></div>'
-    +'<div class="g-teams">'
-    +'<div class="g-team"><span class="g-flag">'+g.road.flag+'</span><div><div class="g-code">'+g.road.code+'</div><div class="g-name">'+g.road.name+'</div></div></div>'
-    +'<span class="g-vs">VS</span>'
-    +'<div class="g-team"><span class="g-flag">'+g.home.flag+'</span><div><div class="g-code">'+g.home.code+'</div><div class="g-name">'+g.home.name+'</div></div></div>'
-    +'</div>'
-    +scoreOrTime(g)
-    +'<div class="g-status">'+pill(g)+'</div>'
-    +'</div>';
-}
-
-/* ═══ RENDER STANDINGS ═══ */
-function renderStandings() {
-  var el=document.getElementById('standingsGrid');
-  var html='';
-  ['A','B','C','D'].forEach(function(k){
-    var p=POOLS[k];
-    var sorted=p.teams.slice().sort(function(a,b){return(b.w-b.l)-(a.w-a.l);});
-    html+='<div class="standings-card">'
-      +'<div class="sc-header" style="color:'+p.color+'">Pool '+k+' <span class="sc-venue">'+p.city+'</span></div>'
-      +'<div class="sc-row"><span class="sc-pos sc-hdr">#</span><span class="sc-team sc-hdr">Team</span><span class="sc-w sc-hdr">W</span><span class="sc-l sc-hdr">L</span></div>';
-    sorted.forEach(function(t,i){
-      html+='<div class="sc-row"><span class="sc-pos">'+(i+1)+'</span><span class="sc-team">'+t.flag+' '+t.code+'</span><span class="sc-w">'+t.w+'</span><span class="sc-l">'+t.l+'</span></div>';
-    });
-    html+='</div>';
-  });
-  el.innerHTML=html;
-}
-
-/* ═══ RENDER SCHEDULE ═══ */
-function renderSchedule() {
-  var root=document.getElementById('scheduleRoot');
-  var html='';
-  ['A','B','C','D'].forEach(function(k){
-    var p=POOLS[k];
-    var flags=p.teams.map(function(t){return t.flag+' '+t.code;}).join(' · ');
-    html+='<div class="pool-section" data-pool="'+k+'" id="pool-'+k+'">'
-      +'<div class="pool-heading">'
-      +'<div class="pool-dot" style="background:'+p.color+'"></div>'
-      +'<span class="pool-title">'+p.name+'</span>'
-      +'<span class="pool-venue-label">'+p.venue+' · '+p.city+'</span>'
-      +'</div>'
-      + p.games.map(renderGameRow).join('')
-      +'</div>';
-  });
-
-  // Bracket
-  html+='<div class="pool-section" data-pool="BRACKET" id="pool-BRACKET">'
-    +'<div class="pool-heading"><div class="pool-dot" style="background:var(--accent)"></div><span class="pool-title">Knockout Bracket</span><span class="pool-venue-label">Quarterfinals · Semifinals · Championship</span></div>'
-    +'<div class="bracket-wrap">';
-  BRACKET.forEach(function(round){
-    html+='<div class="bracket-col"><div class="bracket-col-label">'+round.round+' · '+round.date+' · '+round.venue+'</div>';
-    round.games.forEach(function(g){
-      var cc='b-game'+(round.isChamp?' champ-game':'');
-      var mc='b-meta'+(round.isChamp?' champ':'');
-      if(g.status==='tbd'){
-        html+='<div class="'+cc+'"><div class="'+mc+'">'+g.label+' · '+g.date+' · '+g.time+' ET</div><div class="b-tbd-label">Qualifier to be determined</div></div>';
-      } else {
-        html+='<div class="'+cc+'"><div class="'+mc+'">'+g.label+' · '+g.date+'</div><div class="b-matchup">'
-          +'<div class="b-team"><div class="b-team-info"><span>'+g.road.flag+'</span>'+g.road.code+'</div>'+(g.roadScore!==undefined?'<span class="b-score">'+g.roadScore+'</span>':'')+'</div>'
-          +'<div class="b-divider"></div>'
-          +'<div class="b-team"><div class="b-team-info"><span>'+g.home.flag+'</span>'+g.home.code+'</div>'+(g.homeScore!==undefined?'<span class="b-score">'+g.homeScore+'</span>':'')+'</div>'
-          +'</div></div>';
-      }
-    });
-    html+='</div>';
-  });
-  html+='</div></div>';
-  root.innerHTML=html;
-}
-
-/* ═══ RENDER EXHIBITION ═══ */
-function renderExhibition() {
-  var root=document.getElementById('exhRoot');
-  var html='';
-  EXH.forEach(function(day){
-    html+='<div class="exh-day">'
-      +'<div class="exh-day-heading"><span class="exh-day-title">'+day.date+'</span><span class="exh-badge">Exhibition</span></div>'
-      +'<div class="exh-note">'+day.note+'</div>';
-    day.games.forEach(function(g){
-      html+='<div class="exh-row">'
-        +'<div><div class="exh-time">'+g.time+' ET</div><div class="exh-tz">Eastern</div></div>'
-        +'<div class="exh-matchup">'
-        +'<div class="exh-wbc"><span class="exh-flag">'+g.road.flag+'</span><div><div class="exh-code">'+g.road.code+'</div><div class="exh-name">'+g.road.name+'</div></div></div>'
-        +'<span class="exh-at">@</span>'
-        +'<div class="exh-mlb"><div><div class="exh-mlb-code">'+g.mlb+'</div><div class="exh-mlb-name">'+g.mlbName+'</div></div></div>'
-        +'</div>'
-        +'<div class="exh-venue"><div class="exh-venue-name">'+g.venue+'</div><div class="exh-venue-city">'+g.city+'</div></div>'
-        +'<div class="exh-tv">'+(g.tv?'<span class="tv-pill">'+g.tv+'</span>':'')+'</div>'
-        +'</div>';
-    });
-    html+='</div>';
-  });
-  root.innerHTML=html;
-}
-
-/* ═══ TABS ═══ */
-function switchTab(tab) {
-  ['tournament','exhibition'].forEach(function(t){
-    document.getElementById('tab-'+t).classList.toggle('active', t===tab);
-    document.getElementById('panel-'+t).classList.toggle('active', t===tab);
-  });
-  document.getElementById('filterRow').style.display = tab==='tournament' ? '' : 'none';
-}
-
-/* ═══ FILTER ═══ */
-function filterPool(pool) {
-  document.querySelectorAll('.filter-btn').forEach(function(b){
-    b.classList.toggle('active', (b.getAttribute('onclick')||'').indexOf("'"+pool+"'")!==-1);
-  });
-  document.querySelectorAll('[data-pool]').forEach(function(s){
-    var sp=s.getAttribute('data-pool');
-    if(pool==='ALL') s.style.display='';
-    else if(pool==='BRACKET') s.style.display=sp==='BRACKET'?'':'none';
-    else s.style.display=sp===pool?'':'none';
-  });
-  document.getElementById('standingsWrap').style.display=pool==='BRACKET'?'none':'';
-}
-
-// Init
-renderStandings();
-renderSchedule();
-renderExhibition();
-</script>
 </body>
 </html>
