@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When to Watch International Baseball 2026 | Classic Baseball World</title>
+  <meta name="description" content="2026 NPB and KBO schedules with US time zones. When to watch Japanese and Korean baseball from the US — ET, CT, PT times for every game window.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:     #0f172a;
+      --card:   #1e293b;
+      --card2:  #162032;
+      --text:   #f8fafc;
+      --muted:  #94a3b8;
+      --accent: #D50032;
+      --neon:   #00ff9d;
+      --gold:   #fbbf24;
+      --rule:   #334155;
+      --blue:   #38bdf8;
+      --purple: #a78bfa;
+      --green:  #4ade80;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6; padding: 20px; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    .top-nav { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--rule); padding-bottom: 16px; margin-bottom: 40px; flex-wrap: wrap; gap: 12px; }
+    .nav-left { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .logo-area { font-weight: 900; font-size: 1rem; letter-spacing: -0.5px; }
+    .logo-area a { color: var(--text); }
+    .nav-pill { color: var(--muted); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; padding: 4px 12px; border: 1px solid var(--rule); border-radius: 20px; transition: 0.2s; }
+    .nav-pill:hover { color: var(--text); border-color: var(--text); }
+    .nav-pill.active { color: var(--neon); border-color: var(--neon); }
+    .hq-link { color: var(--neon); border: 1px solid var(--neon); padding: 8px 16px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; transition: background 0.2s; }
+    .hq-link:hover { background: rgba(0,255,157,0.1); }
+    .dot { width: 8px; height: 8px; background: var(--neon); border-radius: 50%; box-shadow: 0 0 5px var(--neon); }
+
+    /* HERO */
+    .hero { text-align: center; margin-bottom: 40px; }
+    .hero-eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1; margin-bottom: 12px; }
+    .hero h1 span { color: var(--neon); }
+    .hero-sub { color: var(--muted); font-size: 1rem; max-width: 640px; margin: 0 auto 24px; }
+
+    /* TIMEZONE BANNER */
+    .tz-banner { background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.25); border-radius: 8px; padding: 16px 20px; margin-bottom: 40px; display: flex; align-items: flex-start; gap: 14px; font-size: 0.82rem; color: var(--muted); }
+    .tz-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+    .tz-banner strong { color: var(--gold); }
+    .tz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; margin-top: 12px; }
+    .tz-item { background: rgba(255,255,255,0.04); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 12px; }
+    .tz-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+    .tz-time { font-size: 0.95rem; font-weight: 700; color: var(--gold); font-family: monospace; }
+    .tz-note { font-size: 0.65rem; color: var(--muted); margin-top: 1px; }
+
+    /* SECTION */
+    .section { margin-bottom: 56px; }
+    .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); flex-wrap: wrap; }
+    .section-num { font-family: monospace; font-size: 0.75rem; color: var(--accent); font-weight: 700; letter-spacing: 2px; }
+    .section-title { font-size: 1.4rem; font-weight: 900; letter-spacing: -0.5px; }
+    .section-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-left: auto; }
+    .badge-npb { background: rgba(56,189,248,0.1); color: var(--blue); border: 1px solid rgba(56,189,248,0.3); }
+    .badge-kbo { background: rgba(74,222,128,0.1); color: var(--green); border: 1px solid rgba(74,222,128,0.3); }
+    .badge-hot { background: rgba(213,0,50,0.15); color: var(--accent); border: 1px solid rgba(213,0,50,0.3); }
+
+    /* WHERE TO WATCH BOX */
+    .wtw-box { background: var(--card2); border: 1px solid var(--rule); border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 20px; margin-bottom: 20px; }
+    .wtw-title { font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+    .wtw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .wtw-item { font-size: 0.82rem; }
+    .wtw-platform { font-weight: 700; color: var(--text); }
+    .wtw-platform a { color: var(--blue); }
+    .wtw-platform a:hover { color: var(--neon); }
+    .wtw-detail { font-size: 0.72rem; color: var(--muted); }
+    .wtw-detail.free { color: var(--neon); }
+
+    /* MONTH BLOCKS */
+    .month-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-bottom: 16px; }
+    .month-card { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+    .month-head { padding: 14px 18px 12px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; }
+    .month-name { font-weight: 900; font-size: 1.1rem; letter-spacing: -0.3px; }
+    .month-tag { font-size: 0.6rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 2px 8px; border-radius: 10px; }
+    .tag-regular { background: rgba(148,163,184,0.1); color: var(--muted); }
+    .tag-special { background: rgba(251,191,36,0.12); color: var(--gold); }
+    .tag-interleague { background: rgba(167,139,250,0.12); color: var(--purple); }
+    .tag-playoffs { background: rgba(213,0,50,0.12); color: var(--accent); }
+    .month-body { padding: 14px 18px 16px; }
+
+    .game-window { padding: 8px 0; border-bottom: 1px solid rgba(51,65,85,0.5); }
+    .game-window:last-child { border-bottom: none; }
+    .gw-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+    .gw-dates { font-size: 0.8rem; font-weight: 700; color: var(--text); }
+    .gw-type { font-size: 0.6rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 1px 6px; border-radius: 8px; }
+    .gw-type.highlight { background: rgba(213,0,50,0.15); color: var(--accent); }
+    .gw-type.interleague { background: rgba(167,139,250,0.12); color: var(--purple); }
+    .gw-type.holiday { background: rgba(251,191,36,0.12); color: var(--gold); }
+    .gw-matchup { font-size: 0.82rem; color: var(--muted); margin-bottom: 4px; }
+    .gw-matchup strong { color: var(--text); }
+    .gw-times { display: flex; gap: 12px; flex-wrap: wrap; }
+    .gw-tz { font-size: 0.7rem; font-family: monospace; }
+    .gw-tz .label { color: var(--muted); }
+    .gw-tz .val { color: var(--neon); font-weight: 700; }
+    .gw-tz .val.early { color: var(--gold); }
+
+    /* STREAM TIP */
+    .stream-tip { background: rgba(0,255,157,0.05); border: 1px solid rgba(0,255,157,0.15); border-radius: 6px; padding: 10px 14px; margin-top: 10px; font-size: 0.78rem; color: var(--muted); }
+    .stream-tip strong { color: var(--neon); }
+
+    /* KEY */
+    .team-key { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+    .tk-item { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; font-size: 0.8rem; }
+    .tk-code { font-family: monospace; font-weight: 900; font-size: 1rem; width: 28px; flex-shrink: 0; }
+    .tk-code.pacific { color: var(--blue); }
+    .tk-code.central { color: var(--gold); }
+    .tk-name { font-weight: 700; color: var(--text); }
+    .tk-city { color: var(--muted); font-size: 0.72rem; }
+    .tk-league { font-size: 0.6rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-left: auto; padding: 1px 6px; border-radius: 8px; flex-shrink: 0; }
+    .tk-league.p { background: rgba(56,189,248,0.1); color: var(--blue); }
+    .tk-league.c { background: rgba(251,191,36,0.1); color: var(--gold); }
+
+    /* INTERLEAGUE CALLOUT */
+    .interleague-box { background: linear-gradient(135deg, #1a0a1e 0%, #0f172a 100%); border: 1px solid var(--purple); border-radius: 10px; padding: 24px 28px; margin-bottom: 24px; }
+    .il-title { font-size: 1.1rem; font-weight: 900; color: var(--purple); margin-bottom: 8px; }
+    .il-body { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+    .il-body strong { color: var(--text); }
+
+    /* COMING SOON */
+    .coming-soon { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 40px 24px; text-align: center; }
+    .cs-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .cs-title { font-weight: 900; font-size: 1.2rem; color: var(--text); margin-bottom: 8px; }
+    .cs-sub { color: var(--muted); font-size: 0.85rem; }
+
+    /* FOOTER */
+    .footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.72rem; color: var(--muted); }
+    .footer a { color: var(--muted); }
+    .footer a:hover { color: var(--neon); }
+    .footer-brand { font-weight: 900; color: var(--text); font-size: 0.85rem; }
+
+    @media (max-width: 600px) {
+      .top-nav { flex-direction: column; align-items: flex-start; }
+      .tz-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="top-nav">
+  <div class="nav-left">
+    <div class="logo-area"><a href="/">CLASSIC BASEBALL WORLD</a></div>
+    <a href="/" class="nav-pill">Movie DB</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+    <a href="/streaming.html" class="nav-pill">Streaming Guide</a>
+    <a href="/schedules.html" class="nav-pill active">When to Watch</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="dot"></span> WBN HQ</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">World Baseball Network · 2026 Season</div>
+  <h1>When to Watch<br><span>International Baseball</span></h1>
+  <p class="hero-sub">2026 NPB and KBO schedules with US time conversions. Every game window, every platform, every time zone — so you never miss a pitch.</p>
+</div>
+
+<!-- TIMEZONE EXPLAINER -->
+<div class="tz-banner">
+  <div class="tz-icon">🕐</div>
+  <div>
+    <strong>Time Zone Key — Japan (JST) & Korea (KST) to US Time</strong><br>
+    Most NPB and KBO games start at 6:00 PM local time on weekdays, 2:00–3:00 PM on weekends and holidays. Here's what that means for US fans:
+    <div class="tz-grid">
+      <div class="tz-item">
+        <div class="tz-label">6:00 PM JST / KST</div>
+        <div class="tz-time">4:00 AM ET</div>
+        <div class="tz-note">3:00 AM CT · 1:00 AM PT</div>
+      </div>
+      <div class="tz-item">
+        <div class="tz-label">5:00 PM JST / KST</div>
+        <div class="tz-time">3:00 AM ET</div>
+        <div class="tz-note">2:00 AM CT · 12:00 AM PT</div>
+      </div>
+      <div class="tz-item">
+        <div class="tz-label">2:00 PM JST / KST</div>
+        <div class="tz-time">12:00 AM ET</div>
+        <div class="tz-note">11:00 PM CT · 9:00 PM PT</div>
+      </div>
+      <div class="tz-item">
+        <div class="tz-label">1:00 PM JST / KST</div>
+        <div class="tz-time">11:00 PM ET</div>
+        <div class="tz-note">10:00 PM CT · 8:00 PM PT</div>
+      </div>
+      <div class="tz-item">
+        <div class="tz-label">Japan is UTC+9</div>
+        <div class="tz-time">−14 hrs ET</div>
+        <div class="tz-note">−15 CT · −17 PT from JST</div>
+      </div>
+      <div class="tz-item">
+        <div class="tz-label">Korea is UTC+9</div>
+        <div class="tz-time">Same as JST</div>
+        <div class="tz-note">Japan & Korea same time zone</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;font-size:0.75rem;">💡 <strong>Weekend tip:</strong> Golden Week (May 3–5) and holiday day games start at 1:00–2:00 PM JST — that's 11:00 PM–12:00 AM ET the night before, which is your best window to watch live without an alarm clock.</div>
+  </div>
+</div>
+
+<!-- NPB -->
+<div class="section" id="npb">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">🇯🇵 NPB — Nippon Professional Baseball 2026</h2>
+    <span class="section-badge badge-npb">Mar – Oct · 12 Teams</span>
+  </div>
+
+  <!-- WHERE TO WATCH NPB -->
+  <div class="wtw-box">
+    <div class="wtw-title">Where to Stream NPB in the US</div>
+    <div class="wtw-grid">
+      <div class="wtw-item">
+        <div class="wtw-platform"><a href="https://pacificleague.com/en/ptv" target="_blank">Pacific League TV</a></div>
+        <div class="wtw-detail">~$11/mo · All 6 PL teams · Americas</div>
+      </div>
+      <div class="wtw-item">
+        <div class="wtw-platform"><a href="https://ftflive.com" target="_blank">FTF / For The Fans</a></div>
+        <div class="wtw-detail">Roku · Pluto · Samsung TV · English replays</div>
+      </div>
+      <div class="wtw-item">
+        <div class="wtw-platform">YouTube — Pacific League</div>
+        <div class="wtw-detail free">Free · 1 game/week + highlights</div>
+      </div>
+      <div class="wtw-item">
+        <div class="wtw-platform">DAZN</div>
+        <div class="wtw-detail">Select Central League games · varies by market</div>
+      </div>
+      <div class="wtw-item">
+        <div class="wtw-platform" style="color:var(--gold)">⚠ Central League</div>
+        <div class="wtw-detail">Mostly unavailable internationally. Exception: Interleague games played at Pacific League parks ARE on PLTV.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERLEAGUE CALLOUT -->
+  <div class="interleague-box">
+    <div class="il-title">⚡ The Interleague Window — Best Time for US Fans to Watch NPB</div>
+    <div class="il-body">
+      <strong>May 26 – June 14:</strong> Interleague play is the golden window for international fans. When Central League teams travel to Pacific League parks, those games are streamed on Pacific League TV — meaning you can legally watch Yomiuri Giants, Hanshin Tigers, and other Central League stars that are otherwise blacked out internationally.<br><br>
+      <strong>Best matchup to watch:</strong> Yomiuri Giants vs. SoftBank Hawks — the two most storied franchises in each league, meeting at a PL stadium = on PLTV = streamable in the US.<br><br>
+      <strong>Note:</strong> Giants and Tigers home interleague games remain geoblocked outside Japan. You need them to be the <em>road team</em> at a Pacific League park.
+    </div>
+  </div>
+
+  <!-- MONTHLY BREAKDOWN -->
+  <div class="month-grid">
+
+    <div class="month-card">
+      <div class="month-head">
+        <div class="month-name">April</div>
+        <span class="month-tag tag-regular">Opening Month</span>
+      </div>
+      <div class="month-body">
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Apr 1 — Season Begins</span>
+          </div>
+          <div class="gw-matchup">All 12 teams in action. Standard weekday schedule resumes.</div>
+          <div class="gw-times">
+            <div class="gw-tz"><span class="label">JST </span><span class="val">6:00 PM</span></div>
+            <div class="gw-tz"><span class="label">ET </span><span class="val early">4:00 AM</span></div>
+            <div class="gw-tz"><span class="label">CT </span><span class="val early">3:00 AM</span></div>
+            <div class="gw-tz"><span class="label">PT </span><span class="val early">1:00 AM</span></div>
+          </div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Apr 14–16</span>
+            <span class="gw-type highlight">Marquee</span>
+          </div>
+          <div class="gw-matchup"><strong>Hanshin Tigers vs. Yomiuri Giants</strong> — The "Traditional Series." Japan's biggest rivalry.</div>
+          <div class="gw-times">
+            <div class="gw-tz"><span class="label">JST </span><span class="val">6:00 PM</span></div>
+            <div class="gw-tz"><span class="label">ET </span><span class="val early">4:00 AM</span></div>
+            <div class="gw-tz"><span class="label">PT </span><span class="val early">1:00 AM</span></div>
+          </div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Apr 28–30</span>
+            <span class="gw-type holiday">Golden Week Starts</span>
+          </div>
+          <div class="gw-matchup">Heavy home schedules. Giants and Hawks featured. Day games begin.</div>
+          <div class="gw-times">
+            <div class="gw-tz"><span class="label">JST </span><span class="val">2:00 PM</span></div>
+            <div class="gw-tz"><span class="label">ET </span><span class="val">12:00 AM</span></div>
+            <div class="gw-tz"><span class="label">PT </span><span class="val">9:00 PM prev.</span></div>
+          </div>
+        </div>
+        <div class="stream-tip">📺 <strong>Stream it:</strong> Pacific League games on <a href="https://pacificleague.com/en/ptv" target="_blank" style="color:var(--neon)">pacificleague.com/en/ptv</a></div>
+      </div>
+    </div>
+
+    <div class="month-card">
+      <div class="month-head">
+        <div class="month-name">May</div>
+        <span class="month-tag tag-special">Golden Week + Interleague</span>
+      </div>
+      <div class="month-body">
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">May 3–5</span>
+            <span class="gw-type holiday">Golden Week Peak</span>
+          </div>
+          <div class="gw-matchup">Peak attendance. Mostly day games — <strong>best window for US West Coast fans.</strong></div>
+          <div class="gw-times">
+            <div class="gw-tz"><span class="label">JST </span><span class="val">1:00–2:00 PM</span></div>
+            <div class="gw-tz"><span class="label">ET </span><span class="val">11:00 PM–12:00 AM</span></div>
+            <div class="gw-tz"><span class="label">PT </span><span class="val">8:00–9:00 PM</span></div>
+          </div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">May 26</span>
+            <span class="gw-type interleague">Interleague Begins</span>
+          </div>
+          <div class="gw-matchup"><strong>Central League teams visit Pacific League parks.</strong> Giants, Tigers, Carp now streamable via PLTV.</div>
+          <div class="gw-times">
+            <div class="gw-tz"><span class="label">JST </span><span class="val">6:00 PM</span></div>
+            <div class="gw-tz"><span class="label">ET </span><span class="val early">4:00 AM</span></div>
+            <div class="gw-tz"><span class="label">PT </span><span class="val early">1:00 AM</span></div>
+          </div>
+        </div>
+        <div class="stream-tip">🔑 <strong>Interleague key:</strong> When CL teams are the <em>road team</em> at PL parks = on Pacific League TV = legal US stream.</div>
+      </div>
+    </div>
+
+    <div class="month-card">
+      <div class="month-head">
+        <div class="month-name">June</div>
+        <span class="month-tag tag-interleague">Full Interleague</span>
+      </div>
+      <div class="month-body">
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Jun 2–4</span>
+            <span class="gw-type interleague">Interleague</span>
+          </div>
+          <div class="gw-matchup">CL teams continue visiting PL stadiums. Best international streaming window of the season.</div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Jun 9–14</span>
+            <span class="gw-type interleague">Interleague Final</span>
+          </div>
+          <div class="gw-matchup">Final stretch of interleague. PL teams host CL visitors.</div>
+          <div class="gw-times">
+            <div class="gw-tz"><span class="label">JST </span><span class="val">6:00 PM</span></div>
+            <div class="gw-tz"><span class="label">ET </span><span class="val early">4:00 AM</span></div>
+            <div class="gw-tz"><span class="label">PT </span><span class="val early">1:00 AM</span></div>
+          </div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Jun 19 — Back to League Play</span>
+          </div>
+          <div class="gw-matchup">Giants vs. Dragons (CL) · Hawks vs. Fighters (PL). PL games back on PLTV.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="month-card">
+      <div class="month-head">
+        <div class="month-name">July</div>
+        <span class="month-tag tag-regular">Mid-Summer</span>
+      </div>
+      <div class="month-body">
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Jul 7–9</span>
+            <span class="gw-type highlight">Tanabata Series</span>
+          </div>
+          <div class="gw-matchup">Cultural festival series. High-profile matchups across both leagues.</div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Jul 20–23</span>
+            <span class="gw-type holiday">All-Star Break</span>
+          </div>
+          <div class="gw-matchup">NPB All-Star Series (Mazda All-Star Game). Short schedule break. Dates may shift.</div>
+          <div class="gw-times">
+            <div class="gw-tz"><span class="label">JST </span><span class="val">6:00 PM</span></div>
+            <div class="gw-tz"><span class="label">ET </span><span class="val early">4:00 AM</span></div>
+            <div class="gw-tz"><span class="label">PT </span><span class="val early">1:00 AM</span></div>
+          </div>
+        </div>
+        <div class="stream-tip">📺 <strong>Stream it:</strong> PL All-Star games on <a href="https://pacificleague.com/en/ptv" target="_blank" style="color:var(--neon)">Pacific League TV</a></div>
+      </div>
+    </div>
+
+    <div class="month-card">
+      <div class="month-head">
+        <div class="month-name">August</div>
+        <span class="month-tag tag-special">Koshien / Summer Grind</span>
+      </div>
+      <div class="month-body">
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Aug 11–13</span>
+            <span class="gw-type holiday">Obon Holiday</span>
+          </div>
+          <div class="gw-matchup">Weekday day games more common. Earlier starts = better US viewing window.</div>
+          <div class="gw-times">
+            <div class="gw-tz"><span class="label">JST </span><span class="val">2:00 PM</span></div>
+            <div class="gw-tz"><span class="label">ET </span><span class="val">12:00 AM</span></div>
+            <div class="gw-tz"><span class="label">PT </span><span class="val">9:00 PM prev.</span></div>
+          </div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">All of August</span>
+            <span class="gw-type highlight">Koshien Displacement</span>
+          </div>
+          <div class="gw-matchup"><strong>Hanshin Tigers play nearly all road games</strong> — Koshien Stadium hosts the national high school tournament. Tigers play at Osaka Dome or neutral sites.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="month-card">
+      <div class="month-head">
+        <div class="month-name">September</div>
+        <span class="month-tag tag-playoffs">Pennant Race</span>
+      </div>
+      <div class="month-body">
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Sep 20–23</span>
+            <span class="gw-type holiday">Silver Week</span>
+          </div>
+          <div class="gw-matchup">Holiday weekend. Day games likely — good US viewing window.</div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Sep 25–30</span>
+            <span class="gw-type highlight">Final Push</span>
+          </div>
+          <div class="gw-matchup">Makeup games from earlier in the season slotted in. Schedule gets choppy. Pennant clinch races.</div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header">
+            <span class="gw-dates">Late Sep / Early Oct</span>
+            <span class="gw-type highlight">Climax Series</span>
+          </div>
+          <div class="gw-matchup">NPB Playoffs — top 3 teams from each league. All games on Pacific League TV for PL teams.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TEAM KEY -->
+  <div class="section-header" style="margin-top:32px;">
+    <span class="section-num">KEY</span>
+    <h3 style="font-size:1rem;font-weight:700;">NPB Team Codes</h3>
+  </div>
+  <div class="team-key">
+    <div class="tk-item"><span class="tk-code pacific">H</span><div><div class="tk-name">Fukuoka SoftBank Hawks</div><div class="tk-city">Fukuoka · Mizuho PayPay Dome</div></div><span class="tk-league p">Pacific</span></div>
+    <div class="tk-item"><span class="tk-code pacific">F</span><div><div class="tk-name">Hokkaido Nippon-Ham Fighters</div><div class="tk-city">Sapporo · ES CON Field</div></div><span class="tk-league p">Pacific</span></div>
+    <div class="tk-item"><span class="tk-code pacific">B</span><div><div class="tk-name">Orix Buffaloes</div><div class="tk-city">Osaka · Kyocera Dome</div></div><span class="tk-league p">Pacific</span></div>
+    <div class="tk-item"><span class="tk-code pacific">M</span><div><div class="tk-name">Chiba Lotte Marines</div><div class="tk-city">Chiba · ZOZOmarine</div></div><span class="tk-league p">Pacific</span></div>
+    <div class="tk-item"><span class="tk-code pacific">E</span><div><div class="tk-name">Tohoku Rakuten Golden Eagles</div><div class="tk-city">Sendai · Rakuten Mobile Park</div></div><span class="tk-league p">Pacific</span></div>
+    <div class="tk-item"><span class="tk-code pacific">L</span><div><div class="tk-name">Saitama Seibu Lions</div><div class="tk-city">Tokorozawa · Belluna Dome</div></div><span class="tk-league p">Pacific</span></div>
+    <div class="tk-item"><span class="tk-code central">G</span><div><div class="tk-name">Yomiuri Giants</div><div class="tk-city">Tokyo · Tokyo Dome</div></div><span class="tk-league c">Central</span></div>
+    <div class="tk-item"><span class="tk-code central">T</span><div><div class="tk-name">Hanshin Tigers</div><div class="tk-city">Nishinomiya · Koshien Stadium</div></div><span class="tk-league c">Central</span></div>
+    <div class="tk-item"><span class="tk-code central">S</span><div><div class="tk-name">Tokyo Yakult Swallows</div><div class="tk-city">Tokyo · Meiji Jingu</div></div><span class="tk-league c">Central</span></div>
+    <div class="tk-item"><span class="tk-code central">DB</span><div><div class="tk-name">Yokohama DeNA BayStars</div><div class="tk-city">Yokohama · Yokohama Stadium</div></div><span class="tk-league c">Central</span></div>
+    <div class="tk-item"><span class="tk-code central">D</span><div><div class="tk-name">Chunichi Dragons</div><div class="tk-city">Nagoya · Vantelin Dome</div></div><span class="tk-league c">Central</span></div>
+    <div class="tk-item"><span class="tk-code central">C</span><div><div class="tk-name">Hiroshima Toyo Carp</div><div class="tk-city">Hiroshima · Mazda Zoom-Zoom Stadium</div></div><span class="tk-league c">Central</span></div>
+  </div>
+</div>
+
+<!-- KBO -->
+<div class="section" id="kbo">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">🇰🇷 KBO — Korea Baseball Organization 2026</h2>
+    <span class="section-badge badge-kbo">Mar 28 – Sep 6 · 10 Teams</span>
+  </div>
+
+  <!-- WHERE TO WATCH KBO -->
+  <div class="wtw-box" style="border-left-color: var(--green);">
+    <div class="wtw-title" style="color:var(--green);">Where to Stream KBO in the US</div>
+    <div class="wtw-grid">
+      <div class="wtw-item">
+        <div class="wtw-platform"><a href="https://www.sooplive.com" target="_blank" style="color:var(--green)">SOOP (sooplive.com)</a></div>
+        <div class="wtw-detail free">FREE · Every game · No account required</div>
+      </div>
+      <div class="wtw-item">
+        <div class="wtw-platform">TVING</div>
+        <div class="wtw-detail">Korea domestic only · subscription</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;font-size:0.78rem;color:var(--muted);">💡 <strong style="color:var(--green)">Best free deal in international baseball:</strong> Every KBO game, live, free, globally via SOOP. No account, no subscription. Open sooplive.com and search KBO during game time.</div>
+  </div>
+
+  <div class="month-grid">
+
+    <div class="month-card">
+      <div class="month-head">
+        <div class="month-name">Season Overview</div>
+        <span class="month-tag tag-regular">144 Games · 10 Teams</span>
+      </div>
+      <div class="month-body">
+        <div class="game-window">
+          <div class="gw-header"><span class="gw-dates">Mar 28 — Opening Day</span></div>
+          <div class="gw-matchup">All 10 teams begin the regular season. 144 games each, facing every opponent 16 times.</div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header"><span class="gw-dates">Weekday Games</span></div>
+          <div class="gw-matchup">Standard 6:30 PM KST start (same time zone as Japan)</div>
+          <div class="gw-times">
+            <div class="gw-tz"><span class="label">KST </span><span class="val">6:30 PM</span></div>
+            <div class="gw-tz"><span class="label">ET </span><span class="val early">4:30 AM</span></div>
+            <div class="gw-tz"><span class="label">PT </span><span class="val early">1:30 AM</span></div>
+          </div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header"><span class="gw-dates">Weekend / Holiday Games</span></div>
+          <div class="gw-matchup">Earlier starts — 2:00 PM KST typical</div>
+          <div class="gw-times">
+            <div class="gw-tz"><span class="label">KST </span><span class="val">2:00 PM</span></div>
+            <div class="gw-tz"><span class="label">ET </span><span class="val">12:00 AM</span></div>
+            <div class="gw-tz"><span class="label">PT </span><span class="val">9:00 PM prev.</span></div>
+          </div>
+        </div>
+        <div class="game-window">
+          <div class="gw-header"><span class="gw-dates">Sep 6 — Regular Season Ends</span></div>
+          <div class="gw-matchup">Playoffs begin shortly after. Wild Card → Semi → Korean Series.</div>
+        </div>
+        <div class="stream-tip">📺 <strong>Stream it free:</strong> <a href="https://www.sooplive.com" target="_blank" style="color:var(--neon)">sooplive.com</a> — search "KBO" during game time. Works on any device, any browser.</div>
+      </div>
+    </div>
+
+    <div class="month-card">
+      <div class="month-head">
+        <div class="month-name">KBO 10 Teams</div>
+        <span class="month-tag tag-regular">2026 Season</span>
+      </div>
+      <div class="month-body" style="font-size:0.82rem;">
+        <div style="display:grid;gap:6px;">
+          <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(51,65,85,0.5);"><span style="font-weight:700;color:var(--text)">LG Twins</span><span style="color:var(--muted)">Seoul · Jamsil Stadium</span></div>
+          <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(51,65,85,0.5);"><span style="font-weight:700;color:var(--text)">Kia Tigers</span><span style="color:var(--muted)">Gwangju · Gwangju-Kia Champions Field</span></div>
+          <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(51,65,85,0.5);"><span style="font-weight:700;color:var(--text)">Samsung Lions</span><span style="color:var(--muted)">Daegu · Lion's Park</span></div>
+          <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(51,65,85,0.5);"><span style="font-weight:700;color:var(--text)">Doosan Bears</span><span style="color:var(--muted)">Seoul · Jamsil Stadium</span></div>
+          <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(51,65,85,0.5);"><span style="font-weight:700;color:var(--text)">Lotte Giants</span><span style="color:var(--muted)">Busan · Sajik Stadium</span></div>
+          <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(51,65,85,0.5);"><span style="font-weight:700;color:var(--text)">SSG Landers</span><span style="color:var(--muted)">Incheon · SSG Landers Field</span></div>
+          <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(51,65,85,0.5);"><span style="font-weight:700;color:var(--text)">Hanwha Eagles</span><span style="color:var(--muted)">Daejeon · Hanwha Life Eagles Park</span></div>
+          <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(51,65,85,0.5);"><span style="font-weight:700;color:var(--text)">NC Dinos</span><span style="color:var(--muted)">Changwon · Changwon NC Park</span></div>
+          <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(51,65,85,0.5);"><span style="font-weight:700;color:var(--text)">KT Wiz</span><span style="color:var(--muted)">Suwon · KT Wiz Park</span></div>
+          <div style="display:flex;justify-content:space-between;padding:4px 0;"><span style="font-weight:700;color:var(--text)">Kiwoom Heroes</span><span style="color:var(--muted)">Seoul · Gocheok Sky Dome</span></div>
+        </div>
+        <div style="margin-top:12px;font-size:0.72rem;color:var(--muted);">Record 12.3M+ fans attended KBO games in 2025. Shinhan Bank title sponsor through 2037 ($77.7M deal).</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- COMING SOON -->
+<div class="section" id="more">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">More Leagues Coming</h2>
+  </div>
+  <div class="month-grid">
+    <div class="coming-soon">
+      <div class="cs-icon">🇹🇼</div>
+      <div class="cs-title">CPBL 2026 Schedule</div>
+      <div class="cs-sub">Taiwan · Mar 28 – Oct · 6 teams · via HamiVideo</div>
+    </div>
+    <div class="coming-soon">
+      <div class="cs-icon">🇻🇪</div>
+      <div class="cs-title">LVBP 2026–27 Winter Schedule</div>
+      <div class="cs-sub">Venezuela · Oct – Jan · via BeisbolPlay.com</div>
+    </div>
+    <div class="coming-soon">
+      <div class="cs-icon">🇩🇴</div>
+      <div class="cs-title">LIDOM 2026–27 Winter Schedule</div>
+      <div class="cs-sub">Dominican Republic · Oct – Jan · via MLB.TV</div>
+    </div>
+    <div class="coming-soon">
+      <div class="cs-icon">🇲🇽</div>
+      <div class="cs-title">LAMP 2026–27 Winter Schedule</div>
+      <div class="cs-sub">Mexico Pacific · Oct – Jan · YouTube free</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>
+    <span class="footer-brand">Classic Baseball World</span> · classicbaseball.world<br>
+    A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · Certified SDVOSB · FIBS Partner · SABR Member
+  </div>
+  <div style="text-align:right;">
+    <div>2026 Season · Updated April 2026</div>
+    <div style="margin-top:4px;"><a href="/">Movie DB</a> · <a href="/wbc2026.html">WBC 2026</a> · <a href="/streaming.html">Streaming Guide</a> · <a href="/schedules.html">When to Watch</a></div>
+  </div>
+</div>
+
+</body>
+</html>
