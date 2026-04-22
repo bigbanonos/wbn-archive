@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Leagues of Earth — Baseball Without Borders | Classic Baseball World</title>
+  <meta name="description" content="Every professional baseball league on the planet. Filter by country, continent, season, or status. Baseball Without Borders.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:       #0a0f1e;
+      --bg2:      #0f172a;
+      --card:     #111827;
+      --card2:    #0d1424;
+      --text:     #f0f4ff;
+      --muted:    #8899bb;
+      --dim:      #4a5a7a;
+      --accent:   #D50032;
+      --neon:     #00ff9d;
+      --gold:     #f5c842;
+      --rule:     #1e2d4a;
+      --rule2:    #263354;
+      --blue:     #38bdf8;
+      --teal:     #2dd4bf;
+      --orange:   #fb923c;
+      --purple:   #a78bfa;
+
+      --mono:     'IBM Plex Mono', monospace;
+      --display:  'Barlow Condensed', sans-serif;
+      --serif:    'Lora', serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--serif); font-size: 15px; line-height: 1.65; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+    /* ── SITE NAV ──────────────────────────────────── */
+    .site-nav {
+      background: var(--bg2); border-bottom: 1px solid var(--rule);
+      padding: 12px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .site-nav .logo { font-family: var(--display); font-weight: 900; font-size: 0.9rem; letter-spacing: 1px; color: var(--text); }
+    .site-nav .navlinks { display: flex; gap: 6px; flex-wrap: wrap; }
+    .nav-pill {
+      font-family: var(--display); font-size: 0.7rem; font-weight: 700; letter-spacing: 1px;
+      padding: 4px 12px; border-radius: 20px;
+      border: 1px solid var(--rule2); color: var(--muted); transition: 0.2s;
+    }
+    .nav-pill:hover { color: var(--text); border-color: var(--text); }
+    .nav-pill.active { color: var(--gold); border-color: var(--gold); }
+    .hq-link {
+      font-family: var(--display); font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--neon); border: 1px solid var(--neon);
+      padding: 6px 14px; border-radius: 4px; display: flex; align-items: center; gap: 8px;
+    }
+    .live-dot { width: 7px; height: 7px; background: var(--neon); border-radius: 50%; box-shadow: 0 0 5px var(--neon); animation: blink 1.8s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    /* ── HERO ──────────────────────────────────────── */
+    .hero {
+      padding: 64px 24px 48px;
+      border-bottom: 3px solid var(--gold);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.012) 0 1px, transparent 1px 60px),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0 1px, transparent 1px 60px);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; }
+    .hero-flag {
+      font-family: var(--display); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 5px; text-transform: uppercase; color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .hero-title {
+      font-family: var(--display);
+      font-size: clamp(3rem, 9vw, 7.5rem);
+      font-weight: 900; font-style: italic;
+      line-height: 0.9; letter-spacing: -2px; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero-title .line2 { color: var(--neon); display: block; }
+    .hero-sub {
+      font-family: var(--display); font-size: clamp(1rem, 2vw, 1.4rem);
+      font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 28px;
+    }
+    .hero-lede {
+      font-family: var(--serif); font-size: 1.05rem; font-style: italic;
+      color: var(--muted); max-width: 680px; line-height: 1.7; margin-bottom: 28px;
+    }
+    .hero-lede strong { color: var(--text); font-style: normal; }
+    .hero-counts {
+      display: flex; gap: 32px; flex-wrap: wrap;
+      padding-top: 20px; border-top: 1px solid var(--rule2);
+    }
+    .hc-num { font-family: var(--display); font-size: 2.2rem; font-weight: 900; line-height: 1; color: var(--gold); }
+    .hc-lbl { font-family: var(--mono); font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+
+    /* ── FILTER BAR ────────────────────────────────── */
+    .filter-bar {
+      background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--rule);
+      padding: 24px;
+      position: sticky; top: 61px; z-index: 90;
+      backdrop-filter: blur(12px);
+    }
+    .filter-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .filter-group {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    }
+    .filter-label {
+      font-family: var(--display); font-size: 0.68rem; font-weight: 900;
+      letter-spacing: 3px; text-transform: uppercase; color: var(--gold);
+      min-width: 100px;
+    }
+    .filter-chip {
+      font-family: var(--display); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 4px;
+      border: 1px solid var(--rule2);
+      background: var(--card);
+      color: var(--muted);
+      transition: 0.15s;
+      white-space: nowrap;
+    }
+    .filter-chip:hover { color: var(--text); border-color: var(--muted); }
+    .filter-chip.active {
+      background: var(--neon); color: #000; border-color: var(--neon);
+    }
+    .filter-chip.active.active-country { background: var(--blue); border-color: var(--blue); color: #000; }
+    .filter-chip.active.active-calendar { background: var(--gold); border-color: var(--gold); color: #000; }
+    .filter-chip.active.active-status { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+    .count-bar {
+      font-family: var(--mono); font-size: 0.75rem; color: var(--muted);
+      padding-top: 12px; border-top: 1px solid var(--rule);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+    }
+    .count-bar .count-num { color: var(--neon); font-weight: 700; }
+    .clear-btn {
+      font-family: var(--display); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--accent); padding: 4px 10px; border: 1px solid var(--accent);
+      border-radius: 3px; transition: 0.15s;
+    }
+    .clear-btn:hover { background: var(--accent); color: #fff; }
+
+    /* ── GRID ──────────────────────────────────────── */
+    .grid-wrap { padding: 32px 24px 64px; }
+    .grid-inner { max-width: 1400px; margin: 0 auto; }
+
+    .group-header {
+      display: flex; align-items: baseline; gap: 16px;
+      padding: 28px 0 14px; margin-top: 16px;
+      border-bottom: 2px solid var(--rule2);
+      flex-wrap: wrap;
+    }
+    .group-header:first-of-type { margin-top: 0; padding-top: 8px; }
+    .group-name {
+      font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 900; font-style: italic;
+      letter-spacing: -0.5px; line-height: 1; text-transform: uppercase;
+    }
+    .group-count { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); }
+    .group-desc { font-family: var(--serif); font-style: italic; color: var(--muted); font-size: 0.88rem; margin-left: auto; max-width: 520px; text-align: right; }
+
+    .league-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    /* ── LEAGUE CARD ───────────────────────────────── */
+    .league-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 22px 22px 20px;
+      transition: 0.2s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      min-height: 230px;
+    }
+    .league-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: var(--accent);
+    }
+    .league-card.americas::before { background: var(--gold); }
+    .league-card.asia::before { background: var(--blue); }
+    .league-card.europe::before { background: var(--purple); }
+    .league-card.oceania::before { background: var(--teal); }
+    .league-card.usa::before { background: var(--accent); }
+    .league-card.tournament::before { background: var(--neon); }
+
+    .league-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--muted);
+      background: var(--card2);
+    }
+    .league-card.hidden { display: none !important; }
+
+    .lc-top {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .lc-flag { font-size: 2rem; line-height: 1; }
+    .lc-status-dot {
+      font-family: var(--mono); font-size: 0.58rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 3px 9px; border-radius: 3px;
+      white-space: nowrap;
+    }
+    .status-active { background: rgba(0,255,157,0.1); color: var(--neon); border: 1px solid rgba(0,255,157,0.3); }
+    .status-dormant { background: rgba(74,90,122,0.15); color: var(--dim); border: 1px solid rgba(74,90,122,0.3); }
+    .status-upcoming { background: rgba(245,200,66,0.1); color: var(--gold); border: 1px solid rgba(245,200,66,0.3); }
+    .status-event { background: rgba(167,139,250,0.1); color: var(--purple); border: 1px solid rgba(167,139,250,0.3); }
+
+    .lc-abbr {
+      font-family: var(--display); font-size: 1.9rem; font-weight: 900;
+      line-height: 1; letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+    .lc-full {
+      font-family: var(--display); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .lc-meta {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      padding-top: 10px; border-top: 1px solid rgba(30,45,74,0.6);
+      font-family: var(--mono); font-size: 0.68rem;
+      color: var(--muted); margin-top: auto;
+    }
+    .lc-meta span { display: inline-flex; align-items: center; gap: 4px; }
+    .lc-meta strong { color: var(--text); font-weight: 700; }
+    .lc-bottom-row {
+      margin-top: 12px;
+      display: flex; justify-content: space-between; align-items: center; gap: 10px;
+    }
+    .lc-stream-note {
+      font-family: var(--mono); font-size: 0.65rem; color: var(--muted);
+    }
+    .lc-stream-note.free { color: var(--neon); font-weight: 700; }
+    .lc-cta {
+      font-family: var(--display); font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .league-card:hover .lc-cta { color: var(--text); }
+
+    /* ── NO RESULTS ────────────────────────────────── */
+    .no-results {
+      text-align: center; padding: 80px 24px;
+      display: none;
+    }
+    .no-results.show { display: block; }
+    .nr-icon { font-size: 3rem; margin-bottom: 16px; }
+    .nr-title { font-family: var(--display); font-size: 1.4rem; font-weight: 900; letter-spacing: -0.3px; margin-bottom: 8px; }
+    .nr-sub { color: var(--muted); font-size: 0.9rem; }
+
+    /* ── FOOTER ────────────────────────────────────── */
+    .footer {
+      border-top: 2px solid var(--gold);
+      padding: 32px 24px; margin-top: 40px;
+    }
+    .footer-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .gf-brand { font-family: var(--display); font-size: 1.3rem; font-weight: 900; letter-spacing: 1px; }
+    .gf-pub { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); margin-top: 6px; }
+    .gf-pub a { color: var(--muted); }
+    .gf-pub a:hover { color: var(--neon); }
+    .gf-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+    .gf-link { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
+    .gf-link:hover { color: var(--neon); }
+
+    @media (max-width: 700px) {
+      .filter-bar { position: static; }
+      .site-nav { position: static; }
+      .filter-label { min-width: auto; }
+      .hero { padding: 44px 20px 32px; }
+      .hero-counts { gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- SITE NAV -->
+<nav class="site-nav">
+  <div class="logo">BASEBALL WITHOUT BORDERS</div>
+  <div class="navlinks">
+    <a href="/index.html" class="nav-pill">Home</a>
+    <a href="/leagues.html" class="nav-pill active">Leagues</a>
+    <a href="/schedules.html" class="nav-pill">Schedules</a>
+    <a href="/streaming.html" class="nav-pill">Streaming</a>
+    <a href="/viewers-guide-may-4.html" class="nav-pill">Viewer's Guide</a>
+    <a href="/marlins.html" class="nav-pill">Marlins Beat</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-flag">The Master Index · World Baseball Network</div>
+    <h1 class="hero-title">
+      Every League<br>
+      <span class="line2">on Earth.</span>
+    </h1>
+    <div class="hero-sub">From Tokyo to Dubai to Guadalajara</div>
+    <p class="hero-lede">
+      Baseball is played professionally in <strong>26 countries across 5 continents</strong>. Nobody charts it all in one place. We do. Every league, every country, every schedule — filter, click, and find out exactly where and when the world is playing.
+    </p>
+    <div class="hero-counts">
+      <div>
+        <div class="hc-num">45+</div>
+        <div class="hc-lbl">Leagues Tracked</div>
+      </div>
+      <div>
+        <div class="hc-num">26</div>
+        <div class="hc-lbl">Countries</div>
+      </div>
+      <div>
+        <div class="hc-num">5</div>
+        <div class="hc-lbl">Continents</div>
+      </div>
+      <div>
+        <div class="hc-num">365</div>
+        <div class="hc-lbl">Days / Year</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-inner">
+
+    <div class="filter-group">
+      <span class="filter-label">Region</span>
+      <button class="filter-chip filter-region active" data-region="all">All</button>
+      <button class="filter-chip filter-region" data-region="usa">🇺🇸 USA</button>
+      <button class="filter-chip filter-region" data-region="americas">🌎 Americas</button>
+      <button class="filter-chip filter-region" data-region="asia">🌏 Asia</button>
+      <button class="filter-chip filter-region" data-region="europe">🇪🇺 Europe</button>
+      <button class="filter-chip filter-region" data-region="oceania">🇦🇺 Oceania</button>
+      <button class="filter-chip filter-region" data-region="tournament">🏆 Tournaments</button>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Status</span>
+      <button class="filter-chip filter-status active" data-status="all">All</button>
+      <button class="filter-chip filter-status" data-status="active">🟢 Playing Now</button>
+      <button class="filter-chip filter-status" data-status="upcoming">🟡 Starting Soon</button>
+      <button class="filter-chip filter-status" data-status="dormant">🔴 Off-Season</button>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Calendar</span>
+      <button class="filter-chip filter-calendar active" data-calendar="all">All</button>
+      <button class="filter-chip filter-calendar" data-calendar="spring-summer">Spring–Summer</button>
+      <button class="filter-chip filter-calendar" data-calendar="winter">Fall–Winter</button>
+      <button class="filter-chip filter-calendar" data-calendar="year-round">Year-Round</button>
+      <button class="filter-chip filter-calendar" data-calendar="event">Events Only</button>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Cost</span>
+      <button class="filter-chip filter-cost active" data-cost="all">All</button>
+      <button class="filter-chip filter-cost" data-cost="free">🆓 Free to Watch</button>
+      <button class="filter-chip filter-cost" data-cost="paid">💳 Subscription</button>
+    </div>
+
+    <div class="count-bar">
+      <div>Showing <span class="count-num" id="count">45</span> leagues. <span style="color:var(--muted)">Click any card for full details, schedule, and streaming info.</span></div>
+      <button class="clear-btn" id="clear-btn">Clear All Filters</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- GRID -->
+<div class="grid-wrap">
+  <div class="grid-inner">
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- GROUP: USA - MLB ECOSYSTEM -->
+    <!-- ════════════════════════════════════════════ -->
+    <div class="group-header" data-group="usa">
+      <div class="group-name">The United States</div>
+      <div class="group-count" id="usa-count">14 leagues</div>
+      <div class="group-desc">MLB, MiLB, College, Independent, and the newest frontiers of the American game.</div>
+    </div>
+    <div class="league-grid">
+
+      <a href="/league/mlb.html" class="league-card usa" data-region="usa" data-status="active" data-calendar="year-round" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">MLB</div>
+        <div class="lc-full">Major League Baseball</div>
+        <div class="lc-meta">
+          <span>📍 30 teams</span>
+          <span>📅 Mar–Oct</span>
+          <span>💰 ESPN Unltd</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">MLB.TV · Apple · Fox · NBC</span>
+          <span class="lc-cta">Full Page →</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">AAA</div>
+        <div class="lc-full">MiLB Triple-A · Int'l + PCL</div>
+        <div class="lc-meta">
+          <span>📍 30 teams</span>
+          <span>📅 Apr–Sep</span>
+          <span>💰 MiLB.TV</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Next step before MLB</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">AA</div>
+        <div class="lc-full">MiLB Double-A</div>
+        <div class="lc-meta">
+          <span>📍 30 teams</span>
+          <span>📅 Apr–Sep</span>
+          <span>💰 MiLB.TV</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Eastern · Southern · Texas</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">NCAA</div>
+        <div class="lc-full">College Baseball · Road to Omaha</div>
+        <div class="lc-meta">
+          <span>📍 300+ D1 programs</span>
+          <span>📅 Feb–Jun</span>
+          <span>💰 ESPN+</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">College World Series · June</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">ATLANTIC</div>
+        <div class="lc-full">Atlantic League of Pro Baseball</div>
+        <div class="lc-meta">
+          <span>📍 10 teams</span>
+          <span>📅 Apr–Sep</span>
+          <span>💰 Partner League</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">MLB Rule Lab · Indy Pro</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">AMER ASSN</div>
+        <div class="lc-full">American Association</div>
+        <div class="lc-meta">
+          <span>📍 12 teams</span>
+          <span>📅 May–Sep</span>
+          <span>💰 Partner League</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Midwest Indy Pro</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">FRONTIER</div>
+        <div class="lc-full">Frontier League</div>
+        <div class="lc-meta">
+          <span>📍 18 teams</span>
+          <span>📅 May–Sep</span>
+          <span>💰 Partner League</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">All-Star @ Florence 2026</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="upcoming" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-upcoming">◐ May Start</span></div>
+        <div class="lc-abbr">PIONEER</div>
+        <div class="lc-full">Pioneer Baseball League</div>
+        <div class="lc-meta">
+          <span>📍 12 teams</span>
+          <span>📅 May–Sep</span>
+          <span>💰 HomeTeam Network</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Opens May 19</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="/league/wpbl.html" class="league-card usa" data-region="usa" data-status="upcoming" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-upcoming">◐ 2026 Inaugural</span></div>
+        <div class="lc-abbr">WPBL</div>
+        <div class="lc-full">Women's Pro Baseball League</div>
+        <div class="lc-meta">
+          <span>📍 Springfield, IL</span>
+          <span>📅 Summer 2026</span>
+          <span>💰 TBD</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note" style="color:var(--gold);">★ Historic inaugural season</span>
+          <span class="lc-cta">Full Page →</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🍌</span><span class="lc-status-dot status-active">● Touring</span></div>
+        <div class="lc-abbr">BANANAS</div>
+        <div class="lc-full">Savannah Bananas · Banana Ball</div>
+        <div class="lc-meta">
+          <span>📍 Mobile tour</span>
+          <span>📅 Feb–Oct</span>
+          <span>💰 Ticketed only</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Sells out NFL stadiums</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="dormant" data-calendar="event" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-dormant">○ Fall Event</span></div>
+        <div class="lc-abbr">AFL</div>
+        <div class="lc-full">Arizona Fall League</div>
+        <div class="lc-meta">
+          <span>📍 6 teams</span>
+          <span>📅 Oct–Nov</span>
+          <span>💰 MLB.TV</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Top prospects showcase</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="dormant" data-calendar="event" data-cost="free">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-dormant">○ August Event</span></div>
+        <div class="lc-abbr">LLWS</div>
+        <div class="lc-full">Little League World Series</div>
+        <div class="lc-meta">
+          <span>📍 Williamsport, PA</span>
+          <span>📅 Aug 19–30</span>
+          <span>💰 ESPN</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note free">Free broadcasts</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="dormant" data-calendar="event" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-dormant">○ Spring Event</span></div>
+        <div class="lc-abbr">BREAKOUT</div>
+        <div class="lc-full">MLB Spring Breakout</div>
+        <div class="lc-meta">
+          <span>📍 30 prospect games</span>
+          <span>📅 March</span>
+          <span>💰 MLB.TV</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Prospect exhibition</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card usa" data-region="usa" data-status="active" data-calendar="spring-summer" data-cost="free">
+        <div class="lc-top"><span class="lc-flag">🇺🇸</span><span class="lc-status-dot status-upcoming">◐ Summer Start</span></div>
+        <div class="lc-abbr">NORTHWOODS</div>
+        <div class="lc-full">Northwoods League · Collegiate</div>
+        <div class="lc-meta">
+          <span>📍 Upper Midwest</span>
+          <span>📅 May–Aug</span>
+          <span>💰 Team streams</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Top summer collegiate</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- GROUP: ASIA — THE BIG 3 + BASEBALL UNITED -->
+    <!-- ════════════════════════════════════════════ -->
+    <div class="group-header" data-group="asia">
+      <div class="group-name">Asia</div>
+      <div class="group-count">5 leagues</div>
+      <div class="group-desc">NPB, KBO, and CPBL are the three most competitive leagues on Earth outside MLB. Plus the sleeper upstart in Dubai.</div>
+    </div>
+    <div class="league-grid">
+
+      <a href="/league/npb.html" class="league-card asia" data-region="asia" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇯🇵</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">NPB</div>
+        <div class="lc-full">Nippon Professional Baseball</div>
+        <div class="lc-meta">
+          <span>📍 12 teams · 2 leagues</span>
+          <span>📅 Mar–Oct</span>
+          <span>💰 ~$11/mo PLTV</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Pacific League TV · FTF</span>
+          <span class="lc-cta">Full Page →</span>
+        </div>
+      </a>
+
+      <a href="/league/kbo.html" class="league-card asia" data-region="asia" data-status="active" data-calendar="spring-summer" data-cost="free">
+        <div class="lc-top"><span class="lc-flag">🇰🇷</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">KBO</div>
+        <div class="lc-full">Korea Baseball Organization</div>
+        <div class="lc-meta">
+          <span>📍 10 teams</span>
+          <span>📅 Mar 28–Sep 6</span>
+          <span>💰 FREE on SOOP</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note free">🆓 sooplive.com — every game</span>
+          <span class="lc-cta">Full Page →</span>
+        </div>
+      </a>
+
+      <a href="/league/cpbl.html" class="league-card asia" data-region="asia" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇹🇼</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">CPBL</div>
+        <div class="lc-full">Chinese Professional Baseball League</div>
+        <div class="lc-meta">
+          <span>📍 6 teams</span>
+          <span>📅 Mar 28–Oct</span>
+          <span>💰 ~$10/mo HamiVideo</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Wei Chuan FREE on YouTube</span>
+          <span class="lc-cta">Full Page →</span>
+        </div>
+      </a>
+
+      <a href="/league/baseball-united.html" class="league-card asia" data-region="asia" data-status="active" data-calendar="winter" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇦🇪</span><span class="lc-status-dot status-active">● Growing</span></div>
+        <div class="lc-abbr">B·UNITED</div>
+        <div class="lc-full">Baseball United · UAE / South Asia</div>
+        <div class="lc-meta">
+          <span>📍 Dubai hub</span>
+          <span>📅 Nov–Feb</span>
+          <span>💰 baseballunited.com</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note" style="color:var(--gold);">★ The new frontier</span>
+          <span class="lc-cta">Full Page →</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card asia" data-region="asia" data-status="dormant" data-calendar="event" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇹🇼</span><span class="lc-status-dot status-dormant">○ Nov–Dec</span></div>
+        <div class="lc-abbr">AWL</div>
+        <div class="lc-full">Asia Winter Baseball League</div>
+        <div class="lc-meta">
+          <span>📍 5 teams · Taiwan</span>
+          <span>📅 Nov 15–Dec 7</span>
+          <span>💰 CPBL TV</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Prospect showcase</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- GROUP: AMERICAS (non-US) -->
+    <!-- ════════════════════════════════════════════ -->
+    <div class="group-header" data-group="americas">
+      <div class="group-name">The Americas</div>
+      <div class="group-count">11 leagues</div>
+      <div class="group-desc">Summer ball in Mexico, winter ball across the Caribbean, professional play year-round across Latin America.</div>
+    </div>
+    <div class="league-grid">
+
+      <a href="/league/lmb.html" class="league-card americas" data-region="americas" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇲🇽</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">LMB</div>
+        <div class="lc-full">Liga Mexicana de Béisbol</div>
+        <div class="lc-meta">
+          <span>📍 20 teams</span>
+          <span>📅 Apr 16–Aug 6</span>
+          <span>💰 jonron.tv</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Mexico's summer league · MiLB-aff</span>
+          <span class="lc-cta">Full Page →</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card americas" data-region="americas" data-status="active" data-calendar="winter" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇨🇺</span><span class="lc-status-dot status-active">● Playoffs</span></div>
+        <div class="lc-abbr">SNB</div>
+        <div class="lc-full">Cuba Serie Nacional · 64th Edition</div>
+        <div class="lc-meta">
+          <span>📍 16 teams</span>
+          <span>📅 Sep–Jan</span>
+          <span>💰 Regional TV</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Leñadores de Las Tunas · def.</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card americas" data-region="americas" data-status="dormant" data-calendar="winter" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇻🇪</span><span class="lc-status-dot status-dormant">○ Oct start</span></div>
+        <div class="lc-abbr">LVBP</div>
+        <div class="lc-full">Liga Venezolana de Béisbol Profesional</div>
+        <div class="lc-meta">
+          <span>📍 8 teams</span>
+          <span>📅 Oct 15–Feb</span>
+          <span>💰 ~$23/season</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">BeisbolPlay · Magallanes def.</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card americas" data-region="americas" data-status="dormant" data-calendar="winter" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇩🇴</span><span class="lc-status-dot status-dormant">○ Oct start</span></div>
+        <div class="lc-abbr">LIDOM</div>
+        <div class="lc-full">Liga Dominicana de Béisbol Profesional</div>
+        <div class="lc-meta">
+          <span>📍 6 teams</span>
+          <span>📅 Oct 15–Jan</span>
+          <span>💰 MLB.TV</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Escogido def. · 18 titles</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card americas" data-region="americas" data-status="dormant" data-calendar="winter" data-cost="free">
+        <div class="lc-top"><span class="lc-flag">🇲🇽</span><span class="lc-status-dot status-dormant">○ Oct start</span></div>
+        <div class="lc-abbr">LAMP</div>
+        <div class="lc-full">Liga ARCO Mexicana del Pacífico</div>
+        <div class="lc-meta">
+          <span>📍 10 teams</span>
+          <span>📅 Oct–Jan</span>
+          <span>💰 FREE YouTube</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note free">🆓 YouTube · Charros 2025–26 champs</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card americas" data-region="americas" data-status="dormant" data-calendar="winter" data-cost="free">
+        <div class="lc-top"><span class="lc-flag">🇵🇷</span><span class="lc-status-dot status-dormant">○ Nov start</span></div>
+        <div class="lc-abbr">LBPRC</div>
+        <div class="lc-full">Liga de Béisbol Profesional Roberto Clemente</div>
+        <div class="lc-meta">
+          <span>📍 6 teams</span>
+          <span>📅 Nov 7–Jan</span>
+          <span>💰 Free YouTube</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note free">🆓 @lbprc21tv · Santurce champs</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card americas" data-region="americas" data-status="dormant" data-calendar="winter" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇳🇮</span><span class="lc-status-dot status-dormant">○ Nov start</span></div>
+        <div class="lc-abbr">APBN</div>
+        <div class="lc-full">Asociación Profesional de Béisbol Nicaragüense</div>
+        <div class="lc-meta">
+          <span>📍 5 teams</span>
+          <span>📅 Nov 4–Jan</span>
+          <span>💰 Regional</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Rebrand of LBPN · Leones def.</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card americas" data-region="americas" data-status="dormant" data-calendar="winter" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇵🇦</span><span class="lc-status-dot status-dormant">○ Winter</span></div>
+        <div class="lc-abbr">PROBEIS</div>
+        <div class="lc-full">Liga Profesional de Béisbol de Panamá</div>
+        <div class="lc-meta">
+          <span>📍 3–4 teams</span>
+          <span>📅 Dec–Jan</span>
+          <span>💰 Regional</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Federales de Chiriquí champs</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card americas" data-region="americas" data-status="dormant" data-calendar="winter" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇨🇴</span><span class="lc-status-dot status-dormant">○ Nov start</span></div>
+        <div class="lc-abbr">LBPC</div>
+        <div class="lc-full">Liga Profesional de Béisbol Colombiano</div>
+        <div class="lc-meta">
+          <span>📍 4 teams</span>
+          <span>📅 Nov 28–Jan</span>
+          <span>💰 Regional</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">30-game season · Serie de las Américas</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card americas" data-region="americas" data-status="dormant" data-calendar="winter" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇨🇼</span><span class="lc-status-dot status-dormant">○ Winter</span></div>
+        <div class="lc-abbr">CURAÇAO</div>
+        <div class="lc-full">Curaçao Professional Baseball</div>
+        <div class="lc-meta">
+          <span>📍 Small-field</span>
+          <span>📅 Winter</span>
+          <span>💰 Regional</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">MLB pipeline island</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card americas" data-region="americas" data-status="dormant" data-calendar="winter" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇦🇷</span><span class="lc-status-dot status-dormant">○ Winter</span></div>
+        <div class="lc-abbr">LIGA ARG</div>
+        <div class="lc-full">Liga Argentina de Béisbol</div>
+        <div class="lc-meta">
+          <span>📍 Small-field</span>
+          <span>📅 Winter</span>
+          <span>💰 Regional</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Club Daom · 2024 champs</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- GROUP: EUROPE -->
+    <!-- ════════════════════════════════════════════ -->
+    <div class="group-header" data-group="europe">
+      <div class="group-name">Europe</div>
+      <div class="group-count">5 leagues</div>
+      <div class="group-desc">Serie A in Italy is the continent's flagship. The Dutch Hoofdklasse is the longest-running. Germany and Czechia are the rising pipelines.</div>
+    </div>
+    <div class="league-grid">
+
+      <a href="/league/italian-baseball-league.html" class="league-card europe" data-region="europe" data-status="active" data-calendar="spring-summer" data-cost="free">
+        <div class="lc-top"><span class="lc-flag">🇮🇹</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">SERIE A</div>
+        <div class="lc-full">Italian Baseball League · FIBS</div>
+        <div class="lc-meta">
+          <span>📍 ~30 teams</span>
+          <span>📅 Apr–Oct</span>
+          <span>💰 FREE YouTube</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note free">🆓 FIBSchannel3 · WBN partner</span>
+          <span class="lc-cta">Full Page →</span>
+        </div>
+      </a>
+
+      <a href="/league/hoofdklasse.html" class="league-card europe" data-region="europe" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇳🇱</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">HOOFDKLASSE</div>
+        <div class="lc-full">Honkbal Hoofdklasse · Netherlands</div>
+        <div class="lc-meta">
+          <span>📍 8 teams</span>
+          <span>📅 Apr–Sep</span>
+          <span>💰 KNBSB</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Neptunus def. · Holland Series</span>
+          <span class="lc-cta">Full Page →</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card europe" data-region="europe" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇩🇪</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">BUNDESLIGA</div>
+        <div class="lc-full">1st Bundesliga · Germany</div>
+        <div class="lc-meta">
+          <span>📍 10 teams</span>
+          <span>📅 Apr–Sep</span>
+          <span>💰 Regional</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Heidenheim Heideköpfe lead</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card europe" data-region="europe" data-status="active" data-calendar="spring-summer" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇨🇿</span><span class="lc-status-dot status-active">● Playing</span></div>
+        <div class="lc-abbr">EXTRALIGA</div>
+        <div class="lc-full">Czech Extraliga</div>
+        <div class="lc-meta">
+          <span>📍 8 teams</span>
+          <span>📅 Apr–Sep</span>
+          <span>💰 Regional</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Eagles Praha · WBC 2026</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card europe" data-region="europe" data-status="dormant" data-calendar="event" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🇪🇺</span><span class="lc-status-dot status-dormant">○ Sep Event</span></div>
+        <div class="lc-abbr">EURO CHAMP</div>
+        <div class="lc-full">European Baseball Championship</div>
+        <div class="lc-meta">
+          <span>📍 12 nations</span>
+          <span>📅 Sep</span>
+          <span>💰 GameTime</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">WBSC Olympic qualifier</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- GROUP: OCEANIA -->
+    <!-- ════════════════════════════════════════════ -->
+    <div class="group-header" data-group="oceania">
+      <div class="group-name">Oceania</div>
+      <div class="group-count">1 league</div>
+      <div class="group-desc">The Australian Baseball League is the Southern Hemisphere's top-flight and a prospect pipeline for MLB organizations.</div>
+    </div>
+    <div class="league-grid">
+
+      <a href="/league/abl.html" class="league-card oceania" data-region="oceania" data-status="dormant" data-calendar="winter" data-cost="free">
+        <div class="lc-top"><span class="lc-flag">🇦🇺</span><span class="lc-status-dot status-dormant">○ Nov start</span></div>
+        <div class="lc-abbr">ABL</div>
+        <div class="lc-full">Australian Baseball League</div>
+        <div class="lc-meta">
+          <span>📍 6 teams</span>
+          <span>📅 Nov 13–Feb</span>
+          <span>💰 Team YouTube</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note free">🆓 Perth Heat · Sydney Blue Sox</span>
+          <span class="lc-cta">Full Page →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- GROUP: INTERNATIONAL TOURNAMENTS -->
+    <!-- ════════════════════════════════════════════ -->
+    <div class="group-header" data-group="tournament">
+      <div class="group-name">International Tournaments</div>
+      <div class="group-count">6 events</div>
+      <div class="group-desc">The big ones. Every four years the world plays for pride. In between, the Caribbean champions fight for the crown.</div>
+    </div>
+    <div class="league-grid">
+
+      <a href="/wbc2026.html" class="league-card tournament" data-region="tournament" data-status="dormant" data-calendar="event" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🌍</span><span class="lc-status-dot status-event">🏆 Complete</span></div>
+        <div class="lc-abbr">WBC 2026</div>
+        <div class="lc-full">World Baseball Classic</div>
+        <div class="lc-meta">
+          <span>📍 20 nations</span>
+          <span>📅 Mar 5–17</span>
+          <span>💰 FOX / Fox Deportes</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note" style="color:var(--accent);">🇻🇪 Venezuela — Champions</span>
+          <span class="lc-cta">Full Results →</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card tournament" data-region="tournament" data-status="upcoming" data-calendar="event" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🌍</span><span class="lc-status-dot status-upcoming">◐ 2027</span></div>
+        <div class="lc-abbr">PREMIER12</div>
+        <div class="lc-full">WBSC Premier12 · 4th edition</div>
+        <div class="lc-meta">
+          <span>📍 16 nations</span>
+          <span>📅 Nov 2027</span>
+          <span>💰 DAZN US Excl.</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Expanded from 12 teams · LA28 Qualifier</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card tournament" data-region="tournament" data-status="dormant" data-calendar="event" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🏆</span><span class="lc-status-dot status-event">🏆 Feb Event</span></div>
+        <div class="lc-abbr">SERIE CARIBE</div>
+        <div class="lc-full">Caribbean Series 2027</div>
+        <div class="lc-meta">
+          <span>📍 Mexico host</span>
+          <span>📅 Feb 2027</span>
+          <span>💰 YouTube</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">LIDOM · LVBP · LAMP · LBPRC</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card tournament" data-region="tournament" data-status="dormant" data-calendar="event" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🏆</span><span class="lc-status-dot status-event">🏆 Jan Event</span></div>
+        <div class="lc-abbr">SDLA</div>
+        <div class="lc-full">Serie de las Américas 2027</div>
+        <div class="lc-meta">
+          <span>📍 Barranquilla, Colombia</span>
+          <span>📅 Jan 2027</span>
+          <span>💰 Regional</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Argentina · Cuba · Curaçao · Nicaragua · Panama · Colombia</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card tournament" data-region="tournament" data-status="dormant" data-calendar="event" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🏆</span><span class="lc-status-dot status-event">🏆 Summer 2028</span></div>
+        <div class="lc-abbr">LA28</div>
+        <div class="lc-full">Olympic Baseball · Los Angeles 2028</div>
+        <div class="lc-meta">
+          <span>📍 6 nations</span>
+          <span>📅 Jul 2028</span>
+          <span>💰 NBC</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Baseball returns to the Games</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+      <a href="#" class="league-card tournament" data-region="tournament" data-status="dormant" data-calendar="event" data-cost="paid">
+        <div class="lc-top"><span class="lc-flag">🏆</span><span class="lc-status-dot status-event">🏆 Club Event</span></div>
+        <div class="lc-abbr">BCL</div>
+        <div class="lc-full">Baseball Champions League · Americas/Europe</div>
+        <div class="lc-meta">
+          <span>📍 Club tournament</span>
+          <span>📅 Summer</span>
+          <span>💰 GameTime</span>
+        </div>
+        <div class="lc-bottom-row">
+          <span class="lc-stream-note">Best clubs across continents</span>
+          <span class="lc-cta">Coming Soon</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- NO RESULTS -->
+    <div class="no-results" id="no-results">
+      <div class="nr-icon">⚾</div>
+      <div class="nr-title">No Leagues Match Those Filters</div>
+      <div class="nr-sub">Try clearing a filter or widening your search.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="gf-brand">BASEBALL WITHOUT BORDERS</div>
+      <div class="gf-pub">
+        A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>
+        Verified April 2026 · Streaming availability varies by territory
+      </div>
+    </div>
+    <div class="gf-links">
+      <a href="/index.html" class="gf-link">Home</a>
+      <a href="/schedules.html" class="gf-link">Schedules</a>
+      <a href="/streaming.html" class="gf-link">Streaming</a>
+      <a href="/viewers-guide-may-4.html" class="gf-link">Viewer's Guide</a>
+      <a href="/wbc2026.html" class="gf-link">WBC 2026</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Filter state
+  const state = { region: 'all', status: 'all', calendar: 'all', cost: 'all' };
+
+  function applyFilters() {
+    const cards = document.querySelectorAll('.league-card');
+    let visible = 0;
+
+    cards.forEach(card => {
+      const region = card.dataset.region;
+      const status = card.dataset.status;
+      const calendar = card.dataset.calendar;
+      const cost = card.dataset.cost;
+
+      const match =
+        (state.region === 'all' || region === state.region) &&
+        (state.status === 'all' || status === state.status) &&
+        (state.calendar === 'all' || calendar === state.calendar) &&
+        (state.cost === 'all' || cost === state.cost);
+
+      if (match) {
+        card.classList.remove('hidden');
+        visible++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    // Update count
+    document.getElementById('count').textContent = visible;
+
+    // Show/hide no-results
+    document.getElementById('no-results').classList.toggle('show', visible === 0);
+
+    // Hide empty group headers
+    document.querySelectorAll('.group-header').forEach(h => {
+      const group = h.dataset.group;
+      const gridAfter = h.nextElementSibling;
+      const hasVisible = gridAfter && gridAfter.querySelectorAll('.league-card:not(.hidden)').length > 0;
+      h.style.display = hasVisible ? '' : 'none';
+      if (gridAfter) gridAfter.style.display = hasVisible ? '' : 'none';
+    });
+  }
+
+  // Wire up filter buttons
+  function wireFilters(selector, stateKey, activeClass) {
+    document.querySelectorAll(selector).forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll(selector).forEach(b => {
+          b.classList.remove('active', activeClass);
+        });
+        btn.classList.add('active');
+        if (activeClass) btn.classList.add(activeClass);
+        state[stateKey] = btn.dataset[stateKey];
+        applyFilters();
+      });
+    });
+  }
+
+  wireFilters('.filter-region', 'region', 'active-country');
+  wireFilters('.filter-status', 'status', 'active-status');
+  wireFilters('.filter-calendar', 'calendar', 'active-calendar');
+  wireFilters('.filter-cost', 'cost', '');
+
+  // Clear button
+  document.getElementById('clear-btn').addEventListener('click', () => {
+    state.region = 'all'; state.status = 'all'; state.calendar = 'all'; state.cost = 'all';
+    document.querySelectorAll('.filter-chip').forEach(c => {
+      c.classList.remove('active', 'active-country', 'active-status', 'active-calendar');
+      if (c.dataset.region === 'all' || c.dataset.status === 'all' || c.dataset.calendar === 'all' || c.dataset.cost === 'all') {
+        c.classList.add('active');
+      }
+    });
+    applyFilters();
+  });
+
+  // Initial count
+  applyFilters();
+</script>
+
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
