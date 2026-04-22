@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIDOM — Liga Dominicana de Béisbol Profesional | Baseball Without Borders</title>
+  <meta name="description" content="LIDOM — the Dominican Republic's winter league. 6 historic franchises, Tigres del Licey vs. Águilas Cibaeñas rivalry, MLB.TV carries every game. The best talent pipeline in baseball.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--purple:#a78bfa;--lg:#002D62;--lg2:#CE1126;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+    .site-nav{background:var(--bg2);border-bottom:1px solid var(--rule);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+    .site-nav .logo{font-family:var(--display);font-weight:900;font-size:.9rem;letter-spacing:1px;}
+    .site-nav .navlinks{display:flex;gap:6px;flex-wrap:wrap;}
+    .nav-pill{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);transition:.2s;}
+    .nav-pill:hover{color:var(--text);border-color:var(--text);}
+    .nav-pill.active{color:var(--gold);border-color:var(--gold);}
+    .hq-link{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--neon);border:1px solid var(--neon);padding:6px 14px;border-radius:4px;display:flex;align-items:center;gap:8px;}
+    .live-dot{width:7px;height:7px;background:var(--neon);border-radius:50%;box-shadow:0 0 5px var(--neon);animation:blink 1.8s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .crumbs{padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .crumbs a{color:var(--muted);}.crumbs a:hover{color:var(--neon);}.crumbs span{color:var(--gold);}
+    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg2);position:relative;overflow:hidden;background:linear-gradient(180deg,#030a14 0%,#0a0f1e 100%);}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(206,17,38,.03) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(0,45,98,.05) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero-inner{max-width:1200px;margin:0 auto;position:relative;}
+    .hero-flag{font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--lg2);margin-bottom:12px;}
+    .hero-country{display:flex;align-items:center;gap:18px;margin-bottom:18px;flex-wrap:wrap;}
+    .hero-flag-emoji{font-size:3.2rem;line-height:1;}
+    .hero-title{font-family:var(--display);font-size:clamp(3.4rem,10vw,8rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-2.5px;text-transform:uppercase;}
+    .hero-full{font-family:var(--display);font-size:clamp(1rem,2vw,1.4rem);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:8px;margin-bottom:24px;}
+    .hero-lede{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--muted);max-width:720px;line-height:1.75;}
+    .hero-lede strong{color:var(--text);font-style:normal;}
+    .hero-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;margin-top:24px;border-top:1px solid var(--rule2);}
+    .hs-num{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;color:var(--lg2);}
+    .hs-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+    .page{max-width:1200px;margin:0 auto;padding:40px 24px 64px;}
+    .section{margin-bottom:56px;}
+    .section-head{display:flex;align-items:baseline;gap:16px;padding-bottom:14px;margin-bottom:24px;border-bottom:2px solid var(--rule2);}
+    .section-num{font-family:var(--mono);font-size:.75rem;color:var(--lg2);font-weight:700;letter-spacing:2px;}
+    .section-title{font-family:var(--display);font-size:1.6rem;font-weight:900;letter-spacing:-.5px;text-transform:uppercase;}
+    .section-sub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-left:auto;}
+    .platforms{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+    .platform-card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:18px 20px;transition:.15s;border-left:4px solid var(--rule2);}
+    .platform-card:hover{border-color:var(--rule2);transform:translateY(-2px);}
+    .platform-card.premium{border-left-color:var(--lg2);}
+    .platform-card.free{border-left-color:var(--neon);}
+    .platform-name{font-family:var(--display);font-size:1.1rem;font-weight:900;letter-spacing:-.3px;margin-bottom:4px;}
+    .platform-tag{font-family:var(--mono);font-size:.58rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:2px 7px;border-radius:3px;display:inline-block;margin-bottom:10px;background:rgba(255,255,255,.05);color:var(--lg2);}
+    .tag-free{background:rgba(0,255,157,.1);color:var(--neon);}
+    .platform-cost{font-family:var(--mono);font-size:.85rem;color:var(--text);font-weight:700;margin-bottom:6px;}
+    .platform-cost.free{color:var(--neon);}
+    .platform-desc{font-family:var(--serif);font-size:.85rem;color:var(--muted);line-height:1.6;}
+    .platform-desc strong{color:var(--text);}
+    .platform-link{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:.7rem;color:var(--lg2);font-weight:700;}
+    .platform-link:hover{color:var(--neon);}
+    .watch-window{background:rgba(245,200,66,.06);border:1px solid rgba(245,200,66,.2);border-left:4px solid var(--gold);border-radius:6px;padding:20px 24px;margin-bottom:32px;}
+    .watch-window.neon{background:rgba(0,255,157,.04);border-color:rgba(0,255,157,.2);border-left-color:var(--neon);}
+    .ww-title{font-family:var(--display);font-size:1.1rem;font-weight:900;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+    .watch-window.neon .ww-title{color:var(--neon);}
+    .ww-lede{font-family:var(--serif);font-size:.92rem;color:var(--muted);line-height:1.7;margin-bottom:12px;}
+    .ww-lede strong{color:var(--text);}
+    .ww-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px;}
+    .ww-item{background:rgba(0,0,0,.25);border:1px solid var(--rule);border-radius:4px;padding:10px 12px;}
+    .ww-val{font-family:var(--mono);font-size:.9rem;font-weight:700;color:var(--gold);}
+    .ww-lbl{font-family:var(--mono);font-size:.6rem;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:1px;}
+    .timeline{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+    .tl-item{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;}
+    .tl-date{font-family:var(--mono);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lg2);margin-bottom:6px;}
+    .tl-title{font-family:var(--display);font-size:1rem;font-weight:900;letter-spacing:-.3px;margin-bottom:4px;}
+    .tl-desc{font-family:var(--serif);font-size:.82rem;color:var(--muted);line-height:1.55;}
+    .divisions-wrap{background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;}
+    .div-block{padding:20px 24px;border-bottom:1px solid var(--rule);}
+    .div-block:last-child{border-bottom:none;}
+    .div-title{font-family:var(--display);font-size:.95rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;color:var(--lg2);}
+    .div-teams{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;}
+    .team-row{font-family:var(--serif);font-size:.88rem;color:var(--muted);padding:4px 0;}
+    .team-row strong{color:var(--text);font-family:var(--display);font-weight:700;letter-spacing:.2px;}
+    .did-you-know{background:linear-gradient(135deg,rgba(245,200,66,.06) 0%,rgba(245,200,66,.02) 100%);border:1px solid rgba(245,200,66,.2);border-left:5px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 28px;margin-bottom:32px;}
+    .dyk-badge{font-family:var(--display);font-size:.62rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:#000;background:var(--gold);padding:4px 10px;border-radius:3px;display:inline-block;margin-bottom:14px;}
+    .dyk-title{font-family:var(--display);font-size:1.3rem;font-weight:900;letter-spacing:-.3px;margin-bottom:10px;}
+    .dyk-body{font-family:var(--serif);font-size:.95rem;color:var(--muted);line-height:1.75;font-style:italic;}
+    .dyk-body strong{color:var(--text);font-style:normal;}
+    .footer{border-top:2px solid var(--lg2);padding:32px 24px;margin-top:40px;background:var(--bg2);}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+    .gf-brand{font-family:var(--display);font-size:1.3rem;font-weight:900;letter-spacing:1px;}
+    .gf-pub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:6px;}
+    .gf-pub a{color:var(--muted);}.gf-pub a:hover{color:var(--neon);}
+    .gf-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;}
+    .gf-link{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .gf-link:hover{color:var(--neon);}
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="logo">BASEBALL WITHOUT BORDERS</div>
+  <div class="navlinks">
+    <a href="/index.html" class="nav-pill">Home</a>
+    <a href="/leagues.html" class="nav-pill">Leagues</a>
+    <a href="/schedules.html" class="nav-pill">Schedules</a>
+    <a href="/streaming.html" class="nav-pill">Streaming</a>
+    <a href="/viewers-guide-may-4.html" class="nav-pill">Viewer's Guide</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+</nav>
+
+<div class="crumbs"><a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>LIDOM · Dominican Republic</span></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-flag">Dominican Republic · Liga de Béisbol Profesional · 75th Season</div>
+    <div class="hero-country">
+      <span class="hero-flag-emoji">🇩🇴</span>
+      <div>
+        <div class="hero-title">LIDOM</div>
+        <div class="hero-full">Liga Dominicana de Béisbol Profesional</div>
+      </div>
+    </div>
+    <p class="hero-lede">
+      The <strong>most productive baseball country on Earth per capita</strong> plays its winter league here. Six historic franchises. A rivalry between <strong>Tigres del Licey</strong> and <strong>Águilas Cibaeñas</strong> that makes Yankees-Red Sox look casual. MLB.TV carries every game as part of its subscription. Over <strong>900 Dominicans have played in MLB</strong>, and almost every single one of them passed through LIDOM first. <strong>Escogido are the defending champions</strong> with their 18th title.
+    </p>
+    <div class="hero-stats">
+      <div><div class="hs-num">6</div><div class="hs-lbl">Teams</div></div>
+      <div><div class="hs-num">50</div><div class="hs-lbl">Games / Team</div></div>
+      <div><div class="hs-num">75th</div><div class="hs-lbl">Season</div></div>
+      <div><div class="hs-num">UTC-4</div><div class="hs-lbl">AST · ET +0</div></div>
+      <div><div class="hs-num">900+</div><div class="hs-lbl">MLB alumni</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="watch-window">
+    <div class="ww-title">⚡ When to Watch LIDOM from the US</div>
+    <div class="ww-lede">Dominican Republic is on <strong>Atlantic Standard Time (UTC-4)</strong> — same clock as US Eastern most of the year. Weeknight games at 19:30 AST = <strong>7:30 PM ET</strong>. Weekend day games at 16:00 AST = <strong>4:00 PM ET</strong>. LIDOM is the most US-convenient winter league after LVBP.</div>
+    <div class="ww-grid">
+      <div class="ww-item"><div class="ww-val">7:30 PM ET</div><div class="ww-lbl">Weekday 19:30 AST</div></div>
+      <div class="ww-item"><div class="ww-val">4:00 PM ET</div><div class="ww-lbl">Weekend 16:00 AST</div></div>
+      <div class="ww-item"><div class="ww-val">MLB.TV</div><div class="ww-lbl">Every game</div></div>
+      <div class="ww-item"><div class="ww-val">Oct 15</div><div class="ww-lbl">Season opens</div></div>
+      <div class="ww-item"><div class="ww-val">Jan–Feb</div><div class="ww-lbl">Round-Robin → Final</div></div>
+      <div class="ww-item"><div class="ww-val">Licey v Águilas</div><div class="ww-lbl">The rivalry</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Where to Watch LIDOM</h2>
+      <span class="section-sub">Verified Apr 2026</span>
+    </div>
+    <div class="platforms">
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Primary · All Games</div>
+        <div class="platform-name">MLB.TV</div>
+        <div class="platform-cost">MLB.TV subscription</div>
+        <div class="platform-desc">
+          <strong>Every LIDOM game included with MLB.TV.</strong> MLB has distributed Dominican winter ball for years and continues in the 2026 rights landscape. If you already pay for MLB.TV, you don't need anything else to watch LIDOM. English and Spanish feeds available.
+        </div>
+        <a href="https://mlb.com/tv" target="_blank" class="platform-link">mlb.com/tv →</a>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Direct · International</div>
+        <div class="platform-name">LIDOM Digital</div>
+        <div class="platform-cost">~$30 / season</div>
+        <div class="platform-desc">
+          Official league streaming service. Spanish commentary, full DR production. Annual subscription is a fraction of MLB.TV's price if you only want LIDOM.
+        </div>
+        <a href="https://lidom.com" target="_blank" class="platform-link">lidom.com →</a>
+      </div>
+
+      <div class="platform-card free">
+        <div class="platform-tag tag-free">Free · Select</div>
+        <div class="platform-name">Team Social Media</div>
+        <div class="platform-cost free">FREE · Sporadic</div>
+        <div class="platform-desc">
+          LIDOM teams occasionally stream select home games free on Facebook Live and YouTube. Águilas Cibaeñas have been the most active club on social. Search club Facebook pages.
+        </div>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Domestic DR</div>
+        <div class="platform-name">CDN Sports Max · Antena 21</div>
+        <div class="platform-cost">DR cable</div>
+        <div class="platform-desc">
+          Dominican broadcast networks carry games domestically. Geoblocked outside DR. Dominican TV covers LIDOM the way ESPN covers MLB — wall-to-wall, year-round.
+        </div>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Caribbean Series</div>
+        <div class="platform-name">ESPN / ESPN Deportes</div>
+        <div class="platform-cost">Cable</div>
+        <div class="platform-desc">
+          ESPN properties carry the Caribbean Series in February, where the LIDOM champion represents the Dominican Republic against LVBP, LMP (Mexico), LBPRC (Puerto Rico), and usually a host invitee.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">2026–27 Season Key Dates</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">Oct 15, 2026</div><div class="tl-title">Season Opens</div><div class="tl-desc">All 6 teams begin 50-game regular season.</div></div>
+      <div class="tl-item"><div class="tl-date">Dec 25</div><div class="tl-title">Christmas Day Baseball</div><div class="tl-desc">Huge Dominican tradition · stadiums packed · national event.</div></div>
+      <div class="tl-item"><div class="tl-date">Early Jan 2027</div><div class="tl-title">Regular Season Ends</div><div class="tl-desc">Top 4 teams advance to Round-Robin.</div></div>
+      <div class="tl-item"><div class="tl-date">Jan 2027</div><div class="tl-title">Round-Robin</div><div class="tl-desc">Four-team round-robin to determine Finals.</div></div>
+      <div class="tl-item"><div class="tl-date">Late Jan 2027</div><div class="tl-title">LIDOM Final</div><div class="tl-desc">Best-of-9 championship series · winner to Caribbean Series.</div></div>
+      <div class="tl-item"><div class="tl-date">Feb 2027</div><div class="tl-title">Caribbean Series</div><div class="tl-desc">Mexico hosts 2027 · LIDOM champ represents DR.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">The 6 Teams</h2>
+      <span class="section-sub">LIDOM · 2026–27</span>
+    </div>
+    <div class="divisions-wrap">
+      <div class="div-block">
+        <div class="div-title">Liga Dominicana · 6 Clubs</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>Leones del Escogido</strong> — Santo Domingo · Estadio Quisqueya · 18 titles · Defending champs</div>
+          <div class="team-row"><strong>Tigres del Licey</strong> — Santo Domingo · Estadio Quisqueya · 22 titles · Most decorated · Shared park</div>
+          <div class="team-row"><strong>Águilas Cibaeñas</strong> — Santiago · Estadio Cibao · 22 titles · Northern powerhouse</div>
+          <div class="team-row"><strong>Estrellas Orientales</strong> — San Pedro de Macorís · Estadio Tetelo Vargas · "Cradle of MLB talent"</div>
+          <div class="team-row"><strong>Gigantes del Cibao</strong> — San Francisco de Macorís · Estadio Julián Javier</div>
+          <div class="team-row"><strong>Toros del Este</strong> — La Romana · Estadio Francisco Micheli · Eastern region</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="did-you-know">
+    <div class="dyk-badge">The Fact</div>
+    <div class="dyk-title">Every MLB Team's Dominican Academy Feeds LIDOM First</div>
+    <div class="dyk-body">
+      <strong>Every one of the 30 MLB organizations operates a baseball academy in the Dominican Republic.</strong> Young Dominican prospects — 16-year-olds signed to professional contracts — live, eat, and train at these academies for months before they ever see the United States. But before they can sign with an MLB team, almost all of them play for a LIDOM club first. The academies feed the winter league, and the winter league feeds MLB. <strong>Juan Soto, Vladimir Guerrero Jr., Rafael Devers, Fernando Tatis Jr., Julio Rodríguez, Ketel Marte</strong> — every single one came up through this system. The town of San Pedro de Macorís alone — home of Estrellas Orientales — has produced more MLB shortstops than any other city on Earth. When you watch LIDOM, you're watching <strong>the most productive baseball pipeline in the world</strong>, and you're watching the country whose WBC roster made it to the finals four times. This isn't exhibition baseball. This is where the MLB roster for 2030 is being built right now.
+    </div>
+  </div>
+
+  <div class="watch-window neon">
+    <div class="ww-title">⚡ LIDOM This Week</div>
+    <div class="ww-lede">When LIDOM is in season (Oct–Jan), see every matchup in the <strong>Official Viewer's Guide</strong>.</div>
+    <a href="/viewers-guide-may-4.html" style="display:inline-block;margin-top:12px;background:var(--neon);color:#000;font-family:var(--display);font-weight:900;letter-spacing:2px;padding:10px 20px;border-radius:4px;text-transform:uppercase;font-size:.8rem;">Open This Week's Guide →</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="gf-brand">BASEBALL WITHOUT BORDERS</div>
+      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>LIDOM verified Apr 2026 · 86 WBN articles · Escogido defending champions</div>
+    </div>
+    <div class="gf-links">
+      <a href="/leagues.html" class="gf-link">← All Leagues</a>
+      <a href="/viewers-guide-may-4.html" class="gf-link">This Week's Guide</a>
+      <a href="/wbc2026.html" class="gf-link">WBC 2026</a>
+    </div>
+  </div>
+</div>
+
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
