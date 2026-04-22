@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KBO — Korea Baseball Organization | Baseball Without Borders</title>
+  <meta name="description" content="The definitive guide to watching KBO from anywhere on Earth. FREE on SOOP, every game, no subscription. Record 12.3M fans in 2025. The most accessible pro league on the planet.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--purple:#a78bfa;--lg:#005bac;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+    .site-nav{background:var(--bg2);border-bottom:1px solid var(--rule);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+    .site-nav .logo{font-family:var(--display);font-weight:900;font-size:.9rem;letter-spacing:1px;}
+    .site-nav .navlinks{display:flex;gap:6px;flex-wrap:wrap;}
+    .nav-pill{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);transition:.2s;}
+    .nav-pill:hover{color:var(--text);border-color:var(--text);}
+    .nav-pill.active{color:var(--gold);border-color:var(--gold);}
+    .hq-link{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--neon);border:1px solid var(--neon);padding:6px 14px;border-radius:4px;display:flex;align-items:center;gap:8px;}
+    .live-dot{width:7px;height:7px;background:var(--neon);border-radius:50%;box-shadow:0 0 5px var(--neon);animation:blink 1.8s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .crumbs{padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .crumbs a{color:var(--muted);}
+    .crumbs a:hover{color:var(--neon);}
+    .crumbs span{color:var(--gold);}
+    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg);position:relative;overflow:hidden;background:linear-gradient(180deg,#020818 0%,#0a0f1e 100%);}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(0,91,172,.03) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(0,91,172,.03) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero-inner{max-width:1200px;margin:0 auto;position:relative;}
+    .hero-flag{font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--lg);margin-bottom:12px;}
+    .hero-country{display:flex;align-items:center;gap:18px;margin-bottom:18px;flex-wrap:wrap;}
+    .hero-flag-emoji{font-size:3.2rem;line-height:1;}
+    .hero-title{font-family:var(--display);font-size:clamp(3.4rem,10vw,8rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-2.5px;text-transform:uppercase;}
+    .hero-full{font-family:var(--display);font-size:clamp(1rem,2vw,1.4rem);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:8px;margin-bottom:24px;}
+    .hero-lede{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--muted);max-width:720px;line-height:1.75;}
+    .hero-lede strong{color:var(--text);font-style:normal;}
+    .hero-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;margin-top:24px;border-top:1px solid var(--rule2);}
+    .hs-num{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;color:var(--lg);}
+    .hs-num.free-hs{color:var(--neon);}
+    .hs-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+    .page{max-width:1200px;margin:0 auto;padding:40px 24px 64px;}
+    .section{margin-bottom:56px;}
+    .section-head{display:flex;align-items:baseline;gap:16px;padding-bottom:14px;margin-bottom:24px;border-bottom:2px solid var(--rule2);}
+    .section-num{font-family:var(--mono);font-size:.75rem;color:var(--lg);font-weight:700;letter-spacing:2px;}
+    .section-title{font-family:var(--display);font-size:1.6rem;font-weight:900;letter-spacing:-.5px;text-transform:uppercase;}
+    .section-sub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-left:auto;}
+    .platforms{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+    .platform-card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:18px 20px;transition:.15s;border-left:4px solid var(--rule2);}
+    .platform-card:hover{border-color:var(--rule2);transform:translateY(-2px);}
+    .platform-card.premium{border-left-color:var(--lg);}
+    .platform-card.free{border-left-color:var(--neon);}
+    .platform-card.exclusive{border-left-color:var(--gold);}
+    .platform-name{font-family:var(--display);font-size:1.1rem;font-weight:900;letter-spacing:-.3px;margin-bottom:4px;}
+    .platform-tag{font-family:var(--mono);font-size:.58rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:2px 7px;border-radius:3px;display:inline-block;margin-bottom:10px;background:rgba(255,255,255,.05);color:var(--lg);}
+    .tag-free{background:rgba(0,255,157,.1);color:var(--neon);}
+    .tag-exclusive{background:rgba(245,200,66,.12);color:var(--gold);}
+    .platform-cost{font-family:var(--mono);font-size:.85rem;color:var(--text);font-weight:700;margin-bottom:6px;}
+    .platform-cost.free{color:var(--neon);}
+    .platform-desc{font-family:var(--serif);font-size:.85rem;color:var(--muted);line-height:1.6;}
+    .platform-desc strong{color:var(--text);}
+    .platform-link{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:.7rem;color:var(--lg);font-weight:700;}
+    .platform-link:hover{color:var(--neon);}
+    .watch-window{background:rgba(245,200,66,.06);border:1px solid rgba(245,200,66,.2);border-left:4px solid var(--gold);border-radius:6px;padding:20px 24px;margin-bottom:32px;}
+    .watch-window.neon{background:rgba(0,255,157,.04);border-color:rgba(0,255,157,.2);border-left-color:var(--neon);}
+    .ww-title{font-family:var(--display);font-size:1.1rem;font-weight:900;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+    .watch-window.neon .ww-title{color:var(--neon);}
+    .ww-lede{font-family:var(--serif);font-size:.92rem;color:var(--muted);line-height:1.7;margin-bottom:12px;}
+    .ww-lede strong{color:var(--text);}
+    .ww-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px;}
+    .ww-item{background:rgba(0,0,0,.25);border:1px solid var(--rule);border-radius:4px;padding:10px 12px;}
+    .ww-val{font-family:var(--mono);font-size:.9rem;font-weight:700;color:var(--gold);}
+    .ww-val.neon-val{color:var(--neon);}
+    .ww-lbl{font-family:var(--mono);font-size:.6rem;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:1px;}
+    .timeline{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+    .tl-item{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;}
+    .tl-date{font-family:var(--mono);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lg);margin-bottom:6px;}
+    .tl-title{font-family:var(--display);font-size:1rem;font-weight:900;letter-spacing:-.3px;margin-bottom:4px;}
+    .tl-desc{font-family:var(--serif);font-size:.82rem;color:var(--muted);line-height:1.55;}
+    .divisions-wrap{background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;}
+    .div-block{padding:20px 24px;border-bottom:1px solid var(--rule);}
+    .div-block:last-child{border-bottom:none;}
+    .div-title{font-family:var(--display);font-size:.95rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;color:var(--lg);}
+    .div-teams{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;}
+    .team-row{font-family:var(--serif);font-size:.88rem;color:var(--muted);padding:4px 0;}
+    .team-row strong{color:var(--text);font-family:var(--display);font-weight:700;letter-spacing:.2px;}
+    .did-you-know{background:linear-gradient(135deg,rgba(245,200,66,.06) 0%,rgba(245,200,66,.02) 100%);border:1px solid rgba(245,200,66,.2);border-left:5px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 28px;margin-bottom:32px;}
+    .dyk-badge{font-family:var(--display);font-size:.62rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:#000;background:var(--gold);padding:4px 10px;border-radius:3px;display:inline-block;margin-bottom:14px;}
+    .dyk-title{font-family:var(--display);font-size:1.3rem;font-weight:900;letter-spacing:-.3px;margin-bottom:10px;}
+    .dyk-body{font-family:var(--serif);font-size:.95rem;color:var(--muted);line-height:1.75;font-style:italic;}
+    .dyk-body strong{color:var(--text);font-style:normal;}
+    .footer{border-top:2px solid var(--lg);padding:32px 24px;margin-top:40px;background:var(--bg2);}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+    .gf-brand{font-family:var(--display);font-size:1.3rem;font-weight:900;letter-spacing:1px;}
+    .gf-pub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:6px;}
+    .gf-pub a{color:var(--muted);}
+    .gf-pub a:hover{color:var(--neon);}
+    .gf-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;}
+    .gf-link{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .gf-link:hover{color:var(--neon);}
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="logo">BASEBALL WITHOUT BORDERS</div>
+  <div class="navlinks">
+    <a href="/index.html" class="nav-pill">Home</a>
+    <a href="/leagues.html" class="nav-pill">Leagues</a>
+    <a href="/schedules.html" class="nav-pill">Schedules</a>
+    <a href="/streaming.html" class="nav-pill">Streaming</a>
+    <a href="/viewers-guide-may-4.html" class="nav-pill">Viewer's Guide</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+</nav>
+
+<div class="crumbs"><a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>KBO · South Korea</span></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-flag">South Korea · Korea Baseball Organization · 2026 Season</div>
+    <div class="hero-country">
+      <span class="hero-flag-emoji">🇰🇷</span>
+      <div>
+        <div class="hero-title">KBO</div>
+        <div class="hero-full">Korea Baseball Organization · 한국야구위원회</div>
+      </div>
+    </div>
+    <p class="hero-lede">
+      The <strong>best free deal in international baseball</strong>. KBO moved off paid platforms in 2024 and now streams <strong>every single game</strong>, live and worldwide, on <strong>SOOP</strong> — no subscription, no account, no credit card. A record <strong>12.3 million fans</strong> attended KBO games in 2025. The cheerleaders are professional. The stadium chants are choreographed. The baseball is faster than you expect.
+    </p>
+    <div class="hero-stats">
+      <div><div class="hs-num">10</div><div class="hs-lbl">Teams</div></div>
+      <div><div class="hs-num">144</div><div class="hs-lbl">Games / Team</div></div>
+      <div><div class="hs-num free-hs">FREE</div><div class="hs-lbl">Every game on SOOP</div></div>
+      <div><div class="hs-num">UTC+9</div><div class="hs-lbl">KST · ET +13</div></div>
+      <div><div class="hs-num">12.3M</div><div class="hs-lbl">2025 Attendance</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="watch-window">
+    <div class="ww-title">⚡ When to Watch KBO from the US</div>
+    <div class="ww-lede">Games start at <strong>6:30 PM KST on weekdays</strong>, <strong>2:00 PM KST on weekends and holidays</strong>. Korea is UTC+9 — <strong>-13 hours from ET</strong>. Every weekday game is a 5:30 AM ET wake-up; weekends are 1:00 AM ET the night before. The <strong>Children's Day Series (May 5–7)</strong> is the cultural peak.</div>
+    <div class="ww-grid">
+      <div class="ww-item"><div class="ww-val">5:30 AM ET</div><div class="ww-lbl">Weekday 18:30 KST</div></div>
+      <div class="ww-item"><div class="ww-val">1:00 AM ET</div><div class="ww-lbl">Weekend 14:00 KST</div></div>
+      <div class="ww-item"><div class="ww-val neon-val">FREE</div><div class="ww-lbl">Every game · SOOP</div></div>
+      <div class="ww-item"><div class="ww-val">Sat–Sun</div><div class="ww-lbl">Best US window</div></div>
+      <div class="ww-item"><div class="ww-val">May 5</div><div class="ww-lbl">Children's Day Series</div></div>
+      <div class="ww-item"><div class="ww-val">Jul 11</div><div class="ww-lbl">All-Star · Jamsil</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Where to Watch KBO</h2>
+      <span class="section-sub">Verified Apr 2026</span>
+    </div>
+    <div class="platforms">
+
+      <div class="platform-card free">
+        <div class="platform-tag tag-free">Free · Every Game</div>
+        <div class="platform-name">SOOP (sooplive.com)</div>
+        <div class="platform-cost free">FREE · No account needed</div>
+        <div class="platform-desc">
+          <strong>Every KBO game, live, free, globally.</strong> SOOP is the former AfreecaTV, rebranded in 2024. Open sooplive.com in any browser, click KBO during game time. Works on desktop, mobile, smart TV. This is the deal. No signup. No credit card. No geoblock. Korean commentary with auto-translation widgets.
+        </div>
+        <a href="https://sooplive.com" target="_blank" class="platform-link">sooplive.com →</a>
+      </div>
+
+      <div class="platform-card free">
+        <div class="platform-tag tag-free">Free · Highlights + Select</div>
+        <div class="platform-name">KBO Official YouTube</div>
+        <div class="platform-cost free">FREE</div>
+        <div class="platform-desc">
+          Daily highlight packages, archive content, and select full-game rebroadcasts. Search 'KBO' on YouTube. Good entry point if SOOP's interface feels too Korean-first. Every team has its own channel too.
+        </div>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Korea Domestic</div>
+        <div class="platform-name">TVING</div>
+        <div class="platform-cost">Korean residents only</div>
+        <div class="platform-desc">
+          Primary Korean OTT — full HD broadcasts with Korean commentary. <strong>Geoblocked outside South Korea.</strong> If you live in Seoul, this is your app. If you don't, use SOOP.
+        </div>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Postseason</div>
+        <div class="platform-name">Korean Series Broadcasts</div>
+        <div class="platform-cost">SOOP + multiple partners</div>
+        <div class="platform-desc">
+          Korean Series (KBO's World Series) is carried on SOOP plus broadcast networks SBS, KBS, and MBC in Korea. Still free internationally on SOOP.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">2026 Season Key Dates</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">Mar 28</div><div class="tl-title">Opening Day</div><div class="tl-desc">All 10 teams begin 144-game season. 720 total games.</div></div>
+      <div class="tl-item"><div class="tl-date">May 5–7</div><div class="tl-title">Children's Day Series</div><div class="tl-desc">Annual holiday series · Jamsil Stadium (LG Twins home) · Cultural event.</div></div>
+      <div class="tl-item"><div class="tl-date">Jul 11</div><div class="tl-title">All-Star Game</div><div class="tl-desc">Jamsil Baseball Stadium · Nanum vs. Dream All-Stars.</div></div>
+      <div class="tl-item"><div class="tl-date">Sep 6</div><div class="tl-title">Regular Season Ends</div><div class="tl-desc">Top 5 teams advance to playoffs.</div></div>
+      <div class="tl-item"><div class="tl-date">Sep–Oct</div><div class="tl-title">Playoffs</div><div class="tl-desc">Wild Card → Semi-Playoff → Playoff → Korean Series.</div></div>
+      <div class="tl-item"><div class="tl-date">Oct–Nov</div><div class="tl-title">Korean Series</div><div class="tl-desc">Best-of-7 championship. LG Twins are 2025 defending champs.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">The 10 Teams</h2>
+      <span class="section-sub">All streaming free on SOOP</span>
+    </div>
+    <div class="divisions-wrap">
+      <div class="div-block">
+        <div class="div-title">KBO League · 10 Teams · 2026 Season</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>KT Wiz</strong> — Suwon · KT Wiz Park · 2025 Korean Series Runner-up</div>
+          <div class="team-row"><strong>LG Twins</strong> — Seoul · Jamsil Stadium · 2025 Defending Champs</div>
+          <div class="team-row"><strong>Samsung Lions</strong> — Daegu · Samsung Lions Park</div>
+          <div class="team-row"><strong>SSG Landers</strong> — Incheon · SSG Landers Field</div>
+          <div class="team-row"><strong>KIA Tigers</strong> — Gwangju · Gwangju-Kia Champions Field · 12 titles · Most decorated</div>
+          <div class="team-row"><strong>Doosan Bears</strong> — Seoul · Jamsil Stadium (shared with LG)</div>
+          <div class="team-row"><strong>Lotte Giants</strong> — Busan · Sajik Stadium · Most passionate fans in KBO</div>
+          <div class="team-row"><strong>NC Dinos</strong> — Changwon · Changwon NC Park · 2020 Korean Series Champs</div>
+          <div class="team-row"><strong>Hanwha Eagles</strong> — Daejeon · Hanwha Life Eagles Park · New stadium 2025</div>
+          <div class="team-row"><strong>Kiwoom Heroes</strong> — Seoul · Gocheok Sky Dome · Only domed KBO park</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="did-you-know">
+    <div class="dyk-badge">The Fact</div>
+    <div class="dyk-title">KBO Cheerleaders Are a Full-Time Career — And the Soundtrack Is the Show</div>
+    <div class="dyk-body">
+      Every KBO team employs a <strong>full-time professional cheerleading squad</strong> that performs choreographed routines in front of the dugout throughout every inning — not just between. Each team has signature chants for every player in the batting order. Fans don't just cheer; they <strong>perform</strong>. Watching KBO on SOOP with the sound off is like watching half a movie. Turn the audio on. The experience is part K-pop concert, part ballpark, and it's the single biggest reason <strong>12.3 million Koreans</strong> showed up in 2025 — a league record. The energy transfers through the screen. Lotte Giants fans in Busan are particularly intense — bring orange plastic bags, a thundersticks, and expectations.
+    </div>
+  </div>
+
+  <div class="watch-window neon">
+    <div class="ww-title">⚡ KBO This Week</div>
+    <div class="ww-lede">See every KBO game this week with matchups, times in NYC/ET, and direct SOOP links — in the <strong>Official Viewer's Guide</strong>.</div>
+    <a href="/viewers-guide-may-4.html" style="display:inline-block;margin-top:12px;background:var(--neon);color:#000;font-family:var(--display);font-weight:900;letter-spacing:2px;padding:10px 20px;border-radius:4px;text-transform:uppercase;font-size:.8rem;">Open This Week's Guide →</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="gf-brand">BASEBALL WITHOUT BORDERS</div>
+      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>KBO streaming verified Apr 2026 · SOOP replaced FloSports in 2024</div>
+    </div>
+    <div class="gf-links">
+      <a href="/leagues.html" class="gf-link">← All Leagues</a>
+      <a href="/viewers-guide-may-4.html" class="gf-link">This Week's Guide</a>
+      <a href="/wbc2026.html" class="gf-link">WBC 2026</a>
+    </div>
+  </div>
+</div>
+
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
