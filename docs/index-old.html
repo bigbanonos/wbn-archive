@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Baseball World — International Baseball Guide</title>
+  <meta name="description" content="Where to watch international baseball in 2026. NPB, KBO, CPBL, LVBP, LIDOM, LMB, WBC results, and the world's best baseball movie database.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:    #0f172a;
+      --card:  #1e293b;
+      --card2: #162032;
+      --text:  #f8fafc;
+      --muted: #94a3b8;
+      --accent:#D50032;
+      --neon:  #00ff9d;
+      --gold:  #fbbf24;
+      --rule:  #334155;
+      --blue:  #38bdf8;
+      --purple:#a78bfa;
+      --green: #4ade80;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6; padding: 20px; max-width: 1100px; margin: 0 auto; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    .top-nav { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--rule); padding-bottom: 16px; margin-bottom: 48px; flex-wrap: wrap; gap: 12px; }
+    .logo-area { font-weight: 900; font-size: 0.95rem; letter-spacing: -0.3px; }
+    .hq-link { color: var(--neon); border: 1px solid var(--neon); padding: 8px 16px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+    .dot { width: 8px; height: 8px; background: var(--neon); border-radius: 50%; box-shadow: 0 0 6px var(--neon); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+    /* HERO */
+    .hero { text-align: center; margin-bottom: 64px; }
+    .hero-eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+    .hero h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 900; letter-spacing: -2px; line-height: 1; margin-bottom: 16px; }
+    .hero h1 .accent { color: var(--neon); }
+    .hero-sub { color: var(--muted); font-size: 1rem; max-width: 580px; margin: 0 auto; }
+
+    /* GRID */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(460px, 1fr)); gap: 20px; margin-bottom: 64px; }
+
+    /* CARDS */
+    .card { border-radius: 12px; border: 1px solid var(--rule); overflow: hidden; transition: border-color 0.2s, transform 0.2s; display: flex; flex-direction: column; }
+    .card:hover { transform: translateY(-3px); }
+    .card.streaming { border-color: rgba(56,189,248,0.3); }
+    .card.streaming:hover { border-color: var(--blue); }
+    .card.schedules { border-color: rgba(0,255,157,0.3); }
+    .card.schedules:hover { border-color: var(--neon); }
+    .card.movies { border-color: rgba(251,191,36,0.3); }
+    .card.movies:hover { border-color: var(--gold); }
+    .card.wbc { border-color: rgba(213,0,50,0.4); }
+    .card.wbc:hover { border-color: var(--accent); }
+
+    .card-hero { padding: 32px 28px 0; }
+    .card-tag { font-size: 0.6rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+    .tag-blue { color: var(--blue); }
+    .tag-neon { color: var(--neon); }
+    .tag-gold { color: var(--gold); }
+    .tag-red { color: var(--accent); }
+
+    .card-title { font-size: 1.6rem; font-weight: 900; letter-spacing: -0.8px; line-height: 1.1; margin-bottom: 10px; }
+    .card-sub { color: var(--muted); font-size: 0.85rem; line-height: 1.6; margin-bottom: 20px; }
+
+    .card-leagues { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
+    .league-chip { font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; padding: 3px 9px; border-radius: 20px; }
+    .chip-blue { background: rgba(56,189,248,0.1); color: var(--blue); border: 1px solid rgba(56,189,248,0.25); }
+    .chip-neon { background: rgba(0,255,157,0.08); color: var(--neon); border: 1px solid rgba(0,255,157,0.2); }
+    .chip-gold { background: rgba(251,191,36,0.1); color: var(--gold); border: 1px solid rgba(251,191,36,0.25); }
+    .chip-red  { background: rgba(213,0,50,0.1); color: var(--accent); border: 1px solid rgba(213,0,50,0.25); }
+    .chip-purple { background: rgba(167,139,250,0.1); color: var(--purple); border: 1px solid rgba(167,139,250,0.25); }
+    .chip-green { background: rgba(74,222,128,0.1); color: var(--green); border: 1px solid rgba(74,222,128,0.25); }
+
+    .card-cta { display: block; padding: 14px 28px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px; border-top: 1px solid var(--rule); transition: background 0.15s; }
+    .cta-blue  { color: var(--blue);  } .cta-blue:hover  { background: rgba(56,189,248,0.07); }
+    .cta-neon  { color: var(--neon);  } .cta-neon:hover  { background: rgba(0,255,157,0.06); }
+    .cta-gold  { color: var(--gold);  } .cta-gold:hover  { background: rgba(251,191,36,0.06); }
+    .cta-red   { color: var(--accent);} .cta-red:hover   { background: rgba(213,0,50,0.06); }
+
+    /* WBC RESULT BANNER */
+    .wbc-result { background: linear-gradient(135deg, #1a0505 0%, #0f172a 60%); border: 1px solid rgba(213,0,50,0.4); border-radius: 10px; padding: 20px 24px; margin-bottom: 64px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .wbc-flag { font-size: 2.8rem; line-height: 1; flex-shrink: 0; }
+    .wbc-text { flex: 1; min-width: 200px; }
+    .wbc-eyebrow { font-size: 0.6rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+    .wbc-headline { font-size: 1.2rem; font-weight: 900; letter-spacing: -0.3px; line-height: 1.2; }
+    .wbc-detail { color: var(--muted); font-size: 0.8rem; margin-top: 4px; }
+    .wbc-detail strong { color: var(--text); }
+    .wbc-btn { background: var(--accent); color: white; font-weight: 700; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; padding: 10px 18px; border-radius: 6px; white-space: nowrap; transition: background 0.15s; flex-shrink: 0; }
+    .wbc-btn:hover { background: #ff1a3d; }
+
+    /* LEAGUE TICKER */
+    .ticker-wrap { overflow: hidden; margin-bottom: 64px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 10px 0; }
+    .ticker { display: flex; gap: 40px; animation: ticker 30s linear infinite; width: max-content; }
+    .ticker:hover { animation-play-state: paused; }
+    @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .ticker-item { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+    .ticker-item span { color: var(--neon); margin-right: 8px; }
+
+    /* ABOUT BAR */
+    .about-bar { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 24px 28px; margin-bottom: 32px; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+    .about-item { font-size: 0.78rem; }
+    .about-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .about-val { font-weight: 700; color: var(--text); }
+    .about-sub { font-size: 0.7rem; color: var(--muted); }
+
+    /* FOOTER */
+    .footer { padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.72rem; color: var(--muted); }
+    .footer a { color: var(--muted); }
+    .footer a:hover { color: var(--neon); }
+    .footer-brand { font-weight: 900; color: var(--text); font-size: 0.85rem; }
+
+    @media (max-width: 640px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .wbc-result { flex-direction: column; }
+    }
+  </style>
+  <script data-goatcounter="https://bigbanonos.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="logo-area">CLASSIC BASEBALL WORLD</div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="dot"></span> WBN HQ</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">World Baseball Network · classicbaseball.world</div>
+  <h1>The World Plays<br><span class="accent">Baseball.</span></h1>
+  <p class="hero-sub">Your guide to international baseball — where to watch, when to play, who's streaming, and the greatest baseball films ever made.</p>
+</div>
+
+<!-- WBC RESULT BANNER -->
+<div class="wbc-result">
+  <div class="wbc-flag">🇻🇪</div>
+  <div class="wbc-text">
+    <div class="wbc-eyebrow">2026 World Baseball Classic · March 17, Miami</div>
+    <div class="wbc-headline">Venezuela wins first WBC title — defeats USA 3–2</div>
+    <div class="wbc-detail">Eugenio Suárez RBI double in the 9th · <strong>Maikel García</strong> named tournament MVP · Japan eliminated in QF · Italy's Cinderella run ends in SF · 36,490 fans at loanDepot Park</div>
+  </div>
+  <a href="/wbc2026.html" class="wbc-btn">Full Results →</a>
+</div>
+
+<!-- LEAGUE TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker-item"><span>🇯🇵</span>NPB · SEASON ACTIVE</div>
+    <div class="ticker-item"><span>🇰🇷</span>KBO · SEASON ACTIVE</div>
+    <div class="ticker-item"><span>🇹🇼</span>CPBL · SEASON ACTIVE</div>
+    <div class="ticker-item"><span>🇲🇽</span>LMB · SEASON ACTIVE</div>
+    <div class="ticker-item"><span>🇮🇹</span>FIBS SERIE A · ACTIVE</div>
+    <div class="ticker-item"><span>🇻🇪</span>LVBP · STARTS OCT 2026</div>
+    <div class="ticker-item"><span>🇩🇴</span>LIDOM · STARTS OCT 2026</div>
+    <div class="ticker-item"><span>🇵🇷</span>LBPRC · STARTS NOV 2026</div>
+    <div class="ticker-item"><span>🌍</span>PREMIER12 · 2027</div>
+    <div class="ticker-item"><span>🏆</span>SERIE DEL CARIBE · FEB 2027</div>
+    <!-- duplicate for seamless loop -->
+    <div class="ticker-item"><span>🇯🇵</span>NPB · SEASON ACTIVE</div>
+    <div class="ticker-item"><span>🇰🇷</span>KBO · SEASON ACTIVE</div>
+    <div class="ticker-item"><span>🇹🇼</span>CPBL · SEASON ACTIVE</div>
+    <div class="ticker-item"><span>🇲🇽</span>LMB · SEASON ACTIVE</div>
+    <div class="ticker-item"><span>🇮🇹</span>FIBS SERIE A · ACTIVE</div>
+    <div class="ticker-item"><span>🇻🇪</span>LVBP · STARTS OCT 2026</div>
+    <div class="ticker-item"><span>🇩🇴</span>LIDOM · STARTS OCT 2026</div>
+    <div class="ticker-item"><span>🇵🇷</span>LBPRC · STARTS NOV 2026</div>
+    <div class="ticker-item"><span>🌍</span>PREMIER12 · 2027</div>
+    <div class="ticker-item"><span>🏆</span>SERIE DEL CARIBE · FEB 2027</div>
+  </div>
+</div>
+
+<!-- FOUR CARDS -->
+<div class="card-grid">
+
+  <!-- STREAMING -->
+  <a href="/streaming.html" class="card streaming">
+    <div class="card-hero">
+      <div class="card-tag tag-blue">Streaming Guide · 2026</div>
+      <div class="card-title">Where to Watch<br>International Baseball</div>
+      <p class="card-sub">Every platform, every league, every price point. NPB, KBO, CPBL, LVBP, LIDOM, LAMP, LBPRC, LMB, WBSC, and MLB — all in one place. Who owns the rights, how much it costs, and how to find the game.</p>
+      <div class="card-leagues">
+        <span class="league-chip chip-blue">NPB Pacific League TV</span>
+        <span class="league-chip chip-neon">KBO on SOOP · Free</span>
+        <span class="league-chip chip-gold">CPBL · HamiVideo</span>
+        <span class="league-chip chip-red">LVBP · BeisbolPlay</span>
+        <span class="league-chip chip-purple">LIDOM · MLB.TV</span>
+        <span class="league-chip chip-green">FIBS Italy · YouTube Free</span>
+        <span class="league-chip chip-blue">DAZN × WBSC</span>
+        <span class="league-chip chip-neon">LAMP · YouTube Free</span>
+      </div>
+    </div>
+    <div class="card-cta cta-blue">Streaming Guide →</div>
+  </a>
+
+  <!-- SCHEDULES -->
+  <a href="/schedules.html" class="card schedules">
+    <div class="card-hero">
+      <div class="card-tag tag-neon">When to Watch · NYC Time</div>
+      <div class="card-title">International Baseball<br>Schedules 2026</div>
+      <p class="card-sub">Every league calendar with US time zone conversions in military format. NPB interleague windows, KBO free on SOOP, CPBL live now, LMB Opening Night April 16, winter leagues starting in October. Never miss a game.</p>
+      <div class="card-leagues">
+        <span class="league-chip chip-neon">NPB · Apr–Oct</span>
+        <span class="league-chip chip-neon">KBO · Mar 28–Sep 6</span>
+        <span class="league-chip chip-neon">CPBL · Mar–Oct</span>
+        <span class="league-chip chip-neon">LMB · Apr 16–Aug</span>
+        <span class="league-chip chip-neon">LVBP · Oct–Jan</span>
+        <span class="league-chip chip-neon">LIDOM · Oct–Jan</span>
+        <span class="league-chip chip-neon">LBPRC · Nov–Jan</span>
+        <span class="league-chip chip-neon">Premier12 · 2027</span>
+      </div>
+    </div>
+    <div class="card-cta cta-neon">View Schedules →</div>
+  </a>
+
+  <!-- MOVIES -->
+  <a href="/movies.html" class="card movies">
+    <div class="card-hero">
+      <div class="card-tag tag-gold">Film Database · Classic Baseball</div>
+      <div class="card-title">The Baseball<br>Movie Guide</div>
+      <p class="card-sub">The definitive database of baseball films — from Bull Durham and The Natural to Sugar and Mr. Baseball. Every major baseball movie rated, reviewed, and catalogued. For fans who love the game on and off the field.</p>
+      <div class="card-leagues">
+        <span class="league-chip chip-gold">Feature Films</span>
+        <span class="league-chip chip-gold">Documentaries</span>
+        <span class="league-chip chip-gold">International Baseball Films</span>
+        <span class="league-chip chip-gold">Classic + Modern</span>
+      </div>
+    </div>
+    <div class="card-cta cta-gold">Browse Films →</div>
+  </a>
+
+  <!-- WBC 2026 -->
+  <a href="/wbc2026.html" class="card wbc">
+    <div class="card-hero">
+      <div class="card-tag tag-red">2026 WBC · Complete Results</div>
+      <div class="card-title">World Baseball<br>Classic 2026</div>
+      <p class="card-sub">Venezuela wins their first WBC title in one of the most dramatic finals in tournament history. Bryce Harper's 8th-inning two-run homer tied it — Eugenio Suárez's 9th-inning double won it. Full results, pool standings, bracket, and streaming guide for every nation.</p>
+      <div class="card-leagues">
+        <span class="league-chip chip-red">🇻🇪 Venezuela — Champions</span>
+        <span class="league-chip chip-red">USA · Runners-up</span>
+        <span class="league-chip chip-red">DR · SF</span>
+        <span class="league-chip chip-red">Italy · SF (Cinderella)</span>
+        <span class="league-chip chip-red">Japan · QF exit</span>
+        <span class="league-chip chip-red">MVP: Maikel García</span>
+      </div>
+    </div>
+    <div class="card-cta cta-red">Full Results & Bracket →</div>
+  </a>
+
+</div>
+
+<!-- ABOUT BAR -->
+<div class="about-bar">
+  <div class="about-item">
+    <div class="about-label">Publisher</div>
+    <div class="about-val">World Baseball Network</div>
+    <div class="about-sub">worldbaseball.com · SDVOSB Certified</div>
+  </div>
+  <div class="about-item">
+    <div class="about-label">Partnerships</div>
+    <div class="about-val">FIBS Official Partner</div>
+    <div class="about-sub">SABR Member · WBSC Affiliated</div>
+  </div>
+  <div class="about-item">
+    <div class="about-label">Coverage</div>
+    <div class="about-val">11 Leagues · 4 Continents</div>
+    <div class="about-sub">Asia · Americas · Caribbean · Europe</div>
+  </div>
+  <div class="about-item">
+    <div class="about-label">Updated</div>
+    <div class="about-val">April 2026</div>
+    <div class="about-sub">Streaming links verified · Schedules current</div>
+  </div>
+</div>
+
+<div class="footer">
+  <div>
+    <span class="footer-brand">Classic Baseball World</span> · classicbaseball.world<br>
+    A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a>
+  </div>
+  <div style="text-align:right;">
+    <a href="/streaming.html">Streaming</a> · <a href="/schedules.html">Schedules</a> · <a href="/movies.html">Movies</a> · <a href="/wbc2026.html">WBC 2026</a>
+  </div>
+</div>
+
+</body>
+</html>
