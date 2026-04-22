@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International Baseball — Where to Watch | Classic Baseball World</title>
+  <meta name="description" content="The definitive guide to streaming international baseball. NPB, KBO, CPBL, LIDOM, LVBP, WBSC, MLB and more — where to watch, how to stream, who to contact. Verified for 2026.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:     #0f172a;
+      --card:   #1e293b;
+      --card2:  #162032;
+      --text:   #f8fafc;
+      --muted:  #94a3b8;
+      --accent: #D50032;
+      --neon:   #00ff9d;
+      --gold:   #fbbf24;
+      --rule:   #334155;
+      --blue:   #38bdf8;
+      --purple: #a78bfa;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAV ── */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .nav-left { display: flex; align-items: center; gap: 20px; }
+    .logo-area { font-weight: 900; font-size: 1rem; letter-spacing: -0.5px; }
+    .logo-area a { color: var(--text); }
+    .nav-pill {
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      border: 1px solid var(--rule);
+      border-radius: 20px;
+      transition: 0.2s;
+    }
+    .nav-pill:hover { color: var(--text); border-color: var(--text); }
+    .nav-pill.active { color: var(--neon); border-color: var(--neon); }
+    .hq-link {
+      color: var(--neon);
+      border: 1px solid var(--neon);
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    .hq-link:hover { background: rgba(0,255,157,0.1); }
+    .dot { width: 8px; height: 8px; background: var(--neon); border-radius: 50%; box-shadow: 0 0 5px var(--neon); }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--neon); }
+    .hero-sub { color: var(--muted); font-size: 1rem; max-width: 600px; margin: 0 auto 24px; }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-family: monospace;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .hero-stats span { color: var(--accent); font-weight: bold; }
+
+    /* ── JUMP NAV ── */
+    .jump-nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .jump-btn {
+      background: transparent;
+      border: 1px solid var(--rule);
+      color: var(--muted);
+      padding: 7px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.03em;
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .jump-btn:hover { border-color: var(--neon); color: var(--neon); }
+
+    /* ── SECTION ── */
+    .section { margin-bottom: 56px; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .section-num {
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+    .section-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-left: auto;
+    }
+    .badge-free { background: rgba(0,255,157,0.1); color: var(--neon); border: 1px solid rgba(0,255,157,0.3); }
+    .badge-asia { background: rgba(56,189,248,0.1); color: var(--blue); border: 1px solid rgba(56,189,248,0.3); }
+    .badge-latam { background: rgba(251,191,36,0.1); color: var(--gold); border: 1px solid rgba(251,191,36,0.3); }
+    .badge-wbsc { background: rgba(167,139,250,0.1); color: var(--purple); border: 1px solid rgba(167,139,250,0.3); }
+    .badge-mlb { background: rgba(213,0,50,0.15); color: var(--accent); border: 1px solid rgba(213,0,50,0.3); }
+
+    /* ── LEAGUE GRID ── */
+    .league-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .league-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .league-card:hover { border-color: #475569; transform: translateY(-2px); }
+
+    .lc-top {
+      padding: 18px 20px 14px;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .lc-flag { font-size: 24px; line-height: 1; margin-bottom: 6px; }
+    .lc-abbr {
+      font-weight: 900;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      color: var(--text);
+    }
+    .lc-name { font-size: 0.7rem; color: var(--muted); margin-top: 2px; letter-spacing: 0.02em; }
+    .lc-chips { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
+    .chip {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+    .chip-free { background: rgba(0,255,157,0.12); color: var(--neon); }
+    .chip-paid { background: rgba(56,189,248,0.1); color: var(--blue); }
+    .chip-scale { background: rgba(148,163,184,0.1); color: var(--muted); }
+    .chip-season { background: rgba(213,0,50,0.1); color: #f87171; }
+
+    .lc-body { padding: 16px 20px 18px; }
+
+    .stream-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .stream-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+    .stream-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(51,65,85,0.5);
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+    .stream-row:last-of-type { border-bottom: none; }
+    .sr-platform { font-weight: 700; color: var(--text); }
+    .sr-platform a { color: var(--accent); transition: color 0.15s; }
+    .sr-platform a:hover { color: #f87171; }
+    .sr-detail { font-size: 0.75rem; color: var(--muted); text-align: right; flex-shrink: 0; }
+    .sr-detail.free { color: var(--neon); font-weight: 700; }
+    .sr-detail.paid { color: var(--blue); }
+
+    .how-to {
+      margin-top: 14px;
+      background: rgba(0,0,0,0.25);
+      border-left: 3px solid var(--gold);
+      padding: 10px 12px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.55;
+      border-radius: 0 4px 4px 0;
+    }
+    .how-to strong { color: var(--gold); }
+
+    .contact-line {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--rule);
+      font-size: 0.72rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .contact-line::before { content: '✉'; }
+    .contact-line a { color: var(--accent); }
+    .contact-line a:hover { color: #f87171; }
+
+    /* ── DAZN FEATURE BOX ── */
+    .feature-box {
+      background: linear-gradient(135deg, #1a0a1e 0%, #0f172a 100%);
+      border: 1px solid var(--purple);
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+    .fb-title {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--purple);
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+    .fb-body { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
+    .fb-body strong { color: var(--text); }
+    .fb-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .fb-item {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 12px 14px;
+    }
+    .fb-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-bottom: 5px;
+    }
+    .fb-val { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .fb-val strong { color: var(--text); }
+
+    /* ── MLB GRID ── */
+    .mlb-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .mlb-item {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      padding: 16px 18px;
+      transition: border-color 0.2s;
+    }
+    .mlb-item:hover { border-left-color: #f87171; }
+    .mlb-net { font-weight: 900; font-size: 1rem; color: var(--text); margin-bottom: 6px; }
+    .mlb-detail { font-size: 0.78rem; color: var(--muted); line-height: 1.55; }
+    .mlb-detail a { color: var(--accent); }
+    .mlb-detail a:hover { color: #f87171; }
+    .mlb-detail strong { color: var(--text); }
+
+    /* ── CONTACTS GRID ── */
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 14px 16px;
+    }
+    .cc-org { font-weight: 900; font-size: 0.9rem; color: var(--text); margin-bottom: 6px; }
+    .cc-detail { font-size: 0.75rem; color: var(--muted); line-height: 1.6; }
+    .cc-detail a { color: var(--neon); }
+    .cc-detail a:hover { text-decoration: underline; }
+
+    /* ── VERIFIED BANNER ── */
+    .verified-bar {
+      background: rgba(0,255,157,0.06);
+      border: 1px solid rgba(0,255,157,0.2);
+      border-radius: 8px;
+      padding: 14px 20px;
+      margin-bottom: 40px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .vb-icon { color: var(--neon); font-size: 1rem; flex-shrink: 0; }
+    .verified-bar strong { color: var(--neon); }
+
+    /* ── FOOTER ── */
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .footer a { color: var(--muted); }
+    .footer a:hover { color: var(--neon); }
+    .footer-brand { font-weight: 900; color: var(--text); font-size: 0.85rem; }
+
+    @media (max-width: 600px) {
+      .fb-grid { grid-template-columns: 1fr; }
+      .hero h1 { letter-spacing: -1px; }
+      .top-nav { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="top-nav">
+  <div class="nav-left">
+    <div class="logo-area"><a href="/">CLASSIC BASEBALL WORLD</a></div>
+    <a href="/" class="nav-pill">Movie DB</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+    <a href="/streaming.html" class="nav-pill active">Streaming Guide</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="dot"></span> WBN HQ</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">World Baseball Network · 2026 Edition</div>
+  <h1>International Baseball<br><span>Where to Watch</span></h1>
+  <p class="hero-sub">Every league. Every platform. How to stream from anywhere on earth. Verified against primary sources — April 2026.</p>
+  <div class="hero-stats">
+    <div><span>12</span> Leagues</div>
+    <div><span>20+</span> Platforms</div>
+    <div><span>8-year</span> DAZN/WBSC Deal</div>
+    <div><span>FREE</span> KBO via SOOP</div>
+    <div><span>19.4B</span> MLB.TV mins in 2025</div>
+  </div>
+</div>
+
+<!-- VERIFIED BANNER -->
+<div class="verified-bar">
+  <span class="vb-icon">✓</span>
+  <div><strong>Verified for 2026.</strong> This guide reflects the November 2025 MLB rights realignment (ESPN Unlimited, NBC/Peacock Sunday Night Baseball, Netflix marquee events) and the October 2024 DAZN/WBSC 8-year global deal. Cross-checked against MLB.com press releases, WBSC.org, and DAZN Group announcements. Territorial restrictions and blackout policies apply to all platforms.</div>
+</div>
+
+<!-- JUMP NAV -->
+<div class="jump-nav">
+  <a href="#asia" class="jump-btn">🇯🇵 NPB</a>
+  <a href="#asia" class="jump-btn">🇰🇷 KBO</a>
+  <a href="#asia" class="jump-btn">🇹🇼 CPBL</a>
+  <a href="#latin" class="jump-btn">🇲🇽 LMB</a>
+  <a href="#caribbean" class="jump-btn">🇻🇪 LVBP</a>
+  <a href="#caribbean" class="jump-btn">🇩🇴 LIDOM</a>
+  <a href="#caribbean" class="jump-btn">🇵🇷 LBPRC</a>
+  <a href="#caribbean" class="jump-btn">🇲🇽 LAMP</a>
+  <a href="#intl" class="jump-btn">🌍 WBSC/DAZN</a>
+  <a href="#intl" class="jump-btn">🇮🇹 FIBS/Italy</a>
+  <a href="#intl" class="jump-btn">🇦🇺 ABL</a>
+  <a href="#mlb" class="jump-btn">⚾ MLB</a>
+  <a href="#contacts" class="jump-btn">✉ Contacts</a>
+</div>
+
+<!-- ASIA -->
+<div class="section" id="asia">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Asia — The Big Three</h2>
+    <span class="section-badge badge-asia">NPB · KBO · CPBL</span>
+  </div>
+  <div class="league-grid">
+
+    <!-- NPB -->
+    <div class="league-card">
+      <div class="lc-top">
+        <div>
+          <div class="lc-flag">🇯🇵</div>
+          <div class="lc-abbr">NPB</div>
+          <div class="lc-name">Nippon Professional Baseball</div>
+        </div>
+        <div class="lc-chips">
+          <span class="chip chip-scale">12 Teams</span>
+          <span class="chip chip-season">Mar – Oct</span>
+          <span class="chip chip-paid">Paid (US)</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="stream-label">How to Stream</div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://pacificleague.tv" target="_blank">Pacific League TV</a></span>
+          <span class="sr-detail paid">~$11/mo · Americas</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://ftfsports.com" target="_blank">FTF Sports</a></span>
+          <span class="sr-detail paid">US & Canada</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform">Central League teams</span>
+          <span class="sr-detail">Fragmented by club</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://www.youtube.com/@PacificLeagueTVEngofficial" target="_blank">YouTube — Pacific League</a></span>
+          <span class="sr-detail free">Free · 1 game/wk</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform">Pacific League TV</span>
+          <span class="sr-detail free">Free · EU/UK</span>
+        </div>
+        <div class="how-to">
+          <strong>Pacific League:</strong> pacificleague.tv → Create account → International plan (~$11/mo). FTF Sports for US/Canada. <strong>Central League:</strong> Rights are fragmented by club — Giants TV, Tigers TV, etc. Very limited international availability. DAZN carries select CL content in some markets but coverage is inconsistent by team.
+        </div>
+        <div class="contact-line">
+          <a href="mailto:international@npb.or.jp">international@npb.or.jp</a> · <a href="https://npb.or.jp" target="_blank">npb.or.jp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- KBO -->
+    <div class="league-card">
+      <div class="lc-top">
+        <div>
+          <div class="lc-flag">🇰🇷</div>
+          <div class="lc-abbr">KBO</div>
+          <div class="lc-name">Korea Baseball Organization</div>
+        </div>
+        <div class="lc-chips">
+          <span class="chip chip-scale">10 Teams</span>
+          <span class="chip chip-season">Mar – Oct</span>
+          <span class="chip chip-free">FREE Intl</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="stream-label">How to Stream</div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://www.sooplive.com" target="_blank">SOOP</a> (fmr. AfreecaTV)</span>
+          <span class="sr-detail free">FREE · No account</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform">TVING</span>
+          <span class="sr-detail paid">Korea domestic only</span>
+        </div>
+        <div class="how-to">
+          <strong>Big change from prior years:</strong> KBO moved from FloSports (paid) to <strong>SOOP</strong> (soop.com). Every KBO game is now free internationally — no subscription, no account. Open soop.com in any browser, search KBO. Works on desktop, mobile, smart TV. Record 12.3M fans attended KBO games in 2025.
+        </div>
+        <div class="contact-line">
+          <a href="mailto:international@kbo.or.kr">international@kbo.or.kr</a> · <a href="https://kbo.or.kr" target="_blank">kbo.or.kr</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CPBL -->
+    <div class="league-card">
+      <div class="lc-top">
+        <div>
+          <div class="lc-flag">🇹🇼</div>
+          <div class="lc-abbr">CPBL</div>
+          <div class="lc-name">Chinese Professional Baseball League</div>
+        </div>
+        <div class="lc-chips">
+          <span class="chip chip-scale">6 Teams</span>
+          <span class="chip chip-season">Mar – Oct</span>
+          <span class="chip chip-paid">CPBL.TV</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="stream-label">How to Stream</div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://cpbl.tv" target="_blank">CPBL.TV</a></span>
+          <span class="sr-detail paid">Official OTT · Intl access</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform">Eleven Sports Network</span>
+          <span class="sr-detail">Taiwan domestic</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform">iQiyi</span>
+          <span class="sr-detail">Mainland China</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://www.youtube.com/channel/UCDt9GAqyRzc2e5BNxPrwZrw" target="_blank">YouTube — CPBL Official</a></span>
+          <span class="sr-detail free">Select free games</span>
+        </div>
+        <div class="how-to">
+          <strong>How to access:</strong> cpbl.tv → subscribe for full access. YouTube: search "CPBL Baseball" for the official channel. Taiwan won the 2024 Premier12 championship — league popularity is surging internationally.
+        </div>
+        <div class="contact-line">
+          <a href="mailto:media@cpbl.com.tw">media@cpbl.com.tw</a> · <a href="https://cpbl.com.tw" target="_blank">cpbl.com.tw</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- LATIN AMERICA -->
+<div class="section" id="latin">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Latin America — Summer League</h2>
+    <span class="section-badge badge-latam">LMB · Mexico</span>
+  </div>
+  <div class="league-grid">
+    <div class="league-card">
+      <div class="lc-top">
+        <div>
+          <div class="lc-flag">🇲🇽</div>
+          <div class="lc-abbr">LMB</div>
+          <div class="lc-name">Liga Mexicana de Béisbol</div>
+        </div>
+        <div class="lc-chips">
+          <span class="chip chip-scale">18 Teams</span>
+          <span class="chip chip-season">Apr – Aug</span>
+          <span class="chip chip-paid">Jonron.tv</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="stream-label">How to Stream</div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://jonron.tv" target="_blank">Jonron.tv</a></span>
+          <span class="sr-detail paid">Primary platform</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://www.lmb.com.mx/en-vivo" target="_blank">LMB En Vivo</a></span>
+          <span class="sr-detail paid">Secondary option</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform">YouTube TV</span>
+          <span class="sr-detail">Select broadcasts</span>
+        </div>
+        <div class="how-to">
+          <strong>How to access:</strong> Jonron.tv is the primary home — subscription required. MiLB-affiliated; strong development circuit for international prospects. 18 teams across Mexico.
+        </div>
+        <div class="contact-line">
+          <a href="https://lmb.com.mx" target="_blank">lmb.com.mx</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARIBBEAN & WINTER -->
+<div class="section" id="caribbean">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Caribbean &amp; Winter Leagues</h2>
+    <span class="section-badge badge-latam">LVBP · LIDOM · LBPRC · LAMP</span>
+  </div>
+  <div class="league-grid">
+
+    <!-- LVBP -->
+    <div class="league-card">
+      <div class="lc-top">
+        <div>
+          <div class="lc-flag">🇻🇪</div>
+          <div class="lc-abbr">LVBP</div>
+          <div class="lc-name">Liga Venezolana de Béisbol Profesional</div>
+        </div>
+        <div class="lc-chips">
+          <span class="chip chip-scale">8 Teams</span>
+          <span class="chip chip-season">Oct – Jan</span>
+          <span class="chip chip-paid">~$22.99 season</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="stream-label">How to Stream</div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://beisbolplay.com" target="_blank">BeisbolPlay.com</a></span>
+          <span class="sr-detail paid">~$22.99 USD/season</span>
+        </div>
+        <div class="how-to">
+          <strong>How to access:</strong> beisbolplay.com → season subscription (~$22.99 USD). Desktop and mobile. Venezuela is a premier MLB pipeline — Juan Soto, Ronald Acuña Jr., Salvi Pérez all hail from Venezuela's winter league tradition.
+        </div>
+        <div class="contact-line">
+          <a href="mailto:prensa@lvbp.com">prensa@lvbp.com</a> · <a href="https://lvbp.com" target="_blank">lvbp.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIDOM -->
+    <div class="league-card">
+      <div class="lc-top">
+        <div>
+          <div class="lc-flag">🇩🇴</div>
+          <div class="lc-abbr">LIDOM</div>
+          <div class="lc-name">Liga de Béisbol Prof. República Dominicana</div>
+        </div>
+        <div class="lc-chips">
+          <span class="chip chip-scale">6 Teams</span>
+          <span class="chip chip-season">Oct – Jan</span>
+          <span class="chip chip-paid">MLB.TV</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="stream-label">How to Stream</div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://www.mlb.com/live-stream-games" target="_blank">MLB.TV</a> via ESPN app</span>
+          <span class="sr-detail paid">Included in MLB.TV</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://lidomrd.com" target="_blank">lidomrd.com</a></span>
+          <span class="sr-detail">Official site · links</span>
+        </div>
+        <div class="how-to">
+          <strong>How to access:</strong> LIDOM games stream through MLB.TV — subscribe via the ESPN app or mlb.com/tv. Also available at lidomrd.com. The Dominican Republic brought arguably the strongest WBC roster in history to the 2026 tournament.
+        </div>
+        <div class="contact-line">
+          <a href="mailto:comunicaciones@lidomrd.com">comunicaciones@lidomrd.com</a> · <a href="https://lidomrd.com" target="_blank">lidomrd.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LBPRC -->
+    <div class="league-card">
+      <div class="lc-top">
+        <div>
+          <div class="lc-flag">🇵🇷</div>
+          <div class="lc-abbr">LBPRC</div>
+          <div class="lc-name">Liga Roberto Clemente de Puerto Rico</div>
+        </div>
+        <div class="lc-chips">
+          <span class="chip chip-scale">6 Teams</span>
+          <span class="chip chip-season">Jan – Feb</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="stream-label">How to Stream</div>
+        <div class="stream-row">
+          <span class="sr-platform">Liga PR App</span>
+          <span class="sr-detail">iOS + Android · search "Liga PR"</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://ligapr.com" target="_blank">ligapr.com</a></span>
+          <span class="sr-detail">Web portal</span>
+        </div>
+        <div class="contact-line">
+          <a href="https://ligapr.com" target="_blank">ligapr.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LAMP -->
+    <div class="league-card">
+      <div class="lc-top">
+        <div>
+          <div class="lc-flag">🇲🇽</div>
+          <div class="lc-abbr">LAMP</div>
+          <div class="lc-name">Liga ARCO Mexicana del Pacífico</div>
+        </div>
+        <div class="lc-chips">
+          <span class="chip chip-scale">8 Teams</span>
+          <span class="chip chip-season">Oct – Jan</span>
+          <span class="chip chip-free">YouTube Free</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="stream-label">How to Stream</div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://www.youtube.com/channel/UCdW_4rN3OarOoawQ4Er-ZXw" target="_blank">YouTube — Liga del Pacífico</a></span>
+          <span class="sr-detail free">FREE · Official channel</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://lmp.com.mx" target="_blank">lmp.com.mx</a></span>
+          <span class="sr-detail free">Official site · links</span>
+        </div>
+        <div class="how-to">
+          <strong>How to access:</strong> YouTube → search "Liga Mexicana del Pacífico". Completely free. LAMP feeds into the Caribbean Series every February, where champions of all four winter leagues compete.
+        </div>
+        <div class="contact-line">
+          <a href="mailto:prensa@lmp.com.mx">prensa@lmp.com.mx</a> · <a href="https://lmp.com.mx" target="_blank">lmp.com.mx</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- INTERNATIONAL / WBSC / EUROPE / ABL -->
+<div class="section" id="intl">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">International &amp; Governing Body Events</h2>
+    <span class="section-badge badge-wbsc">WBSC · DAZN · FIBS · ABL</span>
+  </div>
+
+  <!-- DAZN / WBSC FEATURE -->
+  <div class="feature-box">
+    <div class="fb-title">⚡ DAZN × WBSC — The 8-Year Global Deal (Oct. 2024)</div>
+    <div class="fb-body">
+      DAZN and the WBSC signed an <strong>8-year global distribution partnership</strong> making DAZN the primary international distributor for all WBSC premium baseball and softball events. For U.S. fans this is the most significant international baseball streaming deal in years.<br><br>
+      <strong>DAZN holds exclusive U.S. rights to the Premier12</strong> — the only legal way to watch it in America. For other WBSC World Cups and Olympic Qualifiers, DAZN is the primary U.S. platform, though rights vary by specific tournament. Outside the U.S., Premier12 is on DAZN's free tier in English, Spanish, Japanese, and Korean.
+    </div>
+    <div class="fb-grid">
+      <div class="fb-item">
+        <div class="fb-label">US Exclusive</div>
+        <div class="fb-val"><strong>Premier12</strong> — DAZN only; paid subscription required in US. Free globally outside US.</div>
+      </div>
+      <div class="fb-item">
+        <div class="fb-label">Also Covered</div>
+        <div class="fb-val">WBSC Baseball World Cups (U-12, U-15, U-18, U-23, Women's), Olympic Qualifiers, Softball & Baseball5 World Cups</div>
+      </div>
+      <div class="fb-item">
+        <div class="fb-label">Excluded Territories</div>
+        <div class="fb-val">Japan, Korea, Taiwan, Mexico — local rights holders only. Spanish-language excluded in most Latin American markets.</div>
+      </div>
+      <div class="fb-item">
+        <div class="fb-label">How to Access (US)</div>
+        <div class="fb-val"><a href="https://www.dazn.com" target="_blank">dazn.com</a> → subscribe. App available on Apple TV, Roku, Fire TV, iOS, Android, smart TV.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="league-grid">
+
+    <!-- WBSC GameTime -->
+    <div class="league-card">
+      <div class="lc-top">
+        <div>
+          <div class="lc-flag">🌍</div>
+          <div class="lc-abbr">WBSC GameTime</div>
+          <div class="lc-name">World Baseball Softball Confederation · gametime.sport</div>
+        </div>
+        <div class="lc-chips">
+          <span class="chip chip-scale">250+ Games/Yr</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="stream-label">How to Stream</div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://gametime.sport" target="_blank">gametime.sport</a></span>
+          <span class="sr-detail paid">Per-tournament pass</span>
+        </div>
+        <div class="how-to">
+          <strong>How to access:</strong> gametime.sport → Offers → select Tournament Pass. International credit cards accepted. Many events free in certain territories. Covers ~250 games/year across 6 World Cups: Baseball (U-12 through Women's), Softball, Baseball5. Also carries Baseball Champions League 2026.
+        </div>
+        <div class="contact-line">
+          <a href="mailto:media@wbsc.org">media@wbsc.org</a> · <a href="https://wbsc.org" target="_blank">wbsc.org</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIBS / Italy -->
+    <div class="league-card">
+      <div class="lc-top">
+        <div>
+          <div class="lc-flag">🇮🇹</div>
+          <div class="lc-abbr">FIBS / Serie A</div>
+          <div class="lc-name">Federazione Italiana Baseball Softball · WBN Partner</div>
+        </div>
+        <div class="lc-chips">
+          <span class="chip chip-free">YouTube Free</span>
+          <span class="chip chip-season">May – Oct</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="stream-label">How to Stream</div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://www.youtube.com/channel/UC9eaHtrDHJifGSqTlC42r0g" target="_blank">FIBSchannel3 (YouTube)</a></span>
+          <span class="sr-detail free">FREE · No account · Any device</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://gametime.sport" target="_blank">GameTime (WBSC)</a></span>
+          <span class="sr-detail paid">Euro Champ. · Olympic Quals.</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform">RAI</span>
+          <span class="sr-detail">Serie A finals · Italy domestic</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform">FOX / FS1</span>
+          <span class="sr-detail">Team Italy WBC 2026 in US</span>
+        </div>
+        <div class="how-to">
+          <strong>FIBSchannel3:</strong> On any smart device — YouTube → search <strong>"FIBSchannel3"</strong>. Carries live Serie A Baseball with real-time scoring overlays built on WBSC's Cloud GFX tech: pitch count, base runners, batting averages integrated into the broadcast. Free, no account. WBN is a certified FIBS partner.
+        </div>
+        <div class="contact-line">
+          <a href="mailto:press@fibs.it">press@fibs.it</a> · <a href="https://fibs.it" target="_blank">fibs.it</a> · @FIBSpress
+        </div>
+      </div>
+    </div>
+
+    <!-- ABL -->
+    <div class="league-card">
+      <div class="lc-top">
+        <div>
+          <div class="lc-flag">🇦🇺</div>
+          <div class="lc-abbr">ABL</div>
+          <div class="lc-name">Australian Baseball League</div>
+        </div>
+        <div class="lc-chips">
+          <span class="chip chip-scale">6 Teams</span>
+          <span class="chip chip-season">Nov – Feb</span>
+        </div>
+      </div>
+      <div class="lc-body">
+        <div class="stream-label">How to Stream</div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://australianbaseballleague.com.au" target="_blank">ABL Official Site</a></span>
+          <span class="sr-detail">Per-game links</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform"><a href="https://www.youtube.com/results?search_query=ABL+baseball" target="_blank">Team YouTube Channels</a></span>
+          <span class="sr-detail free">Primary global access</span>
+        </div>
+        <div class="stream-row">
+          <span class="sr-platform">Local Australian Broadcasters</span>
+          <span class="sr-detail">Select coverage; varies by season</span>
+        </div>
+        <div class="how-to">
+          <strong>How to access:</strong> australianbaseballleague.com.au for per-game stream links. YouTube channels for Perth Heat, Sydney Blue Sox, and other teams carry home games globally. Growing league with increasing international prospect visibility.
+        </div>
+        <div class="contact-line">
+          <a href="https://australianbaseballleague.com.au" target="_blank">australianbaseballleague.com.au</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MLB -->
+<div class="section" id="mlb">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">MLB — The Major Leagues</h2>
+    <span class="section-badge badge-mlb">30 Teams · 2026 New Rights Era</span>
+  </div>
+  <p style="font-size:0.8rem;color:var(--muted);margin-bottom:16px;">Commissioner: Rob Manfred · 2026–2028 rights cycle began this season · all deals verified against MLB.com press releases</p>
+  <div class="mlb-grid">
+    <div class="mlb-item">
+      <div class="mlb-net">ESPN Unlimited</div>
+      <div class="mlb-detail">Midweek national package (30 exclusive games). Now the retail home for MLB.TV — <strong>MLB owns the product, ESPN distributes it</strong>. Subscribe and watch out-of-market games via the ESPN app. In-market games blacked out. ~$29.99/mo · <a href="https://www.espn.com/watch/" target="_blank">espn.com/watch</a></div>
+    </div>
+    <div class="mlb-item">
+      <div class="mlb-net">NBC / Peacock</div>
+      <div class="mlb-detail"><strong>Sunday Night Baseball — exclusive from 2026</strong>, ending ESPN's 35-year run. All Wild Card round games (NBC + NBCSN + Peacock). MLB Sunday Leadoff (18 early-day games). <a href="https://www.peacocktv.com/sports/mlb" target="_blank">peacocktv.com/sports/mlb</a></div>
+    </div>
+    <div class="mlb-item">
+      <div class="mlb-net">Netflix</div>
+      <div class="mlb-detail"><strong>Exclusive marquee events only (2026–2028):</strong> Opening Night (Yankees vs. Giants, March 25 — first-ever live MLB on Netflix), Home Run Derby, Field of Dreams Game, select annual specials. All 47 WBC 2026 games exclusive in Japan. <a href="https://netflix.com" target="_blank">netflix.com</a></div>
+    </div>
+    <div class="mlb-item">
+      <div class="mlb-net">Apple TV+</div>
+      <div class="mlb-detail">Friday Night Baseball doubleheaders — <strong>exclusive all season</strong>. ~$85M/yr rights deal. A single Dodgers-Yankees game drove 722,000 new signups in 2025. ~$12.99/mo · <a href="https://tv.apple.com/us/sporting-event/mlb" target="_blank">tv.apple.com/us/sporting-event/mlb</a></div>
+    </div>
+    <div class="mlb-item">
+      <div class="mlb-net">FOX / FS1 / FOX One</div>
+      <div class="mlb-detail">World Series, LCS, Division Series, All-Star Game, select regular season. <strong>All 47 WBC 2026 games in the U.S.</strong> FOX One streams every FOX Sports broadcast. <a href="https://www.foxsports.com/live" target="_blank">foxsports.com/live</a></div>
+    </div>
+    <div class="mlb-item">
+      <div class="mlb-net">TBS / Max</div>
+      <div class="mlb-detail">Tuesday Night Baseball (regular season). LCS and Division Series playoff games. All TBS games stream on Max. <a href="https://play.max.com/sports" target="_blank">play.max.com/sports</a></div>
+    </div>
+    <div class="mlb-item">
+      <div class="mlb-net">MLB.TV (via ESPN app)</div>
+      <div class="mlb-detail">MLB-owned out-of-market product — <strong>every game outside your local market (~2,430/yr)</strong>. Subscribe through ESPN app or MLB app. In-market games blacked out. Record 19.4B minutes watched in 2025. <a href="https://www.mlb.com/live-stream-games" target="_blank">mlb.com/live-stream-games</a></div>
+    </div>
+    <div class="mlb-item">
+      <div class="mlb-net">MLB Network</div>
+      <div class="mlb-detail">24/7 baseball. Live games (Showcase package), Hot Stove, MLB Tonight. Distributed by ESPN from 2026. <a href="https://www.mlb.com/network" target="_blank">mlb.com/network</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACTS -->
+<div class="section" id="contacts">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2 class="section-title">Key Contacts</h2>
+  </div>
+  <div class="contacts-grid">
+    <div class="contact-card">
+      <div class="cc-org">WBSC</div>
+      <div class="cc-detail"><a href="mailto:media@wbsc.org">media@wbsc.org</a> · <a href="https://wbsc.org" target="_blank">wbsc.org</a><br>President: Riccardo Fraccari</div>
+    </div>
+    <div class="contact-card">
+      <div class="cc-org">DAZN Partnerships</div>
+      <div class="cc-detail"><a href="mailto:partnerships@dazn.com">partnerships@dazn.com</a> · <a href="https://dazngroup.com" target="_blank">dazngroup.com</a><br>CEO: Shay Segev · CEO Growth Mkts: Pete Oliver</div>
+    </div>
+    <div class="contact-card">
+      <div class="cc-org">FIBS (Italy) — WBN Partner</div>
+      <div class="cc-detail"><a href="mailto:press@fibs.it">press@fibs.it</a> · <a href="https://fibs.it" target="_blank">fibs.it</a><br>President: Marco Mazzieri · @FIBSpress</div>
+    </div>
+    <div class="contact-card">
+      <div class="cc-org">NPB / Pacific League</div>
+      <div class="cc-detail"><a href="mailto:international@npb.or.jp">international@npb.or.jp</a> · <a href="https://npb.or.jp" target="_blank">npb.or.jp</a><br>Commissioner: Atsushi Saito</div>
+    </div>
+    <div class="contact-card">
+      <div class="cc-org">KBO</div>
+      <div class="cc-detail"><a href="mailto:international@kbo.or.kr">international@kbo.or.kr</a> · <a href="https://kbo.or.kr" target="_blank">kbo.or.kr</a><br>Commissioner: Heung-gyu Heo</div>
+    </div>
+    <div class="contact-card">
+      <div class="cc-org">CPBL</div>
+      <div class="cc-detail"><a href="mailto:media@cpbl.com.tw">media@cpbl.com.tw</a> · <a href="https://cpbl.com.tw" target="_blank">cpbl.com.tw</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="cc-org">LIDOM</div>
+      <div class="cc-detail"><a href="mailto:comunicaciones@lidomrd.com">comunicaciones@lidomrd.com</a> · <a href="https://lidomrd.com" target="_blank">lidomrd.com</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="cc-org">LVBP</div>
+      <div class="cc-detail"><a href="mailto:prensa@lvbp.com">prensa@lvbp.com</a> · <a href="https://lvbp.com" target="_blank">lvbp.com</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="cc-org">MLB Media Relations</div>
+      <div class="cc-detail"><a href="https://www.mlb.com/official-information/contact" target="_blank">mlb.com/official-information/contact</a><br>Commissioner: Rob Manfred</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>
+    <span class="footer-brand">Classic Baseball World</span> · classicbaseball.world<br>
+    A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · Certified SDVOSB · FIBS Partner · SABR Member
+  </div>
+  <div style="text-align:right;">
+    <div>Verified April 2026 · Cross-checked vs. MLB.com, WBSC.org, DAZN Group</div>
+    <div style="margin-top:4px;"><a href="/">Movie DB</a> · <a href="/wbc2026.html">WBC 2026</a> · <a href="/streaming.html">Streaming Guide</a></div>
+  </div>
+</div>
+
+</body>
+</html>

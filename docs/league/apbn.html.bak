@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoofdklasse — Honkbal Hoofdklasse (Netherlands) | Baseball Without Borders</title>
-  <meta name="description" content="Netherlands Hoofdklasse — Europe's longest-running pro baseball league. Neptunus, Curaçao Neptunus, Holland Series. The pipeline that produced Jurickson Profar, Xander Bogaerts, Andruw Jones.">
+  <title>APBN — Asociación Profesional de Béisbol Nicaragüense | Baseball Without Borders</title>
+  <meta name="description" content="Nicaragua's winter league — APBN (formerly LBPN). 5 teams, rebranded December 2025. Tigres de Chinandega defending champs. The most baseball-obsessed country you've never heard of — and their pitching pipeline is real.">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--purple:#a78bfa;--lg:#FF6B00;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--purple:#a78bfa;--lg:#0067C6;--lg2:#FFFFFF;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
     *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
     body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
     a{text-decoration:none;color:inherit;}
@@ -22,13 +22,14 @@
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
     .crumbs{padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
     .crumbs a{color:var(--muted);}.crumbs a:hover{color:var(--neon);}.crumbs span{color:var(--gold);}
-    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg);position:relative;overflow:hidden;background:linear-gradient(180deg,#1a0f00 0%,#0a0f1e 100%);}
-    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,107,0,.03) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(255,107,0,.03) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg);position:relative;overflow:hidden;background:linear-gradient(180deg,#000e1a 0%,#0a0f1e 100%);}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(0,103,198,.03) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(0,103,198,.03) 0 1px,transparent 1px 60px);pointer-events:none;}
     .hero-inner{max-width:1200px;margin:0 auto;position:relative;}
     .hero-flag{font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--lg);margin-bottom:12px;}
+    .new-badge{display:inline-block;background:var(--lg);color:#fff;font-family:var(--display);font-size:.65rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:3px;margin-bottom:12px;}
     .hero-country{display:flex;align-items:center;gap:18px;margin-bottom:18px;flex-wrap:wrap;}
     .hero-flag-emoji{font-size:3.2rem;line-height:1;}
-    .hero-title{font-family:var(--display);font-size:clamp(2.6rem,8vw,6rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-1.5px;text-transform:uppercase;}
+    .hero-title{font-family:var(--display);font-size:clamp(3.4rem,10vw,8rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-2.5px;text-transform:uppercase;}
     .hero-full{font-family:var(--display);font-size:clamp(1rem,2vw,1.4rem);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:8px;margin-bottom:24px;}
     .hero-lede{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--muted);max-width:720px;line-height:1.75;}
     .hero-lede strong{color:var(--text);font-style:normal;}
@@ -95,10 +96,7 @@
 <body>
 
 <nav class="site-nav">
-  <a href="/index.html" class="brand-block" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-      <img src="/assets/img/wbn-logo.jpg" alt="World Baseball Network" class="wbn-logo" style="height:38px;width:auto;display:block;">
-      <span class="logo" style="font-family:var(--display);font-weight:900;font-size:0.75rem;letter-spacing:1px;line-height:1.1;color:var(--text);max-width:180px;">Official Viewer's Guide<br>to International Baseball</span>
-    </a>
+  <div class="logo">BASEBALL WITHOUT BORDERS</div>
   <div class="navlinks">
     <a href="/index.html" class="nav-pill">Home</a>
     <a href="/leagues.html" class="nav-pill">Leagues</a>
@@ -110,27 +108,28 @@
   <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
 </nav>
 
-<div class="crumbs"><a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>Hoofdklasse · Netherlands</span></div>
+<div class="crumbs"><a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>APBN · Nicaragua</span></div>
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-flag">Netherlands · Honkbal Hoofdklasse · 103rd Season</div>
+    <div class="new-badge">★ Rebranded Dec 2025 · Formerly LBPN</div>
+    <div class="hero-flag">Nicaragua · Asociación Profesional de Béisbol Nicaragüense · 2026 Season</div>
     <div class="hero-country">
-      <span class="hero-flag-emoji">🇳🇱</span>
+      <span class="hero-flag-emoji">🇳🇮</span>
       <div>
-        <div class="hero-title">HOOFDKLASSE</div>
-        <div class="hero-full">Honkbal Hoofdklasse · KNBSB</div>
+        <div class="hero-title">APBN</div>
+        <div class="hero-full">Asociación Profesional de Béisbol Nicaragüense</div>
       </div>
     </div>
     <p class="hero-lede">
-      The <strong>longest-running professional baseball league in Europe</strong>, founded 1922 — older than the MLB All-Star Game. Eight clubs, a top-flight known as "Honkbal" (literally "home-ball"), and a pipeline that has produced <strong>Jurickson Profar, Xander Bogaerts, Andruw Jones, Kenley Jansen, Didi Gregorius</strong>, and most of the Dutch WBC contingent that terrorized WBC 2009 and 2013. The Holland Series decides the Dutch champion every September.
+      Nicaragua is the <strong>most baseball-obsessed country in Central America</strong> — baseball outranks soccer as the national sport, a rarity anywhere outside the Caribbean basin. APBN is the country's top flight, freshly rebranded in December 2025 from the old LBPN name. Five teams compete for the national championship and the right to represent Nicaragua in the Caribbean Series. The pipeline is real: <strong>Denis Martínez</strong> (the first Nicaraguan in MLB, only pitcher to throw a perfect game while Nicaraguan), <strong>Marvin Benard, Vicente Padilla, Cheslor Cuthbert</strong>, and the current generation all came through this league first.
     </p>
     <div class="hero-stats">
-      <div><div class="hs-num">8</div><div class="hs-lbl">Teams</div></div>
-      <div><div class="hs-num">42</div><div class="hs-lbl">Games / Team</div></div>
-      <div><div class="hs-num">1922</div><div class="hs-lbl">Founded</div></div>
-      <div><div class="hs-num">UTC+2</div><div class="hs-lbl">CEST · ET +6</div></div>
-      <div><div class="hs-num">103rd</div><div class="hs-lbl">Season</div></div>
+      <div><div class="hs-num">5</div><div class="hs-lbl">Teams</div></div>
+      <div><div class="hs-num">52</div><div class="hs-lbl">Games / Team</div></div>
+      <div><div class="hs-num">UTC-6</div><div class="hs-lbl">CST · ET -1</div></div>
+      <div><div class="hs-num">2025</div><div class="hs-lbl">Rebranded</div></div>
+      <div><div class="hs-num">1956</div><div class="hs-lbl">First pro league</div></div>
     </div>
   </div>
 </div>
@@ -138,71 +137,70 @@
 <div class="page">
 
   <div class="watch-window">
-    <div class="ww-title">⚡ When to Watch Hoofdklasse from the US</div>
-    <div class="ww-lede">Netherlands is <strong>UTC+2 (CEST)</strong> in the summer — 6 hours ahead of US Eastern. Hoofdklasse games typically start at <strong>19:30 CEST = 1:30 PM ET</strong>. That's <strong>perfect lunch-hour baseball</strong> for US fans. Saturday afternoons and Sunday day games (14:00 CEST = 8:00 AM ET) are the weekend pattern.</div>
+    <div class="ww-title">⚡ When to Watch APBN from the US</div>
+    <div class="ww-lede">Nicaragua is on <strong>Central Standard Time (UTC-6)</strong> — one hour behind US Eastern. Weeknight games at 19:30 CST = <strong>8:30 PM ET</strong>, right on MLB's prime window. Weekend day games at 14:00 CST = <strong>3:00 PM ET</strong>. The offseason-spanning schedule runs November through January.</div>
     <div class="ww-grid">
-      <div class="ww-item"><div class="ww-val">1:30 PM ET</div><div class="ww-lbl">Weeknight 19:30 CEST</div></div>
-      <div class="ww-item"><div class="ww-val">8:00 AM ET</div><div class="ww-lbl">Sunday 14:00 CEST</div></div>
-      <div class="ww-item"><div class="ww-val">10:30 AM PT</div><div class="ww-lbl">West Coast weeknight</div></div>
-      <div class="ww-item"><div class="ww-val">Apr–Aug</div><div class="ww-lbl">Regular season</div></div>
-      <div class="ww-item"><div class="ww-val">Sept</div><div class="ww-lbl">Holland Series</div></div>
-      <div class="ww-item"><div class="ww-val">Sat 14:00</div><div class="ww-lbl">Best day window</div></div>
+      <div class="ww-item"><div class="ww-val">8:30 PM ET</div><div class="ww-lbl">Weekday 19:30 CST</div></div>
+      <div class="ww-item"><div class="ww-val">3:00 PM ET</div><div class="ww-lbl">Weekend 14:00 CST</div></div>
+      <div class="ww-item"><div class="ww-val">Nov 4</div><div class="ww-lbl">Season opens</div></div>
+      <div class="ww-item"><div class="ww-val">Jan</div><div class="ww-lbl">Serie Final</div></div>
+      <div class="ww-item"><div class="ww-val">Feb</div><div class="ww-lbl">Serie de las Américas</div></div>
+      <div class="ww-item"><div class="ww-val">Managua</div><div class="ww-lbl">Capital hub</div></div>
     </div>
   </div>
 
   <div class="section">
     <div class="section-head">
       <span class="section-num">01</span>
-      <h2 class="section-title">Where to Watch Hoofdklasse</h2>
-      <span class="section-sub">Verified Apr 2026</span>
+      <h2 class="section-title">Where to Watch APBN</h2>
+      <span class="section-sub">Verified Apr 2026 · Streaming evolving</span>
     </div>
     <div class="platforms">
 
       <div class="platform-card premium">
-        <div class="platform-tag">Primary · Per Club</div>
-        <div class="platform-name">KNBSB · Federation Stream</div>
-        <div class="platform-cost">Free / per-tournament</div>
+        <div class="platform-tag">Primary · Official</div>
+        <div class="platform-name">APBN Official Streaming</div>
+        <div class="platform-cost">TBD · Post-rebrand</div>
         <div class="platform-desc">
-          Dutch federation (KNBSB) operates streaming for top matchups, Holland Series, and European Champions Cup. Federation-level streaming; coverage varies by week. Check knbsb.nl schedule.
+          Following the December 2025 rebrand from LBPN, the league is establishing refreshed digital infrastructure. Watch for announcements ahead of the November 2026 season.
         </div>
-        <a href="https://knbsb.nl" target="_blank" class="platform-link">knbsb.nl →</a>
       </div>
 
       <div class="platform-card free">
         <div class="platform-tag tag-free">Free · Select</div>
-        <div class="platform-name">Team YouTube Channels</div>
-        <div class="platform-cost free">FREE</div>
+        <div class="platform-name">Team YouTube & Facebook</div>
+        <div class="platform-cost free">FREE · Varies</div>
         <div class="platform-desc">
-          <strong>Neptunus</strong> and <strong>Curaçao Neptunus</strong> both maintain active YouTube channels streaming select home games free. L&D Amsterdam Pirates and Quick Amersfoort also upload content. Search team name + "honkbal".
+          Individual Nicaraguan clubs — especially <strong>Tigres de Chinandega</strong> and <strong>Indios del Bóer</strong> — stream select home games on Facebook Live and YouTube. Search team name + "en vivo" during the season.
         </div>
-      </div>
-
-      <div class="platform-card premium">
-        <div class="platform-tag">International Events</div>
-        <div class="platform-name">GameTime (WBSC)</div>
-        <div class="platform-cost">Per-tournament pass</div>
-        <div class="platform-desc">
-          European Champions Cup (the continental club tournament featuring Hoofdklasse teams vs. Italian Serie A) streams on WBSC's GameTime platform.
-        </div>
-        <a href="https://gametime.sport" target="_blank" class="platform-link">gametime.sport →</a>
       </div>
 
       <div class="platform-card premium">
         <div class="platform-tag">Domestic</div>
-        <div class="platform-name">Ziggo Sport</div>
-        <div class="platform-cost">Dutch cable</div>
+        <div class="platform-name">Canal 8 · Canal 15</div>
+        <div class="platform-cost">Nicaraguan broadcast</div>
         <div class="platform-desc">
-          Ziggo carries select Holland Series and high-profile regular season broadcasts. Geoblocked outside the Netherlands.
+          Nicaraguan broadcast TV carries high-profile matchups including the Serie Final. Geoblocked outside Central America.
         </div>
       </div>
 
       <div class="platform-card premium">
-        <div class="platform-tag">WBC Only</div>
-        <div class="platform-name">FOX / FS1</div>
-        <div class="platform-cost">Cable · WBC coverage</div>
+        <div class="platform-tag">Regional</div>
+        <div class="platform-name">ESPN Centroamérica</div>
+        <div class="platform-cost">Cable Centro</div>
         <div class="platform-desc">
-          Team Netherlands' WBC 2026 games were carried on FOX in the US. Kingdom of the Netherlands roster included Jurickson Profar, Xander Bogaerts, and Didi Gregorius — mixed with Hoofdklasse vets.
+          ESPN's Central American service carries select APBN content and full Serie de las Américas coverage.
         </div>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Serie de las Américas</div>
+        <div class="platform-name">WBSC GameTime</div>
+        <div class="platform-cost">Per tournament</div>
+        <div class="platform-desc">
+          Nicaragua regularly represents at the Serie de las Américas in January each year — expanded international coverage through WBSC's streaming platform.
+        </div>
+        <a href="https://gametime.sport" target="_blank" class="platform-link">gametime.sport →</a>
       </div>
 
     </div>
@@ -211,35 +209,33 @@
   <div class="section">
     <div class="section-head">
       <span class="section-num">02</span>
-      <h2 class="section-title">2026 Season Key Dates</h2>
+      <h2 class="section-title">2026–27 Season Key Dates</h2>
     </div>
     <div class="timeline">
-      <div class="tl-item"><div class="tl-date">Apr 17</div><div class="tl-title">Opening Weekend</div><div class="tl-desc">All 8 teams begin · 42-game regular season.</div></div>
-      <div class="tl-item"><div class="tl-date">May</div><div class="tl-title">European Champions Cup</div><div class="tl-desc">Top Hoofdklasse clubs face Italian Serie A and other continental opponents.</div></div>
-      <div class="tl-item"><div class="tl-date">Jul</div><div class="tl-title">Haarlem Baseball Week</div><div class="tl-desc">International tournament · national teams visit Pim Mulier Stadion.</div></div>
-      <div class="tl-item"><div class="tl-date">Aug</div><div class="tl-title">Regular Season Ends</div><div class="tl-desc">Top 4 teams advance to playoff round.</div></div>
-      <div class="tl-item"><div class="tl-date">Sept</div><div class="tl-title">Holland Series</div><div class="tl-desc">Best-of-7 championship · Dutch title at stake.</div></div>
+      <div class="tl-item"><div class="tl-date">Nov 4, 2026</div><div class="tl-title">Season Opens</div><div class="tl-desc">All 5 teams begin 52-game regular season.</div></div>
+      <div class="tl-item"><div class="tl-date">Dec</div><div class="tl-title">Navidades</div><div class="tl-desc">Christmas slate · holiday baseball tradition.</div></div>
+      <div class="tl-item"><div class="tl-date">Early Jan 2027</div><div class="tl-title">Playoffs Begin</div><div class="tl-desc">Top 4 teams advance · best-of-7 semifinals.</div></div>
+      <div class="tl-item"><div class="tl-date">Late Jan 2027</div><div class="tl-title">Serie Final</div><div class="tl-desc">Best-of-7 championship series.</div></div>
+      <div class="tl-item"><div class="tl-date">Jan 2027</div><div class="tl-title">Serie de las Américas</div><div class="tl-desc">Nicaragua competes in Barranquilla (host).</div></div>
+      <div class="tl-item"><div class="tl-date">Feb 2027</div><div class="tl-title">Offseason</div><div class="tl-desc">Player development · WBC prep for 2030.</div></div>
     </div>
   </div>
 
   <div class="section">
     <div class="section-head">
       <span class="section-num">03</span>
-      <h2 class="section-title">The 8 Teams</h2>
-      <span class="section-sub">Hoofdklasse · 2026</span>
+      <h2 class="section-title">The 5 Teams</h2>
+      <span class="section-sub">APBN · 2026–27</span>
     </div>
     <div class="divisions-wrap">
       <div class="div-block">
-        <div class="div-title">Hoofdklasse · 8 Clubs</div>
+        <div class="div-title">Asociación Profesional · 5 Clubs</div>
         <div class="div-teams">
-          <div class="team-row"><strong>Neptunus Rotterdam</strong> — Rotterdam · Familiestadion · 2025 Defending Champs · Most titles (18)</div>
-          <div class="team-row"><strong>Curaçao Neptunus</strong> — Rotterdam-based Curaçao affiliate · Perennial power</div>
-          <div class="team-row"><strong>L&D Amsterdam Pirates</strong> — Amsterdam · 2024 Runner-up · Dutch royalty</div>
-          <div class="team-row"><strong>Hoofddorp Pioniers</strong> — Hoofddorp · Near Schiphol · Longtime contender</div>
-          <div class="team-row"><strong>Quick Amersfoort</strong> — Amersfoort · Utrecht region</div>
-          <div class="team-row"><strong>HCAW</strong> — Bussum · Amsterdam region</div>
-          <div class="team-row"><strong>UVV Baseball</strong> — Utrecht · University club · Returning force</div>
-          <div class="team-row"><strong>DSS Kinheim</strong> — Haarlem · Host of Haarlem Baseball Week</div>
+          <div class="team-row"><strong>Tigres de Chinandega</strong> — Chinandega · Estadio Efraín Tijerino Mazariego · Defending champs</div>
+          <div class="team-row"><strong>Leones de León</strong> — León · Estadio Héroes y Mártires de Septiembre · Historic power</div>
+          <div class="team-row"><strong>Indios del Bóer</strong> — Managua · Estadio Dennis Martínez · Most decorated · Historic capital club</div>
+          <div class="team-row"><strong>Gigantes de Rivas</strong> — Rivas · Estadio Yamil Ríos Ugarte · Southern franchise</div>
+          <div class="team-row"><strong>Orientales de Granada</strong> — Granada · Estadio Roque Zavala · Colonial city historic club</div>
         </div>
       </div>
     </div>
@@ -247,15 +243,15 @@
 
   <div class="did-you-know">
     <div class="dyk-badge">The Fact</div>
-    <div class="dyk-title">The Hoofdklasse Pipeline Put Xander Bogaerts on the Field at Fenway</div>
+    <div class="dyk-title">Baseball Ranks Ahead of Soccer in Nicaragua — The Only Central American Country Where That's True</div>
     <div class="dyk-body">
-      The Dutch-Caribbean baseball ecosystem is the <strong>most productive MLB pipeline on Earth outside Latin America and East Asia</strong>. Hoofdklasse and its Curaçao-affiliated feeder system have produced <strong>Xander Bogaerts, Jurickson Profar, Kenley Jansen, Didi Gregorius, Jonathan Schoop, Ozzie Albies, Andruw Jones</strong>, and dozens more. The reason: Curaçao and Aruba are part of the Kingdom of the Netherlands, which means Dutch youth development programs operate in the Caribbean with full funding and structure. A 14-year-old prospect in Willemstad is developed inside the same system that runs Hoofdklasse. Team Kingdom of the Netherlands has reached the WBC semifinals twice (2009, 2013) using this exact pipeline. <strong>When you watch a Neptunus Rotterdam game on a Saturday afternoon, you're watching the most efficient small-country scouting operation in baseball.</strong>
+      Walk down any street in Managua, León, or Granada and you'll see kids playing <strong>béisbol</strong>, not fútbol. Nicaragua is the only country in Central America where baseball outranks soccer as the dominant sport — a cultural inheritance from US Marines stationed in the country in the early 20th century that somehow took deeper root here than anywhere else in the region. <strong>Denis Martínez</strong> — "El Presidente" — became Nicaragua's first MLB player in 1976 and pitched a perfect game with the Expos in 1991. The <strong>Estadio Dennis Martínez National Stadium in Managua</strong> holds 15,000 and regularly sells out for Serie Final games. Nicaragua hosted the Serie de las Américas as recently as 2024 in Managua, drew international television coverage, and <strong>beat both Colombia and Panama on national TV</strong>. The rebrand from LBPN to APBN in December 2025 signals the federation's renewed international ambitions. If you want to watch the most under-appreciated baseball culture in the hemisphere, this is where it lives.
     </div>
   </div>
 
   <div class="watch-window neon">
-    <div class="ww-title">⚡ Hoofdklasse This Week</div>
-    <div class="ww-lede">See every Hoofdklasse game this week — times in NYC/ET, streaming links — in the <strong>Official Viewer's Guide</strong>.</div>
+    <div class="ww-title">⚡ APBN This Week</div>
+    <div class="ww-lede">When APBN is in season (Nov–Jan), see every matchup in the <strong>Official Viewer's Guide</strong>.</div>
     <a href="/viewers-guide-may-4.html" style="display:inline-block;margin-top:12px;background:var(--neon);color:#000;font-family:var(--display);font-weight:900;letter-spacing:2px;padding:10px 20px;border-radius:4px;text-transform:uppercase;font-size:.8rem;">Open This Week's Guide →</a>
   </div>
 
@@ -264,8 +260,8 @@
 <div class="footer">
   <div class="footer-inner">
     <div>
-      <div class="gf-brand">Official Viewer's Guide</div>
-      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>Hoofdklasse verified Apr 2026 · KNBSB federation</div>
+      <div class="gf-brand">BASEBALL WITHOUT BORDERS</div>
+      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>APBN verified Apr 2026 · 81 WBN articles · Rebranded from LBPN December 2025</div>
     </div>
     <div class="gf-links">
       <a href="/leagues.html" class="gf-link">← All Leagues</a>

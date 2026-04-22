@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoofdklasse — Honkbal Hoofdklasse (Netherlands) | Baseball Without Borders</title>
-  <meta name="description" content="Netherlands Hoofdklasse — Europe's longest-running pro baseball league. Neptunus, Curaçao Neptunus, Holland Series. The pipeline that produced Jurickson Profar, Xander Bogaerts, Andruw Jones.">
+  <title>WPBL — Women's Pro Baseball League | Baseball Without Borders</title>
+  <meta name="description" content="Women's Pro Baseball League — inaugural 2026 season. Springfield, IL hub. First pro women's baseball league since the AAGPBL closed in 1954. Justine Siegal, Kelsie Whitmore, Ayami Sato.">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--purple:#a78bfa;--lg:#FF6B00;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--purple:#a78bfa;--lg:#E91E63;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
     *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
     body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
     a{text-decoration:none;color:inherit;}
@@ -22,18 +22,20 @@
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
     .crumbs{padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
     .crumbs a{color:var(--muted);}.crumbs a:hover{color:var(--neon);}.crumbs span{color:var(--gold);}
-    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg);position:relative;overflow:hidden;background:linear-gradient(180deg,#1a0f00 0%,#0a0f1e 100%);}
-    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,107,0,.03) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(255,107,0,.03) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg);position:relative;overflow:hidden;background:linear-gradient(180deg,#1a0511 0%,#0a0f1e 100%);}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(233,30,99,.03) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(233,30,99,.03) 0 1px,transparent 1px 60px);pointer-events:none;}
     .hero-inner{max-width:1200px;margin:0 auto;position:relative;}
+    .historic-badge{display:inline-block;background:var(--lg);color:#fff;font-family:var(--display);font-size:.68rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:3px;margin-bottom:14px;}
     .hero-flag{font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--lg);margin-bottom:12px;}
     .hero-country{display:flex;align-items:center;gap:18px;margin-bottom:18px;flex-wrap:wrap;}
     .hero-flag-emoji{font-size:3.2rem;line-height:1;}
-    .hero-title{font-family:var(--display);font-size:clamp(2.6rem,8vw,6rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-1.5px;text-transform:uppercase;}
+    .hero-title{font-family:var(--display);font-size:clamp(3.4rem,10vw,8rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-2.5px;text-transform:uppercase;}
     .hero-full{font-family:var(--display);font-size:clamp(1rem,2vw,1.4rem);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:8px;margin-bottom:24px;}
     .hero-lede{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--muted);max-width:720px;line-height:1.75;}
     .hero-lede strong{color:var(--text);font-style:normal;}
     .hero-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;margin-top:24px;border-top:1px solid var(--rule2);}
     .hs-num{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;color:var(--lg);}
+    .hs-num.gold-hs{color:var(--gold);}
     .hs-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
     .page{max-width:1200px;margin:0 auto;padding:40px 24px 64px;}
     .section{margin-bottom:56px;}
@@ -95,10 +97,7 @@
 <body>
 
 <nav class="site-nav">
-  <a href="/index.html" class="brand-block" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-      <img src="/assets/img/wbn-logo.jpg" alt="World Baseball Network" class="wbn-logo" style="height:38px;width:auto;display:block;">
-      <span class="logo" style="font-family:var(--display);font-weight:900;font-size:0.75rem;letter-spacing:1px;line-height:1.1;color:var(--text);max-width:180px;">Official Viewer's Guide<br>to International Baseball</span>
-    </a>
+  <div class="logo">BASEBALL WITHOUT BORDERS</div>
   <div class="navlinks">
     <a href="/index.html" class="nav-pill">Home</a>
     <a href="/leagues.html" class="nav-pill">Leagues</a>
@@ -110,27 +109,28 @@
   <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
 </nav>
 
-<div class="crumbs"><a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>Hoofdklasse · Netherlands</span></div>
+<div class="crumbs"><a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>WPBL · Women's Pro Baseball League</span></div>
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-flag">Netherlands · Honkbal Hoofdklasse · 103rd Season</div>
+    <div class="historic-badge">★ Inaugural 2026 · Historic First Season</div>
+    <div class="hero-flag">United States · Women's Pro Baseball League · Founded 2024</div>
     <div class="hero-country">
-      <span class="hero-flag-emoji">🇳🇱</span>
+      <span class="hero-flag-emoji">🇺🇸</span>
       <div>
-        <div class="hero-title">HOOFDKLASSE</div>
-        <div class="hero-full">Honkbal Hoofdklasse · KNBSB</div>
+        <div class="hero-title">WPBL</div>
+        <div class="hero-full">Women's Pro Baseball League · Inaugural 2026 Season</div>
       </div>
     </div>
     <p class="hero-lede">
-      The <strong>longest-running professional baseball league in Europe</strong>, founded 1922 — older than the MLB All-Star Game. Eight clubs, a top-flight known as "Honkbal" (literally "home-ball"), and a pipeline that has produced <strong>Jurickson Profar, Xander Bogaerts, Andruw Jones, Kenley Jansen, Didi Gregorius</strong>, and most of the Dutch WBC contingent that terrorized WBC 2009 and 2013. The Holland Series decides the Dutch champion every September.
+      The <strong>first professional women's baseball league in the United States since the AAGPBL folded in 1954</strong> — seventy-two years of history closing in a single summer. Six franchises, a hub in Springfield, Illinois, co-founded by Olympic gold medalist softball star <strong>Justine Siegal</strong> (the first woman to coach for an MLB organization) and business operator <strong>Keith Stein</strong>. The inaugural season begins in August 2026. The rosters include women who've played NCAA baseball, professional softball in Japan, and international team competitions.
     </p>
     <div class="hero-stats">
-      <div><div class="hs-num">8</div><div class="hs-lbl">Teams</div></div>
-      <div><div class="hs-num">42</div><div class="hs-lbl">Games / Team</div></div>
-      <div><div class="hs-num">1922</div><div class="hs-lbl">Founded</div></div>
-      <div><div class="hs-num">UTC+2</div><div class="hs-lbl">CEST · ET +6</div></div>
-      <div><div class="hs-num">103rd</div><div class="hs-lbl">Season</div></div>
+      <div><div class="hs-num">6</div><div class="hs-lbl">Inaugural Teams</div></div>
+      <div><div class="hs-num gold-hs">2026</div><div class="hs-lbl">Historic Launch</div></div>
+      <div><div class="hs-num">60</div><div class="hs-lbl">Games / Team</div></div>
+      <div><div class="hs-num">72</div><div class="hs-lbl">Years Since AAGPBL</div></div>
+      <div><div class="hs-num">IL</div><div class="hs-lbl">Springfield Hub</div></div>
     </div>
   </div>
 </div>
@@ -138,70 +138,60 @@
 <div class="page">
 
   <div class="watch-window">
-    <div class="ww-title">⚡ When to Watch Hoofdklasse from the US</div>
-    <div class="ww-lede">Netherlands is <strong>UTC+2 (CEST)</strong> in the summer — 6 hours ahead of US Eastern. Hoofdklasse games typically start at <strong>19:30 CEST = 1:30 PM ET</strong>. That's <strong>perfect lunch-hour baseball</strong> for US fans. Saturday afternoons and Sunday day games (14:00 CEST = 8:00 AM ET) are the weekend pattern.</div>
+    <div class="ww-title">⚡ When to Watch WPBL</div>
+    <div class="ww-lede">The inaugural 2026 season runs <strong>August through October</strong> — deliberately scheduled around the NCAA women's softball calendar and the MLB playoff window. Games at <strong>6:05 PM CT on weekdays</strong> (7:05 PM ET), <strong>2:05 PM CT on weekend afternoons</strong>. Hub-and-spoke model means most games played at Springfield's shared facility during Year One, with road trips to participating host cities.</div>
     <div class="ww-grid">
-      <div class="ww-item"><div class="ww-val">1:30 PM ET</div><div class="ww-lbl">Weeknight 19:30 CEST</div></div>
-      <div class="ww-item"><div class="ww-val">8:00 AM ET</div><div class="ww-lbl">Sunday 14:00 CEST</div></div>
-      <div class="ww-item"><div class="ww-val">10:30 AM PT</div><div class="ww-lbl">West Coast weeknight</div></div>
-      <div class="ww-item"><div class="ww-val">Apr–Aug</div><div class="ww-lbl">Regular season</div></div>
-      <div class="ww-item"><div class="ww-val">Sept</div><div class="ww-lbl">Holland Series</div></div>
-      <div class="ww-item"><div class="ww-val">Sat 14:00</div><div class="ww-lbl">Best day window</div></div>
+      <div class="ww-item"><div class="ww-val">7:05 PM ET</div><div class="ww-lbl">Weekday 18:05 CT</div></div>
+      <div class="ww-item"><div class="ww-val">3:05 PM ET</div><div class="ww-lbl">Weekend 14:05 CT</div></div>
+      <div class="ww-item"><div class="ww-val">Aug–Oct</div><div class="ww-lbl">Inaugural season</div></div>
+      <div class="ww-item"><div class="ww-val">60 games</div><div class="ww-lbl">Per team</div></div>
+      <div class="ww-item"><div class="ww-val">Year 1 Hub</div><div class="ww-lbl">Springfield, IL</div></div>
+      <div class="ww-item"><div class="ww-val">Oct</div><div class="ww-lbl">Championship Series</div></div>
     </div>
   </div>
 
   <div class="section">
     <div class="section-head">
       <span class="section-num">01</span>
-      <h2 class="section-title">Where to Watch Hoofdklasse</h2>
-      <span class="section-sub">Verified Apr 2026</span>
+      <h2 class="section-title">Where to Watch WPBL</h2>
+      <span class="section-sub">Evolving for inaugural season</span>
     </div>
     <div class="platforms">
 
       <div class="platform-card premium">
-        <div class="platform-tag">Primary · Per Club</div>
-        <div class="platform-name">KNBSB · Federation Stream</div>
-        <div class="platform-cost">Free / per-tournament</div>
+        <div class="platform-tag">Primary · Official</div>
+        <div class="platform-name">wpblofficial.com</div>
+        <div class="platform-cost">TBD · Direct-to-consumer</div>
         <div class="platform-desc">
-          Dutch federation (KNBSB) operates streaming for top matchups, Holland Series, and European Champions Cup. Federation-level streaming; coverage varies by week. Check knbsb.nl schedule.
+          <strong>Official league streaming home</strong>. Direct-to-consumer platform announced for all six teams. Subscription pricing expected to be announced closer to the August 2026 launch.
         </div>
-        <a href="https://knbsb.nl" target="_blank" class="platform-link">knbsb.nl →</a>
+        <a href="https://wpblofficial.com" target="_blank" class="platform-link">wpblofficial.com →</a>
       </div>
 
       <div class="platform-card free">
-        <div class="platform-tag tag-free">Free · Select</div>
-        <div class="platform-name">Team YouTube Channels</div>
-        <div class="platform-cost free">FREE</div>
+        <div class="platform-tag tag-free">Expected · Free</div>
+        <div class="platform-name">WPBL YouTube</div>
+        <div class="platform-cost free">FREE · Highlights + select</div>
         <div class="platform-desc">
-          <strong>Neptunus</strong> and <strong>Curaçao Neptunus</strong> both maintain active YouTube channels streaming select home games free. L&D Amsterdam Pirates and Quick Amersfoort also upload content. Search team name + "honkbal".
+          The league has confirmed an aggressive YouTube strategy to introduce women's pro baseball to the widest possible audience. Expect free highlights, season recaps, and likely select free live broadcasts.
         </div>
       </div>
 
       <div class="platform-card premium">
-        <div class="platform-tag">International Events</div>
-        <div class="platform-name">GameTime (WBSC)</div>
-        <div class="platform-cost">Per-tournament pass</div>
+        <div class="platform-tag">Partnership Rumored</div>
+        <div class="platform-name">ESPN+ / Disney</div>
+        <div class="platform-cost">Package TBD</div>
         <div class="platform-desc">
-          European Champions Cup (the continental club tournament featuring Hoofdklasse teams vs. Italian Serie A) streams on WBSC's GameTime platform.
-        </div>
-        <a href="https://gametime.sport" target="_blank" class="platform-link">gametime.sport →</a>
-      </div>
-
-      <div class="platform-card premium">
-        <div class="platform-tag">Domestic</div>
-        <div class="platform-name">Ziggo Sport</div>
-        <div class="platform-cost">Dutch cable</div>
-        <div class="platform-desc">
-          Ziggo carries select Holland Series and high-profile regular season broadcasts. Geoblocked outside the Netherlands.
+          National broadcast partner discussions ongoing. ESPN has been reported as in negotiations. Opening Day, All-Star Game, and Championship Series are expected to have marquee national coverage.
         </div>
       </div>
 
       <div class="platform-card premium">
-        <div class="platform-tag">WBC Only</div>
-        <div class="platform-name">FOX / FS1</div>
-        <div class="platform-cost">Cable · WBC coverage</div>
+        <div class="platform-tag">Regional</div>
+        <div class="platform-name">Illinois / Midwest TV</div>
+        <div class="platform-cost">Regional partners</div>
         <div class="platform-desc">
-          Team Netherlands' WBC 2026 games were carried on FOX in the US. Kingdom of the Netherlands roster included Jurickson Profar, Xander Bogaerts, and Didi Gregorius — mixed with Hoofdklasse vets.
+          Springfield-area regional TV and Midwest sports networks expected to carry home games in the hub model. Year 1 is geographically concentrated.
         </div>
       </div>
 
@@ -211,35 +201,34 @@
   <div class="section">
     <div class="section-head">
       <span class="section-num">02</span>
-      <h2 class="section-title">2026 Season Key Dates</h2>
+      <h2 class="section-title">2026 Inaugural Season Key Dates</h2>
     </div>
     <div class="timeline">
-      <div class="tl-item"><div class="tl-date">Apr 17</div><div class="tl-title">Opening Weekend</div><div class="tl-desc">All 8 teams begin · 42-game regular season.</div></div>
-      <div class="tl-item"><div class="tl-date">May</div><div class="tl-title">European Champions Cup</div><div class="tl-desc">Top Hoofdklasse clubs face Italian Serie A and other continental opponents.</div></div>
-      <div class="tl-item"><div class="tl-date">Jul</div><div class="tl-title">Haarlem Baseball Week</div><div class="tl-desc">International tournament · national teams visit Pim Mulier Stadion.</div></div>
-      <div class="tl-item"><div class="tl-date">Aug</div><div class="tl-title">Regular Season Ends</div><div class="tl-desc">Top 4 teams advance to playoff round.</div></div>
-      <div class="tl-item"><div class="tl-date">Sept</div><div class="tl-title">Holland Series</div><div class="tl-desc">Best-of-7 championship · Dutch title at stake.</div></div>
+      <div class="tl-item"><div class="tl-date">Jan 2026</div><div class="tl-title">Player Combine</div><div class="tl-desc">Multi-day tryout at Kansas City facility · 300+ athletes invited.</div></div>
+      <div class="tl-item"><div class="tl-date">Apr 2026</div><div class="tl-title">Inaugural Draft</div><div class="tl-desc">First-ever WPBL player draft · televised event.</div></div>
+      <div class="tl-item"><div class="tl-date">Jul 2026</div><div class="tl-title">Training Camp</div><div class="tl-desc">All six teams report to Springfield for preseason.</div></div>
+      <div class="tl-item"><div class="tl-date">Aug 2026</div><div class="tl-title">OPENING DAY</div><div class="tl-desc">Historic first game · First pro women's baseball game in the US since 1954.</div></div>
+      <div class="tl-item"><div class="tl-date">Sep 2026</div><div class="tl-title">All-Star Game</div><div class="tl-desc">Mid-season showcase · sponsor activation target.</div></div>
+      <div class="tl-item"><div class="tl-date">Oct 2026</div><div class="tl-title">Championship Series</div><div class="tl-desc">First WPBL champion crowned.</div></div>
     </div>
   </div>
 
   <div class="section">
     <div class="section-head">
       <span class="section-num">03</span>
-      <h2 class="section-title">The 8 Teams</h2>
-      <span class="section-sub">Hoofdklasse · 2026</span>
+      <h2 class="section-title">The Inaugural 6 Teams</h2>
+      <span class="section-sub">Franchise identities evolving</span>
     </div>
     <div class="divisions-wrap">
       <div class="div-block">
-        <div class="div-title">Hoofdklasse · 8 Clubs</div>
+        <div class="div-title">WPBL · 6 Franchises · 2026 Season</div>
         <div class="div-teams">
-          <div class="team-row"><strong>Neptunus Rotterdam</strong> — Rotterdam · Familiestadion · 2025 Defending Champs · Most titles (18)</div>
-          <div class="team-row"><strong>Curaçao Neptunus</strong> — Rotterdam-based Curaçao affiliate · Perennial power</div>
-          <div class="team-row"><strong>L&D Amsterdam Pirates</strong> — Amsterdam · 2024 Runner-up · Dutch royalty</div>
-          <div class="team-row"><strong>Hoofddorp Pioniers</strong> — Hoofddorp · Near Schiphol · Longtime contender</div>
-          <div class="team-row"><strong>Quick Amersfoort</strong> — Amersfoort · Utrecht region</div>
-          <div class="team-row"><strong>HCAW</strong> — Bussum · Amsterdam region</div>
-          <div class="team-row"><strong>UVV Baseball</strong> — Utrecht · University club · Returning force</div>
-          <div class="team-row"><strong>DSS Kinheim</strong> — Haarlem · Host of Haarlem Baseball Week</div>
+          <div class="team-row"><strong>Team names and brand identities</strong> — Being finalized ahead of the August 2026 launch · Watch for franchise reveals in coming months</div>
+          <div class="team-row"><strong>Springfield, IL</strong> — Primary hub city · Shared facility model for Year 1</div>
+          <div class="team-row"><strong>Midwest concentration</strong> — Year 1 focuses on Illinois-centric hub-and-spoke travel</div>
+          <div class="team-row"><strong>Expansion cities</strong> — Identified for Year 2: Boston, New York, Washington DC rumored</div>
+          <div class="team-row"><strong>Roster pipelines</strong> — NCAA baseball, international softball, Japan women's pro, Team USA</div>
+          <div class="team-row"><strong>Name your WPBL team?</strong> — Fan voting contests rumored for franchise naming ahead of launch</div>
         </div>
       </div>
     </div>
@@ -247,16 +236,16 @@
 
   <div class="did-you-know">
     <div class="dyk-badge">The Fact</div>
-    <div class="dyk-title">The Hoofdklasse Pipeline Put Xander Bogaerts on the Field at Fenway</div>
+    <div class="dyk-title">The First Professional Women's Baseball League in 72 Years</div>
     <div class="dyk-body">
-      The Dutch-Caribbean baseball ecosystem is the <strong>most productive MLB pipeline on Earth outside Latin America and East Asia</strong>. Hoofdklasse and its Curaçao-affiliated feeder system have produced <strong>Xander Bogaerts, Jurickson Profar, Kenley Jansen, Didi Gregorius, Jonathan Schoop, Ozzie Albies, Andruw Jones</strong>, and dozens more. The reason: Curaçao and Aruba are part of the Kingdom of the Netherlands, which means Dutch youth development programs operate in the Caribbean with full funding and structure. A 14-year-old prospect in Willemstad is developed inside the same system that runs Hoofdklasse. Team Kingdom of the Netherlands has reached the WBC semifinals twice (2009, 2013) using this exact pipeline. <strong>When you watch a Neptunus Rotterdam game on a Saturday afternoon, you're watching the most efficient small-country scouting operation in baseball.</strong>
+      The <strong>All-American Girls Professional Baseball League (AAGPBL)</strong> — the league that inspired "A League of Their Own" — played its final game on September 5, 1954. For <strong>72 years</strong>, women in America had no path to professional baseball. They had softball — a different sport with a different ball, different pitching, different fields. The <strong>WPBL launching in August 2026</strong> ends that drought. Co-founder <strong>Justine Siegal</strong> has been building toward this for decades — she became the first woman to coach for an MLB organization (Oakland A's, 2015), the first to throw batting practice for a major league team, and she founded Baseball For All, which ran girls' baseball clinics in all 50 states. The WPBL's opening day will be the most historically significant moment in American women's team sport since the WNBA's inaugural game in 1997. <strong>It's not exhibition. It's not softball. It's professional women's baseball.</strong> And it launches this August.
     </div>
   </div>
 
   <div class="watch-window neon">
-    <div class="ww-title">⚡ Hoofdklasse This Week</div>
-    <div class="ww-lede">See every Hoofdklasse game this week — times in NYC/ET, streaming links — in the <strong>Official Viewer's Guide</strong>.</div>
-    <a href="/viewers-guide-may-4.html" style="display:inline-block;margin-top:12px;background:var(--neon);color:#000;font-family:var(--display);font-weight:900;letter-spacing:2px;padding:10px 20px;border-radius:4px;text-transform:uppercase;font-size:.8rem;">Open This Week's Guide →</a>
+    <div class="ww-title">⚡ Follow the Inaugural Season</div>
+    <div class="ww-lede">World Baseball Network will be covering every WPBL story from player signings through Opening Day through the first Championship Series. Historic first season. Daily updates as we approach August 2026 launch.</div>
+    <a href="https://worldbaseball.com" target="_blank" style="display:inline-block;margin-top:12px;background:var(--neon);color:#000;font-family:var(--display);font-weight:900;letter-spacing:2px;padding:10px 20px;border-radius:4px;text-transform:uppercase;font-size:.8rem;">WPBL Coverage on WBN →</a>
   </div>
 
 </div>
@@ -264,8 +253,8 @@
 <div class="footer">
   <div class="footer-inner">
     <div>
-      <div class="gf-brand">Official Viewer's Guide</div>
-      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>Hoofdklasse verified Apr 2026 · KNBSB federation</div>
+      <div class="gf-brand">BASEBALL WITHOUT BORDERS</div>
+      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>WPBL Inaugural Season verified Apr 2026 · Historic first launch August 2026</div>
     </div>
     <div class="gf-links">
       <a href="/leagues.html" class="gf-link">← All Leagues</a>

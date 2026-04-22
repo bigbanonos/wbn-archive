@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoofdklasse — Honkbal Hoofdklasse (Netherlands) | Baseball Without Borders</title>
-  <meta name="description" content="Netherlands Hoofdklasse — Europe's longest-running pro baseball league. Neptunus, Curaçao Neptunus, Holland Series. The pipeline that produced Jurickson Profar, Xander Bogaerts, Andruw Jones.">
+  <title>LAMP — Liga ARCO Mexicana del Pacífico | Baseball Without Borders</title>
+  <meta name="description" content="LAMP — Mexico's winter league. Free on YouTube, 10 teams, Charros de Jalisco defending champs. Caribbean Series representatives. The bridge between LMB summer and Caribbean Series February.">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--purple:#a78bfa;--lg:#FF6B00;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--purple:#a78bfa;--lg:#006847;--lg2:#CE1126;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
     *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
     body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
     a{text-decoration:none;color:inherit;}
@@ -22,18 +22,19 @@
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
     .crumbs{padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
     .crumbs a{color:var(--muted);}.crumbs a:hover{color:var(--neon);}.crumbs span{color:var(--gold);}
-    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg);position:relative;overflow:hidden;background:linear-gradient(180deg,#1a0f00 0%,#0a0f1e 100%);}
-    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,107,0,.03) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(255,107,0,.03) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg);position:relative;overflow:hidden;background:linear-gradient(180deg,#00120a 0%,#0a0f1e 100%);}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(0,104,71,.03) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(0,104,71,.03) 0 1px,transparent 1px 60px);pointer-events:none;}
     .hero-inner{max-width:1200px;margin:0 auto;position:relative;}
     .hero-flag{font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--lg);margin-bottom:12px;}
     .hero-country{display:flex;align-items:center;gap:18px;margin-bottom:18px;flex-wrap:wrap;}
     .hero-flag-emoji{font-size:3.2rem;line-height:1;}
-    .hero-title{font-family:var(--display);font-size:clamp(2.6rem,8vw,6rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-1.5px;text-transform:uppercase;}
+    .hero-title{font-family:var(--display);font-size:clamp(3.4rem,10vw,8rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-2.5px;text-transform:uppercase;}
     .hero-full{font-family:var(--display);font-size:clamp(1rem,2vw,1.4rem);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:8px;margin-bottom:24px;}
     .hero-lede{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--muted);max-width:720px;line-height:1.75;}
     .hero-lede strong{color:var(--text);font-style:normal;}
     .hero-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;margin-top:24px;border-top:1px solid var(--rule2);}
     .hs-num{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;color:var(--lg);}
+    .hs-num.free-hs{color:var(--neon);}
     .hs-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
     .page{max-width:1200px;margin:0 auto;padding:40px 24px 64px;}
     .section{margin-bottom:56px;}
@@ -64,6 +65,7 @@
     .ww-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px;}
     .ww-item{background:rgba(0,0,0,.25);border:1px solid var(--rule);border-radius:4px;padding:10px 12px;}
     .ww-val{font-family:var(--mono);font-size:.9rem;font-weight:700;color:var(--gold);}
+    .ww-val.neon-val{color:var(--neon);}
     .ww-lbl{font-family:var(--mono);font-size:.6rem;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:1px;}
     .timeline{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
     .tl-item{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;}
@@ -95,10 +97,7 @@
 <body>
 
 <nav class="site-nav">
-  <a href="/index.html" class="brand-block" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-      <img src="/assets/img/wbn-logo.jpg" alt="World Baseball Network" class="wbn-logo" style="height:38px;width:auto;display:block;">
-      <span class="logo" style="font-family:var(--display);font-weight:900;font-size:0.75rem;letter-spacing:1px;line-height:1.1;color:var(--text);max-width:180px;">Official Viewer's Guide<br>to International Baseball</span>
-    </a>
+  <div class="logo">BASEBALL WITHOUT BORDERS</div>
   <div class="navlinks">
     <a href="/index.html" class="nav-pill">Home</a>
     <a href="/leagues.html" class="nav-pill">Leagues</a>
@@ -110,27 +109,27 @@
   <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
 </nav>
 
-<div class="crumbs"><a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>Hoofdklasse · Netherlands</span></div>
+<div class="crumbs"><a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>LAMP · Mexico Winter</span></div>
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-flag">Netherlands · Honkbal Hoofdklasse · 103rd Season</div>
+    <div class="hero-flag">Mexico · Liga ARCO Mexicana del Pacífico · 2026–27 Season</div>
     <div class="hero-country">
-      <span class="hero-flag-emoji">🇳🇱</span>
+      <span class="hero-flag-emoji">🇲🇽</span>
       <div>
-        <div class="hero-title">HOOFDKLASSE</div>
-        <div class="hero-full">Honkbal Hoofdklasse · KNBSB</div>
+        <div class="hero-title">LAMP</div>
+        <div class="hero-full">Liga ARCO Mexicana del Pacífico</div>
       </div>
     </div>
     <p class="hero-lede">
-      The <strong>longest-running professional baseball league in Europe</strong>, founded 1922 — older than the MLB All-Star Game. Eight clubs, a top-flight known as "Honkbal" (literally "home-ball"), and a pipeline that has produced <strong>Jurickson Profar, Xander Bogaerts, Andruw Jones, Kenley Jansen, Didi Gregorius</strong>, and most of the Dutch WBC contingent that terrorized WBC 2009 and 2013. The Holland Series decides the Dutch champion every September.
+      Mexico's <strong>winter league on the Pacific coast</strong> — complementing LMB's summer season in the interior. Ten teams across Sonora, Sinaloa, Sonora, Jalisco, and the Baja peninsula. Famously <strong>free on YouTube</strong> — every game, no subscription, global access. <strong>Charros de Jalisco</strong> are defending 2025–26 champions. The league winner represents Mexico in the February Caribbean Series, where Mexican teams have won 11 championships — more than any country except the Dominican Republic.
     </p>
     <div class="hero-stats">
-      <div><div class="hs-num">8</div><div class="hs-lbl">Teams</div></div>
-      <div><div class="hs-num">42</div><div class="hs-lbl">Games / Team</div></div>
-      <div><div class="hs-num">1922</div><div class="hs-lbl">Founded</div></div>
-      <div><div class="hs-num">UTC+2</div><div class="hs-lbl">CEST · ET +6</div></div>
-      <div><div class="hs-num">103rd</div><div class="hs-lbl">Season</div></div>
+      <div><div class="hs-num">10</div><div class="hs-lbl">Teams</div></div>
+      <div><div class="hs-num">68</div><div class="hs-lbl">Games / Team</div></div>
+      <div><div class="hs-num free-hs">FREE</div><div class="hs-lbl">YouTube</div></div>
+      <div><div class="hs-num">UTC-7</div><div class="hs-lbl">MST · ET -2</div></div>
+      <div><div class="hs-num">11</div><div class="hs-lbl">Caribbean titles</div></div>
     </div>
   </div>
 </div>
@@ -138,70 +137,70 @@
 <div class="page">
 
   <div class="watch-window">
-    <div class="ww-title">⚡ When to Watch Hoofdklasse from the US</div>
-    <div class="ww-lede">Netherlands is <strong>UTC+2 (CEST)</strong> in the summer — 6 hours ahead of US Eastern. Hoofdklasse games typically start at <strong>19:30 CEST = 1:30 PM ET</strong>. That's <strong>perfect lunch-hour baseball</strong> for US fans. Saturday afternoons and Sunday day games (14:00 CEST = 8:00 AM ET) are the weekend pattern.</div>
+    <div class="ww-title">⚡ When to Watch LAMP from the US</div>
+    <div class="ww-lede">Most LAMP teams play on <strong>Mountain Time (UTC-7)</strong> — 2 hours behind US Eastern. A 19:30 MST first pitch = <strong>9:30 PM ET</strong>. Weekend day games at 16:00 MST = <strong>6:00 PM ET</strong>. The Jalisco-based teams (Charros, Mariachis) play Central Time, making them even closer to East Coast clocks.</div>
     <div class="ww-grid">
-      <div class="ww-item"><div class="ww-val">1:30 PM ET</div><div class="ww-lbl">Weeknight 19:30 CEST</div></div>
-      <div class="ww-item"><div class="ww-val">8:00 AM ET</div><div class="ww-lbl">Sunday 14:00 CEST</div></div>
-      <div class="ww-item"><div class="ww-val">10:30 AM PT</div><div class="ww-lbl">West Coast weeknight</div></div>
-      <div class="ww-item"><div class="ww-val">Apr–Aug</div><div class="ww-lbl">Regular season</div></div>
-      <div class="ww-item"><div class="ww-val">Sept</div><div class="ww-lbl">Holland Series</div></div>
-      <div class="ww-item"><div class="ww-val">Sat 14:00</div><div class="ww-lbl">Best day window</div></div>
+      <div class="ww-item"><div class="ww-val">9:30 PM ET</div><div class="ww-lbl">Weekday 19:30 MST</div></div>
+      <div class="ww-item"><div class="ww-val">6:00 PM ET</div><div class="ww-lbl">Weekend 16:00 MST</div></div>
+      <div class="ww-item"><div class="ww-val neon-val">FREE</div><div class="ww-lbl">YouTube all games</div></div>
+      <div class="ww-item"><div class="ww-val">Oct</div><div class="ww-lbl">Season opens</div></div>
+      <div class="ww-item"><div class="ww-val">Jan</div><div class="ww-lbl">Playoffs</div></div>
+      <div class="ww-item"><div class="ww-val">Feb</div><div class="ww-lbl">Caribbean Series</div></div>
     </div>
   </div>
 
   <div class="section">
     <div class="section-head">
       <span class="section-num">01</span>
-      <h2 class="section-title">Where to Watch Hoofdklasse</h2>
-      <span class="section-sub">Verified Apr 2026</span>
+      <h2 class="section-title">Where to Watch LAMP</h2>
+      <span class="section-sub">Free distribution strategy</span>
     </div>
     <div class="platforms">
 
-      <div class="platform-card premium">
-        <div class="platform-tag">Primary · Per Club</div>
-        <div class="platform-name">KNBSB · Federation Stream</div>
-        <div class="platform-cost">Free / per-tournament</div>
-        <div class="platform-desc">
-          Dutch federation (KNBSB) operates streaming for top matchups, Holland Series, and European Champions Cup. Federation-level streaming; coverage varies by week. Check knbsb.nl schedule.
-        </div>
-        <a href="https://knbsb.nl" target="_blank" class="platform-link">knbsb.nl →</a>
-      </div>
-
       <div class="platform-card free">
-        <div class="platform-tag tag-free">Free · Select</div>
-        <div class="platform-name">Team YouTube Channels</div>
-        <div class="platform-cost free">FREE</div>
+        <div class="platform-tag tag-free">Free · Every Game</div>
+        <div class="platform-name">LAMP Official YouTube</div>
+        <div class="platform-cost free">FREE · Live</div>
         <div class="platform-desc">
-          <strong>Neptunus</strong> and <strong>Curaçao Neptunus</strong> both maintain active YouTube channels streaming select home games free. L&D Amsterdam Pirates and Quick Amersfoort also upload content. Search team name + "honkbal".
+          <strong>Every LAMP game streams free on YouTube.</strong> Search "Liga ARCO Mexicana del Pacífico" or individual team names. Deliberate strategy — LAMP understood before most leagues that free distribution builds audience, and the approach has worked. Spanish commentary, full HD.
+        </div>
+        <a href="https://youtube.com/@LMPBeisbol" target="_blank" class="platform-link">YouTube →</a>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Official Site</div>
+        <div class="platform-name">lmp.mx</div>
+        <div class="platform-cost">Free schedules/stats</div>
+        <div class="platform-desc">
+          League HQ for schedules, standings, live stats, and embedded stream links for every game. Clean site, updates quickly.
+        </div>
+        <a href="https://lmp.mx" target="_blank" class="platform-link">lmp.mx →</a>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">US Spanish</div>
+        <div class="platform-name">ESPN Deportes</div>
+        <div class="platform-cost">Cable</div>
+        <div class="platform-desc">
+          ESPN's Spanish network carries LAMP marquee matchups and the Mexican Series championship. Caribbean Series coverage is robust.
         </div>
       </div>
 
       <div class="platform-card premium">
-        <div class="platform-tag">International Events</div>
-        <div class="platform-name">GameTime (WBSC)</div>
-        <div class="platform-cost">Per-tournament pass</div>
+        <div class="platform-tag">Domestic MX</div>
+        <div class="platform-name">TUDN · Fox Sports México</div>
+        <div class="platform-cost">Mexican cable</div>
         <div class="platform-desc">
-          European Champions Cup (the continental club tournament featuring Hoofdklasse teams vs. Italian Serie A) streams on WBSC's GameTime platform.
-        </div>
-        <a href="https://gametime.sport" target="_blank" class="platform-link">gametime.sport →</a>
-      </div>
-
-      <div class="platform-card premium">
-        <div class="platform-tag">Domestic</div>
-        <div class="platform-name">Ziggo Sport</div>
-        <div class="platform-cost">Dutch cable</div>
-        <div class="platform-desc">
-          Ziggo carries select Holland Series and high-profile regular season broadcasts. Geoblocked outside the Netherlands.
+          TUDN carries select games. Fox Sports México has LAMP rights for weekly national broadcasts. Geoblocked outside Mexico.
         </div>
       </div>
 
       <div class="platform-card premium">
-        <div class="platform-tag">WBC Only</div>
-        <div class="platform-name">FOX / FS1</div>
-        <div class="platform-cost">Cable · WBC coverage</div>
+        <div class="platform-tag">Caribbean Series</div>
+        <div class="platform-name">ESPN / MLB Network</div>
+        <div class="platform-cost">Cable</div>
         <div class="platform-desc">
-          Team Netherlands' WBC 2026 games were carried on FOX in the US. Kingdom of the Netherlands roster included Jurickson Profar, Xander Bogaerts, and Didi Gregorius — mixed with Hoofdklasse vets.
+          When LAMP's champion plays in February's Caribbean Series, coverage expands to ESPN, MLB Network, and multiple international platforms.
         </div>
       </div>
 
@@ -211,35 +210,38 @@
   <div class="section">
     <div class="section-head">
       <span class="section-num">02</span>
-      <h2 class="section-title">2026 Season Key Dates</h2>
+      <h2 class="section-title">2026–27 Season Key Dates</h2>
     </div>
     <div class="timeline">
-      <div class="tl-item"><div class="tl-date">Apr 17</div><div class="tl-title">Opening Weekend</div><div class="tl-desc">All 8 teams begin · 42-game regular season.</div></div>
-      <div class="tl-item"><div class="tl-date">May</div><div class="tl-title">European Champions Cup</div><div class="tl-desc">Top Hoofdklasse clubs face Italian Serie A and other continental opponents.</div></div>
-      <div class="tl-item"><div class="tl-date">Jul</div><div class="tl-title">Haarlem Baseball Week</div><div class="tl-desc">International tournament · national teams visit Pim Mulier Stadion.</div></div>
-      <div class="tl-item"><div class="tl-date">Aug</div><div class="tl-title">Regular Season Ends</div><div class="tl-desc">Top 4 teams advance to playoff round.</div></div>
-      <div class="tl-item"><div class="tl-date">Sept</div><div class="tl-title">Holland Series</div><div class="tl-desc">Best-of-7 championship · Dutch title at stake.</div></div>
+      <div class="tl-item"><div class="tl-date">Oct 2026</div><div class="tl-title">Season Opens</div><div class="tl-desc">All 10 teams begin 68-game regular season.</div></div>
+      <div class="tl-item"><div class="tl-date">Nov</div><div class="tl-title">Pacific Rivalries</div><div class="tl-desc">Sonora-Sinaloa border rivalries · peak fan energy.</div></div>
+      <div class="tl-item"><div class="tl-date">Dec 25</div><div class="tl-title">Christmas Games</div><div class="tl-desc">Holiday matchups · sold-out stadiums.</div></div>
+      <div class="tl-item"><div class="tl-date">Jan 2027</div><div class="tl-title">Playoffs</div><div class="tl-desc">Top 8 teams advance · best-of-7 rounds.</div></div>
+      <div class="tl-item"><div class="tl-date">Late Jan</div><div class="tl-title">Serie Final</div><div class="tl-desc">Mexican Pacific Series champion crowned.</div></div>
+      <div class="tl-item"><div class="tl-date">Feb 2027</div><div class="tl-title">Caribbean Series</div><div class="tl-desc">Mexico hosts 2027 · LAMP champ represents.</div></div>
     </div>
   </div>
 
   <div class="section">
     <div class="section-head">
       <span class="section-num">03</span>
-      <h2 class="section-title">The 8 Teams</h2>
-      <span class="section-sub">Hoofdklasse · 2026</span>
+      <h2 class="section-title">The 10 Teams</h2>
+      <span class="section-sub">LAMP · 2026–27</span>
     </div>
     <div class="divisions-wrap">
       <div class="div-block">
-        <div class="div-title">Hoofdklasse · 8 Clubs</div>
+        <div class="div-title">Liga Mexicana del Pacífico · 10 Clubs</div>
         <div class="div-teams">
-          <div class="team-row"><strong>Neptunus Rotterdam</strong> — Rotterdam · Familiestadion · 2025 Defending Champs · Most titles (18)</div>
-          <div class="team-row"><strong>Curaçao Neptunus</strong> — Rotterdam-based Curaçao affiliate · Perennial power</div>
-          <div class="team-row"><strong>L&D Amsterdam Pirates</strong> — Amsterdam · 2024 Runner-up · Dutch royalty</div>
-          <div class="team-row"><strong>Hoofddorp Pioniers</strong> — Hoofddorp · Near Schiphol · Longtime contender</div>
-          <div class="team-row"><strong>Quick Amersfoort</strong> — Amersfoort · Utrecht region</div>
-          <div class="team-row"><strong>HCAW</strong> — Bussum · Amsterdam region</div>
-          <div class="team-row"><strong>UVV Baseball</strong> — Utrecht · University club · Returning force</div>
-          <div class="team-row"><strong>DSS Kinheim</strong> — Haarlem · Host of Haarlem Baseball Week</div>
+          <div class="team-row"><strong>Charros de Jalisco</strong> — Guadalajara · Estadio Panamericano · 2025–26 Defending Champs</div>
+          <div class="team-row"><strong>Naranjeros de Hermosillo</strong> — Hermosillo · Estadio Sonora · Most titles · Sonora crown jewel</div>
+          <div class="team-row"><strong>Tomateros de Culiacán</strong> — Culiacán · Estadio Chevron Parque · Sinaloa powerhouse</div>
+          <div class="team-row"><strong>Venados de Mazatlán</strong> — Mazatlán · Estadio Teodoro Mariscal</div>
+          <div class="team-row"><strong>Yaquis de Ciudad Obregón</strong> — Obregón · Estadio Tomás Oroz</div>
+          <div class="team-row"><strong>Mayos de Navojoa</strong> — Navojoa · Estadio Manuel "Chapulín" Ordaz</div>
+          <div class="team-row"><strong>Águilas de Mexicali</strong> — Mexicali · Estadio B-Air · Baja California</div>
+          <div class="team-row"><strong>Cañeros de Los Mochis</strong> — Los Mochis · Estadio Chevron · Sinaloa</div>
+          <div class="team-row"><strong>Algodoneros de Guasave</strong> — Guasave · Estadio Kuroda Park</div>
+          <div class="team-row"><strong>Sultanes de Monterrey (Verano Expansion)</strong> — Expansion 2025 · Nuevo León</div>
         </div>
       </div>
     </div>
@@ -247,15 +249,15 @@
 
   <div class="did-you-know">
     <div class="dyk-badge">The Fact</div>
-    <div class="dyk-title">The Hoofdklasse Pipeline Put Xander Bogaerts on the Field at Fenway</div>
+    <div class="dyk-title">LAMP is Mexico's Caribbean Series Engine</div>
     <div class="dyk-body">
-      The Dutch-Caribbean baseball ecosystem is the <strong>most productive MLB pipeline on Earth outside Latin America and East Asia</strong>. Hoofdklasse and its Curaçao-affiliated feeder system have produced <strong>Xander Bogaerts, Jurickson Profar, Kenley Jansen, Didi Gregorius, Jonathan Schoop, Ozzie Albies, Andruw Jones</strong>, and dozens more. The reason: Curaçao and Aruba are part of the Kingdom of the Netherlands, which means Dutch youth development programs operate in the Caribbean with full funding and structure. A 14-year-old prospect in Willemstad is developed inside the same system that runs Hoofdklasse. Team Kingdom of the Netherlands has reached the WBC semifinals twice (2009, 2013) using this exact pipeline. <strong>When you watch a Neptunus Rotterdam game on a Saturday afternoon, you're watching the most efficient small-country scouting operation in baseball.</strong>
+      Mexico has won <strong>11 Caribbean Series championships</strong> — more than any country except the Dominican Republic (20 titles). And <strong>almost every one of those 11 titles came from a LAMP champion</strong>, not a summer-league LMB team. The Naranjeros de Hermosillo and Tomateros de Culiacán have combined for most of Mexico's Caribbean Series success. The reason: LAMP plays on Mexican Pacific time, in Mexican Pacific climate, against the fiercest competition in Mexican baseball. By February, when the Caribbean Series starts, LAMP's champion has already played 68 regular-season games plus best-of-7 playoff rounds against nine other teams. <strong>They are battle-tested in a way no Caribbean winter team is.</strong> And because every LAMP game streams free on YouTube, US fans can watch that battle all winter long — four months of high-level baseball at 9:30 PM ET, every night, at no cost.
     </div>
   </div>
 
   <div class="watch-window neon">
-    <div class="ww-title">⚡ Hoofdklasse This Week</div>
-    <div class="ww-lede">See every Hoofdklasse game this week — times in NYC/ET, streaming links — in the <strong>Official Viewer's Guide</strong>.</div>
+    <div class="ww-title">⚡ LAMP This Week</div>
+    <div class="ww-lede">When LAMP is in season (Oct–Jan), see every matchup in the <strong>Official Viewer's Guide</strong>.</div>
     <a href="/viewers-guide-may-4.html" style="display:inline-block;margin-top:12px;background:var(--neon);color:#000;font-family:var(--display);font-weight:900;letter-spacing:2px;padding:10px 20px;border-radius:4px;text-transform:uppercase;font-size:.8rem;">Open This Week's Guide →</a>
   </div>
 
@@ -264,8 +266,8 @@
 <div class="footer">
   <div class="footer-inner">
     <div>
-      <div class="gf-brand">Official Viewer's Guide</div>
-      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>Hoofdklasse verified Apr 2026 · KNBSB federation</div>
+      <div class="gf-brand">BASEBALL WITHOUT BORDERS</div>
+      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>LAMP verified Apr 2026 · 103 WBN articles · Charros defending champions</div>
     </div>
     <div class="gf-links">
       <a href="/leagues.html" class="gf-link">← All Leagues</a>
