@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baseball United — UAE / South Asia Pro League | Baseball Without Borders</title>
+  <meta name="description" content="Baseball United — the first professional league for UAE, Saudi Arabia, India, Pakistan. Dubai hub, 48 WBN articles, Barry Larkin, Mariano Rivera, Manny Ramirez invested.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--purple:#a78bfa;--lg:#E8B923;--lg2:#0A3161;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+    .site-nav{background:var(--bg2);border-bottom:1px solid var(--rule);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+    .site-nav .logo{font-family:var(--display);font-weight:900;font-size:.9rem;letter-spacing:1px;}
+    .site-nav .navlinks{display:flex;gap:6px;flex-wrap:wrap;}
+    .nav-pill{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);transition:.2s;}
+    .nav-pill:hover{color:var(--text);border-color:var(--text);}
+    .nav-pill.active{color:var(--gold);border-color:var(--gold);}
+    .hq-link{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--neon);border:1px solid var(--neon);padding:6px 14px;border-radius:4px;display:flex;align-items:center;gap:8px;}
+    .live-dot{width:7px;height:7px;background:var(--neon);border-radius:50%;box-shadow:0 0 5px var(--neon);animation:blink 1.8s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .crumbs{padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .crumbs a{color:var(--muted);}.crumbs a:hover{color:var(--neon);}.crumbs span{color:var(--gold);}
+    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg);position:relative;overflow:hidden;background:linear-gradient(180deg,#1a1005 0%,#0a0f1e 100%);}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(232,185,35,.03) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(232,185,35,.03) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero-inner{max-width:1200px;margin:0 auto;position:relative;}
+    .hero-flag{font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--lg);margin-bottom:12px;}
+    .sleeper-badge{display:inline-block;background:var(--lg);color:#000;font-family:var(--display);font-size:.65rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:3px;margin-bottom:12px;}
+    .hero-country{display:flex;align-items:center;gap:18px;margin-bottom:18px;flex-wrap:wrap;}
+    .hero-flag-emoji{font-size:3.2rem;line-height:1;}
+    .hero-title{font-family:var(--display);font-size:clamp(2.8rem,9vw,7rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-2px;text-transform:uppercase;}
+    .hero-full{font-family:var(--display);font-size:clamp(1rem,2vw,1.4rem);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:8px;margin-bottom:24px;}
+    .hero-lede{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--muted);max-width:720px;line-height:1.75;}
+    .hero-lede strong{color:var(--text);font-style:normal;}
+    .hero-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;margin-top:24px;border-top:1px solid var(--rule2);}
+    .hs-num{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;color:var(--lg);}
+    .hs-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+    .page{max-width:1200px;margin:0 auto;padding:40px 24px 64px;}
+    .section{margin-bottom:56px;}
+    .section-head{display:flex;align-items:baseline;gap:16px;padding-bottom:14px;margin-bottom:24px;border-bottom:2px solid var(--rule2);}
+    .section-num{font-family:var(--mono);font-size:.75rem;color:var(--lg);font-weight:700;letter-spacing:2px;}
+    .section-title{font-family:var(--display);font-size:1.6rem;font-weight:900;letter-spacing:-.5px;text-transform:uppercase;}
+    .section-sub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-left:auto;}
+    .platforms{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+    .platform-card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:18px 20px;transition:.15s;border-left:4px solid var(--rule2);}
+    .platform-card:hover{border-color:var(--rule2);transform:translateY(-2px);}
+    .platform-card.premium{border-left-color:var(--lg);}
+    .platform-card.free{border-left-color:var(--neon);}
+    .platform-name{font-family:var(--display);font-size:1.1rem;font-weight:900;letter-spacing:-.3px;margin-bottom:4px;}
+    .platform-tag{font-family:var(--mono);font-size:.58rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:2px 7px;border-radius:3px;display:inline-block;margin-bottom:10px;background:rgba(255,255,255,.05);color:var(--lg);}
+    .tag-free{background:rgba(0,255,157,.1);color:var(--neon);}
+    .platform-cost{font-family:var(--mono);font-size:.85rem;color:var(--text);font-weight:700;margin-bottom:6px;}
+    .platform-cost.free{color:var(--neon);}
+    .platform-desc{font-family:var(--serif);font-size:.85rem;color:var(--muted);line-height:1.6;}
+    .platform-desc strong{color:var(--text);}
+    .platform-link{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:.7rem;color:var(--lg);font-weight:700;}
+    .platform-link:hover{color:var(--neon);}
+    .watch-window{background:rgba(245,200,66,.06);border:1px solid rgba(245,200,66,.2);border-left:4px solid var(--gold);border-radius:6px;padding:20px 24px;margin-bottom:32px;}
+    .watch-window.neon{background:rgba(0,255,157,.04);border-color:rgba(0,255,157,.2);border-left-color:var(--neon);}
+    .ww-title{font-family:var(--display);font-size:1.1rem;font-weight:900;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+    .watch-window.neon .ww-title{color:var(--neon);}
+    .ww-lede{font-family:var(--serif);font-size:.92rem;color:var(--muted);line-height:1.7;margin-bottom:12px;}
+    .ww-lede strong{color:var(--text);}
+    .ww-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px;}
+    .ww-item{background:rgba(0,0,0,.25);border:1px solid var(--rule);border-radius:4px;padding:10px 12px;}
+    .ww-val{font-family:var(--mono);font-size:.9rem;font-weight:700;color:var(--gold);}
+    .ww-lbl{font-family:var(--mono);font-size:.6rem;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:1px;}
+    .timeline{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+    .tl-item{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;}
+    .tl-date{font-family:var(--mono);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lg);margin-bottom:6px;}
+    .tl-title{font-family:var(--display);font-size:1rem;font-weight:900;letter-spacing:-.3px;margin-bottom:4px;}
+    .tl-desc{font-family:var(--serif);font-size:.82rem;color:var(--muted);line-height:1.55;}
+    .divisions-wrap{background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;}
+    .div-block{padding:20px 24px;border-bottom:1px solid var(--rule);}
+    .div-block:last-child{border-bottom:none;}
+    .div-title{font-family:var(--display);font-size:.95rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;color:var(--lg);}
+    .div-teams{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;}
+    .team-row{font-family:var(--serif);font-size:.88rem;color:var(--muted);padding:4px 0;}
+    .team-row strong{color:var(--text);font-family:var(--display);font-weight:700;letter-spacing:.2px;}
+    .did-you-know{background:linear-gradient(135deg,rgba(245,200,66,.06) 0%,rgba(245,200,66,.02) 100%);border:1px solid rgba(245,200,66,.2);border-left:5px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 28px;margin-bottom:32px;}
+    .dyk-badge{font-family:var(--display);font-size:.62rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:#000;background:var(--gold);padding:4px 10px;border-radius:3px;display:inline-block;margin-bottom:14px;}
+    .dyk-title{font-family:var(--display);font-size:1.3rem;font-weight:900;letter-spacing:-.3px;margin-bottom:10px;}
+    .dyk-body{font-family:var(--serif);font-size:.95rem;color:var(--muted);line-height:1.75;font-style:italic;}
+    .dyk-body strong{color:var(--text);font-style:normal;}
+    .founders-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;}
+    .founder{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px;text-align:center;}
+    .founder-name{font-family:var(--display);font-size:1rem;font-weight:900;letter-spacing:-.2px;margin-bottom:3px;color:var(--lg);}
+    .founder-cred{font-family:var(--mono);font-size:.65rem;color:var(--muted);line-height:1.4;}
+    .footer{border-top:2px solid var(--lg);padding:32px 24px;margin-top:40px;background:var(--bg2);}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+    .gf-brand{font-family:var(--display);font-size:1.3rem;font-weight:900;letter-spacing:1px;}
+    .gf-pub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:6px;}
+    .gf-pub a{color:var(--muted);}.gf-pub a:hover{color:var(--neon);}
+    .gf-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;}
+    .gf-link{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .gf-link:hover{color:var(--neon);}
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="logo">BASEBALL WITHOUT BORDERS</div>
+  <div class="navlinks">
+    <a href="/index.html" class="nav-pill">Home</a>
+    <a href="/leagues.html" class="nav-pill">Leagues</a>
+    <a href="/schedules.html" class="nav-pill">Schedules</a>
+    <a href="/streaming.html" class="nav-pill">Streaming</a>
+    <a href="/viewers-guide-may-4.html" class="nav-pill">Viewer's Guide</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+</nav>
+
+<div class="crumbs"><a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>Baseball United · UAE / South Asia</span></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="sleeper-badge">★ WBN Major Coverage · 48 Articles</div>
+    <div class="hero-flag">United Arab Emirates · Dubai Hub · Inaugural Launched 2024</div>
+    <div class="hero-country">
+      <span class="hero-flag-emoji">🇦🇪</span>
+      <span class="hero-flag-emoji">🇮🇳</span>
+      <span class="hero-flag-emoji">🇵🇰</span>
+      <div>
+        <div class="hero-title">BASEBALL UNITED</div>
+        <div class="hero-full">Professional League · UAE · India · Pakistan · Saudi Arabia</div>
+      </div>
+    </div>
+    <p class="hero-lede">
+      The <strong>first professional baseball league for the Middle East and South Asia</strong>. Six clubs. Dubai as the hub. Founded and backed by <strong>Mariano Rivera, Barry Larkin, Manny Ramirez</strong>, and investor-commissioner Kash Shaikh. The business thesis: 1.8 billion people in a region with zero pro baseball before 2024. Target markets are <strong>India, Pakistan, UAE, Saudi Arabia</strong>. The Mid-Season Showcase runs November through February. World Baseball Network has been the single biggest English-language editorial home for this league.
+    </p>
+    <div class="hero-stats">
+      <div><div class="hs-num">6</div><div class="hs-lbl">Founding Clubs</div></div>
+      <div><div class="hs-num">48</div><div class="hs-lbl">WBN Articles</div></div>
+      <div><div class="hs-num">UTC+4</div><div class="hs-lbl">GST · ET +8</div></div>
+      <div><div class="hs-num">2024</div><div class="hs-lbl">Inaugural</div></div>
+      <div><div class="hs-num">1.8B</div><div class="hs-lbl">Regional Pop.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="watch-window">
+    <div class="ww-title">⚡ When to Watch Baseball United from the US</div>
+    <div class="ww-lede">UAE is <strong>UTC+4 (Gulf Standard Time)</strong> — 8 hours ahead of US Eastern. Baseball United games run primarily in the evening local time, which puts them <strong>morning-to-midday on the US East Coast</strong>. The Mid-Season Showcase is a compressed tournament format — fewer games, bigger stakes, better for one-sitting viewing.</div>
+    <div class="ww-grid">
+      <div class="ww-item"><div class="ww-val">11:00 AM ET</div><div class="ww-lbl">Evening 19:00 GST</div></div>
+      <div class="ww-item"><div class="ww-val">12:00 PM ET</div><div class="ww-lbl">20:00 GST prime</div></div>
+      <div class="ww-item"><div class="ww-val">Nov–Feb</div><div class="ww-lbl">Mid-Season Showcase</div></div>
+      <div class="ww-item"><div class="ww-val">Weekends</div><div class="ww-lbl">Best matchup windows</div></div>
+      <div class="ww-item"><div class="ww-val">Dubai</div><div class="ww-lbl">Primary host city</div></div>
+      <div class="ww-item"><div class="ww-val">Mumbai</div><div class="ww-lbl">Future expansion</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Where to Watch Baseball United</h2>
+      <span class="section-sub">Evolving distribution · Verified Apr 2026</span>
+    </div>
+    <div class="platforms">
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Primary · Direct</div>
+        <div class="platform-name">baseballunited.com</div>
+        <div class="platform-cost">Free / Subscription</div>
+        <div class="platform-desc">
+          <strong>Official streaming home</strong> — every Mid-Season Showcase game, plus archived tournament footage. The league operates its own direct-to-consumer streaming, and has been free for most inaugural-season broadcasts as the league builds audience.
+        </div>
+        <a href="https://baseballunited.com" target="_blank" class="platform-link">baseballunited.com →</a>
+      </div>
+
+      <div class="platform-card free">
+        <div class="platform-tag tag-free">Free · Social</div>
+        <div class="platform-name">Baseball United YouTube</div>
+        <div class="platform-cost free">FREE</div>
+        <div class="platform-desc">
+          Official YouTube channel carries highlights, full-game archives, and select live coverage. Aggressive content strategy — the league treats YouTube as primary marketing to the American diaspora in the US.
+        </div>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">India Streaming</div>
+        <div class="platform-name">JioCinema / Sony LIV</div>
+        <div class="platform-cost">Varies · India</div>
+        <div class="platform-desc">
+          Indian OTT deals have been announced for select games targeting the Indian diaspora. Check regional availability during showcase windows.
+        </div>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Regional</div>
+        <div class="platform-name">GeoTV (Pakistan)</div>
+        <div class="platform-cost">Domestic Pakistan</div>
+        <div class="platform-desc">
+          Pakistani broadcaster has carried select matchups featuring Mir Ali Khan and Pakistani national team players.
+        </div>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">MENA Region</div>
+        <div class="platform-name">Dubai Sports · Abu Dhabi Sports</div>
+        <div class="platform-cost">Domestic UAE</div>
+        <div class="platform-desc">
+          Emirati state sports broadcasters carry home events. Geoblocked outside MENA.
+        </div>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Editorial Home</div>
+        <div class="platform-name">World Baseball Network</div>
+        <div class="platform-cost">FREE · 48 articles</div>
+        <div class="platform-desc">
+          <strong>WBN has been the largest English-language editorial outlet covering Baseball United since launch.</strong> 48 articles in the archive — breaking news, team profiles, player signings, showcase recaps. See worldbaseball.com/category/baseball-united.
+        </div>
+        <a href="https://worldbaseball.com/category/baseball-united" target="_blank" class="platform-link">worldbaseball.com →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">2026 Showcase Key Dates</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">Nov 2025</div><div class="tl-title">Showcase Returns</div><div class="tl-desc">2nd Mid-Season Showcase launches at Al Dhaid Cricket Village · Dubai.</div></div>
+      <div class="tl-item"><div class="tl-date">Dec 2025</div><div class="tl-title">Group Play</div><div class="tl-desc">All 6 clubs in round-robin format · international broadcasts.</div></div>
+      <div class="tl-item"><div class="tl-date">Jan 2026</div><div class="tl-title">Showcase Finals</div><div class="tl-desc">Championship round · crowned Showcase winner.</div></div>
+      <div class="tl-item"><div class="tl-date">Feb 2026</div><div class="tl-title">Offseason</div><div class="tl-desc">League regroups for expansion to Riyadh and Mumbai windows.</div></div>
+      <div class="tl-item"><div class="tl-date">Mid-2026</div><div class="tl-title">Expansion Draft</div><div class="tl-desc">New markets identified · Saudi Arabia, India clubs rumored.</div></div>
+      <div class="tl-item"><div class="tl-date">Nov 2026</div><div class="tl-title">3rd Showcase</div><div class="tl-desc">Expanded format projected · potential 8 clubs.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">The 6 Clubs</h2>
+      <span class="section-sub">Founding season + expansion</span>
+    </div>
+    <div class="divisions-wrap">
+      <div class="div-block">
+        <div class="div-title">Baseball United · 6 Clubs</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>Mumbai Cobras</strong> — India-branded · Targeting the 1.4B Indian market · Priority club</div>
+          <div class="team-row"><strong>Karachi Monarchs</strong> — Pakistan-branded · Featured Pakistani national team core</div>
+          <div class="team-row"><strong>Arabia Wolves</strong> — Saudi Arabian branding · Vision 2030 sports initiative tie-in</div>
+          <div class="team-row"><strong>Mid East Falcons</strong> — Regional MENA-focused branding</div>
+          <div class="team-row"><strong>Bangladesh Royals</strong> — Targeting the Bangladeshi diaspora</div>
+          <div class="team-row"><strong>Dubai Wildcats</strong> — UAE host club · Home base in Dubai</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="section-title">The Founder-Investors</h2>
+      <span class="section-sub">Hall of Fame backing</span>
+    </div>
+    <div class="founders-grid">
+      <div class="founder"><div class="founder-name">Mariano Rivera</div><div class="founder-cred">Yankees · HoF closer · 652 saves · Advisor</div></div>
+      <div class="founder"><div class="founder-name">Barry Larkin</div><div class="founder-cred">Reds · HoF shortstop · 1995 NL MVP · Advisor</div></div>
+      <div class="founder"><div class="founder-name">Manny Ramirez</div><div class="founder-cred">555 HR · 2× World Series · Advisor</div></div>
+      <div class="founder"><div class="founder-name">Kash Shaikh</div><div class="founder-cred">Commissioner · Founder · CEO</div></div>
+      <div class="founder"><div class="founder-name">Félix Hernández</div><div class="founder-cred">Mariners · Cy Young · King Felix · Advisor</div></div>
+      <div class="founder"><div class="founder-name">Robinson Canó</div><div class="founder-cred">Player · Investor · 8× All-Star</div></div>
+    </div>
+  </div>
+
+  <div class="did-you-know">
+    <div class="dyk-badge">The Fact</div>
+    <div class="dyk-title">The World's Largest Untapped Baseball Market — And Nobody's There Yet</div>
+    <div class="dyk-body">
+      <strong>Baseball United is the first professional baseball league ever founded in the region</strong> that includes India (population 1.4B), Pakistan (240M), UAE (10M), and Saudi Arabia (36M). That's a combined <strong>1.8 billion potential viewers with zero pro baseball history</strong>. The league's thesis is simple: you don't compete for existing baseball fans, you build new ones. Cricket supplies the cultural context — pitching, batting, running, fielding translate. The Dubai hub is deliberate: hub airport, crypto-friendly banking, low taxes, existing sports infrastructure from the Indian Premier League and F1. When Kash Shaikh assembled Rivera, Larkin, and Manny as advisors, he wasn't recruiting for name recognition — he was recruiting the only three humans who could walk into a Riyadh or Mumbai pitch meeting and be the most respected person in the room. <strong>World Baseball Network has been the dominant English-language voice documenting the league's rise</strong>, with 48 articles in the archive and counting.
+    </div>
+  </div>
+
+  <div class="watch-window neon">
+    <div class="ww-title">⚡ Follow Baseball United on WBN</div>
+    <div class="ww-lede">World Baseball Network has <strong>48 articles</strong> on Baseball United — the largest English-language editorial archive on the league. Breaking news, signings, showcase recaps.</div>
+    <a href="https://worldbaseball.com/category/baseball-united" target="_blank" style="display:inline-block;margin-top:12px;background:var(--neon);color:#000;font-family:var(--display);font-weight:900;letter-spacing:2px;padding:10px 20px;border-radius:4px;text-transform:uppercase;font-size:.8rem;">Open WBN's Baseball United Archive →</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="gf-brand">BASEBALL WITHOUT BORDERS</div>
+      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>Baseball United verified Apr 2026 · WBN: 48 articles in archive</div>
+    </div>
+    <div class="gf-links">
+      <a href="/leagues.html" class="gf-link">← All Leagues</a>
+      <a href="/viewers-guide-may-4.html" class="gf-link">This Week's Guide</a>
+      <a href="/wbc2026.html" class="gf-link">WBC 2026</a>
+    </div>
+  </div>
+</div>
+
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

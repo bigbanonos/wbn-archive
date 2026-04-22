@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WPBL — Women's Pro Baseball League | Baseball Without Borders</title>
+  <meta name="description" content="Women's Pro Baseball League — inaugural 2026 season. Springfield, IL hub. First pro women's baseball league since the AAGPBL closed in 1954. Justine Siegal, Kelsie Whitmore, Ayami Sato.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--purple:#a78bfa;--lg:#E91E63;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+    .site-nav{background:var(--bg2);border-bottom:1px solid var(--rule);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+    .site-nav .logo{font-family:var(--display);font-weight:900;font-size:.9rem;letter-spacing:1px;}
+    .site-nav .navlinks{display:flex;gap:6px;flex-wrap:wrap;}
+    .nav-pill{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);transition:.2s;}
+    .nav-pill:hover{color:var(--text);border-color:var(--text);}
+    .nav-pill.active{color:var(--gold);border-color:var(--gold);}
+    .hq-link{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--neon);border:1px solid var(--neon);padding:6px 14px;border-radius:4px;display:flex;align-items:center;gap:8px;}
+    .live-dot{width:7px;height:7px;background:var(--neon);border-radius:50%;box-shadow:0 0 5px var(--neon);animation:blink 1.8s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .crumbs{padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .crumbs a{color:var(--muted);}.crumbs a:hover{color:var(--neon);}.crumbs span{color:var(--gold);}
+    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg);position:relative;overflow:hidden;background:linear-gradient(180deg,#1a0511 0%,#0a0f1e 100%);}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(233,30,99,.03) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(233,30,99,.03) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero-inner{max-width:1200px;margin:0 auto;position:relative;}
+    .historic-badge{display:inline-block;background:var(--lg);color:#fff;font-family:var(--display);font-size:.68rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:3px;margin-bottom:14px;}
+    .hero-flag{font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--lg);margin-bottom:12px;}
+    .hero-country{display:flex;align-items:center;gap:18px;margin-bottom:18px;flex-wrap:wrap;}
+    .hero-flag-emoji{font-size:3.2rem;line-height:1;}
+    .hero-title{font-family:var(--display);font-size:clamp(3.4rem,10vw,8rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-2.5px;text-transform:uppercase;}
+    .hero-full{font-family:var(--display);font-size:clamp(1rem,2vw,1.4rem);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:8px;margin-bottom:24px;}
+    .hero-lede{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--muted);max-width:720px;line-height:1.75;}
+    .hero-lede strong{color:var(--text);font-style:normal;}
+    .hero-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;margin-top:24px;border-top:1px solid var(--rule2);}
+    .hs-num{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;color:var(--lg);}
+    .hs-num.gold-hs{color:var(--gold);}
+    .hs-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+    .page{max-width:1200px;margin:0 auto;padding:40px 24px 64px;}
+    .section{margin-bottom:56px;}
+    .section-head{display:flex;align-items:baseline;gap:16px;padding-bottom:14px;margin-bottom:24px;border-bottom:2px solid var(--rule2);}
+    .section-num{font-family:var(--mono);font-size:.75rem;color:var(--lg);font-weight:700;letter-spacing:2px;}
+    .section-title{font-family:var(--display);font-size:1.6rem;font-weight:900;letter-spacing:-.5px;text-transform:uppercase;}
+    .section-sub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-left:auto;}
+    .platforms{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+    .platform-card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:18px 20px;transition:.15s;border-left:4px solid var(--rule2);}
+    .platform-card:hover{border-color:var(--rule2);transform:translateY(-2px);}
+    .platform-card.premium{border-left-color:var(--lg);}
+    .platform-card.free{border-left-color:var(--neon);}
+    .platform-name{font-family:var(--display);font-size:1.1rem;font-weight:900;letter-spacing:-.3px;margin-bottom:4px;}
+    .platform-tag{font-family:var(--mono);font-size:.58rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:2px 7px;border-radius:3px;display:inline-block;margin-bottom:10px;background:rgba(255,255,255,.05);color:var(--lg);}
+    .tag-free{background:rgba(0,255,157,.1);color:var(--neon);}
+    .platform-cost{font-family:var(--mono);font-size:.85rem;color:var(--text);font-weight:700;margin-bottom:6px;}
+    .platform-cost.free{color:var(--neon);}
+    .platform-desc{font-family:var(--serif);font-size:.85rem;color:var(--muted);line-height:1.6;}
+    .platform-desc strong{color:var(--text);}
+    .platform-link{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:.7rem;color:var(--lg);font-weight:700;}
+    .platform-link:hover{color:var(--neon);}
+    .watch-window{background:rgba(245,200,66,.06);border:1px solid rgba(245,200,66,.2);border-left:4px solid var(--gold);border-radius:6px;padding:20px 24px;margin-bottom:32px;}
+    .watch-window.neon{background:rgba(0,255,157,.04);border-color:rgba(0,255,157,.2);border-left-color:var(--neon);}
+    .ww-title{font-family:var(--display);font-size:1.1rem;font-weight:900;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+    .watch-window.neon .ww-title{color:var(--neon);}
+    .ww-lede{font-family:var(--serif);font-size:.92rem;color:var(--muted);line-height:1.7;margin-bottom:12px;}
+    .ww-lede strong{color:var(--text);}
+    .ww-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px;}
+    .ww-item{background:rgba(0,0,0,.25);border:1px solid var(--rule);border-radius:4px;padding:10px 12px;}
+    .ww-val{font-family:var(--mono);font-size:.9rem;font-weight:700;color:var(--gold);}
+    .ww-lbl{font-family:var(--mono);font-size:.6rem;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:1px;}
+    .timeline{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+    .tl-item{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;}
+    .tl-date{font-family:var(--mono);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lg);margin-bottom:6px;}
+    .tl-title{font-family:var(--display);font-size:1rem;font-weight:900;letter-spacing:-.3px;margin-bottom:4px;}
+    .tl-desc{font-family:var(--serif);font-size:.82rem;color:var(--muted);line-height:1.55;}
+    .divisions-wrap{background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;}
+    .div-block{padding:20px 24px;border-bottom:1px solid var(--rule);}
+    .div-block:last-child{border-bottom:none;}
+    .div-title{font-family:var(--display);font-size:.95rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;color:var(--lg);}
+    .div-teams{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;}
+    .team-row{font-family:var(--serif);font-size:.88rem;color:var(--muted);padding:4px 0;}
+    .team-row strong{color:var(--text);font-family:var(--display);font-weight:700;letter-spacing:.2px;}
+    .did-you-know{background:linear-gradient(135deg,rgba(245,200,66,.06) 0%,rgba(245,200,66,.02) 100%);border:1px solid rgba(245,200,66,.2);border-left:5px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 28px;margin-bottom:32px;}
+    .dyk-badge{font-family:var(--display);font-size:.62rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:#000;background:var(--gold);padding:4px 10px;border-radius:3px;display:inline-block;margin-bottom:14px;}
+    .dyk-title{font-family:var(--display);font-size:1.3rem;font-weight:900;letter-spacing:-.3px;margin-bottom:10px;}
+    .dyk-body{font-family:var(--serif);font-size:.95rem;color:var(--muted);line-height:1.75;font-style:italic;}
+    .dyk-body strong{color:var(--text);font-style:normal;}
+    .footer{border-top:2px solid var(--lg);padding:32px 24px;margin-top:40px;background:var(--bg2);}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+    .gf-brand{font-family:var(--display);font-size:1.3rem;font-weight:900;letter-spacing:1px;}
+    .gf-pub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:6px;}
+    .gf-pub a{color:var(--muted);}.gf-pub a:hover{color:var(--neon);}
+    .gf-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;}
+    .gf-link{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .gf-link:hover{color:var(--neon);}
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="logo">BASEBALL WITHOUT BORDERS</div>
+  <div class="navlinks">
+    <a href="/index.html" class="nav-pill">Home</a>
+    <a href="/leagues.html" class="nav-pill">Leagues</a>
+    <a href="/schedules.html" class="nav-pill">Schedules</a>
+    <a href="/streaming.html" class="nav-pill">Streaming</a>
+    <a href="/viewers-guide-may-4.html" class="nav-pill">Viewer's Guide</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+</nav>
+
+<div class="crumbs"><a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>WPBL · Women's Pro Baseball League</span></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="historic-badge">★ Inaugural 2026 · Historic First Season</div>
+    <div class="hero-flag">United States · Women's Pro Baseball League · Founded 2024</div>
+    <div class="hero-country">
+      <span class="hero-flag-emoji">🇺🇸</span>
+      <div>
+        <div class="hero-title">WPBL</div>
+        <div class="hero-full">Women's Pro Baseball League · Inaugural 2026 Season</div>
+      </div>
+    </div>
+    <p class="hero-lede">
+      The <strong>first professional women's baseball league in the United States since the AAGPBL folded in 1954</strong> — seventy-two years of history closing in a single summer. Six franchises, a hub in Springfield, Illinois, co-founded by Olympic gold medalist softball star <strong>Justine Siegal</strong> (the first woman to coach for an MLB organization) and business operator <strong>Keith Stein</strong>. The inaugural season begins in August 2026. The rosters include women who've played NCAA baseball, professional softball in Japan, and international team competitions.
+    </p>
+    <div class="hero-stats">
+      <div><div class="hs-num">6</div><div class="hs-lbl">Inaugural Teams</div></div>
+      <div><div class="hs-num gold-hs">2026</div><div class="hs-lbl">Historic Launch</div></div>
+      <div><div class="hs-num">60</div><div class="hs-lbl">Games / Team</div></div>
+      <div><div class="hs-num">72</div><div class="hs-lbl">Years Since AAGPBL</div></div>
+      <div><div class="hs-num">IL</div><div class="hs-lbl">Springfield Hub</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="watch-window">
+    <div class="ww-title">⚡ When to Watch WPBL</div>
+    <div class="ww-lede">The inaugural 2026 season runs <strong>August through October</strong> — deliberately scheduled around the NCAA women's softball calendar and the MLB playoff window. Games at <strong>6:05 PM CT on weekdays</strong> (7:05 PM ET), <strong>2:05 PM CT on weekend afternoons</strong>. Hub-and-spoke model means most games played at Springfield's shared facility during Year One, with road trips to participating host cities.</div>
+    <div class="ww-grid">
+      <div class="ww-item"><div class="ww-val">7:05 PM ET</div><div class="ww-lbl">Weekday 18:05 CT</div></div>
+      <div class="ww-item"><div class="ww-val">3:05 PM ET</div><div class="ww-lbl">Weekend 14:05 CT</div></div>
+      <div class="ww-item"><div class="ww-val">Aug–Oct</div><div class="ww-lbl">Inaugural season</div></div>
+      <div class="ww-item"><div class="ww-val">60 games</div><div class="ww-lbl">Per team</div></div>
+      <div class="ww-item"><div class="ww-val">Year 1 Hub</div><div class="ww-lbl">Springfield, IL</div></div>
+      <div class="ww-item"><div class="ww-val">Oct</div><div class="ww-lbl">Championship Series</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Where to Watch WPBL</h2>
+      <span class="section-sub">Evolving for inaugural season</span>
+    </div>
+    <div class="platforms">
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Primary · Official</div>
+        <div class="platform-name">wpblofficial.com</div>
+        <div class="platform-cost">TBD · Direct-to-consumer</div>
+        <div class="platform-desc">
+          <strong>Official league streaming home</strong>. Direct-to-consumer platform announced for all six teams. Subscription pricing expected to be announced closer to the August 2026 launch.
+        </div>
+        <a href="https://wpblofficial.com" target="_blank" class="platform-link">wpblofficial.com →</a>
+      </div>
+
+      <div class="platform-card free">
+        <div class="platform-tag tag-free">Expected · Free</div>
+        <div class="platform-name">WPBL YouTube</div>
+        <div class="platform-cost free">FREE · Highlights + select</div>
+        <div class="platform-desc">
+          The league has confirmed an aggressive YouTube strategy to introduce women's pro baseball to the widest possible audience. Expect free highlights, season recaps, and likely select free live broadcasts.
+        </div>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Partnership Rumored</div>
+        <div class="platform-name">ESPN+ / Disney</div>
+        <div class="platform-cost">Package TBD</div>
+        <div class="platform-desc">
+          National broadcast partner discussions ongoing. ESPN has been reported as in negotiations. Opening Day, All-Star Game, and Championship Series are expected to have marquee national coverage.
+        </div>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag">Regional</div>
+        <div class="platform-name">Illinois / Midwest TV</div>
+        <div class="platform-cost">Regional partners</div>
+        <div class="platform-desc">
+          Springfield-area regional TV and Midwest sports networks expected to carry home games in the hub model. Year 1 is geographically concentrated.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">2026 Inaugural Season Key Dates</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">Jan 2026</div><div class="tl-title">Player Combine</div><div class="tl-desc">Multi-day tryout at Kansas City facility · 300+ athletes invited.</div></div>
+      <div class="tl-item"><div class="tl-date">Apr 2026</div><div class="tl-title">Inaugural Draft</div><div class="tl-desc">First-ever WPBL player draft · televised event.</div></div>
+      <div class="tl-item"><div class="tl-date">Jul 2026</div><div class="tl-title">Training Camp</div><div class="tl-desc">All six teams report to Springfield for preseason.</div></div>
+      <div class="tl-item"><div class="tl-date">Aug 2026</div><div class="tl-title">OPENING DAY</div><div class="tl-desc">Historic first game · First pro women's baseball game in the US since 1954.</div></div>
+      <div class="tl-item"><div class="tl-date">Sep 2026</div><div class="tl-title">All-Star Game</div><div class="tl-desc">Mid-season showcase · sponsor activation target.</div></div>
+      <div class="tl-item"><div class="tl-date">Oct 2026</div><div class="tl-title">Championship Series</div><div class="tl-desc">First WPBL champion crowned.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">The Inaugural 6 Teams</h2>
+      <span class="section-sub">Franchise identities evolving</span>
+    </div>
+    <div class="divisions-wrap">
+      <div class="div-block">
+        <div class="div-title">WPBL · 6 Franchises · 2026 Season</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>Team names and brand identities</strong> — Being finalized ahead of the August 2026 launch · Watch for franchise reveals in coming months</div>
+          <div class="team-row"><strong>Springfield, IL</strong> — Primary hub city · Shared facility model for Year 1</div>
+          <div class="team-row"><strong>Midwest concentration</strong> — Year 1 focuses on Illinois-centric hub-and-spoke travel</div>
+          <div class="team-row"><strong>Expansion cities</strong> — Identified for Year 2: Boston, New York, Washington DC rumored</div>
+          <div class="team-row"><strong>Roster pipelines</strong> — NCAA baseball, international softball, Japan women's pro, Team USA</div>
+          <div class="team-row"><strong>Name your WPBL team?</strong> — Fan voting contests rumored for franchise naming ahead of launch</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="did-you-know">
+    <div class="dyk-badge">The Fact</div>
+    <div class="dyk-title">The First Professional Women's Baseball League in 72 Years</div>
+    <div class="dyk-body">
+      The <strong>All-American Girls Professional Baseball League (AAGPBL)</strong> — the league that inspired "A League of Their Own" — played its final game on September 5, 1954. For <strong>72 years</strong>, women in America had no path to professional baseball. They had softball — a different sport with a different ball, different pitching, different fields. The <strong>WPBL launching in August 2026</strong> ends that drought. Co-founder <strong>Justine Siegal</strong> has been building toward this for decades — she became the first woman to coach for an MLB organization (Oakland A's, 2015), the first to throw batting practice for a major league team, and she founded Baseball For All, which ran girls' baseball clinics in all 50 states. The WPBL's opening day will be the most historically significant moment in American women's team sport since the WNBA's inaugural game in 1997. <strong>It's not exhibition. It's not softball. It's professional women's baseball.</strong> And it launches this August.
+    </div>
+  </div>
+
+  <div class="watch-window neon">
+    <div class="ww-title">⚡ Follow the Inaugural Season</div>
+    <div class="ww-lede">World Baseball Network will be covering every WPBL story from player signings through Opening Day through the first Championship Series. Historic first season. Daily updates as we approach August 2026 launch.</div>
+    <a href="https://worldbaseball.com" target="_blank" style="display:inline-block;margin-top:12px;background:var(--neon);color:#000;font-family:var(--display);font-weight:900;letter-spacing:2px;padding:10px 20px;border-radius:4px;text-transform:uppercase;font-size:.8rem;">WPBL Coverage on WBN →</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="gf-brand">BASEBALL WITHOUT BORDERS</div>
+      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>WPBL Inaugural Season verified Apr 2026 · Historic first launch August 2026</div>
+    </div>
+    <div class="gf-links">
+      <a href="/leagues.html" class="gf-link">← All Leagues</a>
+      <a href="/viewers-guide-may-4.html" class="gf-link">This Week's Guide</a>
+      <a href="/wbc2026.html" class="gf-link">WBC 2026</a>
+    </div>
+  </div>
+</div>
+
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
