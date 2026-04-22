@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPB — Nippon Professional Baseball | Baseball Without Borders</title>
+  <meta name="description" content="The definitive guide to watching NPB from the US. Pacific League TV, FTF, Central League rights, interleague windows, Koshien displacement, and every time zone conversion.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;
+      --text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;
+      --accent:#D50032;--neon:#00ff9d;--gold:#f5c842;
+      --rule:#1e2d4a;--rule2:#263354;
+      --blue:#38bdf8;--teal:#2dd4bf;--orange:#fb923c;--purple:#a78bfa;
+      --npb:#e8342e;--npb-gold:#d4a85a;
+      --mono:'IBM Plex Mono',monospace;
+      --display:'Barlow Condensed',sans-serif;
+      --serif:'Lora',serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+    .site-nav{background:var(--bg2);border-bottom:1px solid var(--rule);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+    .site-nav .logo{font-family:var(--display);font-weight:900;font-size:.9rem;letter-spacing:1px;}
+    .site-nav .navlinks{display:flex;gap:6px;flex-wrap:wrap;}
+    .nav-pill{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);transition:.2s;}
+    .nav-pill:hover{color:var(--text);border-color:var(--text);}
+    .nav-pill.active{color:var(--gold);border-color:var(--gold);}
+    .hq-link{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--neon);border:1px solid var(--neon);padding:6px 14px;border-radius:4px;display:flex;align-items:center;gap:8px;}
+    .live-dot{width:7px;height:7px;background:var(--neon);border-radius:50%;box-shadow:0 0 5px var(--neon);animation:blink 1.8s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .crumbs{padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .crumbs a{color:var(--muted);}
+    .crumbs a:hover{color:var(--neon);}
+    .crumbs span{color:var(--gold);}
+    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--npb);position:relative;overflow:hidden;background:linear-gradient(180deg,#0c0508 0%,#0a0f1e 100%);}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(232,52,46,.02) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(232,52,46,.02) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero-inner{max-width:1200px;margin:0 auto;position:relative;}
+    .hero-flag{font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--npb);margin-bottom:12px;}
+    .hero-country{display:flex;align-items:center;gap:18px;margin-bottom:18px;flex-wrap:wrap;}
+    .hero-flag-emoji{font-size:3.2rem;line-height:1;}
+    .hero-title{font-family:var(--display);font-size:clamp(3.4rem,10vw,8rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-2.5px;text-transform:uppercase;}
+    .hero-full{font-family:var(--display);font-size:clamp(1rem,2vw,1.4rem);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:8px;margin-bottom:24px;}
+    .hero-lede{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--muted);max-width:720px;line-height:1.75;}
+    .hero-lede strong{color:var(--text);font-style:normal;}
+    .hero-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;margin-top:24px;border-top:1px solid var(--rule2);}
+    .hs-num{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1;color:var(--npb);}
+    .hs-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+    .page{max-width:1200px;margin:0 auto;padding:40px 24px 64px;}
+    .section{margin-bottom:56px;}
+    .section-head{display:flex;align-items:baseline;gap:16px;padding-bottom:14px;margin-bottom:24px;border-bottom:2px solid var(--rule2);}
+    .section-num{font-family:var(--mono);font-size:.75rem;color:var(--npb);font-weight:700;letter-spacing:2px;}
+    .section-title{font-family:var(--display);font-size:1.6rem;font-weight:900;letter-spacing:-.5px;text-transform:uppercase;}
+    .section-sub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-left:auto;}
+    .platforms{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+    .platform-card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:18px 20px;transition:.15s;border-left:4px solid var(--rule2);}
+    .platform-card:hover{border-color:var(--rule2);transform:translateY(-2px);}
+    .platform-card.premium{border-left-color:var(--npb);}
+    .platform-card.free{border-left-color:var(--neon);}
+    .platform-card.exclusive{border-left-color:var(--gold);}
+    .platform-name{font-family:var(--display);font-size:1.1rem;font-weight:900;letter-spacing:-.3px;margin-bottom:4px;}
+    .platform-tag{font-family:var(--mono);font-size:.58rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:2px 7px;border-radius:3px;display:inline-block;margin-bottom:10px;}
+    .tag-primary{background:rgba(232,52,46,.12);color:#ff6b67;}
+    .tag-free{background:rgba(0,255,157,.1);color:var(--neon);}
+    .tag-exclusive{background:rgba(245,200,66,.12);color:var(--gold);}
+    .platform-cost{font-family:var(--mono);font-size:.85rem;color:var(--text);font-weight:700;margin-bottom:6px;}
+    .platform-cost.free{color:var(--neon);}
+    .platform-desc{font-family:var(--serif);font-size:.85rem;color:var(--muted);line-height:1.6;}
+    .platform-desc strong{color:var(--text);}
+    .platform-link{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:.7rem;color:var(--npb);font-weight:700;}
+    .platform-link:hover{color:var(--neon);}
+    .watch-window{background:rgba(245,200,66,.06);border:1px solid rgba(245,200,66,.2);border-left:4px solid var(--gold);border-radius:6px;padding:20px 24px;margin-bottom:32px;}
+    .watch-window.purple{background:rgba(167,139,250,.06);border-color:rgba(167,139,250,.2);border-left-color:var(--purple);}
+    .ww-title{font-family:var(--display);font-size:1.1rem;font-weight:900;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+    .watch-window.purple .ww-title{color:var(--purple);}
+    .ww-lede{font-family:var(--serif);font-size:.92rem;color:var(--muted);line-height:1.7;margin-bottom:12px;}
+    .ww-lede strong{color:var(--text);}
+    .ww-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px;}
+    .ww-item{background:rgba(0,0,0,.25);border:1px solid var(--rule);border-radius:4px;padding:10px 12px;}
+    .ww-val{font-family:var(--mono);font-size:.9rem;font-weight:700;color:var(--gold);}
+    .watch-window.purple .ww-val{color:var(--purple);}
+    .ww-lbl{font-family:var(--mono);font-size:.6rem;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:1px;}
+    .timeline{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+    .tl-item{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;}
+    .tl-date{font-family:var(--mono);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--npb);margin-bottom:6px;}
+    .tl-title{font-family:var(--display);font-size:1rem;font-weight:900;letter-spacing:-.3px;margin-bottom:4px;}
+    .tl-desc{font-family:var(--serif);font-size:.82rem;color:var(--muted);line-height:1.55;}
+    .divisions-wrap{background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;}
+    .div-block{padding:20px 24px;border-bottom:1px solid var(--rule);}
+    .div-block:last-child{border-bottom:none;}
+    .div-title{font-family:var(--display);font-size:.95rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;}
+    .div-league{color:var(--npb);}
+    .div-league.central{color:var(--npb-gold);}
+    .div-teams{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;}
+    .team-row{font-family:var(--serif);font-size:.88rem;color:var(--muted);padding:4px 0;}
+    .team-row strong{color:var(--text);font-family:var(--display);font-weight:700;letter-spacing:.2px;}
+    .did-you-know{background:linear-gradient(135deg,rgba(245,200,66,.06) 0%,rgba(245,200,66,.02) 100%);border:1px solid rgba(245,200,66,.2);border-left:5px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 28px;margin-bottom:32px;}
+    .dyk-badge{font-family:var(--display);font-size:.62rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:#000;background:var(--gold);padding:4px 10px;border-radius:3px;display:inline-block;margin-bottom:14px;}
+    .dyk-title{font-family:var(--display);font-size:1.3rem;font-weight:900;letter-spacing:-.3px;margin-bottom:10px;}
+    .dyk-body{font-family:var(--serif);font-size:.95rem;color:var(--muted);line-height:1.75;font-style:italic;}
+    .dyk-body strong{color:var(--text);font-style:normal;}
+    .footer{border-top:2px solid var(--npb);padding:32px 24px;margin-top:40px;background:var(--bg2);}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+    .gf-brand{font-family:var(--display);font-size:1.3rem;font-weight:900;letter-spacing:1px;}
+    .gf-pub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:6px;}
+    .gf-pub a{color:var(--muted);}
+    .gf-pub a:hover{color:var(--neon);}
+    .gf-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;}
+    .gf-link{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .gf-link:hover{color:var(--neon);}
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="logo">BASEBALL WITHOUT BORDERS</div>
+  <div class="navlinks">
+    <a href="/index.html" class="nav-pill">Home</a>
+    <a href="/leagues.html" class="nav-pill">Leagues</a>
+    <a href="/schedules.html" class="nav-pill">Schedules</a>
+    <a href="/streaming.html" class="nav-pill">Streaming</a>
+    <a href="/viewers-guide-may-4.html" class="nav-pill">Viewer's Guide</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+</nav>
+
+<div class="crumbs">
+  <a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>NPB · Japan</span>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-flag">Japan · Nippon Professional Baseball · 2026 Season</div>
+    <div class="hero-country">
+      <span class="hero-flag-emoji">🇯🇵</span>
+      <div>
+        <div class="hero-title">NPB</div>
+        <div class="hero-full">Nippon Professional Baseball · 日本野球機構</div>
+      </div>
+    </div>
+    <p class="hero-lede">
+      The <strong>second-best baseball league on Earth</strong> and the hardest to watch legally from the US — unless you know the trick. The <strong>Pacific League</strong> has a unified streaming deal. The <strong>Central League</strong> is fragmented by club. And the <strong>interleague window</strong> from May 26 to June 14 is the one time Giants, Tigers, and Carp games are streamable in America.
+    </p>
+    <div class="hero-stats">
+      <div><div class="hs-num">12</div><div class="hs-lbl">Teams</div></div>
+      <div><div class="hs-num">143</div><div class="hs-lbl">Games / Team</div></div>
+      <div><div class="hs-num">2</div><div class="hs-lbl">Leagues</div></div>
+      <div><div class="hs-num">UTC+9</div><div class="hs-lbl">JST · ET +13</div></div>
+      <div><div class="hs-num">1936</div><div class="hs-lbl">Founded</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="watch-window">
+    <div class="ww-title">⚡ When to Watch NPB from the US</div>
+    <div class="ww-lede">
+      Most NPB games start at <strong>6:00 PM JST on weekdays</strong>, <strong>2:00 PM JST on weekends and holidays</strong>. Japan is UTC+9. That's <strong>-14 hours from ET</strong>. In practical terms, every weekday game is a 4:00 AM ET wake-up call. Weekend day games? 12:00 AM–1:00 AM ET — still late, but workable. <strong>Golden Week (May 3–5)</strong> is the best viewing window of the season.
+    </div>
+    <div class="ww-grid">
+      <div class="ww-item"><div class="ww-val">4:00 AM ET</div><div class="ww-lbl">Weekday 18:00 JST</div></div>
+      <div class="ww-item"><div class="ww-val">12:00 AM ET</div><div class="ww-lbl">Weekend 14:00 JST</div></div>
+      <div class="ww-item"><div class="ww-val">1:00 AM PT</div><div class="ww-lbl">Weekday West Coast</div></div>
+      <div class="ww-item"><div class="ww-val">Sat–Sun</div><div class="ww-lbl">Best US window</div></div>
+      <div class="ww-item"><div class="ww-val">May 3–5</div><div class="ww-lbl">Golden Week peak</div></div>
+      <div class="ww-item"><div class="ww-val">May 26–Jun 14</div><div class="ww-lbl">Interleague window</div></div>
+    </div>
+  </div>
+
+  <div class="watch-window purple">
+    <div class="ww-title">🔑 The Interleague Hack — How to Watch Giants & Tigers in the US</div>
+    <div class="ww-lede">
+      Central League games (Yomiuri Giants, Hanshin Tigers, Hiroshima Carp, Yakult Swallows, DeNA BayStars, Chunichi Dragons) are <strong>mostly geoblocked outside Japan</strong>. But during the <strong>May 26 – June 14 interleague window</strong>, when a Central League team is the <em>road team</em> at a Pacific League park, those games ARE carried on Pacific League TV. That's your window. The best matchup to target: <strong>Giants vs. SoftBank Hawks at PayPay Dome</strong> — the two biggest brands in each league, on PLTV, streamable anywhere.
+    </div>
+  </div>
+
+  <!-- WHERE TO WATCH -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Where to Watch NPB</h2>
+      <span class="section-sub">US availability varies by league</span>
+    </div>
+
+    <div class="platforms">
+
+      <div class="platform-card premium">
+        <div class="platform-tag tag-primary">Pacific League · All 6 Teams</div>
+        <div class="platform-name">Pacific League TV</div>
+        <div class="platform-cost">~$11 / month (Americas)</div>
+        <div class="platform-desc">
+          The gold standard for international NPB fans. <strong>All six Pacific League clubs</strong>, live + on-demand, in English. Covers Hawks, Buffaloes, Marines, Eagles, Lions, Fighters. <strong>Free tier in EU/UK.</strong> During interleague play, Central League road games at PL parks are carried here too.
+        </div>
+        <a href="https://pacificleague.com/en/ptv" target="_blank" class="platform-link">pacificleague.com/en/ptv →</a>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag tag-primary">US & Canada</div>
+        <div class="platform-name">FTF / For The Fans</div>
+        <div class="platform-cost">Free (Roku / Pluto / Samsung)</div>
+        <div class="platform-desc">
+          <strong>English-language NPB replays</strong> on smart TV platforms. Not live, but same-day replays with Matt Garza and other ex-MLB commentators. Great for catching up without a 4 AM alarm.
+        </div>
+        <a href="https://ftflive.com" target="_blank" class="platform-link">ftflive.com →</a>
+      </div>
+
+      <div class="platform-card free">
+        <div class="platform-tag tag-free">Free · 1 game/week</div>
+        <div class="platform-name">YouTube — Pacific League</div>
+        <div class="platform-cost">FREE</div>
+        <div class="platform-desc">
+          Official Pacific League YouTube channel carries <strong>one free live game per week</strong> plus daily highlights. Search "Pacific League Baseball" — use this to sample before subscribing to PLTV.
+        </div>
+      </div>
+
+      <div class="platform-card exclusive">
+        <div class="platform-tag tag-exclusive">Central League · Per Club</div>
+        <div class="platform-name">Giants TV / Tigers TV / Club Platforms</div>
+        <div class="platform-cost">Varies by team</div>
+        <div class="platform-desc">
+          Central League rights are <strong>fragmented by club</strong>. Each team operates its own streaming service. Most are geoblocked to Japan. DAZN carries select CL content in some markets but availability is inconsistent team-to-team.
+        </div>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-tag tag-primary">Spanish / Latin America</div>
+        <div class="platform-name">DAZN (select markets)</div>
+        <div class="platform-cost">Varies</div>
+        <div class="platform-desc">
+          DAZN carries Central League content in a handful of international markets. Coverage is inconsistent — check locally.
+        </div>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-tag tag-primary">In Japan</div>
+        <div class="platform-name">Rakuten TV / Paravi / DAZN JP</div>
+        <div class="platform-cost">Domestic only</div>
+        <div class="platform-desc">
+          Full domestic coverage is available inside Japan via multiple platforms. Outside Japan, geoblocked.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- KEY DATES -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">2026 Season Key Dates</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">Mar 27</div><div class="tl-title">Opening Day</div><div class="tl-desc">All 12 teams begin the 143-game regular season.</div></div>
+      <div class="tl-item"><div class="tl-date">Apr 14–16</div><div class="tl-title">Traditional Series</div><div class="tl-desc">Hanshin Tigers vs. Yomiuri Giants — Japan's biggest rivalry.</div></div>
+      <div class="tl-item"><div class="tl-date">May 3–5</div><div class="tl-title">Golden Week</div><div class="tl-desc">Peak holiday attendance · day games · best US viewing window.</div></div>
+      <div class="tl-item"><div class="tl-date">May 26 – Jun 14</div><div class="tl-title">Interleague Play</div><div class="tl-desc">CL teams visit PL parks. CL road games streamable via PLTV.</div></div>
+      <div class="tl-item"><div class="tl-date">Jul 20–23</div><div class="tl-title">Mazda All-Star Series</div><div class="tl-desc">Two-game All-Star Series · short schedule break.</div></div>
+      <div class="tl-item"><div class="tl-date">August</div><div class="tl-title">Koshien Displacement</div><div class="tl-desc">Hanshin Tigers play nearly all road games — Koshien hosts the high school tournament.</div></div>
+      <div class="tl-item"><div class="tl-date">Late Sep</div><div class="tl-title">Regular Season Ends</div><div class="tl-desc">Pennant races close. Climax Series (playoffs) begin.</div></div>
+      <div class="tl-item"><div class="tl-date">Late Oct</div><div class="tl-title">Japan Series</div><div class="tl-desc">Best-of-7 championship between CL and PL champions.</div></div>
+    </div>
+  </div>
+
+  <!-- TEAMS -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">The 12 Teams</h2>
+      <span class="section-sub">Pacific + Central League</span>
+    </div>
+
+    <div class="divisions-wrap">
+
+      <div class="div-block">
+        <div class="div-title"><span class="div-league">Pacific League</span> · 6 Teams · On PLTV</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>Fukuoka SoftBank Hawks</strong> — Mizuho PayPay Dome · Fukuoka</div>
+          <div class="team-row"><strong>Orix Buffaloes</strong> — Kyocera Dome · Osaka</div>
+          <div class="team-row"><strong>Chiba Lotte Marines</strong> — ZOZO Marine Stadium · Chiba</div>
+          <div class="team-row"><strong>Tohoku Rakuten Golden Eagles</strong> — Rakuten Mobile Park · Sendai</div>
+          <div class="team-row"><strong>Saitama Seibu Lions</strong> — Belluna Dome · Tokorozawa</div>
+          <div class="team-row"><strong>Hokkaido Nippon-Ham Fighters</strong> — ES CON Field · Sapporo</div>
+        </div>
+      </div>
+
+      <div class="div-block">
+        <div class="div-title"><span class="div-league central">Central League</span> · 6 Teams · Mostly Geoblocked</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>Yomiuri Giants</strong> — Tokyo Dome · Tokyo · 22 titles</div>
+          <div class="team-row"><strong>Hanshin Tigers</strong> — Koshien Stadium · Nishinomiya</div>
+          <div class="team-row"><strong>Tokyo Yakult Swallows</strong> — Meiji Jingu Stadium · Tokyo</div>
+          <div class="team-row"><strong>Yokohama DeNA BayStars</strong> — Yokohama Stadium · Yokohama</div>
+          <div class="team-row"><strong>Chunichi Dragons</strong> — Vantelin Dome · Nagoya</div>
+          <div class="team-row"><strong>Hiroshima Toyo Carp</strong> — Mazda Zoom-Zoom Stadium · Hiroshima</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DID YOU KNOW -->
+  <div class="did-you-know">
+    <div class="dyk-badge">The Fact</div>
+    <div class="dyk-title">NPB Games Can End in a Tie — And Often Do</div>
+    <div class="dyk-body">
+      Unlike MLB, which eliminated ties decades ago and now uses the ghost runner in extras, <strong>NPB games can officially end in a tie after 12 innings</strong>. No zombie runner. No eternal extras. If it's tied after 12, it's a tie — and it counts in the standings. During the 2026 regular season, expect multiple series to feature ties that shift the pennant race. Combined with the <strong>Climax Series playoff format</strong> where the second-place team has to win a best-of-three just to reach the Japan Series, NPB's approach to "close games" is fundamentally different. It's baseball with <strong>more patience and less panic</strong>.
+    </div>
+  </div>
+
+  <div class="watch-window" style="background:rgba(0,255,157,.04);border-color:rgba(0,255,157,.2);border-left-color:var(--neon);">
+    <div class="ww-title" style="color:var(--neon);">⚡ NPB This Week</div>
+    <div class="ww-lede">See every Pacific League game this week — times in NYC/ET, streaming links verified — in the <strong>Official Viewer's Guide</strong>.</div>
+    <a href="/viewers-guide-may-4.html" style="display:inline-block;margin-top:12px;background:var(--neon);color:#000;font-family:var(--display);font-weight:900;letter-spacing:2px;padding:10px 20px;border-radius:4px;text-transform:uppercase;font-size:.8rem;">Open This Week's Guide →</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="gf-brand">BASEBALL WITHOUT BORDERS</div>
+      <div class="gf-pub">
+        A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>
+        NPB streaming verified Apr 2026 · Territorial restrictions apply
+      </div>
+    </div>
+    <div class="gf-links">
+      <a href="/leagues.html" class="gf-link">← All Leagues</a>
+      <a href="/viewers-guide-may-4.html" class="gf-link">This Week's Guide</a>
+      <a href="/wbc2026.html" class="gf-link">WBC 2026</a>
+    </div>
+  </div>
+</div>
+
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

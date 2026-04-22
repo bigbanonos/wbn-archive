@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLB — Major League Baseball | Baseball Without Borders</title>
+  <meta name="description" content="The definitive guide to watching MLB 2026. ESPN, Fox, NBC, Apple, Netflix, TBS, MLB.TV — every platform, every broadcast window, every blackout rule.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0f1e; --bg2: #0f172a; --card: #111827; --card2: #0d1424;
+      --text: #f0f4ff; --muted: #8899bb; --dim: #4a5a7a;
+      --accent: #D50032; --neon: #00ff9d; --gold: #f5c842;
+      --rule: #1e2d4a; --rule2: #263354;
+      --blue: #38bdf8; --teal: #2dd4bf; --orange: #fb923c; --purple: #a78bfa;
+      --mlb: #002D72; --mlb-red: #D50032;
+      --mono: 'IBM Plex Mono', monospace;
+      --display: 'Barlow Condensed', sans-serif;
+      --serif: 'Lora', serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--serif); font-size: 15px; line-height: 1.65; }
+    a { text-decoration: none; color: inherit; }
+
+    /* SITE NAV */
+    .site-nav { background: var(--bg2); border-bottom: 1px solid var(--rule); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .site-nav .logo { font-family: var(--display); font-weight: 900; font-size: 0.9rem; letter-spacing: 1px; }
+    .site-nav .navlinks { display: flex; gap: 6px; flex-wrap: wrap; }
+    .nav-pill { font-family: var(--display); font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--rule2); color: var(--muted); transition: 0.2s; }
+    .nav-pill:hover { color: var(--text); border-color: var(--text); }
+    .nav-pill.active { color: var(--gold); border-color: var(--gold); }
+    .hq-link { font-family: var(--display); font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--neon); border: 1px solid var(--neon); padding: 6px 14px; border-radius: 4px; display: flex; align-items: center; gap: 8px; }
+    .live-dot { width: 7px; height: 7px; background: var(--neon); border-radius: 50%; box-shadow: 0 0 5px var(--neon); animation: blink 1.8s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    /* BREADCRUMB */
+    .crumbs { padding: 14px 24px; background: var(--bg2); border-bottom: 1px solid var(--rule); font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
+    .crumbs a { color: var(--muted); }
+    .crumbs a:hover { color: var(--neon); }
+    .crumbs span { color: var(--gold); }
+
+    /* HERO */
+    .hero { padding: 56px 24px 40px; border-bottom: 3px solid var(--accent); position: relative; overflow: hidden; background: linear-gradient(180deg, #050c1f 0%, #0a0f1e 100%); }
+    .hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, rgba(213,0,50,0.02) 0 1px, transparent 1px 60px), repeating-linear-gradient(0deg, rgba(213,0,50,0.02) 0 1px, transparent 1px 60px); pointer-events: none; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; }
+    .hero-flag { font-family: var(--display); font-size: 0.68rem; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .hero-country { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; flex-wrap: wrap; }
+    .hero-flag-emoji { font-size: 3.2rem; line-height: 1; }
+    .hero-title { font-family: var(--display); font-size: clamp(3.4rem, 10vw, 8rem); font-weight: 900; font-style: italic; line-height: 0.88; letter-spacing: -2.5px; text-transform: uppercase; }
+    .hero-full { font-family: var(--display); font-size: clamp(1rem, 2vw, 1.4rem); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-top: 8px; margin-bottom: 24px; }
+    .hero-lede { font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: var(--muted); max-width: 720px; line-height: 1.75; }
+    .hero-lede strong { color: var(--text); font-style: normal; }
+    .hero-stats { display: flex; gap: 32px; flex-wrap: wrap; padding-top: 24px; margin-top: 24px; border-top: 1px solid var(--rule2); }
+    .hs-num { font-family: var(--display); font-size: 2rem; font-weight: 900; line-height: 1; color: var(--accent); }
+    .hs-lbl { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+
+    /* PAGE */
+    .page { max-width: 1200px; margin: 0 auto; padding: 40px 24px 64px; }
+
+    /* SECTION */
+    .section { margin-bottom: 56px; }
+    .section-head { display: flex; align-items: baseline; gap: 16px; padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--rule2); }
+    .section-num { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); font-weight: 700; letter-spacing: 2px; }
+    .section-title { font-family: var(--display); font-size: 1.6rem; font-weight: 900; letter-spacing: -0.5px; text-transform: uppercase; }
+    .section-sub { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); margin-left: auto; }
+
+    /* PLATFORM GRID — THE "WHERE TO WATCH" SIGNATURE BLOCK */
+    .platforms { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+    .platform-card { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 18px 20px; transition: 0.15s; border-left: 4px solid var(--rule2); }
+    .platform-card:hover { border-color: var(--rule2); transform: translateY(-2px); }
+    .platform-card.premium { border-left-color: var(--accent); }
+    .platform-card.free { border-left-color: var(--neon); }
+    .platform-card.exclusive { border-left-color: var(--gold); }
+    .platform-name { font-family: var(--display); font-size: 1.1rem; font-weight: 900; letter-spacing: -0.3px; margin-bottom: 4px; }
+    .platform-tag { font-family: var(--mono); font-size: 0.58rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 2px 7px; border-radius: 3px; display: inline-block; margin-bottom: 10px; }
+    .tag-primary { background: rgba(213,0,50,0.12); color: #ff6b88; }
+    .tag-free { background: rgba(0,255,157,0.1); color: var(--neon); }
+    .tag-exclusive { background: rgba(245,200,66,0.12); color: var(--gold); }
+    .platform-cost { font-family: var(--mono); font-size: 0.85rem; color: var(--text); font-weight: 700; margin-bottom: 6px; }
+    .platform-cost.free { color: var(--neon); }
+    .platform-desc { font-family: var(--serif); font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+    .platform-desc strong { color: var(--text); }
+    .platform-link { display: inline-block; margin-top: 10px; font-family: var(--mono); font-size: 0.7rem; color: var(--accent); font-weight: 700; }
+    .platform-link:hover { color: var(--neon); }
+
+    /* WATCH WINDOW */
+    .watch-window { background: rgba(245,200,66,0.06); border: 1px solid rgba(245,200,66,0.2); border-left: 4px solid var(--gold); border-radius: 6px; padding: 20px 24px; margin-bottom: 32px; }
+    .ww-title { font-family: var(--display); font-size: 1.1rem; font-weight: 900; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .ww-lede { font-family: var(--serif); font-size: 0.92rem; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+    .ww-lede strong { color: var(--text); }
+    .ww-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-top: 14px; }
+    .ww-item { background: rgba(0,0,0,0.25); border: 1px solid var(--rule); border-radius: 4px; padding: 10px 12px; }
+    .ww-val { font-family: var(--mono); font-size: 0.9rem; font-weight: 700; color: var(--gold); }
+    .ww-lbl { font-family: var(--mono); font-size: 0.6rem; color: var(--muted); margin-top: 2px; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* KEY DATES TIMELINE */
+    .timeline { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+    .tl-item { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; }
+    .tl-date { font-family: var(--mono); font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .tl-title { font-family: var(--display); font-size: 1rem; font-weight: 900; letter-spacing: -0.3px; margin-bottom: 4px; }
+    .tl-desc { font-family: var(--serif); font-size: 0.82rem; color: var(--muted); line-height: 1.55; }
+
+    /* DIVISIONS */
+    .divisions-wrap { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+    .div-block { padding: 20px 24px; border-bottom: 1px solid var(--rule); }
+    .div-block:last-child { border-bottom: none; }
+    .div-title { font-family: var(--display); font-size: 0.95rem; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+    .div-league { color: var(--accent); }
+    .div-teams { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+    .team-row { font-family: var(--serif); font-size: 0.88rem; color: var(--muted); padding: 4px 0; }
+    .team-row strong { color: var(--text); font-family: var(--display); font-weight: 700; letter-spacing: 0.2px; }
+
+    /* FACT */
+    .did-you-know { background: linear-gradient(135deg, rgba(245,200,66,0.06) 0%, rgba(245,200,66,0.02) 100%); border: 1px solid rgba(245,200,66,0.2); border-left: 5px solid var(--gold); border-radius: 0 8px 8px 0; padding: 20px 28px; margin-bottom: 32px; }
+    .dyk-badge { font-family: var(--display); font-size: 0.62rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: #000; background: var(--gold); padding: 4px 10px; border-radius: 3px; display: inline-block; margin-bottom: 14px; }
+    .dyk-title { font-family: var(--display); font-size: 1.3rem; font-weight: 900; letter-spacing: -0.3px; margin-bottom: 10px; }
+    .dyk-body { font-family: var(--serif); font-size: 0.95rem; color: var(--muted); line-height: 1.75; font-style: italic; }
+    .dyk-body strong { color: var(--text); font-style: normal; }
+
+    /* WBN FEED */
+    .wbn-feed { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 24px 28px; }
+    .feed-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--rule2); flex-wrap: wrap; gap: 10px; }
+    .feed-title { font-family: var(--display); font-size: 1rem; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; }
+    .feed-link { font-family: var(--mono); font-size: 0.68rem; color: var(--neon); }
+    .feed-items { display: flex; flex-direction: column; gap: 10px; }
+    .feed-item { padding: 10px 0; border-bottom: 1px solid rgba(30,45,74,0.5); }
+    .feed-item:last-child { border-bottom: none; }
+    .fi-cat { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+    .fi-title { font-family: var(--display); font-size: 1.05rem; font-weight: 700; letter-spacing: -0.2px; margin: 2px 0; }
+    .fi-meta { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); }
+
+    /* FOOTER */
+    .footer { border-top: 2px solid var(--accent); padding: 32px 24px; margin-top: 40px; background: var(--bg2); }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    .gf-brand { font-family: var(--display); font-size: 1.3rem; font-weight: 900; letter-spacing: 1px; }
+    .gf-pub { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); margin-top: 6px; }
+    .gf-pub a { color: var(--muted); }
+    .gf-pub a:hover { color: var(--neon); }
+    .gf-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+    .gf-link { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
+    .gf-link:hover { color: var(--neon); }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="logo">BASEBALL WITHOUT BORDERS</div>
+  <div class="navlinks">
+    <a href="/index.html" class="nav-pill">Home</a>
+    <a href="/leagues.html" class="nav-pill">Leagues</a>
+    <a href="/schedules.html" class="nav-pill">Schedules</a>
+    <a href="/streaming.html" class="nav-pill">Streaming</a>
+    <a href="/viewers-guide-may-4.html" class="nav-pill">Viewer's Guide</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+</nav>
+
+<div class="crumbs">
+  <a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>MLB · United States</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-flag">United States & Canada · Major League Baseball</div>
+    <div class="hero-country">
+      <span class="hero-flag-emoji">🇺🇸</span>
+      <span class="hero-flag-emoji">🇨🇦</span>
+      <div>
+        <div class="hero-title">MLB</div>
+        <div class="hero-full">Major League Baseball · 2026 Season</div>
+      </div>
+    </div>
+    <p class="hero-lede">
+      The <strong>126th season</strong> of Major League Baseball is underway. The Los Angeles Dodgers are chasing the first World Series three-peat since the 1998–2000 Yankees. The 2026 rights cycle is a brand-new landscape — <strong>ESPN Unlimited</strong>, <strong>NBC/Peacock Sunday Night Baseball</strong>, and <strong>Netflix marquee events</strong> replaced three decades of cable conventions. Here's every way to watch.
+    </p>
+    <div class="hero-stats">
+      <div><div class="hs-num">30</div><div class="hs-lbl">Teams</div></div>
+      <div><div class="hs-num">2,430</div><div class="hs-lbl">Regular Season Games</div></div>
+      <div><div class="hs-num">71.4M</div><div class="hs-lbl">2025 Attendance</div></div>
+      <div><div class="hs-num">19.4B</div><div class="hs-lbl">MLB.TV Minutes 2025</div></div>
+      <div><div class="hs-num">126th</div><div class="hs-lbl">Season</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- WATCH WINDOW -->
+  <div class="watch-window">
+    <div class="ww-title">⚡ When to Watch · MLB Prime Window (US)</div>
+    <div class="ww-lede">
+      Most games start between <strong>6:40 PM and 10:10 PM ET</strong>, with day games on Sundays, holidays, and getaway days. The <strong>Apple TV+ Friday Night Baseball doubleheader</strong> anchors weekends, and the <strong>Sunday Night Baseball</strong> window has moved from ESPN to NBC/Peacock starting 2026.
+    </div>
+    <div class="ww-grid">
+      <div class="ww-item"><div class="ww-val">Daily</div><div class="ww-lbl">Mar 25 – Sep 28</div></div>
+      <div class="ww-item"><div class="ww-val">18:40–22:10 ET</div><div class="ww-lbl">Prime window</div></div>
+      <div class="ww-item"><div class="ww-val">13:05 ET</div><div class="ww-lbl">Typical day game</div></div>
+      <div class="ww-item"><div class="ww-val">Fri nights</div><div class="ww-lbl">Apple TV+ doubleheader</div></div>
+      <div class="ww-item"><div class="ww-val">Sun 19:10 ET</div><div class="ww-lbl">Sunday Night Baseball · NBC</div></div>
+      <div class="ww-item"><div class="ww-val">Tue 19:10 ET</div><div class="ww-lbl">TBS Tuesday · Max</div></div>
+    </div>
+  </div>
+
+  <!-- ═════ WHERE TO WATCH ═════ -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Where to Watch · 2026 Rights</h2>
+      <span class="section-sub">All platforms verified Apr 2026</span>
+    </div>
+
+    <div class="platforms">
+
+      <div class="platform-card premium">
+        <div class="platform-tag tag-primary">Primary OTT</div>
+        <div class="platform-name">ESPN Unlimited</div>
+        <div class="platform-cost">~$29.99 / month</div>
+        <div class="platform-desc">
+          The new retail home for <strong>MLB.TV</strong> — MLB owns the product, ESPN distributes it. Subscribe and stream every out-of-market game (~2,430/yr) via the ESPN app. In-market blackouts apply. Also carries ESPN's midweek national package of 30 exclusive games and MLB Network.
+        </div>
+        <a href="https://espn.com" target="_blank" class="platform-link">espn.com →</a>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag tag-primary">Sundays Exclusive</div>
+        <div class="platform-name">NBC / Peacock</div>
+        <div class="platform-cost">Peacock ~$13.99/mo</div>
+        <div class="platform-desc">
+          <strong>Sunday Night Baseball — exclusive from 2026</strong>, ending ESPN's 35-year run. Also: every Wild Card round game (NBC + NBCSN + Peacock) and MLB Sunday Leadoff (18 early-afternoon games).
+        </div>
+        <a href="https://peacocktv.com" target="_blank" class="platform-link">peacocktv.com →</a>
+      </div>
+
+      <div class="platform-card exclusive">
+        <div class="platform-tag tag-exclusive">Marquee Only</div>
+        <div class="platform-name">Netflix</div>
+        <div class="platform-cost">Netflix subscription</div>
+        <div class="platform-desc">
+          <strong>Exclusive events (2026–2028):</strong> Opening Night (Yankees vs. Giants, March 25 — first-ever live MLB on Netflix), Home Run Derby, Field of Dreams Game, select annual specials. All 47 <strong>WBC 2026 games exclusive in Japan</strong>.
+        </div>
+        <a href="https://netflix.com" target="_blank" class="platform-link">netflix.com →</a>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag tag-primary">Friday Nights</div>
+        <div class="platform-name">Apple TV+</div>
+        <div class="platform-cost">~$12.99 / month</div>
+        <div class="platform-desc">
+          <strong>Friday Night Baseball doubleheaders — exclusive all season.</strong> ~$85M/yr rights deal. A single Dodgers–Yankees game drove 722,000 new signups in 2025. The doubleheader is everywhere.
+        </div>
+        <a href="https://tv.apple.com" target="_blank" class="platform-link">tv.apple.com →</a>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag tag-primary">Broadcast</div>
+        <div class="platform-name">FOX / FS1 / FOX One</div>
+        <div class="platform-cost">Cable / FOX One OTT</div>
+        <div class="platform-desc">
+          World Series, LCS, Division Series, All-Star Game, select regular season Saturdays. <strong>All 47 WBC 2026 games in the U.S.</strong> FOX One streams every FOX Sports broadcast.
+        </div>
+        <a href="https://foxsports.com" target="_blank" class="platform-link">foxsports.com →</a>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag tag-primary">Tuesday + Postseason</div>
+        <div class="platform-name">TBS / Max</div>
+        <div class="platform-cost">Max subscription</div>
+        <div class="platform-desc">
+          Tuesday Night Baseball throughout the regular season. LCS and Division Series playoff games. All TBS broadcasts stream on Max. Strong baseball booth: Ernie Johnson, Smoltz, Darling.
+        </div>
+        <a href="https://max.com" target="_blank" class="platform-link">max.com →</a>
+      </div>
+
+      <div class="platform-card premium">
+        <div class="platform-tag tag-primary">Out-of-Market</div>
+        <div class="platform-name">MLB.TV (via ESPN app)</div>
+        <div class="platform-cost">Bundled with ESPN Unltd</div>
+        <div class="platform-desc">
+          <strong>Every game outside your local market</strong> (~2,430/yr). Distributed through the ESPN app starting 2026. In-market games blacked out. Record <strong>19.4 billion minutes</strong> watched in 2025.
+        </div>
+        <a href="https://mlb.com/tv" target="_blank" class="platform-link">mlb.com/tv →</a>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-tag tag-primary">24/7</div>
+        <div class="platform-name">MLB Network</div>
+        <div class="platform-cost">Cable + streaming</div>
+        <div class="platform-desc">
+          24/7 baseball. Live Showcase games, Hot Stove, MLB Tonight, Intentional Talk. Distributed by ESPN starting 2026.
+        </div>
+        <a href="https://mlb.com/network" target="_blank" class="platform-link">mlb.com/network →</a>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-tag tag-primary">Regional</div>
+        <div class="platform-name">Regional Sports Networks</div>
+        <div class="platform-cost">Varies by market</div>
+        <div class="platform-desc">
+          <strong>YES (Yankees)</strong>, <strong>SNY (Mets)</strong>, <strong>NESN (Red Sox)</strong>, <strong>SportsNet LA (Dodgers)</strong>, <strong>MASN (Orioles/Nationals)</strong>, MLB-owned Padres/Rockies/Guardians/Twins direct-to-consumer options. The RSN landscape is evolving rapidly.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═════ KEY DATES ═════ -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Key Dates · 2026 Season</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">Mar 25 · Netflix</div>
+        <div class="tl-title">Opening Night</div>
+        <div class="tl-desc">Yankees @ Giants · Oracle Park · First-ever live MLB on Netflix · 8:05 PM ET</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Mar 26 · League-Wide</div>
+        <div class="tl-title">Opening Day</div>
+        <div class="tl-desc">All 30 teams in action. Season begins.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jun 8 · Netflix</div>
+        <div class="tl-title">Home Run Derby</div>
+        <div class="tl-desc">Philadelphia · First Derby on Netflix · Prime-time event</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jul 14 · FOX</div>
+        <div class="tl-title">All-Star Game</div>
+        <div class="tl-desc">Citizens Bank Park, Philadelphia · 96th Midsummer Classic</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Aug · Netflix</div>
+        <div class="tl-title">Field of Dreams Game</div>
+        <div class="tl-desc">Dyersville, IA · Annual specialty broadcast on Netflix</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Sep 28</div>
+        <div class="tl-title">Regular Season Ends</div>
+        <div class="tl-desc">162 games complete. Wild Card race peaks.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Sep 30 · NBC/Peacock</div>
+        <div class="tl-title">Wild Card Round</div>
+        <div class="tl-desc">Best-of-3 series. All on NBC properties — new exclusive from 2026.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Oct · TBS/FOX</div>
+        <div class="tl-title">Division Series / LCS</div>
+        <div class="tl-desc">Best-of-5 and best-of-7 rounds across TBS, FOX, FS1.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Late Oct · FOX</div>
+        <div class="tl-title">World Series</div>
+        <div class="tl-desc">Best-of-7 · Exclusively on FOX · Dodgers chase three-peat</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════ DIVISIONS ═════ -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">The 30 Teams</h2>
+      <span class="section-sub">2026 alignment</span>
+    </div>
+
+    <div class="divisions-wrap">
+
+      <div class="div-block">
+        <div class="div-title"><span class="div-league">American League</span> · East</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>Toronto Blue Jays</strong> — 2025 AL Champions</div>
+          <div class="team-row"><strong>New York Yankees</strong></div>
+          <div class="team-row"><strong>Boston Red Sox</strong></div>
+          <div class="team-row"><strong>Baltimore Orioles</strong></div>
+          <div class="team-row"><strong>Tampa Bay Rays</strong></div>
+        </div>
+      </div>
+
+      <div class="div-block">
+        <div class="div-title"><span class="div-league">American League</span> · Central</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>Cleveland Guardians</strong></div>
+          <div class="team-row"><strong>Detroit Tigers</strong></div>
+          <div class="team-row"><strong>Kansas City Royals</strong></div>
+          <div class="team-row"><strong>Minnesota Twins</strong></div>
+          <div class="team-row"><strong>Chicago White Sox</strong></div>
+        </div>
+      </div>
+
+      <div class="div-block">
+        <div class="div-title"><span class="div-league">American League</span> · West</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>Houston Astros</strong></div>
+          <div class="team-row"><strong>Seattle Mariners</strong></div>
+          <div class="team-row"><strong>Texas Rangers</strong></div>
+          <div class="team-row"><strong>Los Angeles Angels</strong></div>
+          <div class="team-row"><strong>Athletics</strong> (Sacramento/Vegas transition)</div>
+        </div>
+      </div>
+
+      <div class="div-block">
+        <div class="div-title"><span class="div-league">National League</span> · East</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>Philadelphia Phillies</strong></div>
+          <div class="team-row"><strong>New York Mets</strong></div>
+          <div class="team-row"><strong>Atlanta Braves</strong></div>
+          <div class="team-row"><strong>Miami Marlins</strong> ⚾ <a href="/marlins.html" style="color:var(--neon); font-size:0.75rem;">WBN Beat →</a></div>
+          <div class="team-row"><strong>Washington Nationals</strong></div>
+        </div>
+      </div>
+
+      <div class="div-block">
+        <div class="div-title"><span class="div-league">National League</span> · Central</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>Chicago Cubs</strong></div>
+          <div class="team-row"><strong>Milwaukee Brewers</strong></div>
+          <div class="team-row"><strong>St. Louis Cardinals</strong></div>
+          <div class="team-row"><strong>Cincinnati Reds</strong></div>
+          <div class="team-row"><strong>Pittsburgh Pirates</strong></div>
+        </div>
+      </div>
+
+      <div class="div-block">
+        <div class="div-title"><span class="div-league">National League</span> · West</div>
+        <div class="div-teams">
+          <div class="team-row"><strong>Los Angeles Dodgers</strong> — 2× defending champs · chasing three-peat</div>
+          <div class="team-row"><strong>San Diego Padres</strong></div>
+          <div class="team-row"><strong>Arizona Diamondbacks</strong></div>
+          <div class="team-row"><strong>San Francisco Giants</strong></div>
+          <div class="team-row"><strong>Colorado Rockies</strong></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═════ DID YOU KNOW ═════ -->
+  <div class="did-you-know">
+    <div class="dyk-badge">The Fact</div>
+    <div class="dyk-title">2026 is the Rights Realignment Year — Everything Changed</div>
+    <div class="dyk-body">
+      For 35 years, Sunday Night Baseball lived on ESPN. <strong>That's over.</strong> Starting 2026, the Sunday game moves to NBC/Peacock. ESPN pivoted to become the retail home for MLB.TV, distributing the out-of-market package that MLB itself owns. Netflix entered the ecosystem with marquee events — Opening Night, the Derby, Field of Dreams, and in Japan <strong>all 47 WBC games exclusively</strong>. Apple quietly locked down Friday nights, FOX held the World Series, and TBS kept Tuesdays. If you haven't updated your subscriptions since the 2025 season, you're probably paying for the wrong thing.
+    </div>
+  </div>
+
+  <!-- ═════ WBN FEED ═════ -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Recent MLB Coverage · WBN</h2>
+    </div>
+    <div class="wbn-feed">
+      <div class="feed-head">
+        <div class="feed-title">From World Baseball Network</div>
+        <a href="https://worldbaseball.com/category/mlb" target="_blank" class="feed-link">Full MLB Archive →</a>
+      </div>
+      <div class="feed-items">
+        <div class="feed-item">
+          <div class="fi-cat">MLB · Miami Marlins</div>
+          <div class="fi-title">The Miami Files Issue 2: International Core Dominates Cincinnati</div>
+          <div class="fi-meta">Apr 10, 2026 · Matt Tallarini</div>
+        </div>
+        <div class="feed-item">
+          <div class="fi-cat">MLB · Pipeline</div>
+          <div class="fi-title">Konnor Griffin's MLB Debut — Pirates' #1 Prospect Arrives</div>
+          <div class="fi-meta">Apr 8, 2026 · Matt Tallarini</div>
+        </div>
+        <div class="feed-item">
+          <div class="fi-cat">MLB · Extension</div>
+          <div class="fi-title">Colt Emerson Signs 8-Year, $95M Extension with Mariners</div>
+          <div class="fi-meta">Apr 5, 2026 · Matt Tallarini</div>
+        </div>
+        <div class="feed-item">
+          <div class="fi-cat">MLB · International</div>
+          <div class="fi-title">Sandy Alcántara's Near-Maddux: 8.1 IP, 0 ER, 89 Pitches vs Reds</div>
+          <div class="fi-meta">Apr 7, 2026 · Matt Tallarini</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════ CTA ═════ -->
+  <div class="watch-window" style="background:rgba(0,255,157,0.04); border-color:rgba(0,255,157,0.2); border-left-color:var(--neon);">
+    <div class="ww-title" style="color:var(--neon);">⚡ See What's On This Week</div>
+    <div class="ww-lede">
+      Every MLB game plus NPB, KBO, CPBL, LMB, Italian Serie A, and more — all in one <strong>Official Viewer's Guide</strong>, updated weekly. Game times in NYC/ET. Streaming links verified.
+    </div>
+    <a href="/viewers-guide-may-4.html" style="display:inline-block; margin-top:12px; background:var(--neon); color:#000; font-family:var(--display); font-weight:900; letter-spacing:2px; padding:10px 20px; border-radius:4px; text-transform:uppercase; font-size:0.8rem;">Open This Week's Guide →</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="gf-brand">BASEBALL WITHOUT BORDERS</div>
+      <div class="gf-pub">
+        A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>
+        MLB rights reflect Nov 2025 realignment · Verified Apr 2026
+      </div>
+    </div>
+    <div class="gf-links">
+      <a href="/leagues.html" class="gf-link">← All Leagues</a>
+      <a href="/viewers-guide-may-4.html" class="gf-link">This Week's Guide</a>
+      <a href="/marlins.html" class="gf-link">Marlins Beat</a>
+      <a href="/wbc2026.html" class="gf-link">WBC 2026</a>
+    </div>
+  </div>
+</div>
+
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
