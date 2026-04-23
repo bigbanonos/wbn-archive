@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Viewer's Guide to International Baseball Games | Classic Baseball World</title>
+  <meta name="description" content="The definitive weekly guide to watching professional baseball from every league on Earth. MLB, NPB, KBO, CPBL, LMB, Serie A Italia, and 40+ more. A World Baseball Network publication.">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--orange:#fb923c;--purple:#a78bfa;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+    .site-nav{background:var(--bg2);border-bottom:1px solid var(--rule);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);}
+    .brand-block{display:flex;align-items:center;gap:12px;text-decoration:none;}
+    .wbn-logo{height:42px;width:auto;display:block;}
+    .brand-text{font-family:var(--display);font-weight:900;font-size:.78rem;letter-spacing:1px;line-height:1.15;color:var(--text);max-width:220px;text-transform:uppercase;}
+    .brand-text .t2{color:var(--neon);}
+    .site-nav .navlinks{display:flex;gap:6px;flex-wrap:wrap;}
+    .nav-pill{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);transition:.2s;}
+    .nav-pill:hover{color:var(--text);border-color:var(--text);}
+    .nav-pill.active{color:var(--gold);border-color:var(--gold);}
+    .hq-link{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--neon);border:1px solid var(--neon);padding:6px 14px;border-radius:4px;display:flex;align-items:center;gap:8px;}
+    .live-dot{width:7px;height:7px;background:var(--neon);border-radius:50%;box-shadow:0 0 5px var(--neon);animation:blink 1.8s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .hero{padding:72px 24px 60px;border-bottom:3px solid var(--gold);position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.012) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero-inner{max-width:1300px;margin:0 auto;position:relative;z-index:1;}
+    .hero-issue{font-family:var(--display);font-size:.72rem;font-weight:900;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-family:var(--display);font-size:clamp(3.2rem,10vw,8.5rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-3px;text-transform:uppercase;margin-bottom:18px;}
+    .hero-title .l2{color:var(--neon);display:block;}
+    .hero-title .l3{color:var(--text);display:block;font-size:.42em;font-style:normal;letter-spacing:4px;margin-top:14px;font-weight:700;}
+    .hero-lede{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--muted);max-width:720px;line-height:1.8;margin-top:16px;margin-bottom:32px;}
+    .hero-lede strong{color:var(--text);font-style:normal;}
+    .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;}
+    .cta-primary{background:var(--neon);color:#000;font-family:var(--display);font-weight:900;letter-spacing:2px;padding:14px 28px;border-radius:4px;text-transform:uppercase;font-size:.85rem;transition:.2s;}
+    .cta-primary:hover{background:#fff;transform:translateY(-2px);}
+    .cta-secondary{border:2px solid var(--gold);color:var(--gold);font-family:var(--display);font-weight:900;letter-spacing:2px;padding:12px 26px;border-radius:4px;text-transform:uppercase;font-size:.85rem;transition:.2s;}
+    .cta-secondary:hover{background:var(--gold);color:#000;}
+    .stats-strip{background:var(--bg2);padding:28px 24px;border-bottom:1px solid var(--rule);}
+    .stats-inner{max-width:1300px;margin:0 auto;display:flex;gap:48px;flex-wrap:wrap;justify-content:space-around;}
+    .stat{text-align:center;}
+    .stat-num{font-family:var(--display);font-size:2.3rem;font-weight:900;line-height:1;color:var(--neon);}
+    .stat-lbl{font-family:var(--mono);font-size:.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+    .section{padding:56px 24px;}
+    .section.alt{background:var(--bg2);}
+    .section-inner{max-width:1300px;margin:0 auto;}
+    .section-head{display:flex;align-items:baseline;gap:14px;padding-bottom:16px;margin-bottom:28px;border-bottom:2px solid var(--rule2);flex-wrap:wrap;}
+    .section-num{font-family:var(--mono);font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:3px;}
+    .section-title{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;font-style:italic;letter-spacing:-1px;text-transform:uppercase;line-height:1;}
+    .section-sub{font-family:var(--serif);font-style:italic;color:var(--muted);margin-left:auto;font-size:.95rem;}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+    .card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:24px 22px;transition:.2s;position:relative;overflow:hidden;border-top:4px solid var(--gold);}
+    .card:hover{transform:translateY(-4px);border-color:var(--rule2);background:var(--card2);}
+    .card.neon-top{border-top-color:var(--neon);}
+    .card.accent-top{border-top-color:var(--accent);}
+    .card.blue-top{border-top-color:var(--blue);}
+    .card.purple-top{border-top-color:var(--purple);}
+    .card-lead{font-family:var(--display);font-size:.65rem;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .card.neon-top .card-lead{color:var(--neon);}
+    .card.accent-top .card-lead{color:var(--accent);}
+    .card.blue-top .card-lead{color:var(--blue);}
+    .card.purple-top .card-lead{color:var(--purple);}
+    .card-title{font-family:var(--display);font-size:1.5rem;font-weight:900;letter-spacing:-.5px;line-height:1.05;margin-bottom:10px;text-transform:uppercase;}
+    .card-body{font-family:var(--serif);font-size:.92rem;color:var(--muted);line-height:1.65;margin-bottom:18px;}
+    .card-body strong{color:var(--text);}
+    .card-cta{font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--neon);display:inline-block;}
+    .card:hover .card-cta{color:#fff;}
+    .manifesto{background:linear-gradient(135deg,var(--card) 0%,var(--card2) 100%);border:1px solid var(--rule);border-left:5px solid var(--gold);border-radius:0 10px 10px 0;padding:36px 40px;margin:40px 0;}
+    .manifesto-tag{font-family:var(--display);font-size:.66rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .manifesto-title{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.3rem);font-weight:900;font-style:italic;letter-spacing:-.5px;line-height:1.1;margin-bottom:16px;}
+    .manifesto-body{font-family:var(--serif);font-size:1.05rem;color:var(--muted);line-height:1.8;font-style:italic;}
+    .manifesto-body strong{color:var(--text);font-style:normal;}
+    .footer{border-top:3px solid var(--gold);padding:40px 24px;background:var(--bg2);}
+    .footer-inner{max-width:1300px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;}
+    .gf-brand{display:flex;align-items:center;gap:14px;}
+    .gf-logo{height:56px;width:auto;}
+    .gf-text{font-family:var(--display);font-weight:900;font-size:1rem;letter-spacing:1px;line-height:1.1;text-transform:uppercase;}
+    .gf-text .t2{color:var(--neon);}
+    .gf-pub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:14px;line-height:1.7;}
+    .gf-pub a{color:var(--muted);}.gf-pub a:hover{color:var(--neon);}
+    .gf-links{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end;}
+    .gf-link{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .gf-link:hover{color:var(--neon);}
+    @media (max-width:700px){.site-nav{position:static;}.brand-text{font-size:.62rem;max-width:140px;}.wbn-logo{height:34px;}.hero{padding:48px 20px 40px;}.stats-inner{gap:28px;}.manifesto{padding:24px 22px;}}
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/index.html" class="brand-block">
+    <img src="/assets/img/wbn-logo.jpg" alt="World Baseball Network" class="wbn-logo">
+    <div class="brand-text">Official Viewer's Guide<br><span class="t2">to International Baseball</span></div>
+  </a>
+  <div class="navlinks">
+    <a href="/index.html" class="nav-pill active">Home</a>
+    <a href="/leagues.html" class="nav-pill">Leagues</a>
+    <a href="/schedules.html" class="nav-pill">Schedules</a>
+    <a href="/streaming.html" class="nav-pill">Streaming</a>
+    <a href="/viewers-guide-may-4.html" class="nav-pill">This Week's Guide</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-issue">Issue 001 · 2026 Season · Volume 1</div>
+    <h1 class="hero-title">
+      The Official
+      <span class="l2">Viewer's Guide</span>
+      <span class="l3">to International Baseball Games</span>
+    </h1>
+    <p class="hero-lede">
+      Professional baseball is played in <strong>26 countries on 5 continents</strong> — and until now, nobody has put the whole thing in one place, told you how to watch it, and done it beautifully. We do. <strong>Every league, every country, every schedule, every streaming platform</strong>, in a weekly guide inspired by the Sunday newspapers of the 1980s and built for the screens of today. A publication of the <strong>World Baseball Network</strong>.
+    </p>
+    <div class="hero-ctas">
+      <a href="/viewers-guide-may-4.html" class="cta-primary">Open This Week's Guide →</a>
+      <a href="/leagues.html" class="cta-secondary">Browse All Leagues</a>
+    </div>
+  </div>
+</div>
+
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-num">45+</div><div class="stat-lbl">Leagues Tracked</div></div>
+    <div class="stat"><div class="stat-num">26</div><div class="stat-lbl">Countries</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-lbl">Continents</div></div>
+    <div class="stat"><div class="stat-num">365</div><div class="stat-lbl">Days Per Year</div></div>
+    <div class="stat"><div class="stat-num">1</div><div class="stat-lbl">Viewer's Guide</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-inner">
+    <div class="manifesto">
+      <div class="manifesto-tag">The Vision</div>
+      <h2 class="manifesto-title">Every Game. Every League. Every Sunday.</h2>
+      <p class="manifesto-body">
+        The best hours of American sports media weren't the ESPN highlights or the cable-sub arguments. They were the <strong>Sunday TV Guide inserts</strong> — the glossy, grid-laid, photographed weekly previews that told you exactly what was on, exactly when, and exactly why you should care. We are reviving that format for <strong>international baseball</strong> — the one sport whose global footprint has never been properly served by a weekly guide. MLB. NPB. KBO. CPBL. LMB. Serie A Italia. Hoofdklasse. Baseball United. Winter ball across the Caribbean. Every game, every time zone, every streaming link. <strong>Beautiful on a screen. Printable on a page. Updated every week.</strong>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="section alt">
+  <div class="section-inner">
+    <div class="section-head">
+      <div><div class="section-num">01</div><h2 class="section-title">This Week's Guide</h2></div>
+      <div class="section-sub">Updated every Sunday for the week ahead</div>
+    </div>
+    <div class="card-grid">
+      <a href="/viewers-guide-may-4.html" class="card neon-top">
+        <div class="card-lead">Current Issue · May 4–10</div>
+        <h3 class="card-title">The Weekly Viewer's Guide</h3>
+        <p class="card-body">Every international baseball game this week — <strong>NPB, KBO, CPBL, LMB, Serie A Italia</strong>, plus MLB marquee windows — with times converted to ET, streaming platforms verified, and editorial notes on the matchups that matter.</p>
+        <span class="card-cta">Open Issue 001 →</span>
+      </a>
+      <a href="/wbc2026.html" class="card accent-top">
+        <div class="card-lead">Special Edition</div>
+        <h3 class="card-title">WBC 2026 Complete</h3>
+        <p class="card-body">Full results from the <strong>2026 World Baseball Classic</strong> — Venezuela crowned champions, Italy's Cinderella semifinal run, Team USA's quarterfinal exit.</p>
+        <span class="card-cta">See Results →</span>
+      </a>
+      <a href="/marlins.html" class="card blue-top">
+        <div class="card-lead">WBN Beat Coverage</div>
+        <h3 class="card-title">The Miami Marlins Files</h3>
+        <p class="card-body">Matt Tallarini's beat coverage — the <strong>Marlins' international-pipeline identity</strong> game by game. Cabrera, Alcántara, and the Latin core feeding a new era of South Florida baseball.</p>
+        <span class="card-cta">Open Dashboard →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-inner">
+    <div class="section-head">
+      <div><div class="section-num">02</div><h2 class="section-title">The League Directory</h2></div>
+      <div class="section-sub">Click any league for streaming, schedule, and teams</div>
+    </div>
+    <div class="card-grid">
+      <a href="/leagues.html" class="card neon-top">
+        <div class="card-lead">Filterable Master Index</div>
+        <h3 class="card-title">All 45+ Leagues on Earth</h3>
+        <p class="card-body">Filter by <strong>country, season, cost, or status</strong>. Map of every professional baseball league in the world. Every card links to a full page.</p>
+        <span class="card-cta">Browse the Directory →</span>
+      </a>
+      <a href="/league/mlb.html" class="card accent-top">
+        <div class="card-lead">🇺🇸 United States</div>
+        <h3 class="card-title">Major League Baseball</h3>
+        <p class="card-body">Every platform (<strong>ESPN Unlimited, NBC/Peacock, Apple, Netflix, FOX, TBS, MLB.TV</strong>), all 30 teams, 2026 rights realignment explained.</p>
+        <span class="card-cta">MLB Full Page →</span>
+      </a>
+      <a href="/league/npb.html" class="card accent-top">
+        <div class="card-lead">🇯🇵 Japan</div>
+        <h3 class="card-title">Nippon Professional Baseball</h3>
+        <p class="card-body">The Pacific League + Central League. The <strong>interleague window hack</strong> for US fans. Time zone conversions, streaming breakdown.</p>
+        <span class="card-cta">NPB Full Page →</span>
+      </a>
+      <a href="/league/kbo.html" class="card blue-top">
+        <div class="card-lead">🇰🇷 South Korea · FREE</div>
+        <h3 class="card-title">KBO League</h3>
+        <p class="card-body">Every KBO game streams <strong>free worldwide on SOOP</strong>. 12.3M fans in 2025 — a league record.</p>
+        <span class="card-cta">KBO Full Page →</span>
+      </a>
+      <a href="/league/cpbl.html" class="card blue-top">
+        <div class="card-lead">🇹🇼 Taiwan · 2024 Premier12 Champs</div>
+        <h3 class="card-title">Chinese Professional Baseball League</h3>
+        <p class="card-body">CPBL, home of the <strong>2024 Premier12 world champions</strong>. Wei Chuan Dragons free on YouTube.</p>
+        <span class="card-cta">CPBL Full Page →</span>
+      </a>
+      <a href="/league/lmb.html" class="card purple-top">
+        <div class="card-lead">🇲🇽 Mexico · Summer</div>
+        <h3 class="card-title">Liga Mexicana de Béisbol</h3>
+        <p class="card-body">Mexico's <strong>101st season</strong>. 20 teams, jonron.tv streaming, Diablos Rojos chasing a three-peat.</p>
+        <span class="card-cta">LMB Full Page →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="section alt">
+  <div class="section-inner">
+    <div class="section-head">
+      <div><div class="section-num">03</div><h2 class="section-title">How to Watch Anything</h2></div>
+      <div class="section-sub">Platforms, prices, and territorial restrictions</div>
+    </div>
+    <div class="card-grid">
+      <a href="/streaming.html" class="card neon-top">
+        <div class="card-lead">Master Streaming Guide</div>
+        <h3 class="card-title">Every Platform, Ranked</h3>
+        <p class="card-body">The complete breakdown — <strong>ESPN Unlimited, MLB.TV, Pacific League TV, SOOP, HamiVideo, jonron.tv, BeisbolPlay, FIBSchannel3</strong>, and more. What to pay. What's free. What works in the US.</p>
+        <span class="card-cta">Streaming Intel →</span>
+      </a>
+      <a href="/schedules.html" class="card accent-top">
+        <div class="card-lead">Time Zone Conversions</div>
+        <h3 class="card-title">When to Watch From Anywhere</h3>
+        <p class="card-body">Japan games at 4 AM ET. Italy games at 2 PM. Korea at 5:30 AM. Mexico at 8:30 PM. Every window, every league, every time zone.</p>
+        <span class="card-cta">Schedule Hub →</span>
+      </a>
+      <a href="/movies.html" class="card purple-top">
+        <div class="card-lead">Cinema</div>
+        <h3 class="card-title">The Baseball Movie Database</h3>
+        <p class="card-body">Field of Dreams to Moneyball, Sugar to A League of Their Own — baseball's cinematic canon, curated.</p>
+        <span class="card-cta">Open Archive →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-inner">
+    <div class="manifesto" style="border-left-color:var(--neon);background:linear-gradient(135deg,rgba(0,255,157,.04) 0%,rgba(0,255,157,.01) 100%);">
+      <div class="manifesto-tag" style="color:var(--neon);">Powered By</div>
+      <h2 class="manifesto-title">World Baseball Network</h2>
+      <p class="manifesto-body">
+        <strong>classicbaseball.world</strong> is a publication of the <strong><a href="https://worldbaseball.com" target="_blank" style="color:var(--neon);">World Baseball Network (WBN)</a></strong> — the editorial home for international baseball coverage, from Dominican academies to Japanese stadiums to the Italian Serie A. Visit worldbaseball.com for beat reporting, game recaps, and feature journalism. Visit classicbaseball.world every week for the Official Viewer's Guide.
+      </p>
+      <div style="margin-top:20px;">
+        <a href="https://worldbaseball.com" target="_blank" class="cta-primary" style="background:var(--neon);">Visit WBN HQ →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="gf-brand">
+        <img src="/assets/img/wbn-logo.jpg" alt="WBN" class="gf-logo">
+        <div class="gf-text">Official Viewer's Guide<br><span class="t2">to International Baseball</span></div>
+      </div>
+      <div class="gf-pub">
+        A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>
+        Vol. 1 · Issue 001 · Season 2026 · Verified April 2026
+      </div>
+    </div>
+    <div class="gf-links">
+      <a href="/leagues.html" class="gf-link">Leagues</a>
+      <a href="/schedules.html" class="gf-link">Schedules</a>
+      <a href="/streaming.html" class="gf-link">Streaming</a>
+      <a href="/viewers-guide-may-4.html" class="gf-link">This Week</a>
+      <a href="/marlins.html" class="gf-link">Marlins</a>
+      <a href="/wbc2026.html" class="gf-link">WBC 2026</a>
+      <a href="https://worldbaseball.com" target="_blank" class="gf-link">WBN HQ</a>
+    </div>
+  </div>
+</div>
+
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
