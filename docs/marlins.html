@@ -153,6 +153,7 @@
     .lb-stat-val { font-family: var(--mono); font-size: 1rem; font-weight: 700; color: var(--text); }
     .lb-stat-val.hot { color: var(--neon); }
     .lb-stat-val.gold-val { color: var(--gold); }
+    .lb-stat-val.cold { color: var(--accent); }
     .lb-stat-key { font-size: 0.6rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 1px; }
     .lb-note { font-size: 0.72rem; color: var(--muted); margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(51,65,85,0.5); font-style: italic; }
     .cy-badge {
@@ -227,7 +228,9 @@
       padding: 2px 8px; border-radius: 4px;
     }
     .rb-w { background: rgba(0,255,157,0.1); color: var(--neon); border: 1px solid rgba(0,255,157,0.2); }
+    .rb-l { background: rgba(213,0,50,0.08); color: #ff6b6b; border: 1px solid rgba(213,0,50,0.2); }
     .rb-split { background: rgba(148,163,184,0.08); color: var(--muted); border: 1px solid var(--rule); }
+    .rb-preview { background: rgba(0,163,224,0.08); color: var(--marlin); border: 1px solid rgba(0,163,224,0.2); }
 
     /* ── COMING SOON CARD ── */
     .coming-card {
@@ -309,7 +312,7 @@
 <!-- UPDATE BAR -->
 <div class="update-bar">
   <span class="update-dot"></span>
-  Last updated: April 10, 2026 · Game 14 of 162 · Season record: 8–6 · Next: @ Detroit, April 10 (6:40 PM ET)
+  Last updated: April 24, 2026 · Game 26 of 162 · Season record: 12–13 · Next: @ San Francisco, April 24 (10:15 PM ET)
 </div>
 
 <!-- HERO -->
@@ -319,22 +322,22 @@
   <p class="hero-mission">Tracking the international impact and global development of the 2026 Miami Marlins — the most globally constructed roster in the National League.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <div class="hero-stat-val win">8</div>
+      <div class="hero-stat-val win">12</div>
       <div class="hero-stat-label">Wins</div>
     </div>
     <div class="hero-divider"></div>
     <div class="hero-stat">
-      <div class="hero-stat-val loss">5</div>
+      <div class="hero-stat-val loss">13</div>
       <div class="hero-stat-label">Losses</div>
     </div>
     <div class="hero-divider"></div>
     <div class="hero-stat">
-      <div class="hero-stat-val" style="color:var(--marlin)">T-1st</div>
+      <div class="hero-stat-val" style="color:var(--marlin)">2nd</div>
       <div class="hero-stat-label">NL East</div>
     </div>
     <div class="hero-divider"></div>
     <div class="hero-stat">
-      <div class="hero-stat-val" style="color:var(--gold)">13</div>
+      <div class="hero-stat-val" style="color:var(--gold)">25</div>
       <div class="hero-stat-label">Games Played</div>
     </div>
     <div class="hero-divider"></div>
@@ -351,21 +354,22 @@
 <!-- NEXT GAME -->
 <div class="next-game">
   <div>
-    <div class="ng-label">Up Next · Game 14</div>
-    <div class="ng-matchup">🐬 Marlins @ 🐯 Tigers</div>
-    <div class="ng-detail">Friday, April 10 · 6:40 PM ET · Comerica Park, Detroit · <strong>Watch: Peacock / Bally Sports</strong></div>
+    <div class="ng-label">Up Next · Game 26</div>
+    <div class="ng-matchup">🐬 Marlins @ 🟠 Giants</div>
+    <div class="ng-detail">Friday, April 24 · 10:15 PM ET · Oracle Park, San Francisco · <strong>Sandy Alcántara (2-2, 3.06) vs. Adrian Houser (0-2, 5.40)</strong></div>
   </div>
   <div>
     <div class="ng-label">WBN Angle</div>
-    <div class="ng-detail" style="max-width:260px;">Watch <strong>Michael Petersen (UK)</strong> if it's close late. The Middlesex-born arm has been elite in high-leverage spots.</div>
+    <div class="ng-detail" style="max-width:280px;">Sandy (🇩🇴 Santiago) and Willy Adames (🇩🇴 Santiago) — same country, same pipeline, 60 feet apart. Luis Arráez returns to face his former Miami team for the first time.</div>
   </div>
+  <a href="https://worldbaseball.com/marlins-at-giants-series-preview-sandy-alcantara-opens-friday-at-oracle-park-as-miami-heads-west-chasing-the-nl-wild-card/" target="_blank" class="ng-watch">Full Preview →</a>
 </div>
 
 <!-- INTERNATIONAL LEADERBOARD -->
 <div class="section" id="leaderboard">
   <div class="section-header">
     <span class="section-label">WBN Feature</span>
-    <h2 class="section-title">International Leaderboard — Through Game 13</h2>
+    <h2 class="section-title">International Leaderboard — Through Game 25</h2>
     <span class="section-meta">Updated after every series</span>
   </div>
   <div class="leaderboard">
@@ -376,27 +380,27 @@
         <span class="lb-medal">🥇</span>
       </div>
       <div class="lb-body">
-        <div class="lb-player">Sandy Alcántara <span class="cy-badge">Cy Young Watch</span></div>
-        <div class="lb-country"><span class="flag">🇩🇴</span> Dominican Republic · RHP</div>
+        <div class="lb-player">Javier Sanoja</div>
+        <div class="lb-country"><span class="flag">🇻🇪</span> Venezuela · UT</div>
         <div class="lb-stats">
           <div class="lb-stat">
-            <div class="lb-stat-val gold-val">0.74</div>
-            <div class="lb-stat-key">ERA</div>
+            <div class="lb-stat-val gold-val">.352</div>
+            <div class="lb-stat-key">AVG</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val">24.1</div>
-            <div class="lb-stat-key">IP</div>
+            <div class="lb-stat-val hot">9</div>
+            <div class="lb-stat-key">RBI</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val">18</div>
-            <div class="lb-stat-key">K</div>
+            <div class="lb-stat-val hot">7</div>
+            <div class="lb-stat-key">SB</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val gold-val">2-0</div>
-            <div class="lb-stat-key">W-L</div>
+            <div class="lb-stat-val">.842</div>
+            <div class="lb-stat-key">OPS</div>
           </div>
         </div>
-        <div class="lb-note">Best ERA in the NL. Complete-game shutout vs. CHW on Apr 1. The anchor of this entire rotation.</div>
+        <div class="lb-note">WBC energy became the season. 3-for-4 in Cardinals finale, clutch pinch 2-RBI single vs. MIL. The most versatile weapon on the roster.</div>
       </div>
     </div>
 
@@ -410,23 +414,23 @@
         <div class="lb-country"><span class="flag">🇨🇦</span> Canada · OF/RF</div>
         <div class="lb-stats">
           <div class="lb-stat">
-            <div class="lb-stat-val hot">.324</div>
+            <div class="lb-stat-val hot">.294</div>
             <div class="lb-stat-key">AVG</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val hot">12</div>
+            <div class="lb-stat-val hot">18</div>
             <div class="lb-stat-key">RBI</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val">.997</div>
-            <div class="lb-stat-key">OPS</div>
-          </div>
-          <div class="lb-stat">
-            <div class="lb-stat-val hot">2</div>
+            <div class="lb-stat-val">4</div>
             <div class="lb-stat-key">HR</div>
           </div>
+          <div class="lb-stat">
+            <div class="lb-stat-val">.862</div>
+            <div class="lb-stat-key">OPS</div>
+          </div>
         </div>
-        <div class="lb-note">3-for-4, 3 RBI in series finale vs. CIN. Canadian power leading the lineup's production.</div>
+        <div class="lb-note">Anchoring the middle of the order. Canadian power has been a season-long story — the run production has not wavered through the road stretch.</div>
       </div>
     </div>
 
@@ -440,27 +444,83 @@
         <div class="lb-country"><span class="flag">🇨🇦</span> Canada · C/1B</div>
         <div class="lb-stats">
           <div class="lb-stat">
-            <div class="lb-stat-val hot">13</div>
-            <div class="lb-stat-key">RBI</div>
-          </div>
-          <div class="lb-stat">
-            <div class="lb-stat-val">3</div>
-            <div class="lb-stat-key">HR</div>
-          </div>
-          <div class="lb-stat">
-            <div class="lb-stat-val">.323</div>
+            <div class="lb-stat-val">.289</div>
             <div class="lb-stat-key">AVG</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val hot">1.034</div>
+            <div class="lb-stat-val hot">19</div>
+            <div class="lb-stat-key">RBI</div>
+          </div>
+          <div class="lb-stat">
+            <div class="lb-stat-val">4</div>
+            <div class="lb-stat-key">HR</div>
+          </div>
+          <div class="lb-stat">
+            <div class="lb-stat-val">.871</div>
             <div class="lb-stat-key">OPS</div>
           </div>
         </div>
-        <div class="lb-note">Team-leading 13 RBI. Clutch HR in every series so far. Canadian tandem with Caissie is the engine.</div>
+        <div class="lb-note">HR at Atlanta in the series finale. Team-leading RBI. Canadian tandem with Caissie is the engine through 25.</div>
       </div>
     </div>
 
-    <!-- Honorable Mentions -->
+    <!-- Watch Tier -->
+    <div class="lb-card gold-card">
+      <div class="lb-head">
+        <span class="lb-rank">ACE</span>
+        <span class="lb-medal">⚾</span>
+      </div>
+      <div class="lb-body">
+        <div class="lb-player">Sandy Alcántara <span class="cy-badge">Cy Young Watch</span></div>
+        <div class="lb-country"><span class="flag">🇩🇴</span> Dominican Republic · RHP</div>
+        <div class="lb-stats">
+          <div class="lb-stat">
+            <div class="lb-stat-val">3.06</div>
+            <div class="lb-stat-key">ERA</div>
+          </div>
+          <div class="lb-stat">
+            <div class="lb-stat-val">29.1</div>
+            <div class="lb-stat-key">IP</div>
+          </div>
+          <div class="lb-stat">
+            <div class="lb-stat-val">22</div>
+            <div class="lb-stat-key">K</div>
+          </div>
+          <div class="lb-stat">
+            <div class="lb-stat-val">2-2</div>
+            <div class="lb-stat-key">W-L</div>
+          </div>
+        </div>
+        <div class="lb-note">Opened at 0.74 through three starts. Milwaukee was a 6-walk career-high anomaly. Opens at Oracle Park tonight vs. a cold Giants lineup.</div>
+      </div>
+    </div>
+
+    <div class="lb-card">
+      <div class="lb-head">
+        <span class="lb-rank">RETURN</span>
+        <span class="lb-medal">⚡</span>
+      </div>
+      <div class="lb-body">
+        <div class="lb-player">Kyle Stowers</div>
+        <div class="lb-country"><span class="flag">🇺🇸</span> USA · OF (All-Star)</div>
+        <div class="lb-stats">
+          <div class="lb-stat">
+            <div class="lb-stat-val hot">.333</div>
+            <div class="lb-stat-key">AVG</div>
+          </div>
+          <div class="lb-stat">
+            <div class="lb-stat-val">3-9</div>
+            <div class="lb-stat-key">H-AB</div>
+          </div>
+          <div class="lb-stat">
+            <div class="lb-stat-val">1</div>
+            <div class="lb-stat-key">2B</div>
+          </div>
+        </div>
+        <div class="lb-note">Season debut Apr 19 after hamstring IL — 2-for-3 with a double. All-Star bat back in the lineup changes the depth profile completely.</div>
+      </div>
+    </div>
+
     <div class="lb-card">
       <div class="lb-head">
         <span class="lb-rank">WATCH</span>
@@ -471,19 +531,19 @@
         <div class="lb-country"><span class="flag">🇩🇴</span> Dominican Republic · RHP</div>
         <div class="lb-stats">
           <div class="lb-stat">
-            <div class="lb-stat-val">1-1</div>
+            <div class="lb-stat-val">2-1</div>
             <div class="lb-stat-key">W-L</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val">5.06</div>
+            <div class="lb-stat-val">4.15</div>
             <div class="lb-stat-key">ERA</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val">6</div>
-            <div class="lb-stat-key">K/game</div>
+            <div class="lb-stat-val">22</div>
+            <div class="lb-stat-key">K</div>
           </div>
         </div>
-        <div class="lb-note">Stuff is elite. Command still streaky. First win Apr 8 vs. CIN — signs of the ceiling showing.</div>
+        <div class="lb-note">Won the Brewers finale to end the four-game skid. Saturday at Oracle vs. Robbie Ray is the next checkpoint. The ceiling is elite.</div>
       </div>
     </div>
 
@@ -494,48 +554,48 @@
       </div>
       <div class="lb-body">
         <div class="lb-player">Otto Lopez</div>
-        <div class="lb-country"><span class="flag">🇻🇪</span> Venezuela · SS</div>
+        <div class="lb-country"><span class="flag">🇩🇴</span> Dominican Republic · SS</div>
         <div class="lb-stats">
           <div class="lb-stat">
-            <div class="lb-stat-val">.333</div>
+            <div class="lb-stat-val">.278</div>
             <div class="lb-stat-key">AVG</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val">4</div>
+            <div class="lb-stat-val">13</div>
             <div class="lb-stat-key">RBI</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val">1</div>
+            <div class="lb-stat-val">3</div>
             <div class="lb-stat-key">HR</div>
           </div>
         </div>
-        <div class="lb-note">Contact machine at the top of the order. Plays above his tools every night — the quiet engine.</div>
+        <div class="lb-note">HR to tie the Brewers opener in the 10th. Quiet engine at the top of the order, plays above his tools every night.</div>
       </div>
     </div>
 
     <div class="lb-card">
       <div class="lb-head">
-        <span class="lb-rank">WATCH</span>
-        <span class="lb-medal">⚡</span>
+        <span class="lb-rank">DEBUT</span>
+        <span class="lb-medal">🆕</span>
       </div>
       <div class="lb-body">
-        <div class="lb-player">Javier Sanoja</div>
-        <div class="lb-country"><span class="flag">🇻🇪</span> Venezuela · 3B/CF</div>
+        <div class="lb-player">Leo Jiménez</div>
+        <div class="lb-country"><span class="flag">🇵🇦</span> Panama · INF</div>
         <div class="lb-stats">
           <div class="lb-stat">
-            <div class="lb-stat-val hot">.406</div>
+            <div class="lb-stat-val">.241</div>
             <div class="lb-stat-key">AVG</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val">7</div>
+            <div class="lb-stat-val">5</div>
             <div class="lb-stat-key">RBI</div>
           </div>
           <div class="lb-stat">
-            <div class="lb-stat-val">6</div>
-            <div class="lb-stat-key">SB</div>
+            <div class="lb-stat-val">.977</div>
+            <div class="lb-stat-key">FLD%</div>
           </div>
         </div>
-        <div class="lb-note">WBC energy carried straight into April. Playing all over the diamond. The most versatile weapon on the roster.</div>
+        <div class="lb-note">Panama's newest Marlin held his own through the April grind. The glove has been what the front office advertised — clean, instinctive defense.</div>
       </div>
     </div>
 
@@ -614,8 +674,8 @@
       <tr>
         <td class="gm">9</td><td class="date">Apr 5</td><td class="opp">@NYY</td><td class="score">7–6</td>
         <td><span class="result-w">W</span></td>
-        <td><div class="intl-feature"><span class="intl-flag">🇨🇦</span><div><div class="intl-name">Otto Lopez</div><div class="intl-country">Canada</div></div></div></td>
-        <td class="intl-moment moment-good">2-for-4, RBI single in 8th — stole the series win.</td>
+        <td><div class="intl-feature"><span class="intl-flag">🇩🇴</span><div><div class="intl-name">Otto Lopez</div><div class="intl-country">Dominican Republic</div></div></div></td>
+        <td class="intl-moment moment-good">RBI single in 8th inning rally to steal the series finale.</td>
       </tr>
       <tr>
         <td class="gm">10</td><td class="date">Apr 6</td><td class="opp">CIN</td><td class="score">0–2</td>
@@ -626,17 +686,17 @@
       <tr>
         <td class="gm">11</td><td class="date">Apr 7</td><td class="opp">CIN</td><td class="score">3–6 (10)</td>
         <td><span class="result-l">L</span></td>
-        <td><div class="intl-feature"><span class="intl-flag">🇮🇹</span><div><div class="intl-name">Jakob Marsee</div><div class="intl-country">Italy (Dual)</div></div></div></td>
-        <td class="intl-moment moment-good">Historic 4-steal game; maximized international speed game.</td>
+        <td><div class="intl-feature"><span class="intl-flag">🇩🇴</span><div><div class="intl-name">Sandy Alcántara</div><div class="intl-country">Dominican Republic</div></div></div></td>
+        <td class="intl-moment moment-good">8.1 IP of a potential Maddux; bullpen blew a 2-0 lead in extras.</td>
       </tr>
       <tr>
         <td class="gm">12</td><td class="date">Apr 8</td><td class="opp">CIN</td><td class="score">7–4</td>
         <td><span class="result-w">W</span></td>
         <td><div class="intl-feature"><span class="intl-flag">🇩🇴</span><div><div class="intl-name">Eury Pérez</div><div class="intl-country">Dominican Republic</div></div></div></td>
-        <td class="intl-moment moment-good">5.0 IP, 6 K — bounced back to earn first win of '26.</td>
+        <td class="intl-moment moment-good">First win of 2026; bounced back from Bronx start.</td>
       </tr>
-      <tr style="background:rgba(0,163,224,0.04);">
-        <td class="gm" style="color:var(--marlin);">13</td><td class="date">Apr 9</td><td class="opp">CIN</td><td class="score">8–1</td>
+      <tr>
+        <td class="gm">13</td><td class="date">Apr 9</td><td class="opp">CIN</td><td class="score">8–1</td>
         <td><span class="result-w">W</span></td>
         <td><div class="intl-feature"><span class="intl-flag">🇨🇦</span><div><div class="intl-name">Owen Caissie</div><div class="intl-country">Canada</div></div></div></td>
         <td class="intl-moment moment-good">3-for-4, 2 doubles, 3 RBI — series finale masterpiece.</td>
@@ -644,13 +704,79 @@
       <tr>
         <td class="gm">14</td><td class="date">Apr 10</td><td class="opp">@DET</td><td class="score">0–2</td>
         <td><span class="result-l">L</span></td>
-        <td><div class="intl-feature"><span class="intl-flag">🇵🇦</span><div><div class="intl-name">Leo Jiménez</div><div class="intl-country">Panama</div></div></div></td>
-        <td class="intl-moment" style="color:var(--muted);">Handled 4 defensive chances flawlessly; lineup went cold in Detroit.</td>
+        <td><div class="intl-feature"><span class="intl-flag">🇩🇴</span><div><div class="intl-name">Heriberto Hernández</div><div class="intl-country">Dominican Republic</div></div></div></td>
+        <td class="intl-moment moment-bad">SB #2; bats cold against Keider Montero at Comerica.</td>
+      </tr>
+      <tr>
+        <td class="gm">15</td><td class="date">Apr 11</td><td class="opp">@DET</td><td class="score">1–6</td>
+        <td><span class="result-l">L</span></td>
+        <td><div class="intl-feature"><span class="intl-flag">🇩🇴</span><div><div class="intl-name">Janson Junk</div><div class="intl-country">RHP — took the L</div></div></div></td>
+        <td class="intl-moment moment-bad">Drew Anderson earned his 1st MLB save; Greene 3-run HR.</td>
+      </tr>
+      <tr>
+        <td class="gm">16</td><td class="date">Apr 12</td><td class="opp">@DET</td><td class="score">2–8</td>
+        <td><span class="result-l">L</span></td>
+        <td><div class="intl-feature"><span class="intl-flag">🇩🇴</span><div><div class="intl-name">Sandy Alcántara</div><div class="intl-country">Dominican Republic</div></div></div></td>
+        <td class="intl-moment moment-bad">Skubal goes 6; Dingler 3-run HR seals sweep. First real test failed.</td>
+      </tr>
+      <tr>
+        <td class="gm">17</td><td class="date">Apr 13</td><td class="opp">@ATL</td><td class="score">10–4</td>
+        <td><span class="result-w">W</span></td>
+        <td><div class="intl-feature"><span class="intl-flag">🇨🇺</span><div><div class="intl-name">Agustín Ramírez</div><div class="intl-country">Cuba</div></div></div></td>
+        <td class="intl-moment moment-good">HR; Norby also deep — Marlins punch first at Truist.</td>
+      </tr>
+      <tr>
+        <td class="gm">18</td><td class="date">Apr 14</td><td class="opp">@ATL</td><td class="score">5–6</td>
+        <td><span class="result-l">L</span></td>
+        <td><div class="intl-feature"><span class="intl-flag">🇩🇴</span><div><div class="intl-name">Otto Lopez</div><div class="intl-country">Dominican Republic</div></div></div></td>
+        <td class="intl-moment moment-bad">Lopez RBI single in 8th; Dominic Smith clears the bases for ATL.</td>
+      </tr>
+      <tr>
+        <td class="gm">19</td><td class="date">Apr 15</td><td class="opp">@ATL</td><td class="score">3–6</td>
+        <td><span class="result-l">L</span></td>
+        <td><div class="intl-feature"><span class="intl-flag">🇨🇦</span><div><div class="intl-name">Liam Hicks</div><div class="intl-country">Canada</div></div></div></td>
+        <td class="intl-moment moment-bad">Solo HR on Jackie Robinson Day; Elder went 5.2, 7 K.</td>
+      </tr>
+      <tr>
+        <td class="gm">20</td><td class="date">Apr 17</td><td class="opp">MIL</td><td class="score">5–7 (10)</td>
+        <td><span class="result-l">L</span></td>
+        <td><div class="intl-feature"><span class="intl-flag">🇩🇴</span><div><div class="intl-name">Otto Lopez</div><div class="intl-country">Dominican Republic</div></div></div></td>
+        <td class="intl-moment moment-bad">HR to tie in the 9th; Edwards error in the 10th loses it.</td>
+      </tr>
+      <tr>
+        <td class="gm">21</td><td class="date">Apr 18</td><td class="opp">MIL</td><td class="score">2–5</td>
+        <td><span class="result-l">L</span></td>
+        <td><div class="intl-feature"><span class="intl-flag">🇩🇴</span><div><div class="intl-name">Sandy Alcántara</div><div class="intl-country">Dominican Republic</div></div></div></td>
+        <td class="intl-moment moment-bad">Career-high 6 BB; Woodruff throws 7 shutout-type innings.</td>
+      </tr>
+      <tr>
+        <td class="gm">22</td><td class="date">Apr 19</td><td class="opp">MIL</td><td class="score">5–3</td>
+        <td><span class="result-w">W</span></td>
+        <td><div class="intl-feature"><span class="intl-flag">🇩🇴</span><div><div class="intl-name">Eury Pérez</div><div class="intl-country">Dominican Republic</div></div></div></td>
+        <td class="intl-moment moment-good">Earns W; Stowers 2-for-3 in season debut; Sanoja pinch 2-RBI.</td>
+      </tr>
+      <tr>
+        <td class="gm">23</td><td class="date">Apr 20</td><td class="opp">STL</td><td class="score">5–3</td>
+        <td><span class="result-w">W</span></td>
+        <td><div class="intl-feature"><span class="intl-flag">🇨🇺</span><div><div class="intl-name">Agustín Ramírez</div><div class="intl-country">Cuba</div></div></div></td>
+        <td class="intl-moment moment-good">HR to open the homestand; Meyer gets a no-decision at 3.96.</td>
+      </tr>
+      <tr>
+        <td class="gm">24</td><td class="date">Apr 21</td><td class="opp">STL</td><td class="score">3–5</td>
+        <td><span class="result-l">L</span></td>
+        <td><div class="intl-feature"><span class="intl-flag">🇮🇹</span><div><div class="intl-name">Jakob Marsee</div><div class="intl-country">Italy (Dual)</div></div></div></td>
+        <td class="intl-moment moment-bad">Marsee HR; Hernández 2-RBI late — not enough vs. Dustin May.</td>
+      </tr>
+      <tr style="background:rgba(0,163,224,0.04);">
+        <td class="gm" style="color:var(--marlin);">25</td><td class="date">Apr 22</td><td class="opp">STL</td><td class="score">4–1</td>
+        <td><span class="result-w">W</span></td>
+        <td><div class="intl-feature"><span class="intl-flag">🇻🇪</span><div><div class="intl-name">Javier Sanoja</div><div class="intl-country">Venezuela</div></div></div></td>
+        <td class="intl-moment moment-good">3-for-4; Junk + 5 relievers three-hit the Cards. Series won.</td>
       </tr>
     </tbody>
   </table>
   </div>
-  <div style="font-size:0.72rem;color:var(--muted);margin-top:10px;">* Game 14 (@ DET, Apr 10) not yet final · Table updated after each game</div>
+  <div style="font-size:0.72rem;color:var(--muted);margin-top:10px;">* Table updated after each game · Game 26 tonight at Oracle Park</div>
 </div>
 
 <!-- WEEKLY FILES -->
@@ -662,27 +788,146 @@
   </div>
   <div class="article-grid">
 
+    <!-- FILE 6: Giants Series Preview (newest) -->
+    <div class="file-card">
+      <div class="file-card-head">
+        <div class="file-series">The Miami Files · Issue 6</div>
+        <div class="file-title">Marlins at Giants Preview — Chasing the NL Wild Card</div>
+        <div class="file-date">Published April 24, 2026 · Games 26–28</div>
+      </div>
+      <div class="file-body">
+        <p class="file-lede">
+          The Giants have been shut out four times in 25 games. They opened the season going 20 consecutive scoreless innings to tie a 1909 franchise record. They rank 25th in MLB in wRC+. <strong>Sandy Alcántara opens Friday night at Oracle Park against Adrian Houser</strong> (0-2, 5.40) — the weakest arm in the Giants rotation. With the Mets at 9-16 and the Phillies at 8-17, this is the West Coast trip that either validates the 2026 Marlins as NL Wild Card players or sends them home with questions.
+        </p>
+        <div class="file-players">
+          <span class="player-chip dom">🇩🇴 Alcántara vs. Adames</span>
+          <span class="player-chip ven">🇻🇪 Arráez returns</span>
+          <span class="player-chip dom">🇩🇴 Eury vs. Ray</span>
+          <span class="player-chip">Meyer vs. Roupp</span>
+        </div>
+        <div class="file-result">
+          <span class="result-badge rb-preview">SERIES PREVIEW</span>
+          <a href="https://worldbaseball.com/marlins-at-giants-series-preview-sandy-alcantara-opens-friday-at-oracle-park-as-miami-heads-west-chasing-the-nl-wild-card/" target="_blank" style="color:var(--marlin);font-weight:700;">Read the full preview →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILE 5: Cardinals Series -->
+    <div class="file-card">
+      <div class="file-card-head">
+        <div class="file-series">The Miami Files · Issue 5</div>
+        <div class="file-title">Cardinals Series Won — Junk and the Bullpen Three-Hit St. Louis</div>
+        <div class="file-date">Published April 22, 2026 · Games 23–25</div>
+      </div>
+      <div class="file-body">
+        <p class="file-lede">
+          Miami took 2 of 3 from the Cardinals behind <strong>Agustín Ramírez's HR</strong> in the opener and <strong>Janson Junk combining with five relievers</strong> on a three-hitter in the 4-1 finale. <strong>Javier Sanoja went 3-for-4</strong> in the series closer to push his average to .352. The Marlins hand the rotation to Sandy for the flight to San Francisco with the momentum of a home series win.
+        </p>
+        <div class="file-players">
+          <span class="player-chip dom">🇨🇺 Ramírez</span>
+          <span class="player-chip ven">🇻🇪 Sanoja</span>
+          <span class="player-chip">Junk</span>
+          <span class="player-chip">Fairbanks (Save #5)</span>
+        </div>
+        <div class="file-result">
+          <span class="result-badge rb-w">SERIES WON 2–1</span>
+          <span>Season record: 12–13 · Back near .500 before SF</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILE 4: Brewers Series -->
+    <div class="file-card">
+      <div class="file-card-head">
+        <div class="file-series">The Miami Files · Issue 4</div>
+        <div class="file-title">Brewers Series Lost — Sandy's 6-Walk Game, Eury Saves Finale</div>
+        <div class="file-date">Published April 19, 2026 · Games 20–22</div>
+      </div>
+      <div class="file-body">
+        <p class="file-lede">
+          The four-game skid ended Sunday when <strong>Eury Pérez earned the win</strong> and <strong>Kyle Stowers returned from hamstring IL</strong> with a 2-for-3 debut. The series was lost on two of the toughest nights of the young season: <strong>Otto Lopez's HR to tie the opener</strong> undone by an Edwards error in the 10th, and Sandy's <strong>career-high 6 walks</strong> in a Woodruff-authored 5-2 loss.
+        </p>
+        <div class="file-players">
+          <span class="player-chip dom">🇩🇴 Pérez (W)</span>
+          <span class="player-chip">Stowers (debut)</span>
+          <span class="player-chip ven">🇻🇪 Sanoja (pinch RBI)</span>
+          <span class="player-chip dom">🇩🇴 Lopez</span>
+        </div>
+        <div class="file-result">
+          <span class="result-badge rb-l">SERIES LOST 1–2</span>
+          <span>Stowers return was the real story</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILE 3: Atlanta Road Series -->
+    <div class="file-card">
+      <div class="file-card-head">
+        <div class="file-series">The Miami Files · Issue 3</div>
+        <div class="file-title">Atlanta Road Trip — Miami Punches First, Smith Punches Back</div>
+        <div class="file-date">Published April 15, 2026 · Games 17–19</div>
+      </div>
+      <div class="file-body">
+        <p class="file-lede">
+          Miami opened with a <strong>10-4 statement win</strong> behind Ramírez and Norby HRs, then dropped consecutive games — <strong>Dominic Smith cleared the bases</strong> with a three-run double in the 8th of Game 2, and <strong>Bryce Elder struck out seven</strong> on Jackie Robinson Day to close the series. NL East's two most international rosters collided and the Braves took 2 of 3.
+        </p>
+        <div class="file-players">
+          <span class="player-chip dom">🇨🇺 Ramírez</span>
+          <span class="player-chip">Norby</span>
+          <span class="player-chip ven">🇻🇪 Lopez</span>
+          <span class="player-chip">Paddack</span>
+        </div>
+        <div class="file-result">
+          <span class="result-badge rb-l">SERIES LOST 1–2</span>
+          <span>10-4 opener was the calling card</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILE 2.5: Detroit Sweep -->
+    <div class="file-card">
+      <div class="file-card-head">
+        <div class="file-series">The Miami Files · Issue 2.5</div>
+        <div class="file-title">Swept in Detroit — Three Games, Zero Answers</div>
+        <div class="file-date">Published April 13, 2026 · Games 14–16</div>
+      </div>
+      <div class="file-body">
+        <p class="file-lede">
+          Detroit swept Miami on offensive silence. <strong>Kenley Jansen recorded career save #478</strong> in the opener. <strong>Drew Anderson earned his first MLB save</strong> in Game 2. <strong>Tarik Skubal and Dillon Dingler's three-run HR</strong> closed the sweep. A cold-bat road trip that exposed the depth questions early.
+        </p>
+        <div class="file-players">
+          <span class="player-chip">Paddack (L)</span>
+          <span class="player-chip dom">🇩🇴 Junk (L)</span>
+          <span class="player-chip dom">🇩🇴 Alcántara (L)</span>
+        </div>
+        <div class="file-result">
+          <span class="result-badge rb-l">SWEPT 0–3</span>
+          <span>First real test of the season, and it was failed</span>
+        </div>
+      </div>
+    </div>
+
     <!-- FILE 2: Reds Series -->
     <div class="file-card">
       <div class="file-card-head">
         <div class="file-series">The Miami Files · Issue 2</div>
-        <div class="file-title">The Reds Series: International Core Dominates Cincinnati</div>
+        <div class="file-title">The Reds Series — International Core Dominates Cincinnati</div>
         <div class="file-date">Published April 10, 2026 · Games 10–13</div>
       </div>
       <div class="file-body">
         <p class="file-lede">
-          Miami split the four-game set with Cincinnati but the numbers told a different story than the record. <strong>Sandy Alcántara's 8.1-inning clinic</strong> in Game 11 was one of the best starts of the young season — a bullpen implosion in extras the only reason he didn't have a 3-0 record. <strong>Owen Caissie</strong> closed the series with a statement: 3-for-4, two doubles, three RBI in the finale. The international core isn't just contributing — it's carrying.
+          Miami split the four-game set with Cincinnati but the numbers told a different story than the record. <strong>Sandy Alcántara's 8.1-inning clinic</strong> in Game 11 was one of the best starts of the young season — a bullpen implosion in extras the only reason he didn't have a 3-0 record. <strong>Owen Caissie</strong> closed the series with a statement: 3-for-4, two doubles, three RBI in the finale.
         </p>
         <div class="file-players">
           <span class="player-chip dom">🇩🇴 Alcántara</span>
-          <span class="player-chip dom">🇩🇴 Pérez — 1st Win</span>
+          <span class="player-chip dom">🇩🇴 Pérez (1st W)</span>
           <span class="player-chip">🇨🇦 Caissie</span>
           <span class="player-chip">🇨🇦 Hicks</span>
           <span class="player-chip ven">🇵🇦 Jiménez</span>
         </div>
         <div class="file-result">
           <span class="result-badge rb-split">SERIES SPLIT 2–2</span>
-          <span>Season record moves to 8–5</span>
+          <span>Season record moved to 8–5</span>
         </div>
       </div>
     </div>
@@ -691,31 +936,24 @@
     <div class="file-card">
       <div class="file-card-head">
         <div class="file-series">The Miami Files · Issue 1</div>
-        <div class="file-title">Yankee Stadium Encore: WBC Form Is Permanent</div>
+        <div class="file-title">Yankee Stadium Encore — WBC Form Is Permanent</div>
         <div class="file-date">Published April 6, 2026 · Games 7–9</div>
       </div>
       <div class="file-body">
         <p class="file-lede">
-          Miami went into Yankee Stadium and split the three-game set — stealing the finale on <strong>Otto Lopez's</strong> clutch single and a four-run 8th inning. <strong>Javier Sanoja</strong> carried his WBC momentum through Game 8 with a crucial 2-run double. The loss in Game 7 exposed Eury Pérez's command issues at the highest level. The win in Game 9 proved the character is real.
+          Miami went into Yankee Stadium and stole the finale on <strong>Otto Lopez's</strong> clutch single and a late rally. <strong>Heriberto Hernández's 2-RBI triple</strong> drove Game 8. The loss in Game 7 exposed Eury Pérez's command issues at the highest level. The win in Game 9 proved the character is real.
         </p>
         <div class="file-players">
           <span class="player-chip ven">🇻🇪 Sanoja</span>
-          <span class="player-chip ven">🇻🇪 Lopez</span>
+          <span class="player-chip dom">🇩🇴 Lopez</span>
           <span class="player-chip dom">🇩🇴 Pérez</span>
           <span class="player-chip">🇬🇧 Petersen</span>
         </div>
         <div class="file-result">
-          <span class="result-badge rb-split">SERIES SPLIT 1–2</span>
-          <span>Stealing Game 9 was the character play</span>
+          <span class="result-badge rb-split">SERIES LOST 1–2</span>
+          <span>Game 9 was the character play</span>
         </div>
       </div>
-    </div>
-
-    <!-- COMING SOON -->
-    <div class="coming-card">
-      <div class="coming-icon">📝</div>
-      <div class="coming-title">Detroit Series Preview</div>
-      <div class="coming-sub">Games 14–17 · Apr 10–13 · Publishing after the series</div>
     </div>
 
   </div>
@@ -731,17 +969,17 @@
     <div style="background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;">
       <div style="font-size:1.2rem;margin-bottom:4px;">🇩🇴</div>
       <div style="font-weight:700;font-size:0.9rem;">Dominican Republic</div>
-      <div style="font-size:0.72rem;color:var(--muted);margin-top:2px;">Alcántara, Pérez, Sanoja</div>
+      <div style="font-size:0.72rem;color:var(--muted);margin-top:2px;">Alcántara, Pérez, Lopez, Hernández</div>
     </div>
     <div style="background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;">
       <div style="font-size:1.2rem;margin-bottom:4px;">🇨🇦</div>
       <div style="font-weight:700;font-size:0.9rem;">Canada</div>
-      <div style="font-size:0.72rem;color:var(--muted);margin-top:2px;">Caissie, Hicks, Lopez</div>
+      <div style="font-size:0.72rem;color:var(--muted);margin-top:2px;">Caissie, Hicks</div>
     </div>
     <div style="background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;">
       <div style="font-size:1.2rem;margin-bottom:4px;">🇻🇪</div>
       <div style="font-weight:700;font-size:0.9rem;">Venezuela</div>
-      <div style="font-size:0.72rem;color:var(--muted);margin-top:2px;">Sanoja, Acosta</div>
+      <div style="font-size:0.72rem;color:var(--muted);margin-top:2px;">Sanoja</div>
     </div>
     <div style="background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;">
       <div style="font-size:1.2rem;margin-bottom:4px;">🇵🇦</div>
@@ -756,12 +994,17 @@
     <div style="background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;">
       <div style="font-size:1.2rem;margin-bottom:4px;">🇨🇺</div>
       <div style="font-weight:700;font-size:0.9rem;">Cuba</div>
-      <div style="font-size:0.72rem;color:var(--muted);margin-top:2px;">Ramírez, Hernández</div>
+      <div style="font-size:0.72rem;color:var(--muted);margin-top:2px;">Ramírez, Vargas</div>
     </div>
     <div style="background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;">
       <div style="font-size:1.2rem;margin-bottom:4px;">🇮🇹</div>
       <div style="font-weight:700;font-size:0.9rem;">Italy</div>
       <div style="font-size:0.72rem;color:var(--muted);margin-top:2px;">Jakob Marsee (WBC Dual)</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;">
+      <div style="font-size:1.2rem;margin-bottom:4px;">🇲🇽</div>
+      <div style="font-weight:700;font-size:0.9rem;">Mexico</div>
+      <div style="font-size:0.72rem;color:var(--muted);margin-top:2px;">Xavier Edwards (Dual)</div>
     </div>
     <div style="background:var(--card);border:1px solid rgba(0,163,224,0.2);border-radius:8px;padding:12px 14px;">
       <div style="font-size:1.2rem;margin-bottom:4px;">🌍</div>
@@ -778,7 +1021,7 @@
     Beat by <strong style="color:var(--text)">Matt Tallarini</strong> · <a href="https://worldbaseball.com" target="_blank">World Baseball Network</a> · WBN Certified SDVOSB
   </div>
   <div style="text-align:right;">
-    <div>2026 Season · Updated April 10, 2026</div>
+    <div>2026 Season · Updated April 24, 2026</div>
     <div style="margin-top:4px;">
       <a href="/">Home</a> · <a href="/streaming.html">Streaming</a> · <a href="/schedules.html">Schedules</a> · <a href="/wbc2026.html">WBC 2026</a>
     </div>
