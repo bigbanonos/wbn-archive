@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venezuela WBC 2026 Champions — Full Roster | Official Viewer's Guide</title>
+  <meta name="description" content="The complete 2026 World Baseball Classic championship roster of Team Venezuela. 16 pitchers, 13 hitters. Stats, birthplaces, MLB affiliations. Verified via Baseball Reference.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--ven:#CF142B;--ven2:#FCD116;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+
+    .site-nav{background:var(--bg2);border-bottom:1px solid var(--rule);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+    .brand-block{display:flex;align-items:center;gap:12px;}
+    .wbn-logo{height:38px;}
+    .brand-text{font-family:var(--display);font-weight:900;font-size:.72rem;letter-spacing:1px;line-height:1.15;text-transform:uppercase;}
+    .brand-text .t2{color:var(--neon);}
+    .navlinks{display:flex;gap:6px;flex-wrap:wrap;}
+    .nav-pill{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);}
+    .nav-pill:hover{color:var(--text);border-color:var(--text);}
+    .hq-link{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--neon);border:1px solid var(--neon);padding:6px 14px;border-radius:4px;display:flex;align-items:center;gap:8px;}
+    .live-dot{width:7px;height:7px;background:var(--neon);border-radius:50%;animation:blink 1.8s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .crumbs{padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .crumbs a{color:var(--muted);}.crumbs a:hover{color:var(--neon);}.crumbs span{color:var(--gold);}
+
+    /* HERO */
+    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--ven);background:linear-gradient(180deg,#1a0008 0%,#0a0f1e 100%);position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(207,20,43,.04) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero-inner{max-width:1300px;margin:0 auto;position:relative;z-index:1;}
+    .champ-banner{display:inline-block;background:linear-gradient(90deg,var(--ven) 0%,var(--ven2) 100%);color:#000;font-family:var(--display);font-size:.7rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;padding:6px 14px;border-radius:3px;margin-bottom:14px;}
+    .hero-flag-row{display:flex;align-items:center;gap:18px;margin-bottom:20px;flex-wrap:wrap;}
+    .hero-flag{font-size:3.6rem;line-height:1;}
+    .hero-title{font-family:var(--display);font-size:clamp(2.6rem,7vw,5.4rem);font-weight:900;font-style:italic;line-height:.9;letter-spacing:-1.8px;text-transform:uppercase;}
+    .hero-title .l2{color:var(--ven2);display:block;}
+    .hero-sub{font-family:var(--display);font-size:clamp(.95rem,1.6vw,1.2rem);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:8px;margin-bottom:22px;}
+    .hero-lede{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--muted);max-width:760px;line-height:1.8;margin-bottom:24px;}
+    .hero-lede strong{color:var(--text);font-style:normal;}
+    .hero-stats{display:flex;gap:36px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--rule2);}
+    .hs-num{font-family:var(--display);font-size:1.9rem;font-weight:900;line-height:1;color:var(--ven2);}
+    .hs-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+
+    /* PAGE */
+    .page{max-width:1300px;margin:0 auto;padding:36px 24px 64px;}
+
+    /* FILTER BAR */
+    .filter-bar{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:18px 22px;margin-bottom:32px;position:sticky;top:8px;z-index:10;backdrop-filter:blur(8px);}
+    .filter-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+    .filter-search{flex:1;min-width:240px;background:var(--bg2);border:1px solid var(--rule2);border-radius:6px;padding:10px 14px;color:var(--text);font-family:var(--mono);font-size:.9rem;}
+    .filter-search::placeholder{color:var(--dim);}
+    .filter-search:focus{outline:none;border-color:var(--ven2);}
+    .filter-pills{display:flex;gap:6px;flex-wrap:wrap;}
+    .fp{font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:1.5px;padding:7px 14px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);text-transform:uppercase;cursor:pointer;background:transparent;transition:.15s;}
+    .fp:hover{color:var(--text);border-color:var(--text);}
+    .fp.active{background:var(--ven);border-color:var(--ven);color:#fff;}
+    .fp.active.bat{background:var(--ven2);border-color:var(--ven2);color:#000;}
+    .filter-count{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-left:auto;}
+
+    /* SECTION HEADERS */
+    .roster-section{margin-bottom:48px;}
+    .rs-head{display:flex;align-items:baseline;gap:14px;padding-bottom:12px;margin-bottom:20px;border-bottom:2px solid var(--rule2);}
+    .rs-num{font-family:var(--mono);font-size:.7rem;color:var(--ven2);font-weight:700;letter-spacing:2px;}
+    .rs-title{font-family:var(--display);font-size:1.5rem;font-weight:900;font-style:italic;letter-spacing:-.5px;text-transform:uppercase;}
+    .rs-meta{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-left:auto;}
+
+    /* PLAYER GRID */
+    .player-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;}
+    .player-card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:18px 20px;border-left:4px solid var(--rule2);transition:.15s;}
+    .player-card:hover{border-color:var(--ven2);transform:translateY(-2px);background:var(--card2);}
+    .player-card.pitcher{border-left-color:var(--ven);}
+    .player-card.batter{border-left-color:var(--ven2);}
+    .player-card.hidden{display:none;}
+    .pc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px;}
+    .pc-name{font-family:var(--display);font-size:1.25rem;font-weight:900;letter-spacing:-.3px;line-height:1.1;text-transform:uppercase;}
+    .pc-name a{color:var(--text);}
+    .pc-name a:hover{color:var(--ven2);}
+    .pc-pos{font-family:var(--display);font-size:.62rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;padding:3px 8px;border-radius:3px;background:var(--bg2);color:var(--ven);white-space:nowrap;}
+    .pc-pos.bat{color:var(--ven2);}
+    .pc-bio{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-bottom:10px;line-height:1.5;}
+    .pc-bio strong{color:var(--text);}
+    .pc-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:12px;padding:10px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+    .stat-cell{text-align:center;}
+    .stat-val{font-family:var(--display);font-weight:900;font-size:1.05rem;color:var(--ven2);line-height:1;}
+    .stat-key{font-family:var(--mono);font-size:.55rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:3px;}
+    .pc-links{display:flex;gap:8px;flex-wrap:wrap;}
+    .pc-link{font-family:var(--mono);font-size:.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding:4px 9px;border:1px solid var(--rule2);border-radius:3px;transition:.15s;}
+    .pc-link:hover{color:var(--ven2);border-color:var(--ven2);}
+    .pc-link.youtube:hover{color:var(--accent);border-color:var(--accent);}
+
+    /* CREDIT */
+    .credit-block{background:linear-gradient(135deg,rgba(245,200,66,.05) 0%,rgba(207,20,43,.04) 100%);border:1px solid var(--rule);border-left:4px solid var(--gold);border-radius:6px;padding:18px 24px;margin-bottom:32px;}
+    .credit-tag{font-family:var(--display);font-size:.62rem;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+    .credit-body{font-family:var(--serif);font-size:.92rem;color:var(--muted);line-height:1.7;}
+    .credit-body strong{color:var(--text);}
+    .credit-body a{color:var(--ven2);text-decoration:underline;}
+    .credit-body a:hover{color:var(--neon);}
+
+    /* FOOTER */
+    .footer{border-top:2px solid var(--ven);padding:32px 24px;background:var(--bg2);margin-top:48px;}
+    .footer-inner{max-width:1300px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+    .gf-brand{font-family:var(--display);font-size:1.2rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;}
+    .gf-pub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:6px;line-height:1.7;}
+    .gf-pub a{color:var(--muted);}
+    .gf-pub a:hover{color:var(--neon);}
+    .gf-links{display:flex;gap:12px;flex-wrap:wrap;}
+    .gf-link{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .gf-link:hover{color:var(--neon);}
+
+    @media(max-width:600px){
+      .filter-bar{position:static;}
+      .pc-stats{grid-template-columns:repeat(3,1fr);}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/index.html" class="brand-block">
+    <img src="/assets/img/wbn-logo.jpg" alt="WBN" class="wbn-logo">
+    <div class="brand-text">Official Viewer's Guide<br><span class="t2">to International Baseball</span></div>
+  </a>
+  <div class="navlinks">
+    <a href="/index.html" class="nav-pill">Home</a>
+    <a href="/leagues.html" class="nav-pill">Leagues</a>
+    <a href="/schedules.html" class="nav-pill">Schedules</a>
+    <a href="/streaming.html" class="nav-pill">Streaming</a>
+    <a href="/viewers-guide-may-4.html" class="nav-pill">Viewer's Guide</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+</nav>
+
+<div class="crumbs"><a href="/index.html">Home</a> / <a href="/wbc2026.html">WBC 2026</a> / <span>Venezuela Championship Roster</span></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="champ-banner">🏆 World Baseball Classic Champions 2026</div>
+    <div class="hero-flag-row">
+      <span class="hero-flag">🇻🇪</span>
+      <div>
+        <h1 class="hero-title">
+          Venezuela
+          <span class="l2">The Championship Roster</span>
+        </h1>
+        <div class="hero-sub">29 Players · 6-1 Tournament Record · 1st WBC Title in National History</div>
+      </div>
+    </div>
+    <p class="hero-lede">
+      The complete roster of <strong>Team Venezuela's first World Baseball Classic championship</strong>. Manager Omar López. MVP <strong>Maikel García</strong>. 16 pitchers led by <strong>Daniel Palencia (3 saves, 0.00 ERA)</strong> and <strong>Eduardo Rodríguez</strong>. 13 hitters anchored by Acuña Jr., Salvador Pérez, Suárez, Arraez, and breakout star Ezequiel Tovar (.471 BA). Browse, search, filter — and click through to <strong>each player's full Baseball Reference page</strong> for career history, or YouTube for highlights.
+    </p>
+    <div class="hero-stats">
+      <div><div class="hs-num">29</div><div class="hs-lbl">Players</div></div>
+      <div><div class="hs-num">6-1</div><div class="hs-lbl">Record</div></div>
+      <div><div class="hs-num">2.86</div><div class="hs-lbl">Team ERA</div></div>
+      <div><div class="hs-num">.261</div><div class="hs-lbl">Team BA</div></div>
+      <div><div class="hs-num">10</div><div class="hs-lbl">Team HR</div></div>
+      <div><div class="hs-num">9.6</div><div class="hs-lbl">K/9</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="credit-block">
+    <div class="credit-tag">★ Stats Verified</div>
+    <div class="credit-body">
+      All player statistics, birthplaces, and biographical data on this page are sourced from <a href="https://www.baseball-reference.com/register/league.cgi?id=fa20f1ed" target="_blank"><strong>Baseball Reference's 2026 World Baseball Classic register</strong></a> — the authoritative reference for international baseball statistics. Click any player's name to visit their full Baseball Reference page. Click "Highlights" to find their plays on YouTube. <em>This page is a curated index, not a database — credit and traffic flows back to the source.</em>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filter-row">
+      <input type="text" id="searchInput" class="filter-search" placeholder="Search by player name…" oninput="filterPlayers()">
+      <div class="filter-pills">
+        <button class="fp active" data-filter="all" onclick="setFilter('all')">All 29</button>
+        <button class="fp" data-filter="pitcher" onclick="setFilter('pitcher')">Pitchers (16)</button>
+        <button class="fp bat" data-filter="batter" onclick="setFilter('batter')">Hitters (13)</button>
+      </div>
+      <span class="filter-count" id="filterCount">29 players</span>
+    </div>
+  </div>
+
+  <!-- HITTERS SECTION -->
+  <div class="roster-section" id="hittersSection">
+    <div class="rs-head">
+      <span class="rs-num">01</span>
+      <h2 class="rs-title">Hitters</h2>
+      <span class="rs-meta">13 players · .261 / .335 / .440</span>
+    </div>
+    <div class="player-grid" id="hittersGrid">
+
+      <!-- MAIKEL GARCIA - MVP -->
+      <div class="player-card batter" data-name="maikel garcia" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=garcia003mai" target="_blank">Maikel García 🏆</a></div>
+          <span class="pc-pos bat">3B · MVP</span>
+        </div>
+        <div class="pc-bio">Age 26 · La Sabana, Vargas, VE · R/R · 6'1" 180 · <strong>Tournament MVP</strong> · Kansas City Royals</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.385</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">7</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">.970</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=garcia003mai" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Maikel+Garcia+WBC+2026+highlights" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- EZEQUIEL TOVAR -->
+      <div class="player-card batter" data-name="ezequiel tovar" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=tovar-001eze" target="_blank">Ezequiel Tovar</a></div>
+          <span class="pc-pos bat">SS</span>
+        </div>
+        <div class="pc-bio">Age 24 · Maracay, Aragua, VE · R/R · 6'0" 192 · Colorado Rockies · <strong>Best BA on team</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.471</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">1.147</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=tovar-001eze" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Ezequiel+Tovar+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- LUIS ARRAEZ -->
+      <div class="player-card batter" data-name="luis arraez" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=arraez000lui" target="_blank">Luis Arráez</a></div>
+          <span class="pc-pos bat">1B/2B</span>
+        </div>
+        <div class="pc-bio">Age 29 · San Felipe, Yaracuy, VE · L/R · 5'10" 186 · 3x batting champion · San Diego Padres</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.308</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">10</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">1.059</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=arraez000lui" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Luis+Arraez+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- RONALD ACUÑA JR -->
+      <div class="player-card batter" data-name="ronald acuna" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=acunaro01" target="_blank">Ronald Acuña Jr.</a></div>
+          <span class="pc-pos bat">RF</span>
+        </div>
+        <div class="pc-bio">Age 28 · La Guaira, La Guaira, VE · R/R · 6'0" 205 · Atlanta Braves · 2023 NL MVP</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.269</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">4</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">.963</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=acunaro01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Ronald+Acuna+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- WILYER ABREU -->
+      <div class="player-card batter" data-name="wilyer abreu" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=abreuwi01" target="_blank">Wilyer Abreu</a></div>
+          <span class="pc-pos bat">LF</span>
+        </div>
+        <div class="pc-bio">Age 27 · Maracaibo, Zulia, VE · L/L · 5'10" 215 · Boston Red Sox · <strong>Final Game HR</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.250</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">7</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">.845</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=abreuwi01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Wilyer+Abreu+WBC+Final+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- EUGENIO SUAREZ -->
+      <div class="player-card batter" data-name="eugenio suarez" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=suareeu01" target="_blank">Eugenio Suárez</a></div>
+          <span class="pc-pos bat">3B/1B</span>
+        </div>
+        <div class="pc-bio">Age 34 · Puerto Ordaz, Bolivar, VE · R/R · 5'11" 213 · Arizona Diamondbacks · <strong>9th-inning RBI double in Final</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.200</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">4</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">.788</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=suareeu01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Eugenio+Suarez+WBC+2026+9th+inning" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- SALVADOR PEREZ -->
+      <div class="player-card batter" data-name="salvador perez" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=perezsa02" target="_blank">Salvador Pérez</a></div>
+          <span class="pc-pos bat">C · Captain</span>
+        </div>
+        <div class="pc-bio">Age 36 · Valencia, Carabobo, VE · R/R · 6'2" 255 · Kansas City Royals · <strong>Team Captain · 4th WBC</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.182</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">.364</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=perezsa02" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Salvador+Perez+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- WILLIAM CONTRERAS -->
+      <div class="player-card batter" data-name="william contreras" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=contrwi01" target="_blank">William Contreras</a></div>
+          <span class="pc-pos bat">C</span>
+        </div>
+        <div class="pc-bio">Age 28 · Puerto Cabello, Carabobo, VE · R/R · 5'10" 217 · Milwaukee Brewers</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.000</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">.188</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=contrwi01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=William+Contreras+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- WILLSON CONTRERAS -->
+      <div class="player-card batter" data-name="willson contreras" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=contrwi02" target="_blank">Willson Contreras</a></div>
+          <span class="pc-pos bat">1B/C</span>
+        </div>
+        <div class="pc-bio">Age 34 · Puerto Cabello, Carabobo, VE · R/R · 6'0" 240 · St. Louis Cardinals</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.250</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">3</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">.558</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=contrwi02" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Willson+Contreras+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- GLEYBER TORRES -->
+      <div class="player-card batter" data-name="gleyber torres" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=torregl01" target="_blank">Gleyber Torres</a></div>
+          <span class="pc-pos bat">2B</span>
+        </div>
+        <div class="pc-bio">Age 29 · Caracas, Distrito Federal, VE · R/R · 5'10" 205 · Detroit Tigers</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.250</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">.681</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=torregl01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Gleyber+Torres+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- JACKSON CHOURIO -->
+      <div class="player-card batter" data-name="jackson chourio" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=chourja01" target="_blank">Jackson Chourio</a></div>
+          <span class="pc-pos bat">CF</span>
+        </div>
+        <div class="pc-bio">Age 22 · Maracaibo, Zulia, VE · R/R · 6'1" 199 · Milwaukee Brewers · <strong>Future star</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.200</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">.478</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=chourja01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Jackson+Chourio+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- JAVIER SANOJA -->
+      <div class="player-card batter" data-name="javier sanoja" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=sanojja01" target="_blank">Javier Sanoja</a></div>
+          <span class="pc-pos bat">UTIL</span>
+        </div>
+        <div class="pc-bio">Age 23 · Maracay, Aragua, VE · R/R · 5'7" 150 · Miami Marlins · <strong>Stole 2B in 9th of Final</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.375</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">1.125</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=sanojja01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Javier+Sanoja+WBC+stolen+base" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- ANDRES GIMENEZ -->
+      <div class="player-card batter" data-name="andres gimenez" data-type="batter">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=gimenan01" target="_blank">Andrés Giménez</a></div>
+          <span class="pc-pos bat">2B/SS</span>
+        </div>
+        <div class="pc-bio">Age 27 · Barquisimeto, Lara, VE · L/R · 5'11" 161 · Toronto Blue Jays · <strong>Gold Glove infielder</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">.111</div><div class="stat-key">BA</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">RBI</div></div>
+          <div class="stat-cell"><div class="stat-val">.384</div><div class="stat-key">OPS</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=gimenan01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Andres+Gimenez+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PITCHERS SECTION -->
+  <div class="roster-section" id="pitchersSection">
+    <div class="rs-head">
+      <span class="rs-num">02</span>
+      <h2 class="rs-title">Pitchers</h2>
+      <span class="rs-meta">16 players · 2.86 ERA · 67 K · 1.032 WHIP</span>
+    </div>
+    <div class="player-grid" id="pitchersGrid">
+
+      <!-- DANIEL PALENCIA - CLOSER -->
+      <div class="player-card pitcher" data-name="daniel palencia" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=palenda01" target="_blank">Daniel Palencia 🔒</a></div>
+          <span class="pc-pos">RP · CL</span>
+        </div>
+        <div class="pc-bio">Age 26 · San Carlos, Cojedes, VE · R/R · 5'11" 160 · Chicago Cubs · <strong>3 Saves · 0.00 ERA · Closed Final</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">5.0</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">9</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">3</div><div class="stat-key">SV</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=palenda01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Daniel+Palencia+WBC+save" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- EDUARDO RODRIGUEZ -->
+      <div class="player-card pitcher" data-name="eduardo rodriguez" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=rodriedu02" target="_blank">Eduardo Rodríguez</a></div>
+          <span class="pc-pos">SP</span>
+        </div>
+        <div class="pc-bio">Age 33 · Valencia, Carabobo, VE · L/L · 6'2" 231 · Arizona Diamondbacks · <strong>2 Starts · 9 K in 7 IP</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">3.86</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">7.0</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">9</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">11.6</div><div class="stat-key">K/9</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=rodriedu02" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Eduardo+Rodriguez+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- ENMANUEL DE JESUS -->
+      <div class="player-card pitcher" data-name="enmanuel de jesus" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=dejesen01" target="_blank">Enmanuel De Jesús</a></div>
+          <span class="pc-pos">SP/LR</span>
+        </div>
+        <div class="pc-bio">Age 29 · Valencia, Carabobo, VE · L/L · 6'3" 190 · <strong>2-0 · 1.23 ERA · 11 K in 7.1 IP</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">1.23</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">7.1</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">11</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">13.5</div><div class="stat-key">K/9</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=dejesen01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Enmanuel+De+Jesus+WBC+pitcher" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- ANDRES MACHADO -->
+      <div class="player-card pitcher" data-name="andres machado" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=machaan01" target="_blank">Andrés Machado</a></div>
+          <span class="pc-pos">RP</span>
+        </div>
+        <div class="pc-bio">Age 33 · Urama, Carabobo, VE · R/R · 6'1" 232 · <strong>1-0 · 6 appearances · 14.2 K/9</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">2.84</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">6.1</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">10</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">14.2</div><div class="stat-key">K/9</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=machaan01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Andres+Machado+WBC+pitcher" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- ANGEL ZERPA -->
+      <div class="player-card pitcher" data-name="angel zerpa" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=zerpaan01" target="_blank">Ángel Zerpa</a></div>
+          <span class="pc-pos">RP</span>
+        </div>
+        <div class="pc-bio">Age 26 · Valle de la Pascua, Guarico, VE · L/L · 6'0" 237 · Kansas City Royals · <strong>1-0 · 0.00 ERA</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">5.1</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">8</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">13.5</div><div class="stat-key">K/9</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=zerpaan01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Angel+Zerpa+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- RANGER SUAREZ -->
+      <div class="player-card pitcher" data-name="ranger suarez" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=suarera01" target="_blank">Ranger Suárez</a></div>
+          <span class="pc-pos">SP</span>
+        </div>
+        <div class="pc-bio">Age 30 · Pie de Cuesta, Lara, VE · L/L · 6'1" 217 · Philadelphia Phillies · 2024 NL All-Star</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">11.57</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">4.2</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">5</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">9.6</div><div class="stat-key">K/9</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=suarera01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Ranger+Suarez+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- JOSE BUTTO -->
+      <div class="player-card pitcher" data-name="jose butto" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=buttojo01" target="_blank">José Buttó</a></div>
+          <span class="pc-pos">RP</span>
+        </div>
+        <div class="pc-bio">Age 28 · Cumana, Sucre, VE · R/R · 6'0" 208 · New York Mets · <strong>5 appearances · 0.18 WHIP</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">5.2</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">0.18</div><div class="stat-key">WHIP</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=buttojo01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Jose+Butto+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- LUINDER AVILA -->
+      <div class="player-card pitcher" data-name="luinder avila" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=avilalu01" target="_blank">Luinder Ávila</a></div>
+          <span class="pc-pos">RP</span>
+        </div>
+        <div class="pc-bio">Age 24 · Caracas, Distrito Federal, VE · R/R · 6'3" 195</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">4.1</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">3</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">1.39</div><div class="stat-key">WHIP</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=avilalu01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Luinder+Avila+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- EDUARD BAZARDO -->
+      <div class="player-card pitcher" data-name="eduard bazardo" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=bazared01" target="_blank">Eduard Bazardo</a></div>
+          <span class="pc-pos">RP</span>
+        </div>
+        <div class="pc-bio">Age 30 · Maracay, Aragua, VE · R/R · 6'0" 190</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">2.70</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">3.1</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">0.60</div><div class="stat-key">WHIP</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=bazared01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Eduard+Bazardo+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- KEIDER MONTERO -->
+      <div class="player-card pitcher" data-name="keider montero" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=monteke01" target="_blank">Keider Montero</a></div>
+          <span class="pc-pos">SP/LR</span>
+        </div>
+        <div class="pc-bio">Age 25 · Santa Teresa del Tuy, Miranda, VE · R/R · 6'1" 145 · Detroit Tigers</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">4.15</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">4.1</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">3</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">1.85</div><div class="stat-key">WHIP</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=monteke01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Keider+Montero+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- YOENDRYS GOMEZ -->
+      <div class="player-card pitcher" data-name="yoendrys gomez" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=gomezyo01" target="_blank">Yoendrys Gómez</a></div>
+          <span class="pc-pos">SP</span>
+        </div>
+        <div class="pc-bio">Age 26 · Nirgua, VE · R/R · 6'3" 212 · New York Yankees · <strong>1-0 · 0.00 ERA in 2 IP</strong></div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">2.0</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">3</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">1.00</div><div class="stat-key">WHIP</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=gomezyo01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Yoendrys+Gomez+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- RICARDO SANCHEZ -->
+      <div class="player-card pitcher" data-name="ricardo sanchez" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=sanchri01" target="_blank">Ricardo Sánchez</a></div>
+          <span class="pc-pos">RP</span>
+        </div>
+        <div class="pc-bio">Age 29 · Puerto Cabello, Carabobo, VE · L/L · 5'10" 220</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">2.45</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">3.2</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">0.82</div><div class="stat-key">WHIP</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=sanchri01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Ricardo+Sanchez+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- ANTHONY MOLINA -->
+      <div class="player-card pitcher" data-name="anthony molina" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=molinan01" target="_blank">Anthony Molina</a></div>
+          <span class="pc-pos">RP</span>
+        </div>
+        <div class="pc-bio">Age 24 · San Joaquin, Carabobo, VE · R/R · 6'1" 170</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">4.50</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">2.0</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">3.00</div><div class="stat-key">WHIP</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=molinan01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Anthony+Molina+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- ANTONIO SENZATELA -->
+      <div class="player-card pitcher" data-name="antonio senzatela" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=senzaan01" target="_blank">Antonio Senzatela</a></div>
+          <span class="pc-pos">RP</span>
+        </div>
+        <div class="pc-bio">Age 31 · Valencia, Carabobo, VE · R/R · 6'1" 235 · Colorado Rockies</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">27.00</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">1.0</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">3.00</div><div class="stat-key">WHIP</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=senzaan01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Antonio+Senzatela+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- CARLOS GUZMAN -->
+      <div class="player-card pitcher" data-name="carlos guzman" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=guzmaca01" target="_blank">Carlos Guzmán</a></div>
+          <span class="pc-pos">RP</span>
+        </div>
+        <div class="pc-bio">Age 28 · Maracay, Aragua, VE · R/R · 6'1" 210</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">0.2</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">3.00</div><div class="stat-key">WHIP</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=guzmaca01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Carlos+Guzman+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+      <!-- CHRISTIAN SUAREZ -->
+      <div class="player-card pitcher" data-name="christian suarez" data-type="pitcher">
+        <div class="pc-head">
+          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=suarech01" target="_blank">Christian Suárez</a></div>
+          <span class="pc-pos">RP</span>
+        </div>
+        <div class="pc-bio">Age 25 · Maracay, Aragua, VE · L/L · 5'11" 160</div>
+        <div class="pc-stats">
+          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
+          <div class="stat-cell"><div class="stat-val">0.1</div><div class="stat-key">IP</div></div>
+          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">K</div></div>
+          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">WHIP</div></div>
+        </div>
+        <div class="pc-links">
+          <a href="https://www.baseball-reference.com/register/player.fcgi?id=suarech01" target="_blank" class="pc-link">Full Stats →</a>
+          <a href="https://www.youtube.com/results?search_query=Christian+Suarez+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COMING SOON -->
+  <div class="credit-block" style="border-left-color:var(--neon);">
+    <div class="credit-tag" style="color:var(--neon);">Roster Explorer · Phase 1 of 4</div>
+    <div class="credit-body">
+      This is the prototype: Venezuela's championship roster. <strong>Phase 2 adds runner-up USA + finalists Italy and Dominican Republic.</strong> Phase 3 expands to all 20 teams from WBC 2026 — over 600 players. <strong>Phase 4</strong> adds walk-up song integration via Spotify embeds and a complete cross-country search. Tell us which roster you want next via <a href="https://worldbaseball.com" target="_blank">World Baseball Network</a>.
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="gf-brand">Official Viewer's Guide</div>
+      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>Stats verified via <a href="https://www.baseball-reference.com" target="_blank">Baseball Reference</a> · Updated April 2026</div>
+    </div>
+    <div class="gf-links">
+      <a href="/wbc2026.html" class="gf-link">← WBC 2026 Hub</a>
+      <a href="/leagues.html" class="gf-link">All Leagues</a>
+      <a href="/league/lvbp.html" class="gf-link">LVBP Venezuela</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentFilter = 'all';
+  function setFilter(filter) {
+    currentFilter = filter;
+    document.querySelectorAll('.fp').forEach(b=>b.classList.remove('active'));
+    document.querySelector(`[data-filter="${filter}"]`).classList.add('active');
+    filterPlayers();
+  }
+  function filterPlayers() {
+    const search = document.getElementById('searchInput').value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.player-card');
+    let visible = 0;
+    cards.forEach(card => {
+      const matchesType = currentFilter === 'all' || card.dataset.type === currentFilter;
+      const matchesSearch = !search || card.dataset.name.includes(search);
+      if (matchesType && matchesSearch) {
+        card.classList.remove('hidden');
+        visible++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+    document.getElementById('filterCount').textContent = visible + (visible === 1 ? ' player' : ' players');
+    // hide section if empty
+    ['hittersSection','pitchersSection'].forEach(id=>{
+      const sec = document.getElementById(id);
+      const visibleInSec = sec.querySelectorAll('.player-card:not(.hidden)').length;
+      sec.style.display = visibleInSec === 0 ? 'none' : '';
+    });
+  }
+</script>
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
