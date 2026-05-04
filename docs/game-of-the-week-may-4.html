@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game of the Week: Doosan Bears vs. LG Twins | The Free Korean Spectacle</title>
+  <meta name="description" content="The Jamsil Series. KBO's biggest rivalry, both teams sharing one stadium, free on SOOP worldwide. The cheerleader spectacle. The 2026 KBO season's most-watched matchup. WBN Game of the Week.">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--orange:#fb923c;--purple:#a78bfa;--bears:#131230;--twins:#C30452;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+    .site-nav{background:var(--bg2);border-bottom:1px solid var(--rule);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);}
+    .brand-block{display:flex;align-items:center;gap:12px;text-decoration:none;}
+    .wbn-logo{height:42px;width:auto;display:block;}
+    .brand-text{font-family:var(--display);font-weight:900;font-size:.78rem;letter-spacing:1px;line-height:1.15;color:var(--text);max-width:220px;text-transform:uppercase;}
+    .brand-text .t2{color:var(--neon);}
+    .navlinks{display:flex;gap:6px;flex-wrap:wrap;}
+    .nav-pill{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);transition:.2s;}
+    .nav-pill:hover{color:var(--text);border-color:var(--text);}
+    .nav-pill.active{color:var(--gold);border-color:var(--gold);}
+    .hq-link{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--neon);border:1px solid var(--neon);padding:6px 14px;border-radius:4px;display:flex;align-items:center;gap:8px;}
+    .live-dot{width:7px;height:7px;background:var(--neon);border-radius:50%;box-shadow:0 0 5px var(--neon);animation:blink 1.8s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+    .hero{padding:60px 24px 56px;border-bottom:3px solid var(--gold);position:relative;overflow:hidden;background:linear-gradient(135deg,#0a0f1e 0%,#1a0a1f 50%,#0a0f1e 100%);}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.012) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero-inner{max-width:1300px;margin:0 auto;position:relative;z-index:1;}
+    .gow-tag{display:inline-block;background:var(--neon);color:#000;font-family:var(--display);font-weight:900;font-size:.7rem;letter-spacing:3px;padding:6px 14px;border-radius:4px;margin-bottom:18px;text-transform:uppercase;}
+    .week-tag{font-family:var(--display);font-size:.72rem;font-weight:900;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .matchup{font-family:var(--display);font-size:clamp(2.6rem,8vw,6.5rem);font-weight:900;font-style:italic;line-height:.92;letter-spacing:-2px;text-transform:uppercase;}
+    .vs-line{color:var(--muted);font-style:normal;font-size:.5em;letter-spacing:8px;display:block;margin:12px 0;}
+    .matchup .bears{color:#88aacc;}
+    .matchup .twins{color:#ff5577;}
+    .meta-bar{margin-top:28px;padding-top:24px;border-top:1px solid var(--rule2);display:flex;gap:36px;flex-wrap:wrap;}
+    .meta-item{font-family:var(--mono);font-size:.78rem;color:var(--muted);}
+    .meta-item strong{display:block;color:var(--neon);font-family:var(--display);font-size:1.2rem;font-weight:900;letter-spacing:0;margin-bottom:4px;text-transform:uppercase;}
+
+    .free-banner{background:linear-gradient(90deg,rgba(0,255,157,.15) 0%,rgba(0,255,157,.03) 100%);border-bottom:1px solid rgba(0,255,157,.3);padding:18px 24px;text-align:center;}
+    .free-banner-inner{font-family:var(--display);font-size:1.1rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--neon);}
+    .free-banner-inner span{color:var(--text);}
+
+    .section{padding:48px 24px;}
+    .section.alt{background:var(--bg2);}
+    .section-inner{max-width:1300px;margin:0 auto;}
+    .sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--rule2);padding-bottom:14px;margin-bottom:28px;flex-wrap:wrap;}
+    .sec-num{font-family:var(--mono);font-size:.7rem;color:var(--gold);font-weight:700;letter-spacing:3px;}
+    .sec-title{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;font-style:italic;letter-spacing:-1px;text-transform:uppercase;line-height:1;}
+
+    .lede{font-family:var(--serif);font-size:1.2rem;font-style:italic;color:var(--muted);max-width:840px;line-height:1.8;margin-bottom:32px;}
+    .lede strong{color:var(--text);font-style:normal;}
+    .lede em{color:var(--gold);font-style:italic;}
+
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+    @media(max-width:780px){.two-col{grid-template-columns:1fr;}}
+
+    .team-card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:28px;border-top:5px solid;}
+    .team-card.bears{border-top-color:#88aacc;}
+    .team-card.twins{border-top-color:#ff5577;}
+    .team-name{font-family:var(--display);font-size:2rem;font-weight:900;font-style:italic;letter-spacing:-.5px;line-height:1;text-transform:uppercase;margin-bottom:8px;}
+    .team-card.bears .team-name{color:#88aacc;}
+    .team-card.twins .team-name{color:#ff5577;}
+    .team-tag{font-family:var(--mono);font-size:.7rem;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;}
+    .team-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:20px;}
+    .ts-item{padding:12px;background:rgba(15,23,42,.6);border-radius:6px;border:1px solid rgba(30,45,74,.5);}
+    .ts-num{font-family:var(--display);font-size:1.4rem;font-weight:900;letter-spacing:-.5px;color:var(--text);}
+    .ts-lbl{font-family:var(--mono);font-size:.6rem;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+    .team-body{font-family:var(--serif);font-size:.95rem;color:var(--muted);line-height:1.75;}
+    .team-body strong{color:var(--text);}
+    .key-players{margin-top:18px;padding-top:18px;border-top:1px solid var(--rule2);}
+    .kp-label{font-family:var(--display);font-size:.62rem;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .kp-list{font-family:var(--mono);font-size:.78rem;color:var(--muted);line-height:1.9;}
+    .kp-list strong{color:var(--text);}
+
+    .pull-quote{background:linear-gradient(135deg,var(--card) 0%,var(--card2) 100%);border-left:5px solid var(--gold);border-radius:0 10px 10px 0;padding:32px 36px;margin:32px 0;}
+    .pq-tag{font-family:var(--display);font-size:.66rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .pq-title{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:900;font-style:italic;letter-spacing:-.5px;line-height:1.15;margin-bottom:16px;}
+    .pq-body{font-family:var(--serif);font-size:1.05rem;color:var(--muted);line-height:1.8;font-style:italic;}
+    .pq-body strong{color:var(--text);font-style:normal;}
+
+    .schedule{background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;}
+    .sched-row{display:grid;grid-template-columns:160px 1fr 200px 140px;gap:18px;padding:16px 22px;border-bottom:1px solid var(--rule);align-items:center;}
+    .sched-row:last-child{border-bottom:none;}
+    .sched-row.head{background:rgba(245,200,66,.05);font-family:var(--display);font-size:.66rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
+    .sched-row .day{font-family:var(--display);font-weight:900;font-size:1rem;letter-spacing:-.3px;text-transform:uppercase;color:var(--text);}
+    .sched-row .day-sub{font-family:var(--mono);font-size:.66rem;color:var(--muted);font-weight:400;letter-spacing:.5px;display:block;margin-top:2px;text-transform:none;}
+    .sched-row .matchup-cell{font-family:var(--serif);color:var(--muted);font-size:.92rem;}
+    .sched-row .matchup-cell strong{color:var(--text);}
+    .sched-row .time{font-family:var(--mono);font-size:.78rem;color:var(--neon);font-weight:700;}
+    .sched-row .stream{font-family:var(--mono);font-size:.7rem;color:var(--gold);font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+    @media(max-width:780px){.sched-row{grid-template-columns:1fr;gap:6px;}.sched-row.head{display:none;}}
+
+    .watch-card{background:linear-gradient(135deg,#0a3d1f 0%,#0a0f1e 100%);border:1px solid rgba(0,255,157,.3);border-left:5px solid var(--neon);border-radius:0 12px 12px 0;padding:32px 36px;margin-top:30px;}
+    .wc-tag{font-family:var(--display);font-size:.7rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:var(--neon);margin-bottom:12px;}
+    .wc-title{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;font-style:italic;letter-spacing:-.5px;text-transform:uppercase;margin-bottom:14px;}
+    .wc-body{font-family:var(--serif);font-size:1rem;color:#a8d4be;line-height:1.75;margin-bottom:20px;}
+    .wc-body strong{color:#fff;}
+    .wc-cta{display:inline-block;background:var(--neon);color:#000;font-family:var(--display);font-weight:900;letter-spacing:2px;padding:14px 28px;border-radius:4px;text-transform:uppercase;font-size:.85rem;transition:.2s;}
+    .wc-cta:hover{background:#fff;}
+
+    .editorial{font-family:var(--serif);font-size:1.05rem;line-height:1.85;color:var(--muted);max-width:780px;}
+    .editorial p{margin-bottom:18px;}
+    .editorial p:first-of-type::first-letter{font-family:var(--display);font-size:4.5rem;font-weight:900;float:left;line-height:.85;margin:6px 12px 0 0;color:var(--gold);}
+    .editorial strong{color:var(--text);}
+    .editorial em{color:var(--gold);font-style:italic;}
+
+    .footer{border-top:3px solid var(--gold);padding:36px 24px;background:var(--bg2);}
+    .footer-inner{max-width:1300px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;}
+    .gf-brand{display:flex;align-items:center;gap:14px;}
+    .gf-logo{height:48px;width:auto;}
+    .gf-text{font-family:var(--display);font-weight:900;font-size:.95rem;letter-spacing:1px;line-height:1.1;text-transform:uppercase;}
+    .gf-text .t2{color:var(--neon);}
+    .gf-pub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:14px;line-height:1.7;}
+    .gf-pub a{color:var(--muted);}.gf-pub a:hover{color:var(--neon);}
+    .gf-links{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end;}
+    .gf-link{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .gf-link:hover{color:var(--neon);}
+    @media(max-width:700px){.site-nav{position:static;}.hero{padding:44px 20px 36px;}.brand-text{font-size:.62rem;max-width:140px;}.wbn-logo{height:34px;}}
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/index.html" class="brand-block">
+    <img src="/assets/img/wbn-logo.jpg" alt="World Baseball Network" class="wbn-logo">
+    <div class="brand-text">Official Viewer's Guide<br><span class="t2">to International Baseball</span></div>
+  </a>
+  <div class="navlinks">
+    <a href="/index.html" class="nav-pill">Home</a>
+    <a href="/leagues.html" class="nav-pill">Leagues</a>
+    <a href="/calendar.html" class="nav-pill">Calendar</a>
+    <a href="/streaming.html" class="nav-pill">Streaming</a>
+    <a href="/viewers-guide-may-4.html" class="nav-pill active">Game of the Week</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="gow-tag">&#9733; Game of the Week &#9733;</span>
+    <div class="week-tag">Week of May 4-10, 2026 &middot; Issue 001</div>
+    <h1 class="matchup">
+      <span class="bears">Doosan Bears</span>
+      <span class="vs-line">vs.</span>
+      <span class="twins">LG Twins</span>
+    </h1>
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Jamsil Stadium</strong>Seoul, South Korea</div>
+      <div class="meta-item"><strong>3-Game Series</strong>May 9-11 (Fri-Sun)</div>
+      <div class="meta-item"><strong>Free Worldwide</strong>SOOP &middot; sooplive.com</div>
+      <div class="meta-item"><strong>5:00 AM ET</strong>First pitch (US)</div>
+    </div>
+  </div>
+</div>
+
+<div class="free-banner">
+  <div class="free-banner-inner">&#9733; FREE TO WATCH WORLDWIDE &middot; <span>NO ACCOUNT REQUIRED &middot; sooplive.com</span> &middot; &#9733;</div>
+</div>
+
+<div class="section">
+  <div class="section-inner">
+    <div class="sec-head">
+      <div><div class="sec-num">01 / WHY THIS GAME</div><h2 class="sec-title">The Free Korean Spectacle</h2></div>
+    </div>
+    <p class="lede">
+      <strong>The single most-watched matchup in Korean baseball.</strong> Two teams, one stadium, one of the loudest, most choreographed in-game atmospheres on Earth &mdash; and you can stream every pitch, free, on any browser, no sign-up, anywhere in the world. The Doosan Bears and LG Twins share Jamsil Stadium in Seoul. When they play each other, it's a <em>home game for both teams.</em> The cheer squads stack up. The drum lines double. The stadium of 25,000 is divided in half, both halves chanting in unison. <strong>This is the KBO at its loudest, its weirdest, its best</strong> &mdash; and it's free.
+    </p>
+  </div>
+</div>
+
+<div class="section alt">
+  <div class="section-inner">
+    <div class="sec-head">
+      <div><div class="sec-num">02 / THE TEAMS</div><h2 class="sec-title">Two Teams. One Stadium.</h2></div>
+    </div>
+    <div class="two-col">
+
+      <div class="team-card bears">
+        <div class="team-name">Doosan Bears</div>
+        <div class="team-tag">2025 Finish: KBO Playoff Contender &middot; 6 KBO Titles</div>
+        <div class="team-stats">
+          <div class="ts-item"><div class="ts-num">6&times;</div><div class="ts-lbl">KBO Champions</div></div>
+          <div class="ts-item"><div class="ts-num">1982</div><div class="ts-lbl">Founded</div></div>
+          <div class="ts-item"><div class="ts-num">25K</div><div class="ts-lbl">Jamsil Capacity</div></div>
+          <div class="ts-item"><div class="ts-num">Navy</div><div class="ts-lbl">Cap Color</div></div>
+        </div>
+        <div class="team-body">
+          The Bears are <strong>Korea's most consistent franchise of the modern era</strong> &mdash; six KBO titles since their 1982 founding, including a dynasty stretch in the late 2010s. Built on power pitching and small-ball precision. Their rivalry with the Twins traces back to KBO's earliest seasons.
+        </div>
+        <div class="key-players">
+          <div class="kp-label">Watch For</div>
+          <div class="kp-list">
+            <strong>Yang Eui-ji</strong> &middot; veteran C / clubhouse leader<br>
+            <strong>Jose Rojas</strong> &middot; foreign import bat<br>
+            <strong>Kwak Bin</strong> &middot; emerging RHP starter
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card twins">
+        <div class="team-name">LG Twins</div>
+        <div class="team-tag">2023 KBO Champions &middot; The 29-Year Drought Ended</div>
+        <div class="team-stats">
+          <div class="ts-item"><div class="ts-num">3&times;</div><div class="ts-lbl">KBO Champions</div></div>
+          <div class="ts-item"><div class="ts-num">2023</div><div class="ts-lbl">Latest Title</div></div>
+          <div class="ts-item"><div class="ts-num">25K</div><div class="ts-lbl">Jamsil Capacity</div></div>
+          <div class="ts-item"><div class="ts-num">Pink</div><div class="ts-lbl">Brand Color</div></div>
+        </div>
+        <div class="team-body">
+          The Twins ended their <strong>29-year championship drought in 2023</strong> &mdash; one of the most cathartic title runs in KBO history. Massive Seoul fanbase. Pink and red color scheme. The cheermaster culture peaks here. <strong>The Twins' fans are the loudest in baseball</strong>, full stop.
+        </div>
+        <div class="key-players">
+          <div class="kp-label">Watch For</div>
+          <div class="kp-list">
+            <strong>Hong Chang-ki</strong> &middot; star CF / table-setter<br>
+            <strong>Park Hae-min</strong> &middot; veteran OF<br>
+            <strong>Im Chan-kyu</strong> &middot; lefty starter
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-inner">
+    <div class="sec-head">
+      <div><div class="sec-num">03 / THE SERIES</div><h2 class="sec-title">3 Games. 3 Days.</h2></div>
+    </div>
+
+    <div class="schedule">
+      <div class="sched-row head">
+        <div>Day</div>
+        <div>Matchup &amp; Storyline</div>
+        <div>First Pitch</div>
+        <div>Where to Watch</div>
+      </div>
+      <div class="sched-row">
+        <div class="day">Friday<span class="day-sub">May 9, 2026</span></div>
+        <div class="matchup-cell"><strong>Doosan Bears</strong> at <strong>LG Twins</strong> &middot; Series opener &middot; Twins' home crowd dominant</div>
+        <div class="time">5:00 AM ET<br><span style="color:var(--muted);font-weight:400;">6:30 PM KST</span></div>
+        <div class="stream">SOOP &middot; FREE</div>
+      </div>
+      <div class="sched-row">
+        <div class="day">Saturday<span class="day-sub">May 10, 2026</span></div>
+        <div class="matchup-cell"><strong>Doosan Bears</strong> at <strong>LG Twins</strong> &middot; Saturday primetime &middot; Maximum cheermaster activation</div>
+        <div class="time">4:00 AM ET<br><span style="color:var(--muted);font-weight:400;">5:00 PM KST</span></div>
+        <div class="stream">SOOP &middot; FREE</div>
+      </div>
+      <div class="sched-row">
+        <div class="day">Sunday<span class="day-sub">May 11, 2026</span></div>
+        <div class="matchup-cell"><strong>Doosan Bears</strong> at <strong>LG Twins</strong> &middot; Series rubber match &middot; Sunday afternoon</div>
+        <div class="time">3:00 AM ET<br><span style="color:var(--muted);font-weight:400;">2:00 PM KST</span></div>
+        <div class="stream">SOOP &middot; FREE</div>
+      </div>
+    </div>
+
+    <div class="watch-card">
+      <div class="wc-tag">&#9733; How To Watch &#9733;</div>
+      <h3 class="wc-title">Open Browser. Type sooplive.com. Watch.</h3>
+      <p class="wc-body">
+        That's it. <strong>No subscription. No login. No region lock.</strong> SOOP took over from FloSports as KBO's international rights holder in 2024. Every game, every team, free worldwide. Stream quality is HD. English commentary is unavailable, but the visuals tell the story &mdash; <strong>and the cheermaster does too.</strong>
+      </p>
+      <a href="https://www.sooplive.com/live" target="_blank" rel="noopener" class="wc-cta">Open SOOP &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div class="section alt">
+  <div class="section-inner">
+    <div class="sec-head">
+      <div><div class="sec-num">04 / THE CULTURE</div><h2 class="sec-title">The Cheermaster Speech</h2></div>
+    </div>
+
+    <div class="pull-quote">
+      <div class="pq-tag">Did You Know</div>
+      <h3 class="pq-title">Korean Baseball Has a Cheermaster. He Runs the Stadium.</h3>
+      <p class="pq-body">
+        Each KBO club employs a <strong>professional cheermaster</strong> &mdash; a full-time entertainer who leads the home crowd through choreographed chants, drum patterns, and synchronized songs throughout the entire game. Not a half-inning break act. Not a kiss-cam operator. <strong>He runs the stadium for nine innings.</strong> Each player has their own walk-up song that the entire crowd sings. Each team has their own drum cadence. The Twins' fans are famous for <strong>"Make Some Noise"</strong> chants that shake the stadium at 100+ decibels. <em>This is the most intentionally entertaining in-game experience in professional baseball anywhere on Earth.</em> Free on SOOP.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-inner">
+    <div class="sec-head">
+      <div><div class="sec-num">05 / THE EDITORIAL</div><h2 class="sec-title">Why The KBO Matters in 2026</h2></div>
+    </div>
+
+    <div class="editorial">
+      <p>The Korean Baseball Organization drew <strong>12.3 million fans in 2025</strong>, a national record. Per-capita, that's larger than MLB's attendance footprint. Korea is a country of 51 million people, and 1 in 4 of them went to a baseball game last year. <em>Read that again.</em></p>
+
+      <p>The 2026 KBO season opened on March 28 with all 10 teams &mdash; Doosan Bears, LG Twins, Kiwoom Heroes, KIA Tigers, Samsung Lions, Lotte Giants, SSG Landers, NC Dinos, Hanwha Eagles, and KT Wiz &mdash; chasing the title that the LG Twins finally claimed in 2023 after a 29-year drought. The current title belongs to the KIA Tigers (2024) and the SSG Landers (2025).</p>
+
+      <p>And right now, <strong>any American baseball fan with a browser can watch every single game free</strong>. SOOP took over from FloSports as the international rights holder in 2024 and made the smart decision to drop the paywall. The result: KBO games are now finding new audiences in North America and Europe at scale. <strong>This is the cheapest, easiest, most entertaining baseball viewing experience available to a US fan in 2026.</strong></p>
+
+      <p>The Jamsil Series is the entry point. If you've never watched a KBO game, start here. Friday night ET. Wake up, brew coffee, open SOOP, and watch <em>two teams that share one stadium</em> turn it into the loudest place in the world.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="gf-brand">
+        <img src="/assets/img/wbn-logo.jpg" alt="WBN" class="gf-logo">
+        <div class="gf-text">Official Viewer's Guide<br><span class="t2">to International Baseball</span></div>
+      </div>
+      <div class="gf-pub">
+        A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> &middot; classicbaseball.world<br>
+        Game of the Week &middot; Issue 001 &middot; Week of May 4-10, 2026
+      </div>
+    </div>
+    <div class="gf-links">
+      <a href="/index.html" class="gf-link">Home</a>
+      <a href="/calendar.html" class="gf-link">Calendar</a>
+      <a href="/league/kbo.html" class="gf-link">KBO Page</a>
+      <a href="/streaming.html" class="gf-link">Streaming</a>
+      <a href="/viewers-guide-may-4.html" class="gf-link">This Week</a>
+      <a href="https://worldbaseball.com" target="_blank" class="gf-link">WBN HQ</a>
+    </div>
+  </div>
+</div>
+
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

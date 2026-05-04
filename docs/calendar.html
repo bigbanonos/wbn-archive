@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 2026 Baseball Calendar | Classic Baseball World</title>
+  <meta name="description" content="Every notable baseball event in the world from May through December 2026. WBC tournaments, MLB All-Star Week Philadelphia, College World Series, Premier12 qualifiers, Caribbean winter ball openers.">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--orange:#fb923c;--purple:#a78bfa;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+    .site-nav{background:var(--bg2);border-bottom:1px solid var(--rule);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);}
+    .brand-block{display:flex;align-items:center;gap:12px;text-decoration:none;}
+    .wbn-logo{height:42px;width:auto;display:block;}
+    .brand-text{font-family:var(--display);font-weight:900;font-size:.78rem;letter-spacing:1px;line-height:1.15;color:var(--text);max-width:220px;text-transform:uppercase;}
+    .brand-text .t2{color:var(--neon);}
+    .navlinks{display:flex;gap:6px;flex-wrap:wrap;}
+    .nav-pill{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);transition:.2s;}
+    .nav-pill:hover{color:var(--text);border-color:var(--text);}
+    .nav-pill.active{color:var(--gold);border-color:var(--gold);}
+    .hq-link{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--neon);border:1px solid var(--neon);padding:6px 14px;border-radius:4px;display:flex;align-items:center;gap:8px;}
+    .live-dot{width:7px;height:7px;background:var(--neon);border-radius:50%;box-shadow:0 0 5px var(--neon);animation:blink 1.8s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .hero{padding:64px 24px 48px;border-bottom:3px solid var(--gold);position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.012) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 60px);pointer-events:none;}
+    .hero-inner{max-width:1300px;margin:0 auto;position:relative;z-index:1;}
+    .hero-eyebrow{font-family:var(--display);font-size:.72rem;font-weight:900;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-family:var(--display);font-size:clamp(3rem,9vw,7rem);font-weight:900;font-style:italic;line-height:.88;letter-spacing:-2px;text-transform:uppercase;margin-bottom:14px;}
+    .hero-title .l2{color:var(--neon);}
+    .hero-lede{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--muted);max-width:720px;line-height:1.75;margin-top:20px;}
+    .hero-lede strong{color:var(--text);font-style:normal;}
+    .month-nav{background:var(--bg2);border-bottom:1px solid var(--rule);padding:18px 24px;position:sticky;top:61px;z-index:90;backdrop-filter:blur(12px);}
+    .month-nav-inner{max-width:1300px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;}
+    .month-pill{font-family:var(--display);font-size:.72rem;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:4px;border:1px solid var(--rule2);background:var(--card);color:var(--muted);transition:.15s;}
+    .month-pill:hover{color:var(--text);border-color:var(--muted);}
+    .month{padding:48px 24px;border-bottom:1px solid var(--rule);}
+    .month:nth-of-type(odd){background:var(--bg2);}
+    .month-inner{max-width:1300px;margin:0 auto;}
+    .month-header{display:flex;align-items:baseline;gap:18px;border-bottom:2px solid var(--rule2);padding-bottom:14px;margin-bottom:24px;flex-wrap:wrap;}
+    .month-num{font-family:var(--mono);font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:3px;}
+    .month-title{font-family:var(--display);font-size:clamp(2rem,5vw,3.4rem);font-weight:900;font-style:italic;letter-spacing:-1px;text-transform:uppercase;line-height:1;}
+    .month-tag{font-family:var(--serif);font-style:italic;color:var(--muted);margin-left:auto;font-size:.95rem;}
+    .event-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px;}
+    .event{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:18px 20px;transition:.2s;border-left:4px solid var(--gold);position:relative;}
+    .event:hover{transform:translateY(-2px);border-color:var(--rule2);background:var(--card2);}
+    .event.flagship{border-left-color:var(--accent);background:linear-gradient(135deg,rgba(213,0,50,.04) 0%,var(--card) 60%);}
+    .event.intl{border-left-color:var(--blue);}
+    .event.womens{border-left-color:#ff7088;}
+    .event.college{border-left-color:var(--purple);}
+    .event.winter{border-left-color:var(--neon);}
+    .event.tournament{border-left-color:var(--orange);}
+    .event-date{font-family:var(--mono);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+    .event.intl .event-date{color:var(--blue);}
+    .event.womens .event-date{color:#ff7088;}
+    .event.college .event-date{color:var(--purple);}
+    .event.winter .event-date{color:var(--neon);}
+    .event.tournament .event-date{color:var(--orange);}
+    .event.flagship .event-date{color:var(--accent);}
+    .event-title{font-family:var(--display);font-size:1.15rem;font-weight:900;letter-spacing:-.3px;line-height:1.2;text-transform:uppercase;margin-bottom:8px;}
+    .event-loc{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-bottom:8px;letter-spacing:.5px;}
+    .event-body{font-family:var(--serif);font-size:.88rem;color:var(--muted);line-height:1.65;}
+    .event-body strong{color:var(--text);}
+    .event-watch{font-family:var(--mono);font-size:.65rem;color:var(--neon);margin-top:10px;padding-top:8px;border-top:1px solid rgba(30,45,74,.6);font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+    .footer{border-top:3px solid var(--gold);padding:36px 24px;background:var(--bg2);}
+    .footer-inner{max-width:1300px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;}
+    .gf-brand{display:flex;align-items:center;gap:14px;}
+    .gf-logo{height:48px;width:auto;}
+    .gf-text{font-family:var(--display);font-weight:900;font-size:.95rem;letter-spacing:1px;line-height:1.1;text-transform:uppercase;}
+    .gf-text .t2{color:var(--neon);}
+    .gf-pub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:14px;line-height:1.7;}
+    .gf-pub a{color:var(--muted);}.gf-pub a:hover{color:var(--neon);}
+    .gf-links{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end;}
+    .gf-link{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+    .gf-link:hover{color:var(--neon);}
+    @media (max-width:700px){.site-nav,.month-nav{position:static;}.brand-text{font-size:.62rem;max-width:140px;}.wbn-logo{height:34px;}.hero{padding:44px 20px 36px;}}
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/index.html" class="brand-block">
+    <img src="/assets/img/wbn-logo.jpg" alt="World Baseball Network" class="wbn-logo">
+    <div class="brand-text">Official Viewer's Guide<br><span class="t2">to International Baseball</span></div>
+  </a>
+  <div class="navlinks">
+    <a href="/index.html" class="nav-pill">Home</a>
+    <a href="/leagues.html" class="nav-pill">Leagues</a>
+    <a href="/calendar.html" class="nav-pill active">Calendar</a>
+    <a href="/streaming.html" class="nav-pill">Streaming</a>
+    <a href="/viewers-guide-may-4.html" class="nav-pill">This Week</a>
+    <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
+  </div>
+  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">The 2026 Master Calendar &middot; May Through December</div>
+    <h1 class="hero-title">Every Game.<br><span class="l2">Every Tournament.</span></h1>
+    <p class="hero-lede">
+      The complete editorial calendar for the rest of the 2026 international baseball season. <strong>NCAA tournaments, MLB All-Star Week in Philadelphia, the College World Series, Premier12 qualifiers in Barcelona and China, the inaugural WPBL season, the Women's Baseball World Cup, and the openers of all five Caribbean winter leagues.</strong> Filtered, dated, located, and ready for your bookmarks.
+    </p>
+  </div>
+</div>
+
+<div class="month-nav">
+  <div class="month-nav-inner">
+    <a href="#may" class="month-pill">May</a>
+    <a href="#june" class="month-pill">June</a>
+    <a href="#july" class="month-pill">July</a>
+    <a href="#august" class="month-pill">August</a>
+    <a href="#september" class="month-pill">September</a>
+    <a href="#october" class="month-pill">October</a>
+    <a href="#november" class="month-pill">November</a>
+    <a href="#december" class="month-pill">December</a>
+  </div>
+</div>
+
+<!-- ============== MAY ============== -->
+<div class="month" id="may">
+  <div class="month-inner">
+    <div class="month-header">
+      <div><div class="month-num">05 / 12</div><h2 class="month-title">May 2026</h2></div>
+      <div class="month-tag">The conference tournaments and the road to Omaha begins</div>
+    </div>
+    <div class="event-grid">
+
+      <div class="event flagship">
+        <div class="event-date">May 4-10 &middot; This Week</div>
+        <div class="event-title">Viewer's Guide Issue 001</div>
+        <div class="event-loc">MLB &middot; NPB &middot; KBO &middot; CPBL &middot; LMB &middot; Italy</div>
+        <div class="event-body">Six leagues in session globally. <strong>KBO Doosan vs. LG Jamsil Series</strong> is our Game of the Week. Italian Serie A weekend matches at 2 PM ET first pitch. NPB Pacific League nightly.</div>
+        <div class="event-watch">All platforms via Streaming Guide</div>
+      </div>
+
+      <div class="event college">
+        <div class="event-date">May 19-24</div>
+        <div class="event-title">NCAA Conference Tournaments</div>
+        <div class="event-loc">SEC &middot; ACC &middot; Big 12 &middot; Big Ten &middot; Sun Belt</div>
+        <div class="event-body">All five power conference championships in a single week. <strong>SEC Tournament at Hoover, AL.</strong> ACC at Charlotte. Big 12 in Arlington. Selection Show May 25.</div>
+        <div class="event-watch">ESPN Networks &middot; ESPN+</div>
+      </div>
+
+      <div class="event">
+        <div class="event-date">May 26 - June 14</div>
+        <div class="event-title">NPB Interleague Window Opens</div>
+        <div class="event-loc">Pacific League TV &middot; Japan</div>
+        <div class="event-body">The single best 3-week window for US fans to see Central League stars. <strong>Yomiuri Giants and Hanshin Tigers</strong> become legally streamable in the United States via PLTV.</div>
+        <div class="event-watch">Pacific League TV &middot; ~$11/mo</div>
+      </div>
+
+      <div class="event college">
+        <div class="event-date">May 29 - June 1</div>
+        <div class="event-title">NCAA Regionals (16 sites)</div>
+        <div class="event-loc">Host campuses nationwide</div>
+        <div class="event-body">Double-elimination 4-team regionals at 16 host campuses. The first weekend of NCAA tournament play. Top-16 seeds host.</div>
+        <div class="event-watch">ESPN+ &middot; SEC Network &middot; ACC Network</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============== JUNE ============== -->
+<div class="month" id="june">
+  <div class="month-inner">
+    <div class="month-header">
+      <div><div class="month-num">06 / 12</div><h2 class="month-title">June 2026</h2></div>
+      <div class="month-tag">The College World Series and the MLB Draft frenzy</div>
+    </div>
+    <div class="event-grid">
+
+      <div class="event college">
+        <div class="event-date">June 5-8</div>
+        <div class="event-title">NCAA Super Regionals</div>
+        <div class="event-loc">8 sites &middot; Best-of-3</div>
+        <div class="event-body">The eight survivors play best-of-3 super regionals to advance to Omaha. Single most-watched college baseball weekend of the year.</div>
+        <div class="event-watch">ESPN Networks</div>
+      </div>
+
+      <div class="event flagship college">
+        <div class="event-date">June 12-22</div>
+        <div class="event-title">College World Series 2026</div>
+        <div class="event-loc">Charles Schwab Field &middot; Omaha, NE</div>
+        <div class="event-body">The road ends in Omaha. Eight teams, double-elimination bracket, best-of-3 final. <strong>Tennessee defending. LSU, Texas, Florida State perennial.</strong> The single most prestigious tournament in amateur baseball.</div>
+        <div class="event-watch">ESPN Networks</div>
+      </div>
+
+      <div class="event intl">
+        <div class="event-date">June 26 - July 4</div>
+        <div class="event-title">Haarlem Baseball Week</div>
+        <div class="event-loc">Pim Mulier Stadium &middot; Netherlands</div>
+        <div class="event-body">One of international baseball's marquee invitationals. Top European nations + invited international squads. <strong>Dutch national team hosts.</strong> A signature European baseball event.</div>
+        <div class="event-watch">KNBSB &middot; WBSC GameTime</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============== JULY ============== -->
+<div class="month" id="july">
+  <div class="month-inner">
+    <div class="month-header">
+      <div><div class="month-num">07 / 12</div><h2 class="month-title">July 2026</h2></div>
+      <div class="month-tag">All-Star Week Philadelphia &middot; The Semiquincentennial</div>
+    </div>
+    <div class="event-grid">
+
+      <div class="event flagship">
+        <div class="event-date">July 11-14</div>
+        <div class="event-title">MLB All-Star Week 2026</div>
+        <div class="event-loc">Citizens Bank Park &middot; Philadelphia, PA</div>
+        <div class="event-body">The 250th anniversary of the United States. <strong>MLB Draft (July 11), Futures Game (July 12), Home Run Derby (July 13), All-Star Game (July 14).</strong> Philadelphia hosts the first All-Star Game on the Semiquincentennial.</div>
+        <div class="event-watch">FOX &middot; ESPN &middot; MLB Network</div>
+      </div>
+
+      <div class="event womens">
+        <div class="event-date">July 22-27</div>
+        <div class="event-title">Women's Baseball World Cup &middot; Group A</div>
+        <div class="event-loc">Rockford, IL &middot; Aviator Stadium</div>
+        <div class="event-body">The 2026 WBSC Women's Baseball World Cup opens in Rockford &mdash; <strong>the historic home of the AAGPBL Peaches</strong>. Defending champion Japan hunts the title. Preview to August's WPBL launch.</div>
+        <div class="event-watch">WBSC GameTime &middot; YouTube highlights</div>
+      </div>
+
+      <div class="event">
+        <div class="event-date">July (TBD)</div>
+        <div class="event-title">LMB All-Star Game</div>
+        <div class="event-loc">Mexico City &middot; Estadio Alfredo Harp Helu</div>
+        <div class="event-body">Liga Mexicana de Beisbol's mid-season showcase. Featuring 20-team rosters from Mexico's 101st professional season.</div>
+        <div class="event-watch">jonron.tv &middot; YouTube</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============== AUGUST ============== -->
+<div class="month" id="august">
+  <div class="month-inner">
+    <div class="month-header">
+      <div><div class="month-num">08 / 12</div><h2 class="month-title">August 2026</h2></div>
+      <div class="month-tag">WPBL launches &middot; Women's Baseball World Cup Group B</div>
+    </div>
+    <div class="event-grid">
+
+      <div class="event flagship womens">
+        <div class="event-date">August 2026 &middot; Inaugural Season</div>
+        <div class="event-title">WPBL Inaugural Launch</div>
+        <div class="event-loc">United States &middot; Multiple cities</div>
+        <div class="event-body">The <strong>first professional women's baseball league in the United States since the 1954 AAGPBL.</strong> Launches in tandem with the conclusion of the Women's Baseball World Cup. Editorial centerpiece for women's baseball coverage in 2026.</div>
+        <div class="event-watch">TBD &middot; WBN coverage launching</div>
+      </div>
+
+      <div class="event womens">
+        <div class="event-date">August 23-27</div>
+        <div class="event-title">Women's Baseball World Cup &middot; Group B</div>
+        <div class="event-loc">Tainan, Taiwan</div>
+        <div class="event-body">Group B opens in Tainan as the second host city of the 2026 Women's Baseball World Cup. Asia-Pacific qualifying squads play for World Cup placement.</div>
+        <div class="event-watch">WBSC GameTime &middot; DAZN</div>
+      </div>
+
+      <div class="event">
+        <div class="event-date">August 6</div>
+        <div class="event-title">LMB Regular Season Closes</div>
+        <div class="event-loc">Mexico</div>
+        <div class="event-body">Liga Mexicana de Beisbol's 101st regular season ends. Playoffs begin mid-August with the <strong>Diablos Rojos del Mexico chasing a three-peat.</strong></div>
+        <div class="event-watch">jonron.tv</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============== SEPTEMBER ============== -->
+<div class="month" id="september">
+  <div class="month-inner">
+    <div class="month-header">
+      <div><div class="month-num">09 / 12</div><h2 class="month-title">September 2026</h2></div>
+      <div class="month-tag">European Championship &middot; Triple-A National Championship</div>
+    </div>
+    <div class="event-grid">
+
+      <div class="event intl">
+        <div class="event-date">September (TBD)</div>
+        <div class="event-title">European Baseball Championship</div>
+        <div class="event-loc">European host nation TBD</div>
+        <div class="event-body">12-nation continental championship. WBSC qualifier pathway. <strong>Italy defending</strong> following their breakout WBC 2026 semifinal run under Mike Piazza.</div>
+        <div class="event-watch">WBSC GameTime</div>
+      </div>
+
+      <div class="event">
+        <div class="event-date">September 26</div>
+        <div class="event-title">Triple-A National Championship</div>
+        <div class="event-loc">Las Vegas Ballpark</div>
+        <div class="event-body">Pacific Coast League champion vs. International League champion. The pinnacle of the MiLB season.</div>
+        <div class="event-watch">MiLB.TV</div>
+      </div>
+
+      <div class="event">
+        <div class="event-date">September (Late)</div>
+        <div class="event-title">Italian Serie A Playoffs</div>
+        <div class="event-loc">Italy &middot; FIBSchannel3</div>
+        <div class="event-body">Italian Baseball League playoff round. <strong>Free on FIBSchannel3 YouTube.</strong> WBN Certified Partner coverage.</div>
+        <div class="event-watch">FIBSchannel3 &middot; FREE</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============== OCTOBER ============== -->
+<div class="month" id="october">
+  <div class="month-inner">
+    <div class="month-header">
+      <div><div class="month-num">10 / 12</div><h2 class="month-title">October 2026</h2></div>
+      <div class="month-tag">MLB Postseason &middot; Premier12 Barcelona &middot; Winter Ball Opens</div>
+    </div>
+    <div class="event-grid">
+
+      <div class="event flagship">
+        <div class="event-date">October 2026</div>
+        <div class="event-title">MLB Postseason &middot; World Series</div>
+        <div class="event-loc">Across MLB cities</div>
+        <div class="event-body">Wild Card &rarr; Division Series &rarr; LCS &rarr; <strong>World Series</strong>. October baseball at its peak. Network coverage across FOX, ESPN, TBS, and FS1. Major editorial moment.</div>
+        <div class="event-watch">FOX (World Series) &middot; ESPN &middot; TBS</div>
+      </div>
+
+      <div class="event tournament">
+        <div class="event-date">October 9-11</div>
+        <div class="event-title">Premier12 Qualifier &middot; Barcelona</div>
+        <div class="event-loc">Spain &middot; Estadio La Foixarda</div>
+        <div class="event-body">European-region qualifier for the 2027 WBSC Premier12. <strong>Italy, Spain, Czech Republic, Netherlands</strong> compete for tournament berths. The 2026 WBC carries forward.</div>
+        <div class="event-watch">DAZN &middot; WBSC GameTime</div>
+      </div>
+
+      <div class="event winter">
+        <div class="event-date">October 15</div>
+        <div class="event-title">LIDOM Opens (Dominican Winter Ball)</div>
+        <div class="event-loc">Dominican Republic</div>
+        <div class="event-body">Liga de Beisbol Profesional de la Republica Dominicana season opens. <strong>2026 WBC stars head home.</strong> Tigres del Licey and Aguilas Cibaenas tied at 22 championships each.</div>
+        <div class="event-watch">MLB.TV &middot; carries every game</div>
+      </div>
+
+      <div class="event winter">
+        <div class="event-date">October 15</div>
+        <div class="event-title">LVBP Opens (Venezuelan Winter Ball)</div>
+        <div class="event-loc">Venezuela</div>
+        <div class="event-body">Liga Venezolana de Beisbol Profesional opens. <strong>Reigning WBC champions Venezuela</strong> bring their stars home. Navegantes del Magallanes defending the title.</div>
+        <div class="event-watch">beisbolplay.com</div>
+      </div>
+
+      <div class="event winter">
+        <div class="event-date">October 2026</div>
+        <div class="event-title">LMP / LAMP Opens (Mexican Pacific)</div>
+        <div class="event-loc">Mexico</div>
+        <div class="event-body">Liga ARCO Mexicana del Pacifico opens. <strong>FREE on YouTube.</strong> Charros de Jalisco defending champs. Premier Mexican winter ball.</div>
+        <div class="event-watch">YouTube &middot; FREE</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============== NOVEMBER ============== -->
+<div class="month" id="november">
+  <div class="month-inner">
+    <div class="month-header">
+      <div><div class="month-num">11 / 12</div><h2 class="month-title">November 2026</h2></div>
+      <div class="month-tag">ABL Opens &middot; LBPRC &middot; Premier12 Zhongshan</div>
+    </div>
+    <div class="event-grid">
+
+      <div class="event winter">
+        <div class="event-date">November 2026</div>
+        <div class="event-title">ABL Season Opens</div>
+        <div class="event-loc">Australia &middot; 7 cities</div>
+        <div class="event-body">Australian Baseball League's only-pro-league-during-MLB-offseason advantage. <strong>Free on team YouTube channels.</strong> Sydney, Perth, Brisbane, Melbourne, Adelaide, Canberra, Geelong-Korea.</div>
+        <div class="event-watch">Team YouTube &middot; FREE</div>
+      </div>
+
+      <div class="event winter">
+        <div class="event-date">November 2026</div>
+        <div class="event-title">LBPRC Opens (Puerto Rico)</div>
+        <div class="event-loc">Puerto Rico &middot; Roberto Clemente League</div>
+        <div class="event-body">Six-team Puerto Rican winter league opens. San Juan, Caguas, Mayaguez, Ponce, Carolina, Santurce.</div>
+        <div class="event-watch">LBPRC YouTube</div>
+      </div>
+
+      <div class="event winter">
+        <div class="event-date">Late November</div>
+        <div class="event-title">LCBP Opens (Colombia)</div>
+        <div class="event-loc">Colombia</div>
+        <div class="event-body">Colombian Professional Baseball League opens. Four teams: Barranquilla, Cartagena, Monteria, Sincelejo. Newest member of Caribbean Series rotation.</div>
+        <div class="event-watch">Regional</div>
+      </div>
+
+      <div class="event tournament">
+        <div class="event-date">November 26-28</div>
+        <div class="event-title">Premier12 Qualifier &middot; Zhongshan</div>
+        <div class="event-loc">China</div>
+        <div class="event-body">Asian-region qualifier for 2027 Premier12. China hosts. Asian baseball pathway to the main tournament.</div>
+        <div class="event-watch">DAZN &middot; WBSC GameTime</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============== DECEMBER ============== -->
+<div class="month" id="december">
+  <div class="month-inner">
+    <div class="month-header">
+      <div><div class="month-num">12 / 12</div><h2 class="month-title">December 2026</h2></div>
+      <div class="month-tag">U-23 World Cup &middot; Baseball5 World Cup &middot; Winter ball heats up</div>
+    </div>
+    <div class="event-grid">
+
+      <div class="event intl">
+        <div class="event-date">December 2026</div>
+        <div class="event-title">WBSC U-23 Baseball World Cup</div>
+        <div class="event-loc">Nicaragua &middot; Host city TBD</div>
+        <div class="event-body">12-nation U-23 World Cup. Top development pipeline showcase. Future MLB prospects in international competition.</div>
+        <div class="event-watch">WBSC GameTime</div>
+      </div>
+
+      <div class="event tournament">
+        <div class="event-date">December 9-13</div>
+        <div class="event-title">Baseball5 World Cup</div>
+        <div class="event-loc">Host nation TBD</div>
+        <div class="event-body">WBSC's 5-on-5 street-baseball variant. Global tournament. <strong>Olympic pathway sport for LA28 inclusion discussions.</strong></div>
+        <div class="event-watch">WBSC YouTube &middot; FREE highlights</div>
+      </div>
+
+      <div class="event winter">
+        <div class="event-date">December 2026</div>
+        <div class="event-title">All Caribbean Winter Leagues in Full Swing</div>
+        <div class="event-loc">DR &middot; Venezuela &middot; Mexico &middot; Puerto Rico &middot; Colombia</div>
+        <div class="event-body">All five Caribbean Series member leagues at peak season. WBC stars in domestic ball. <strong>Pennant races developing into January-February playoffs and the Caribbean Series.</strong></div>
+        <div class="event-watch">MLB.TV &middot; YouTube &middot; Regional platforms</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="gf-brand">
+        <img src="/assets/img/wbn-logo.jpg" alt="WBN" class="gf-logo">
+        <div class="gf-text">Official Viewer's Guide<br><span class="t2">to International Baseball</span></div>
+      </div>
+      <div class="gf-pub">
+        A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> &middot; classicbaseball.world<br>
+        2026 Master Calendar &middot; Verified April 2026 &middot; Updated weekly
+      </div>
+    </div>
+    <div class="gf-links">
+      <a href="/index.html" class="gf-link">Home</a>
+      <a href="/leagues.html" class="gf-link">Leagues</a>
+      <a href="/streaming.html" class="gf-link">Streaming</a>
+      <a href="/viewers-guide-may-4.html" class="gf-link">This Week</a>
+      <a href="/wbc2026.html" class="gf-link">WBC 2026</a>
+      <a href="https://worldbaseball.com" target="_blank" class="gf-link">WBN HQ</a>
+    </div>
+  </div>
+</div>
+
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
