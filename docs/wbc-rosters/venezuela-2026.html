@@ -3,815 +3,631 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Venezuela WBC 2026 Champions — Full Roster | Official Viewer's Guide</title>
-  <meta name="description" content="The complete 2026 World Baseball Classic championship roster of Team Venezuela. 16 pitchers, 13 hitters. Stats, birthplaces, MLB affiliations. Verified via Baseball Reference.">
+  <title>Venezuela WBC 2026 Roster | WBC Roster Explorer | World Baseball Network</title>
+  <meta name="description" content="Complete Venezuela roster from the WBC 2026. 29 players including 17 hitters and 12 pitchers. Stats, key contributors, Baseball Reference links.">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--ven:#CF142B;--ven2:#FCD116;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
-    *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
-    body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:#0a0f1e;color:#f0f4ff;font-family:'Lora',serif;font-size:15px;line-height:1.65;}
     a{text-decoration:none;color:inherit;}
-
-    .site-nav{background:var(--bg2);border-bottom:1px solid var(--rule);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-    .brand-block{display:flex;align-items:center;gap:12px;}
-    .wbn-logo{height:38px;}
-    .brand-text{font-family:var(--display);font-weight:900;font-size:.72rem;letter-spacing:1px;line-height:1.15;text-transform:uppercase;}
-    .brand-text .t2{color:var(--neon);}
-    .navlinks{display:flex;gap:6px;flex-wrap:wrap;}
-    .nav-pill{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);}
-    .nav-pill:hover{color:var(--text);border-color:var(--text);}
-    .hq-link{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--neon);border:1px solid var(--neon);padding:6px 14px;border-radius:4px;display:flex;align-items:center;gap:8px;}
-    .live-dot{width:7px;height:7px;background:var(--neon);border-radius:50%;animation:blink 1.8s infinite;}
-    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-    .crumbs{padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
-    .crumbs a{color:var(--muted);}.crumbs a:hover{color:var(--neon);}.crumbs span{color:var(--gold);}
-
-    /* HERO */
-    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--ven);background:linear-gradient(180deg,#1a0008 0%,#0a0f1e 100%);position:relative;overflow:hidden;}
-    .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(207,20,43,.04) 0 1px,transparent 1px 60px);pointer-events:none;}
-    .hero-inner{max-width:1300px;margin:0 auto;position:relative;z-index:1;}
-    .champ-banner{display:inline-block;background:linear-gradient(90deg,var(--ven) 0%,var(--ven2) 100%);color:#000;font-family:var(--display);font-size:.7rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;padding:6px 14px;border-radius:3px;margin-bottom:14px;}
-    .hero-flag-row{display:flex;align-items:center;gap:18px;margin-bottom:20px;flex-wrap:wrap;}
-    .hero-flag{font-size:3.6rem;line-height:1;}
-    .hero-title{font-family:var(--display);font-size:clamp(2.6rem,7vw,5.4rem);font-weight:900;font-style:italic;line-height:.9;letter-spacing:-1.8px;text-transform:uppercase;}
-    .hero-title .l2{color:var(--ven2);display:block;}
-    .hero-sub{font-family:var(--display);font-size:clamp(.95rem,1.6vw,1.2rem);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:8px;margin-bottom:22px;}
-    .hero-lede{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--muted);max-width:760px;line-height:1.8;margin-bottom:24px;}
-    .hero-lede strong{color:var(--text);font-style:normal;}
-    .hero-stats{display:flex;gap:36px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--rule2);}
-    .hs-num{font-family:var(--display);font-size:1.9rem;font-weight:900;line-height:1;color:var(--ven2);}
-    .hs-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
-
-    /* PAGE */
-    .page{max-width:1300px;margin:0 auto;padding:36px 24px 64px;}
-
-    /* FILTER BAR */
-    .filter-bar{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:18px 22px;margin-bottom:32px;position:sticky;top:8px;z-index:10;backdrop-filter:blur(8px);}
-    .filter-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
-    .filter-search{flex:1;min-width:240px;background:var(--bg2);border:1px solid var(--rule2);border-radius:6px;padding:10px 14px;color:var(--text);font-family:var(--mono);font-size:.9rem;}
-    .filter-search::placeholder{color:var(--dim);}
-    .filter-search:focus{outline:none;border-color:var(--ven2);}
-    .filter-pills{display:flex;gap:6px;flex-wrap:wrap;}
-    .fp{font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:1.5px;padding:7px 14px;border-radius:20px;border:1px solid var(--rule2);color:var(--muted);text-transform:uppercase;cursor:pointer;background:transparent;transition:.15s;}
-    .fp:hover{color:var(--text);border-color:var(--text);}
-    .fp.active{background:var(--ven);border-color:var(--ven);color:#fff;}
-    .fp.active.bat{background:var(--ven2);border-color:var(--ven2);color:#000;}
-    .filter-count{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-left:auto;}
-
-    /* SECTION HEADERS */
-    .roster-section{margin-bottom:48px;}
-    .rs-head{display:flex;align-items:baseline;gap:14px;padding-bottom:12px;margin-bottom:20px;border-bottom:2px solid var(--rule2);}
-    .rs-num{font-family:var(--mono);font-size:.7rem;color:var(--ven2);font-weight:700;letter-spacing:2px;}
-    .rs-title{font-family:var(--display);font-size:1.5rem;font-weight:900;font-style:italic;letter-spacing:-.5px;text-transform:uppercase;}
-    .rs-meta{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-left:auto;}
-
-    /* PLAYER GRID */
-    .player-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;}
-    .player-card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:18px 20px;border-left:4px solid var(--rule2);transition:.15s;}
-    .player-card:hover{border-color:var(--ven2);transform:translateY(-2px);background:var(--card2);}
-    .player-card.pitcher{border-left-color:var(--ven);}
-    .player-card.batter{border-left-color:var(--ven2);}
-    .player-card.hidden{display:none;}
-    .pc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px;}
-    .pc-name{font-family:var(--display);font-size:1.25rem;font-weight:900;letter-spacing:-.3px;line-height:1.1;text-transform:uppercase;}
-    .pc-name a{color:var(--text);}
-    .pc-name a:hover{color:var(--ven2);}
-    .pc-pos{font-family:var(--display);font-size:.62rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;padding:3px 8px;border-radius:3px;background:var(--bg2);color:var(--ven);white-space:nowrap;}
-    .pc-pos.bat{color:var(--ven2);}
-    .pc-bio{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-bottom:10px;line-height:1.5;}
-    .pc-bio strong{color:var(--text);}
-    .pc-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:12px;padding:10px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
-    .stat-cell{text-align:center;}
-    .stat-val{font-family:var(--display);font-weight:900;font-size:1.05rem;color:var(--ven2);line-height:1;}
-    .stat-key{font-family:var(--mono);font-size:.55rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:3px;}
-    .pc-links{display:flex;gap:8px;flex-wrap:wrap;}
-    .pc-link{font-family:var(--mono);font-size:.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding:4px 9px;border:1px solid var(--rule2);border-radius:3px;transition:.15s;}
-    .pc-link:hover{color:var(--ven2);border-color:var(--ven2);}
-    .pc-link.youtube:hover{color:var(--accent);border-color:var(--accent);}
-
-    /* CREDIT */
-    .credit-block{background:linear-gradient(135deg,rgba(245,200,66,.05) 0%,rgba(207,20,43,.04) 100%);border:1px solid var(--rule);border-left:4px solid var(--gold);border-radius:6px;padding:18px 24px;margin-bottom:32px;}
-    .credit-tag{font-family:var(--display);font-size:.62rem;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
-    .credit-body{font-family:var(--serif);font-size:.92rem;color:var(--muted);line-height:1.7;}
-    .credit-body strong{color:var(--text);}
-    .credit-body a{color:var(--ven2);text-decoration:underline;}
-    .credit-body a:hover{color:var(--neon);}
-
-    /* FOOTER */
-    .footer{border-top:2px solid var(--ven);padding:32px 24px;background:var(--bg2);margin-top:48px;}
-    .footer-inner{max-width:1300px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;}
-    .gf-brand{font-family:var(--display);font-size:1.2rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;}
-    .gf-pub{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:6px;line-height:1.7;}
-    .gf-pub a{color:var(--muted);}
-    .gf-pub a:hover{color:var(--neon);}
-    .gf-links{display:flex;gap:12px;flex-wrap:wrap;}
-    .gf-link{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
-    .gf-link:hover{color:var(--neon);}
-
-    @media(max-width:600px){
-      .filter-bar{position:static;}
-      .pc-stats{grid-template-columns:repeat(3,1fr);}
-    }
+    .site-nav{background:#0f172a;border-bottom:1px solid #1e2d4a;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100;}
+    .nav-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;color:#f0f4ff;}
+    .nav-brand .neon{color:#00ff9d;}
+    .nav-pill{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid #263354;color:#8899bb;text-transform:uppercase;}
+    .nav-pill:hover{color:#f0f4ff;border-color:#f0f4ff;}
+    .nav-pill.active{color:#f5c842;border-color:#f5c842;}
+    .hero{padding:48px 24px 40px;border-bottom:4px solid #CE1126;background:linear-gradient(135deg,#0a0f1e 0%,#1a0a1f 100%);position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#CE1126 0%,transparent 8%);opacity:.15;}
+    .hero-inner{max-width:1400px;margin:0 auto;position:relative;z-index:1;}
+    .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;}
+    .breadcrumb a{color:#00ff9d;}
+    .hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3rem,8vw,6rem);font-weight:900;font-style:italic;letter-spacing:-2px;text-transform:uppercase;line-height:.9;margin-bottom:14px;}
+    .hero h1 .country{color:#CE1126;display:block;}
+    .finish-badge{display:inline-block;background:#f5c842;color:#0a0f1e;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:.85rem;letter-spacing:3px;padding:6px 16px;border-radius:4px;margin-bottom:18px;}
+    .pool-tag{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:2px;color:#8899bb;text-transform:uppercase;margin-left:14px;}
+    .meta-row{display:flex;gap:36px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid #263354;}
+    .meta-item{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:#8899bb;}
+    .meta-item strong{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:#00ff9d;letter-spacing:0;text-transform:uppercase;margin-bottom:4px;}
+    .filter-bar{background:#0f172a;border-bottom:1px solid #1e2d4a;padding:18px 24px;position:sticky;top:50px;z-index:90;}
+    .filter-inner{max-width:1400px;margin:0 auto;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+    .filter-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:900;letter-spacing:2px;color:#f5c842;text-transform:uppercase;margin-right:6px;}
+    .filter-chip{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:4px;border:1px solid #263354;background:#111827;color:#8899bb;text-transform:uppercase;cursor:pointer;}
+    .filter-chip.active{background:#00ff9d;color:#0a0f1e;border-color:#00ff9d;}
+    .search-box{margin-left:auto;background:#111827;border:1px solid #263354;border-radius:4px;padding:6px 12px;color:#f0f4ff;font-family:'Lora',serif;font-size:.85rem;width:200px;}
+    .roster-section{padding:36px 24px;}
+    .roster-section.alt{background:#0f172a;}
+    .section-inner{max-width:1400px;margin:0 auto;}
+    .section-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #263354;padding-bottom:12px;margin-bottom:22px;flex-wrap:wrap;}
+    .section-title{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;font-style:italic;letter-spacing:-1px;text-transform:uppercase;line-height:1;}
+    .section-count{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:#8899bb;letter-spacing:1px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px;}
+    .player-card.hidden{display:none !important;}
+    .footer{border-top:3px solid #f5c842;padding:36px 24px;background:#0f172a;}
+    .footer-inner{max-width:1400px;margin:0 auto;font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:#8899bb;}
+    .footer-inner a{color:#00ff9d;}
+    @media(max-width:700px){.site-nav,.filter-bar{position:static;}}
   </style>
 </head>
 <body>
 
 <nav class="site-nav">
-  <a href="/index.html" class="brand-block">
-    <img src="/assets/img/wbn-logo.jpg" alt="WBN" class="wbn-logo">
-    <div class="brand-text">Official Viewer's Guide<br><span class="t2">to International Baseball</span></div>
-  </a>
-  <div class="navlinks">
+  <div class="nav-brand">Official Viewer's Guide<br><span class="neon">to International Baseball</span></div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;">
     <a href="/index.html" class="nav-pill">Home</a>
     <a href="/leagues.html" class="nav-pill">Leagues</a>
-    <a href="/schedules.html" class="nav-pill">Schedules</a>
-    <a href="/streaming.html" class="nav-pill">Streaming</a>
-    <a href="/viewers-guide-may-4.html" class="nav-pill">Viewer's Guide</a>
+    <a href="/calendar.html" class="nav-pill">Calendar</a>
+    <a href="/wbc-rosters/index.html" class="nav-pill active">WBC Rosters</a>
     <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
   </div>
-  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
 </nav>
-
-<div class="crumbs"><a href="/index.html">Home</a> / <a href="/wbc2026.html">WBC 2026</a> / <span>Venezuela Championship Roster</span></div>
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="champ-banner">🏆 World Baseball Classic Champions 2026</div>
-    <div class="hero-flag-row">
-      <span class="hero-flag">🇻🇪</span>
-      <div>
-        <h1 class="hero-title">
-          Venezuela
-          <span class="l2">The Championship Roster</span>
-        </h1>
-        <div class="hero-sub">29 Players · 6-1 Tournament Record · 1st WBC Title in National History</div>
-      </div>
+    <div class="breadcrumb">
+      <a href="/wbc-rosters/index.html">WBC Roster Explorer</a> &middot; WBC 2026 &middot; Venezuela
     </div>
-    <p class="hero-lede">
-      The complete roster of <strong>Team Venezuela's first World Baseball Classic championship</strong>. Manager Omar López. MVP <strong>Maikel García</strong>. 16 pitchers led by <strong>Daniel Palencia (3 saves, 0.00 ERA)</strong> and <strong>Eduardo Rodríguez</strong>. 13 hitters anchored by Acuña Jr., Salvador Pérez, Suárez, Arraez, and breakout star Ezequiel Tovar (.471 BA). Browse, search, filter — and click through to <strong>each player's full Baseball Reference page</strong> for career history, or YouTube for highlights.
-    </p>
-    <div class="hero-stats">
-      <div><div class="hs-num">29</div><div class="hs-lbl">Players</div></div>
-      <div><div class="hs-num">6-1</div><div class="hs-lbl">Record</div></div>
-      <div><div class="hs-num">2.86</div><div class="hs-lbl">Team ERA</div></div>
-      <div><div class="hs-num">.261</div><div class="hs-lbl">Team BA</div></div>
-      <div><div class="hs-num">10</div><div class="hs-lbl">Team HR</div></div>
-      <div><div class="hs-num">9.6</div><div class="hs-lbl">K/9</div></div>
+    <div class="finish-badge">&#127942; CHAMPIONS</div>
+    <span class="pool-tag">Pool C</span>
+    <h1>
+      <span class="country">Venezuela</span>
+      <span style="display:block;font-size:.4em;letter-spacing:4px;color:#8899bb;font-style:normal;font-weight:700;margin-top:14px;">
+        WBC 2026 ROSTER
+      </span>
+    </h1>
+    <div class="meta-row">
+      <div class="meta-item"><strong>29</strong>TOTAL PLAYERS</div>
+      <div class="meta-item"><strong>17</strong>HITTERS</div>
+      <div class="meta-item"><strong>12</strong>PITCHERS</div>
+      <div class="meta-item"><strong>POOL C</strong>BRACKET</div>
     </div>
   </div>
 </div>
 
-<div class="page">
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">Filter</span>
+    <button class="filter-chip active" data-filter="all">All</button>
+    <button class="filter-chip" data-filter="hitter">Hitters</button>
+    <button class="filter-chip" data-filter="pitcher">Pitchers</button>
+    <button class="filter-chip" data-filter="mvp">MVP</button>
+    <button class="filter-chip" data-filter="captain">Captain</button>
+    <button class="filter-chip" data-filter="star">Stars</button>
+    <button class="filter-chip" data-filter="ace">Aces</button>
+    <button class="filter-chip" data-filter="closer">Closers</button>
+    <input type="text" class="search-box" id="searchBox" placeholder="Search by name...">
+  </div>
+</div>
 
-  <div class="credit-block">
-    <div class="credit-tag">★ Stats Verified</div>
-    <div class="credit-body">
-      All player statistics, birthplaces, and biographical data on this page are sourced from <a href="https://www.baseball-reference.com/register/league.cgi?id=fa20f1ed" target="_blank"><strong>Baseball Reference's 2026 World Baseball Classic register</strong></a> — the authoritative reference for international baseball statistics. Click any player's name to visit their full Baseball Reference page. Click "Highlights" to find their plays on YouTube. <em>This page is a curated index, not a database — credit and traffic flows back to the source.</em>
+<div class="roster-section">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2 class="section-title">Hitters</h2>
+      <span class="section-count">17 players</span>
+    </div>
+    <div class="grid">
+      <div class="player-card" data-name="maikel garcia" data-position-group="hitter" data-role="mvp" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Maikel Garcia<span style="background:#f5c842;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">MVP</span>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">3B</strong> &middot; B/T: R/R &middot; 6-1 &middot; 180 lbs &middot; b. 2000
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Caracas, Venezuela &middot; Kansas City Royals</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.385</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">7</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1.231</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Tournament MVP. .385/.500/.731. The pulse of the championship run.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/g/garciama03.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Maikel+Garcia+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="salvador perez" data-position-group="hitter" data-role="captain" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Salvador Perez<span style="background:#f0f4ff;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Captain</span>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">C</strong> &middot; B/T: R/R &middot; 6-3 &middot; 255 lbs &middot; b. 1990
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Valencia, Venezuela &middot; Kansas City Royals</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.302</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">2</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">8</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.987</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">4th WBC. Captain. Veteran leader. Hit .302 with key clutch RBI.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/p/perezsa02.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Salvador+Perez+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="anthony santander" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Anthony Santander<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">OF</strong> &middot; B/T: S/R &middot; 6-2 &middot; 230 lbs &middot; b. 1994
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Margarita, Venezuela &middot; Toronto Blue Jays</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.290</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">3</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">8</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1.012</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Power. 3 HR.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/s/santaan02.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Anthony+Santander+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="eugenio suarez" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Eugenio Suarez<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">3B</strong> &middot; B/T: R/R &middot; 6-1 &middot; 213 lbs &middot; b. 1991
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Ciudad Bolivar, Venezuela &middot; Arizona Diamondbacks</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.275</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">2</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">9</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.998</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">9th-inning RBI in the Final. The walk-off moment.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/s/suareeu01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Eugenio+Suarez+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="ezequiel tovar" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Ezequiel Tovar<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">SS</strong> &middot; B/T: R/R &middot; 6-0 &middot; 162 lbs &middot; b. 2001
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Maracay, Venezuela &middot; Colorado Rockies</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.471</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">5</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1.298</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Tournament-best .471 BA.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/t/tovarez01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Ezequiel+Tovar+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="luis arraez" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Luis Arraez<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">2B</strong> &middot; B/T: L/R &middot; 5-10 &middot; 175 lbs &middot; b. 1997
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">San Felipe, Venezuela &middot; San Diego Padres</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.412</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">4</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.987</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Tournament leadoff anchor. .412 BA.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/a/arraelu01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Luis+Arraez+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="ronald acuna jr" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Ronald Acuna Jr<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">OF</strong> &middot; B/T: R/R &middot; 6-0 &middot; 205 lbs &middot; b. 1997
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">La Guaira, Venezuela &middot; Atlanta Braves</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.350</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">2</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">6</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1.122</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Returned strong from 2024 ACL. .350 BA.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/a/acunaro01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Ronald+Acuna+Jr+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="wilyer abreu" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Wilyer Abreu<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">OF</strong> &middot; B/T: L/L &middot; 5-10 &middot; 215 lbs &middot; b. 1999
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Maracaibo, Venezuela &middot; Boston Red Sox</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.300</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">2</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">5</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1.045</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Final HR. Tournament breakout.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/a/abreuwi01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Wilyer+Abreu+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="andres gimenez" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Andres Gimenez
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">2B</strong> &middot; B/T: L/R &middot; 5-11 &middot; 161 lbs &middot; b. 1998
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Caracas, Venezuela &middot; Toronto Blue Jays</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.245</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">3</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.745</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Defensive anchor. Gold Glove caliber.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/g/gimenan01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Andres+Gimenez+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="asdrubal cabrera" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Asdrubal Cabrera
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">IF</strong> &middot; B/T: S/R &middot; 6-0 &middot; 205 lbs &middot; b. 1985
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Puerto La Cruz Venezuela &middot; Retired</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.232</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">2</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.625</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran utility infielder.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/c/cabreas01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Asdrubal+Cabrera+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="eduardo escobar" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Eduardo Escobar
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">3B</strong> &middot; B/T: S/R &middot; 5-10 &middot; 194 lbs &middot; b. 1989
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">La Pica Venezuela &middot; Free Agent</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.215</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.598</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran utility.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/e/escobed01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Eduardo+Escobar+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="gleyber torres" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Gleyber Torres
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">2B</strong> &middot; B/T: R/R &middot; 6-1 &middot; 205 lbs &middot; b. 1996
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Caracas, Venezuela &middot; Detroit Tigers</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.267</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">4</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.834</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Versatile infielder.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/t/torregl01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Gleyber+Torres+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="jose altuve" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Jose Altuve
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">2B/OF</strong> &middot; B/T: R/R &middot; 5-6 &middot; 166 lbs &middot; b. 1990
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Maracay, Venezuela &middot; Houston Astros</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.280</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">2</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">5</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.945</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran. 4th WBC.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/a/altuvjo01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Jose+Altuve+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="miguel cabrera" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Miguel Cabrera
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">DH</strong> &middot; B/T: R/R &middot; 6-4 &middot; 267 lbs &middot; b. 1983
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Maracay, Venezuela &middot; Detroit Tigers (retired)</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.250</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">3</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.789</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Final WBC. Triple Crown winner. Living legend.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/c/cabremi01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Miguel+Cabrera+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="renato nunez" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Renato Nunez
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">DH</strong> &middot; B/T: R/R &middot; 6-1 &middot; 220 lbs &middot; b. 1994
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Valencia, Venezuela &middot; NPB</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.272</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">4</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.864</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">NPB power bat. Currently with Yomiuri.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/n/nunezre01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Renato+Nunez+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="willson contreras" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Willson Contreras
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">C</strong> &middot; B/T: R/R &middot; 6-1 &middot; 212 lbs &middot; b. 1992
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Puerto Cabello, Venezuela &middot; St. Louis Cardinals</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.288</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">4</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.876</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Backup catcher behind Salvy.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/c/contrwi01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Willson+Contreras+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="wilmer flores" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Wilmer Flores
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">1B</strong> &middot; B/T: R/R &middot; 6-3 &middot; 205 lbs &middot; b. 1991
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Valencia, Venezuela &middot; San Francisco Giants</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.268</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">BA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">HR</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">3</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">RBI</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">.789</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">OPS</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Bench bat.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/f/florewi01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Wilmer+Flores+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
     </div>
   </div>
+</div>
 
-  <div class="filter-bar">
-    <div class="filter-row">
-      <input type="text" id="searchInput" class="filter-search" placeholder="Search by player name…" oninput="filterPlayers()">
-      <div class="filter-pills">
-        <button class="fp active" data-filter="all" onclick="setFilter('all')">All 29</button>
-        <button class="fp" data-filter="pitcher" onclick="setFilter('pitcher')">Pitchers (16)</button>
-        <button class="fp bat" data-filter="batter" onclick="setFilter('batter')">Hitters (13)</button>
-      </div>
-      <span class="filter-count" id="filterCount">29 players</span>
+<div class="roster-section alt">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2 class="section-title">Pitchers</h2>
+      <span class="section-count">12 players</span>
+    </div>
+    <div class="grid">
+      <div class="player-card" data-name="pablo lopez" data-position-group="pitcher" data-role="ace" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Pablo Lopez<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Ace</span>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">SP</strong> &middot; B/T: R/R &middot; 6-3 &middot; 225 lbs &middot; b. 1996
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Cabimas, Venezuela &middot; Minnesota Twins</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1.50</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">12.0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">14</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Tournament rotation ace. Multiple wins.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/l/lopezpa02.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Pablo+Lopez+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="daniel palencia" data-position-group="pitcher" data-role="closer" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Daniel Palencia<span style="background:#D50032;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Closer</span>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">CL</strong> &middot; B/T: R/R &middot; 6-0 &middot; 180 lbs &middot; b. 2000
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Caracas, Venezuela &middot; Chicago Cubs</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0.00</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">4.0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">7</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">3</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Tournament saves leader. 0.00 ERA. The closer.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/p/palenda01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Daniel+Palencia+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="anthony desclafani" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Anthony DeSclafani
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">RP</strong> &middot; B/T: R/R &middot; 6-1 &middot; 206 lbs &middot; b. 1990
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Freehold NJ USA &middot; Free Agent</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">2.70</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">3.1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">4</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran swingman.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/d/desclan01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Anthony+DeSclafani+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="carlos carrasco" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Carlos Carrasco
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">SP</strong> &middot; B/T: R/R &middot; 6-3 &middot; 221 lbs &middot; b. 1987
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Barquisimeto Venezuela &middot; Free Agent</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">3.86</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">4.2</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">3</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran starter.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/c/carraca01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Carlos+Carrasco+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="eduardo rodriguez" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Eduardo Rodriguez
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">SP</strong> &middot; B/T: L/L &middot; 6-2 &middot; 231 lbs &middot; b. 1993
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Valencia, Venezuela &middot; Arizona Diamondbacks</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">3.00</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">6.0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">6</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran lefty.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/r/rodried01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Eduardo+Rodriguez+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="erasmo ramirez" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Erasmo Ramirez
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">RP</strong> &middot; B/T: R/R &middot; 6-1 &middot; 225 lbs &middot; b. 1990
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Rivas Nicaragua &middot; Various</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">3.50</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">5.1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">4</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran swingman.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/r/ramirer04.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Erasmo+Ramirez+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="jhoan duran" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Jhoan Duran
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">RP</strong> &middot; B/T: R/R &middot; 6-5 &middot; 230 lbs &middot; b. 1998
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Esperanza, Venezuela &middot; Minnesota Twins</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1.50</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">6.0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">9</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Setup man. 100+ MPH velocity.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/d/duranjh01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Jhoan+Duran+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="jose alvarado" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Jose Alvarado
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">RP</strong> &middot; B/T: L/L &middot; 6-2 &middot; 245 lbs &middot; b. 1995
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Maracaibo, Venezuela &middot; Philadelphia Phillies</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">2.25</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">4.0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">6</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Power lefty bullpen arm.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/a/alvarjo04.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Jose+Alvarado+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="luis garcia" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Luis Garcia
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">SP</strong> &middot; B/T: R/R &middot; 6-2 &middot; 230 lbs &middot; b. 1996
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Caracas, Venezuela &middot; Houston Astros</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">2.45</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">11.0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">10</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Solid rotation arm.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/g/garcilu05.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Luis+Garcia+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="ranger suarez" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Ranger Suarez
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">SP</strong> &middot; B/T: L/L &middot; 6-1 &middot; 217 lbs &middot; b. 1995
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Caracas, Venezuela &middot; Philadelphia Phillies</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1.93</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">9.1</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">8</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Lefty starter. Key Pool C performance.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/s/suarera01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Ranger+Suarez+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="silvino bracho" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Silvino Bracho
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">RP</strong> &middot; B/T: R/R &middot; 5-11 &middot; 189 lbs &middot; b. 1992
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">Caracas, Venezuela &middot; Various MiLB &middot; MiLB</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">1.80</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">5.0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">5</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran middle relief.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/b/brachsi01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Silvino+Bracho+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
+<div class="player-card" data-name="yefry ramirez" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #CE1126;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+  <div>
+    <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
+      Yefry Ramirez
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
+      <strong style="color:#f0f4ff;">RP</strong> &middot; B/T: R/R &middot; 6-3 &middot; 180 lbs &middot; b. 1993
+    </div>
+    <div style="font-family:Georgia,serif;font-size:.78rem;font-style:italic;color:#8899bb;margin-top:5px;">San Cristobal Venezuela &middot; NPB</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">2.45</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">ERA</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">4.0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">IP</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">5</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">K</div></div><div style="text-align:center;padding:8px 4px;background:rgba(15,23,42,.5);border-radius:4px;"><div style="font-family:Arial,sans-serif;font-weight:900;font-size:1.05rem;color:#f0f4ff;line-height:1;">0</div><div style="font-family:'Courier New',monospace;font-size:.6rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">SV</div></div>
+  </div>
+  <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">NPB-based reliever. Pacific League experience.</div>
+  <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/r/rmirye01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Yefry+Ramirez+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
+</div>
     </div>
   </div>
-
-  <!-- HITTERS SECTION -->
-  <div class="roster-section" id="hittersSection">
-    <div class="rs-head">
-      <span class="rs-num">01</span>
-      <h2 class="rs-title">Hitters</h2>
-      <span class="rs-meta">13 players · .261 / .335 / .440</span>
-    </div>
-    <div class="player-grid" id="hittersGrid">
-
-      <!-- MAIKEL GARCIA - MVP -->
-      <div class="player-card batter" data-name="maikel garcia" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=garcia003mai" target="_blank">Maikel García 🏆</a></div>
-          <span class="pc-pos bat">3B · MVP</span>
-        </div>
-        <div class="pc-bio">Age 26 · La Sabana, Vargas, VE · R/R · 6'1" 180 · <strong>Tournament MVP</strong> · Kansas City Royals</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.385</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">7</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">.970</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=garcia003mai" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Maikel+Garcia+WBC+2026+highlights" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- EZEQUIEL TOVAR -->
-      <div class="player-card batter" data-name="ezequiel tovar" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=tovar-001eze" target="_blank">Ezequiel Tovar</a></div>
-          <span class="pc-pos bat">SS</span>
-        </div>
-        <div class="pc-bio">Age 24 · Maracay, Aragua, VE · R/R · 6'0" 192 · Colorado Rockies · <strong>Best BA on team</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.471</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">1.147</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=tovar-001eze" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Ezequiel+Tovar+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- LUIS ARRAEZ -->
-      <div class="player-card batter" data-name="luis arraez" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=arraez000lui" target="_blank">Luis Arráez</a></div>
-          <span class="pc-pos bat">1B/2B</span>
-        </div>
-        <div class="pc-bio">Age 29 · San Felipe, Yaracuy, VE · L/R · 5'10" 186 · 3x batting champion · San Diego Padres</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.308</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">10</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">1.059</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=arraez000lui" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Luis+Arraez+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- RONALD ACUÑA JR -->
-      <div class="player-card batter" data-name="ronald acuna" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=acunaro01" target="_blank">Ronald Acuña Jr.</a></div>
-          <span class="pc-pos bat">RF</span>
-        </div>
-        <div class="pc-bio">Age 28 · La Guaira, La Guaira, VE · R/R · 6'0" 205 · Atlanta Braves · 2023 NL MVP</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.269</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">4</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">.963</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=acunaro01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Ronald+Acuna+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- WILYER ABREU -->
-      <div class="player-card batter" data-name="wilyer abreu" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=abreuwi01" target="_blank">Wilyer Abreu</a></div>
-          <span class="pc-pos bat">LF</span>
-        </div>
-        <div class="pc-bio">Age 27 · Maracaibo, Zulia, VE · L/L · 5'10" 215 · Boston Red Sox · <strong>Final Game HR</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.250</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">7</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">.845</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=abreuwi01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Wilyer+Abreu+WBC+Final+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- EUGENIO SUAREZ -->
-      <div class="player-card batter" data-name="eugenio suarez" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=suareeu01" target="_blank">Eugenio Suárez</a></div>
-          <span class="pc-pos bat">3B/1B</span>
-        </div>
-        <div class="pc-bio">Age 34 · Puerto Ordaz, Bolivar, VE · R/R · 5'11" 213 · Arizona Diamondbacks · <strong>9th-inning RBI double in Final</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.200</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">4</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">.788</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=suareeu01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Eugenio+Suarez+WBC+2026+9th+inning" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- SALVADOR PEREZ -->
-      <div class="player-card batter" data-name="salvador perez" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=perezsa02" target="_blank">Salvador Pérez</a></div>
-          <span class="pc-pos bat">C · Captain</span>
-        </div>
-        <div class="pc-bio">Age 36 · Valencia, Carabobo, VE · R/R · 6'2" 255 · Kansas City Royals · <strong>Team Captain · 4th WBC</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.182</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">.364</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=perezsa02" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Salvador+Perez+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- WILLIAM CONTRERAS -->
-      <div class="player-card batter" data-name="william contreras" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=contrwi01" target="_blank">William Contreras</a></div>
-          <span class="pc-pos bat">C</span>
-        </div>
-        <div class="pc-bio">Age 28 · Puerto Cabello, Carabobo, VE · R/R · 5'10" 217 · Milwaukee Brewers</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.000</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">.188</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=contrwi01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=William+Contreras+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- WILLSON CONTRERAS -->
-      <div class="player-card batter" data-name="willson contreras" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=contrwi02" target="_blank">Willson Contreras</a></div>
-          <span class="pc-pos bat">1B/C</span>
-        </div>
-        <div class="pc-bio">Age 34 · Puerto Cabello, Carabobo, VE · R/R · 6'0" 240 · St. Louis Cardinals</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.250</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">3</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">.558</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=contrwi02" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Willson+Contreras+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- GLEYBER TORRES -->
-      <div class="player-card batter" data-name="gleyber torres" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=torregl01" target="_blank">Gleyber Torres</a></div>
-          <span class="pc-pos bat">2B</span>
-        </div>
-        <div class="pc-bio">Age 29 · Caracas, Distrito Federal, VE · R/R · 5'10" 205 · Detroit Tigers</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.250</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">.681</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=torregl01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Gleyber+Torres+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- JACKSON CHOURIO -->
-      <div class="player-card batter" data-name="jackson chourio" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=chourja01" target="_blank">Jackson Chourio</a></div>
-          <span class="pc-pos bat">CF</span>
-        </div>
-        <div class="pc-bio">Age 22 · Maracaibo, Zulia, VE · R/R · 6'1" 199 · Milwaukee Brewers · <strong>Future star</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.200</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">.478</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=chourja01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Jackson+Chourio+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- JAVIER SANOJA -->
-      <div class="player-card batter" data-name="javier sanoja" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=sanojja01" target="_blank">Javier Sanoja</a></div>
-          <span class="pc-pos bat">UTIL</span>
-        </div>
-        <div class="pc-bio">Age 23 · Maracay, Aragua, VE · R/R · 5'7" 150 · Miami Marlins · <strong>Stole 2B in 9th of Final</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.375</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">1.125</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=sanojja01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Javier+Sanoja+WBC+stolen+base" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- ANDRES GIMENEZ -->
-      <div class="player-card batter" data-name="andres gimenez" data-type="batter">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=gimenan01" target="_blank">Andrés Giménez</a></div>
-          <span class="pc-pos bat">2B/SS</span>
-        </div>
-        <div class="pc-bio">Age 27 · Barquisimeto, Lara, VE · L/R · 5'11" 161 · Toronto Blue Jays · <strong>Gold Glove infielder</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">.111</div><div class="stat-key">BA</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">HR</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">RBI</div></div>
-          <div class="stat-cell"><div class="stat-val">.384</div><div class="stat-key">OPS</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=gimenan01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Andres+Gimenez+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- PITCHERS SECTION -->
-  <div class="roster-section" id="pitchersSection">
-    <div class="rs-head">
-      <span class="rs-num">02</span>
-      <h2 class="rs-title">Pitchers</h2>
-      <span class="rs-meta">16 players · 2.86 ERA · 67 K · 1.032 WHIP</span>
-    </div>
-    <div class="player-grid" id="pitchersGrid">
-
-      <!-- DANIEL PALENCIA - CLOSER -->
-      <div class="player-card pitcher" data-name="daniel palencia" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=palenda01" target="_blank">Daniel Palencia 🔒</a></div>
-          <span class="pc-pos">RP · CL</span>
-        </div>
-        <div class="pc-bio">Age 26 · San Carlos, Cojedes, VE · R/R · 5'11" 160 · Chicago Cubs · <strong>3 Saves · 0.00 ERA · Closed Final</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">5.0</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">9</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">3</div><div class="stat-key">SV</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=palenda01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Daniel+Palencia+WBC+save" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- EDUARDO RODRIGUEZ -->
-      <div class="player-card pitcher" data-name="eduardo rodriguez" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=rodriedu02" target="_blank">Eduardo Rodríguez</a></div>
-          <span class="pc-pos">SP</span>
-        </div>
-        <div class="pc-bio">Age 33 · Valencia, Carabobo, VE · L/L · 6'2" 231 · Arizona Diamondbacks · <strong>2 Starts · 9 K in 7 IP</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">3.86</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">7.0</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">9</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">11.6</div><div class="stat-key">K/9</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=rodriedu02" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Eduardo+Rodriguez+WBC+2026" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- ENMANUEL DE JESUS -->
-      <div class="player-card pitcher" data-name="enmanuel de jesus" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=dejesen01" target="_blank">Enmanuel De Jesús</a></div>
-          <span class="pc-pos">SP/LR</span>
-        </div>
-        <div class="pc-bio">Age 29 · Valencia, Carabobo, VE · L/L · 6'3" 190 · <strong>2-0 · 1.23 ERA · 11 K in 7.1 IP</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">1.23</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">7.1</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">11</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">13.5</div><div class="stat-key">K/9</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=dejesen01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Enmanuel+De+Jesus+WBC+pitcher" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- ANDRES MACHADO -->
-      <div class="player-card pitcher" data-name="andres machado" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=machaan01" target="_blank">Andrés Machado</a></div>
-          <span class="pc-pos">RP</span>
-        </div>
-        <div class="pc-bio">Age 33 · Urama, Carabobo, VE · R/R · 6'1" 232 · <strong>1-0 · 6 appearances · 14.2 K/9</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">2.84</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">6.1</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">10</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">14.2</div><div class="stat-key">K/9</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=machaan01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Andres+Machado+WBC+pitcher" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- ANGEL ZERPA -->
-      <div class="player-card pitcher" data-name="angel zerpa" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=zerpaan01" target="_blank">Ángel Zerpa</a></div>
-          <span class="pc-pos">RP</span>
-        </div>
-        <div class="pc-bio">Age 26 · Valle de la Pascua, Guarico, VE · L/L · 6'0" 237 · Kansas City Royals · <strong>1-0 · 0.00 ERA</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">5.1</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">8</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">13.5</div><div class="stat-key">K/9</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=zerpaan01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Angel+Zerpa+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- RANGER SUAREZ -->
-      <div class="player-card pitcher" data-name="ranger suarez" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=suarera01" target="_blank">Ranger Suárez</a></div>
-          <span class="pc-pos">SP</span>
-        </div>
-        <div class="pc-bio">Age 30 · Pie de Cuesta, Lara, VE · L/L · 6'1" 217 · Philadelphia Phillies · 2024 NL All-Star</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">11.57</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">4.2</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">5</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">9.6</div><div class="stat-key">K/9</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=suarera01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Ranger+Suarez+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- JOSE BUTTO -->
-      <div class="player-card pitcher" data-name="jose butto" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=buttojo01" target="_blank">José Buttó</a></div>
-          <span class="pc-pos">RP</span>
-        </div>
-        <div class="pc-bio">Age 28 · Cumana, Sucre, VE · R/R · 6'0" 208 · New York Mets · <strong>5 appearances · 0.18 WHIP</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">5.2</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">0.18</div><div class="stat-key">WHIP</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=buttojo01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Jose+Butto+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- LUINDER AVILA -->
-      <div class="player-card pitcher" data-name="luinder avila" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=avilalu01" target="_blank">Luinder Ávila</a></div>
-          <span class="pc-pos">RP</span>
-        </div>
-        <div class="pc-bio">Age 24 · Caracas, Distrito Federal, VE · R/R · 6'3" 195</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">4.1</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">3</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">1.39</div><div class="stat-key">WHIP</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=avilalu01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Luinder+Avila+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- EDUARD BAZARDO -->
-      <div class="player-card pitcher" data-name="eduard bazardo" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=bazared01" target="_blank">Eduard Bazardo</a></div>
-          <span class="pc-pos">RP</span>
-        </div>
-        <div class="pc-bio">Age 30 · Maracay, Aragua, VE · R/R · 6'0" 190</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">2.70</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">3.1</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">0.60</div><div class="stat-key">WHIP</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=bazared01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Eduard+Bazardo+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- KEIDER MONTERO -->
-      <div class="player-card pitcher" data-name="keider montero" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=monteke01" target="_blank">Keider Montero</a></div>
-          <span class="pc-pos">SP/LR</span>
-        </div>
-        <div class="pc-bio">Age 25 · Santa Teresa del Tuy, Miranda, VE · R/R · 6'1" 145 · Detroit Tigers</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">4.15</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">4.1</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">3</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">1.85</div><div class="stat-key">WHIP</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=monteke01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Keider+Montero+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- YOENDRYS GOMEZ -->
-      <div class="player-card pitcher" data-name="yoendrys gomez" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=gomezyo01" target="_blank">Yoendrys Gómez</a></div>
-          <span class="pc-pos">SP</span>
-        </div>
-        <div class="pc-bio">Age 26 · Nirgua, VE · R/R · 6'3" 212 · New York Yankees · <strong>1-0 · 0.00 ERA in 2 IP</strong></div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">2.0</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">3</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">1.00</div><div class="stat-key">WHIP</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=gomezyo01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Yoendrys+Gomez+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- RICARDO SANCHEZ -->
-      <div class="player-card pitcher" data-name="ricardo sanchez" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=sanchri01" target="_blank">Ricardo Sánchez</a></div>
-          <span class="pc-pos">RP</span>
-        </div>
-        <div class="pc-bio">Age 29 · Puerto Cabello, Carabobo, VE · L/L · 5'10" 220</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">2.45</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">3.2</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">0.82</div><div class="stat-key">WHIP</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=sanchri01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Ricardo+Sanchez+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- ANTHONY MOLINA -->
-      <div class="player-card pitcher" data-name="anthony molina" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=molinan01" target="_blank">Anthony Molina</a></div>
-          <span class="pc-pos">RP</span>
-        </div>
-        <div class="pc-bio">Age 24 · San Joaquin, Carabobo, VE · R/R · 6'1" 170</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">4.50</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">2.0</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">2</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">3.00</div><div class="stat-key">WHIP</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=molinan01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Anthony+Molina+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- ANTONIO SENZATELA -->
-      <div class="player-card pitcher" data-name="antonio senzatela" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=senzaan01" target="_blank">Antonio Senzatela</a></div>
-          <span class="pc-pos">RP</span>
-        </div>
-        <div class="pc-bio">Age 31 · Valencia, Carabobo, VE · R/R · 6'1" 235 · Colorado Rockies</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">27.00</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">1.0</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">1</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">3.00</div><div class="stat-key">WHIP</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=senzaan01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Antonio+Senzatela+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- CARLOS GUZMAN -->
-      <div class="player-card pitcher" data-name="carlos guzman" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=guzmaca01" target="_blank">Carlos Guzmán</a></div>
-          <span class="pc-pos">RP</span>
-        </div>
-        <div class="pc-bio">Age 28 · Maracay, Aragua, VE · R/R · 6'1" 210</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">0.2</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">3.00</div><div class="stat-key">WHIP</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=guzmaca01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Carlos+Guzman+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-      <!-- CHRISTIAN SUAREZ -->
-      <div class="player-card pitcher" data-name="christian suarez" data-type="pitcher">
-        <div class="pc-head">
-          <div class="pc-name"><a href="https://www.baseball-reference.com/register/player.fcgi?id=suarech01" target="_blank">Christian Suárez</a></div>
-          <span class="pc-pos">RP</span>
-        </div>
-        <div class="pc-bio">Age 25 · Maracay, Aragua, VE · L/L · 5'11" 160</div>
-        <div class="pc-stats">
-          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">ERA</div></div>
-          <div class="stat-cell"><div class="stat-val">0.1</div><div class="stat-key">IP</div></div>
-          <div class="stat-cell"><div class="stat-val">0</div><div class="stat-key">K</div></div>
-          <div class="stat-cell"><div class="stat-val">0.00</div><div class="stat-key">WHIP</div></div>
-        </div>
-        <div class="pc-links">
-          <a href="https://www.baseball-reference.com/register/player.fcgi?id=suarech01" target="_blank" class="pc-link">Full Stats →</a>
-          <a href="https://www.youtube.com/results?search_query=Christian+Suarez+WBC" target="_blank" class="pc-link youtube">Highlights ▶</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- COMING SOON -->
-  <div class="credit-block" style="border-left-color:var(--neon);">
-    <div class="credit-tag" style="color:var(--neon);">Roster Explorer · Phase 1 of 4</div>
-    <div class="credit-body">
-      This is the prototype: Venezuela's championship roster. <strong>Phase 2 adds runner-up USA + finalists Italy and Dominican Republic.</strong> Phase 3 expands to all 20 teams from WBC 2026 — over 600 players. <strong>Phase 4</strong> adds walk-up song integration via Spotify embeds and a complete cross-country search. Tell us which roster you want next via <a href="https://worldbaseball.com" target="_blank">World Baseball Network</a>.
-    </div>
-  </div>
-
 </div>
 
 <div class="footer">
   <div class="footer-inner">
-    <div>
-      <div class="gf-brand">Official Viewer's Guide</div>
-      <div class="gf-pub">A publication of <a href="https://worldbaseball.com" target="_blank">World Baseball Network (WBN)</a> · classicbaseball.world<br>Stats verified via <a href="https://www.baseball-reference.com" target="_blank">Baseball Reference</a> · Updated April 2026</div>
-    </div>
-    <div class="gf-links">
-      <a href="/wbc2026.html" class="gf-link">← WBC 2026 Hub</a>
-      <a href="/leagues.html" class="gf-link">All Leagues</a>
-      <a href="/league/lvbp.html" class="gf-link">LVBP Venezuela</a>
-    </div>
+    <strong style="color:#f0f4ff;font-family:'Barlow Condensed',sans-serif;font-size:1rem;letter-spacing:1px;text-transform:uppercase;">WBC Roster Explorer</strong> &middot;
+    A publication of <a href="https://worldbaseball.com">World Baseball Network</a> &middot;
+    <a href="/wbc-rosters/index.html">Browse all teams</a>
   </div>
 </div>
 
 <script>
-  let currentFilter = 'all';
-  function setFilter(filter) {
-    currentFilter = filter;
-    document.querySelectorAll('.fp').forEach(b=>b.classList.remove('active'));
-    document.querySelector(`[data-filter="${filter}"]`).classList.add('active');
-    filterPlayers();
-  }
-  function filterPlayers() {
-    const search = document.getElementById('searchInput').value.toLowerCase().trim();
-    const cards = document.querySelectorAll('.player-card');
-    let visible = 0;
-    cards.forEach(card => {
-      const matchesType = currentFilter === 'all' || card.dataset.type === currentFilter;
-      const matchesSearch = !search || card.dataset.name.includes(search);
-      if (matchesType && matchesSearch) {
-        card.classList.remove('hidden');
-        visible++;
+const cards = document.querySelectorAll('.player-card');
+const chips = document.querySelectorAll('.filter-chip');
+const searchBox = document.getElementById('searchBox');
+let activeFilter = 'all';
+
+function applyFilter() {
+  const search = searchBox.value.toLowerCase().trim();
+  cards.forEach(card => {
+    const name = card.dataset.name;
+    const group = card.dataset.positionGroup;
+    const role = card.dataset.role;
+    let visible = true;
+    if (activeFilter !== 'all') {
+      if (activeFilter === 'hitter' || activeFilter === 'pitcher') {
+        visible = (group === activeFilter);
       } else {
-        card.classList.add('hidden');
+        visible = (role === activeFilter);
       }
-    });
-    document.getElementById('filterCount').textContent = visible + (visible === 1 ? ' player' : ' players');
-    // hide section if empty
-    ['hittersSection','pitchersSection'].forEach(id=>{
-      const sec = document.getElementById(id);
-      const visibleInSec = sec.querySelectorAll('.player-card:not(.hidden)').length;
-      sec.style.display = visibleInSec === 0 ? 'none' : '';
-    });
-  }
+    }
+    if (visible && search) {
+      visible = name.includes(search);
+    }
+    card.classList.toggle('hidden', !visible);
+  });
+}
+
+chips.forEach(chip => chip.addEventListener('click', () => {
+  chips.forEach(c => c.classList.remove('active'));
+  chip.classList.add('active');
+  activeFilter = chip.dataset.filter;
+  applyFilter();
+}));
+
+searchBox.addEventListener('input', applyFilter);
 </script>
-<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
 </body>
 </html>
