@@ -51,6 +51,7 @@ select{width:100%;padding:12px;border:3px solid var(--ink);background:#fff;font:
     <div class="x">×</div>
     <div><label for="b">Team or category</label><select id="b"></select></div>
   </div>
+  <div style="max-width:520px;margin:-6px 0 16px"><label for="c" style="font:600 11px 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.12em;display:block;margin-bottom:6px">+ and also (optional)</label><select id="c"><option value="">—</option></select></div>
   <div class="bar" id="sort">
     <button class="pill" data-s="rare" aria-pressed="true">Rarest first</button>
     <button class="pill" data-s="famous" aria-pressed="false">Most famous first</button>
@@ -79,9 +80,10 @@ fetch('/grid.json').then(function(r){return r.json()}).then(function(d){
   fr.forEach(function(f){a.add(new Option(d.franchises[f],f));});
   var og=document.createElement('optgroup');og.label='Teams';fr.forEach(function(f){og.appendChild(new Option(d.franchises[f],f))});b.appendChild(og);
   var oc=document.createElement('optgroup');oc.label='Categories';CATS.forEach(function(c){oc.appendChild(new Option(c[1],'cat:'+c[0]))});b.appendChild(oc);
+  var c=el('c'); var og3=document.createElement('optgroup');og3.label='Teams';fr.forEach(function(f){og3.appendChild(new Option(d.franchises[f],f))});c.appendChild(og3);var oc3=document.createElement('optgroup');oc3.label='Categories';CATS.forEach(function(x){oc3.appendChild(new Option(x[1],'cat:'+x[0]))});c.appendChild(oc3);
   a.value='STL'; b.value='CHC';
-  var q=new URLSearchParams(location.hash.slice(1)); if(q.get('a'))a.value=q.get('a'); if(q.get('b'))b.value=q.get('b'); if(!a.value)a.value='STL'; if(!b.value)b.value='CHC';
-  a.onchange=b.onchange=run; run(); bridge();
+  var q=new URLSearchParams(location.hash.slice(1)); if(q.get('a'))a.value=q.get('a'); if(q.get('b'))b.value=q.get('b'); if(!a.value)a.value='STL'; if(!b.value)b.value='CHC'; if(q.get('c'))c.value=q.get('c');
+  a.onchange=b.onchange=c.onchange=run; run(); bridge();
   el('note').textContent='Data: the Lahman Baseball Database through 2025, plus the Cardinals 2026 season and 2026 Cardinals trades (Arenado and Nootbaar to Arizona, Gray and Contreras to Boston, Donovan to Seattle). Other teams\' 2026 moves come with the full 2026 update. Counts every franchise under its current name (Brooklyn Dodgers count as Dodgers). Player pages and lineups for the current season come next.';
 });
 document.querySelectorAll('#sort .pill').forEach(function(btn){btn.onclick=function(){sortBy=btn.dataset.s;document.querySelectorAll('#sort .pill').forEach(function(x){x.setAttribute('aria-pressed',x===btn)});run();}});
@@ -118,8 +120,8 @@ function fits(p,key){
   return !!p.t[key];
 }
 function run(){
-  var a=el('a').value,b=el('b').value; location.hash='a='+a+'&b='+b;
-  var list=D.players.filter(function(p){return p.t[a]&&fits(p,b)&&!(b===a)});
+  var a=el('a').value,b=el('b').value,c3=el('c').value; location.hash='a='+a+'&b='+b+(c3?'&c='+c3:'');
+  var list=D.players.filter(function(p){return p.t[a]&&fits(p,b)&&!(b===a)&&(!c3||fits(p,c3))});
   if(sortBy==='rare') list.sort(function(x,y){return x.g-y.g});
   if(sortBy==='famous') list.sort(function(x,y){return (y.x.length-x.x.length)||(y.g-x.g)});
   if(sortBy==='recent') list.sort(function(x,y){return y.y[1]-x.y[1]});
@@ -128,6 +130,7 @@ function run(){
     var ta=p.t[a], tb=p.t[b];
     var line=D.franchises[a]+' '+ta[0]+(ta[1]!==ta[0]?'–'+ta[1]:'')+' ('+ta[2]+' G)';
     if(tb) line+='<br>'+D.franchises[b]+' '+tb[0]+(tb[1]!==tb[0]?'–'+tb[1]:'')+' ('+tb[2]+' G)';
+    var tc=c3&&p.t[c3]; if(tc) line+='<br>'+D.franchises[c3]+' '+tc[0]+(tc[1]!==tc[0]?'–'+tc[1]:'')+' ('+tc[2]+' G)';
     var tags=p.x.filter(function(t){return ['MVP','CY','ROY','HOF','AS'].indexOf(t)>=0}).map(function(t){return '<span class="tag">'+t+'</span>'}).join('');
     var rare=(sortBy==='rare'&&i<5)?'<span class="tag rare">rare pick</span>':'';
     return '<div class="card'+(a==='STL'||b==='STL'?' stl':'')+'"><h3>'+p.n+'</h3><div class="meta">'+line+'<br>'+p.p.join(' · ').toUpperCase()+(p.c&&p.c!=='USA'?' · born '+p.c:'')+'</div>'+rare+tags+'</div>';
