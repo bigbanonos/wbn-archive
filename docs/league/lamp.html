@@ -7,7 +7,7 @@
   <meta name="description" content="LAMP — Mexico's winter league. Free on YouTube, 10 teams, Charros de Jalisco defending champs. Caribbean Series representatives. The bridge between LMB summer and Caribbean Series February.">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0a0f1e;--bg2:#0f172a;--card:#111827;--card2:#0d1424;--text:#f0f4ff;--muted:#8899bb;--dim:#4a5a7a;--accent:#D50032;--neon:#00ff9d;--gold:#f5c842;--rule:#1e2d4a;--rule2:#263354;--blue:#38bdf8;--teal:#2dd4bf;--purple:#a78bfa;--lg:#006847;--lg2:#CE1126;--mono:'IBM Plex Mono',monospace;--display:'Barlow Condensed',sans-serif;--serif:'Lora',serif;}
+    :root{--bg:#fff8ec;--bg2:#ffffff;--card:#ffffff;--card2:#fff3df;--text:#0a0a0a;--muted:#4a4a4a;--dim:#7a7a7a;--accent:#ff2d55;--neon:#1e4dff;--gold:#ff7a1a;--rule:#0a0a0a;--rule2:#0a0a0a;--blue:#1e4dff;--teal:#0a8f7a;--orange:#ff7a1a;--purple:#7b1fa2;--acid:#c6ff3d;--mono:'IBM Plex Mono',monospace;--display:'Archivo Black',sans-serif;--serif:'Inter',sans-serif;}
     *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
     body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:15px;line-height:1.65;}
     a{text-decoration:none;color:inherit;}
@@ -22,7 +22,7 @@
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
     .crumbs{padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
     .crumbs a{color:var(--muted);}.crumbs a:hover{color:var(--neon);}.crumbs span{color:var(--gold);}
-    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg);position:relative;overflow:hidden;background:linear-gradient(180deg,#00120a 0%,#0a0f1e 100%);}
+    .hero{padding:56px 24px 40px;border-bottom:3px solid var(--lg);position:relative;overflow:hidden;background:linear-gradient(180deg,#fff3df 0%,#fff3df 100%);}
     .hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(0,104,71,.03) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(0,104,71,.03) 0 1px,transparent 1px 60px);pointer-events:none;}
     .hero-inner{max-width:1200px;margin:0 auto;position:relative;}
     .hero-flag{font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--lg);margin-bottom:12px;}
@@ -63,7 +63,7 @@
     .ww-lede{font-family:var(--serif);font-size:.92rem;color:var(--muted);line-height:1.7;margin-bottom:12px;}
     .ww-lede strong{color:var(--text);}
     .ww-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px;}
-    .ww-item{background:rgba(0,0,0,.25);border:1px solid var(--rule);border-radius:4px;padding:10px 12px;}
+    .ww-item{background:#ffffff;border:1px solid var(--rule);border-radius:4px;padding:10px 12px;}
     .ww-val{font-family:var(--mono);font-size:.9rem;font-weight:700;color:var(--gold);}
     .ww-val.neon-val{color:var(--neon);}
     .ww-lbl{font-family:var(--mono);font-size:.6rem;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:1px;}
@@ -93,12 +93,13 @@
     .gf-link{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
     .gf-link:hover{color:var(--neon);}
   </style>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <nav class="site-nav">
   <a href="/index.html" class="brand-block" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-      <img src="/assets/img/wbn-logo.jpg" alt="World Baseball Network" class="wbn-logo" style="height:38px;width:auto;display:block;">
+      <span class="bbw" style="font-family:'Archivo Black',sans-serif;font-size:22px;letter-spacing:-.02em;line-height:1;white-space:nowrap"><span style="color:#ff2d55">BIG</span><span style="color:#1e4dff">BA</span><span style="color:#ff7a1a">NO</span><span style="background:#c6ff3d;color:#0a0a0a;padding:0 3px">NOS</span></span>
       <span class="logo" style="font-family:var(--display);font-weight:900;font-size:0.75rem;letter-spacing:1px;line-height:1.1;color:var(--text);max-width:180px;">Official Viewer's Guide<br>to International Baseball</span>
     </a>
   <div class="navlinks">
@@ -109,7 +110,7 @@
     <a href="/viewers-guide-may-4.html" class="nav-pill">Viewer's Guide</a>
     <a href="/wbc2026.html" class="nav-pill">WBC 2026</a>
   </div>
-  <a href="https://worldbaseball.com" target="_blank" class="hq-link"><span class="live-dot"></span> WBN HQ</a>
+  <a href="https://bigbanonos.com/" class="hq-link">⚾ bigbanonos.com</a>
 </nav>
 
 <div class="crumbs"><a href="/index.html">Home</a> / <a href="/leagues.html">Leagues</a> / <span>LAMP · Mexico Winter</span></div>

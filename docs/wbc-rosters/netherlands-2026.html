@@ -8,45 +8,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:#0a0f1e;color:#f0f4ff;font-family:'Lora',serif;font-size:15px;line-height:1.65;}
+    body{background:#fff3df;color:#f0f4ff;font-family:'Lora',serif;font-size:15px;line-height:1.65;}
     a{text-decoration:none;color:inherit;}
-    .site-nav{background:#0f172a;border-bottom:1px solid #1e2d4a;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100;}
+    .site-nav{background:#fff3df;border-bottom:1px solid #1e2d4a;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100;}
     .nav-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;color:#f0f4ff;}
     .nav-brand .neon{color:#00ff9d;}
     .nav-pill{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid #263354;color:#8899bb;text-transform:uppercase;}
     .nav-pill:hover{color:#f0f4ff;border-color:#f0f4ff;}
     .nav-pill.active{color:#f5c842;border-color:#f5c842;}
-    .hero{padding:48px 24px 40px;border-bottom:4px solid #FF7F00;background:linear-gradient(135deg,#0a0f1e 0%,#1a0a1f 100%);position:relative;overflow:hidden;}
+    .hero{padding:48px 24px 40px;border-bottom:4px solid #FF7F00;background:linear-gradient(135deg,#fff3df 0%,#fff3df 100%);position:relative;overflow:hidden;}
     .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#FF7F00 0%,transparent 8%);opacity:.15;}
     .hero-inner{max-width:1400px;margin:0 auto;position:relative;z-index:1;}
     .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;}
     .breadcrumb a{color:#00ff9d;}
     .hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3rem,8vw,6rem);font-weight:900;font-style:italic;letter-spacing:-2px;text-transform:uppercase;line-height:.9;margin-bottom:14px;}
     .hero h1 .country{color:#FF7F00;display:block;}
-    .finish-badge{display:inline-block;background:#8899bb;color:#0a0f1e;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:.85rem;letter-spacing:3px;padding:6px 16px;border-radius:4px;margin-bottom:18px;}
+    .finish-badge{display:inline-block;background:#8899bb;color:#fff3df;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:.85rem;letter-spacing:3px;padding:6px 16px;border-radius:4px;margin-bottom:18px;}
     .pool-tag{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:2px;color:#8899bb;text-transform:uppercase;margin-left:14px;}
     .meta-row{display:flex;gap:36px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid #263354;}
     .meta-item{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:#8899bb;}
     .meta-item strong{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:#00ff9d;letter-spacing:0;text-transform:uppercase;margin-bottom:4px;}
-    .filter-bar{background:#0f172a;border-bottom:1px solid #1e2d4a;padding:18px 24px;position:sticky;top:50px;z-index:90;}
+    .filter-bar{background:#fff3df;border-bottom:1px solid #1e2d4a;padding:18px 24px;position:sticky;top:50px;z-index:90;}
     .filter-inner{max-width:1400px;margin:0 auto;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
     .filter-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:900;letter-spacing:2px;color:#f5c842;text-transform:uppercase;margin-right:6px;}
-    .filter-chip{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:4px;border:1px solid #263354;background:#111827;color:#8899bb;text-transform:uppercase;cursor:pointer;}
-    .filter-chip.active{background:#00ff9d;color:#0a0f1e;border-color:#00ff9d;}
-    .search-box{margin-left:auto;background:#111827;border:1px solid #263354;border-radius:4px;padding:6px 12px;color:#f0f4ff;font-family:'Lora',serif;font-size:.85rem;width:200px;}
+    .filter-chip{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:4px;border:1px solid #263354;background:#fff3df;color:#8899bb;text-transform:uppercase;cursor:pointer;}
+    .filter-chip.active{background:#00ff9d;color:#fff3df;border-color:#00ff9d;}
+    .search-box{margin-left:auto;background:#fff3df;border:1px solid #263354;border-radius:4px;padding:6px 12px;color:#f0f4ff;font-family:'Lora',serif;font-size:.85rem;width:200px;}
     .roster-section{padding:36px 24px;}
-    .roster-section.alt{background:#0f172a;}
+    .roster-section.alt{background:#fff3df;}
     .section-inner{max-width:1400px;margin:0 auto;}
     .section-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #263354;padding-bottom:12px;margin-bottom:22px;flex-wrap:wrap;}
     .section-title{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;font-style:italic;letter-spacing:-1px;text-transform:uppercase;line-height:1;}
     .section-count{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:#8899bb;letter-spacing:1px;}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px;}
     .player-card.hidden{display:none !important;}
-    .footer{border-top:3px solid #f5c842;padding:36px 24px;background:#0f172a;}
+    .footer{border-top:3px solid #f5c842;padding:36px 24px;background:#fff3df;}
     .footer-inner{max-width:1400px;margin:0 auto;font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:#8899bb;}
     .footer-inner a{color:#00ff9d;}
     @media(max-width:700px){.site-nav,.filter-bar{position:static;}}
   </style>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -105,10 +106,10 @@
       <span class="section-count">4 players</span>
     </div>
     <div class="grid">
-      <div class="player-card" data-name="xander bogaerts" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #FF7F00;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+      <div class="player-card" data-name="xander bogaerts" data-position-group="hitter" data-role="star" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #FF7F00;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
-      Xander Bogaerts<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+      Xander Bogaerts<span style="background:#00ff9d;color:#fff3df;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
     </div>
     <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
       <strong style="color:#f0f4ff;">SS</strong> &middot; B/T: R/R &middot; 6-1 &middot; 210 lbs &middot; b. 1992
@@ -121,7 +122,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Aruban Dutch citizenship. Star SS.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/b/bogaeXa01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Xander+Bogaerts+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="andrelton simmons" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #FF7F00;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="andrelton simmons" data-position-group="hitter" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #FF7F00;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Andrelton Simmons
@@ -137,7 +138,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Defensive specialist.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/s/simmoan01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Andrelton+Simmons+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="didi gregorius" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #FF7F00;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="didi gregorius" data-position-group="hitter" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #FF7F00;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Didi Gregorius
@@ -153,7 +154,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran SS.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/g/gregodi01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Didi+Gregorius+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="jurickson profar" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #FF7F00;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="jurickson profar" data-position-group="hitter" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #FF7F00;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Jurickson Profar
@@ -180,7 +181,7 @@
       <span class="section-count">1 players</span>
     </div>
     <div class="grid">
-      <div class="player-card" data-name="kenley jansen" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #FF7F00;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+      <div class="player-card" data-name="kenley jansen" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #FF7F00;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Kenley Jansen

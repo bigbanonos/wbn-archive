@@ -8,45 +8,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=IBM+Plex+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:#0a0f1e;color:#f0f4ff;font-family:'Lora',serif;font-size:15px;line-height:1.65;}
+    body{background:#fff3df;color:#f0f4ff;font-family:'Lora',serif;font-size:15px;line-height:1.65;}
     a{text-decoration:none;color:inherit;}
-    .site-nav{background:#0f172a;border-bottom:1px solid #1e2d4a;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100;}
+    .site-nav{background:#fff3df;border-bottom:1px solid #1e2d4a;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100;}
     .nav-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;color:#f0f4ff;}
     .nav-brand .neon{color:#00ff9d;}
     .nav-pill{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;border:1px solid #263354;color:#8899bb;text-transform:uppercase;}
     .nav-pill:hover{color:#f0f4ff;border-color:#f0f4ff;}
     .nav-pill.active{color:#f5c842;border-color:#f5c842;}
-    .hero{padding:48px 24px 40px;border-bottom:4px solid #0A3161;background:linear-gradient(135deg,#0a0f1e 0%,#1a0a1f 100%);position:relative;overflow:hidden;}
+    .hero{padding:48px 24px 40px;border-bottom:4px solid #0A3161;background:linear-gradient(135deg,#fff3df 0%,#fff3df 100%);position:relative;overflow:hidden;}
     .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#0A3161 0%,transparent 8%);opacity:.15;}
     .hero-inner{max-width:1400px;margin:0 auto;position:relative;z-index:1;}
     .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:#8899bb;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;}
     .breadcrumb a{color:#00ff9d;}
     .hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3rem,8vw,6rem);font-weight:900;font-style:italic;letter-spacing:-2px;text-transform:uppercase;line-height:.9;margin-bottom:14px;}
     .hero h1 .country{color:#0A3161;display:block;}
-    .finish-badge{display:inline-block;background:#c0c0c0;color:#0a0f1e;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:.85rem;letter-spacing:3px;padding:6px 16px;border-radius:4px;margin-bottom:18px;}
+    .finish-badge{display:inline-block;background:#c0c0c0;color:#fff3df;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:.85rem;letter-spacing:3px;padding:6px 16px;border-radius:4px;margin-bottom:18px;}
     .pool-tag{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:2px;color:#8899bb;text-transform:uppercase;margin-left:14px;}
     .meta-row{display:flex;gap:36px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid #263354;}
     .meta-item{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:#8899bb;}
     .meta-item strong{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:#00ff9d;letter-spacing:0;text-transform:uppercase;margin-bottom:4px;}
-    .filter-bar{background:#0f172a;border-bottom:1px solid #1e2d4a;padding:18px 24px;position:sticky;top:50px;z-index:90;}
+    .filter-bar{background:#fff3df;border-bottom:1px solid #1e2d4a;padding:18px 24px;position:sticky;top:50px;z-index:90;}
     .filter-inner{max-width:1400px;margin:0 auto;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
     .filter-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:900;letter-spacing:2px;color:#f5c842;text-transform:uppercase;margin-right:6px;}
-    .filter-chip{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:4px;border:1px solid #263354;background:#111827;color:#8899bb;text-transform:uppercase;cursor:pointer;}
-    .filter-chip.active{background:#00ff9d;color:#0a0f1e;border-color:#00ff9d;}
-    .search-box{margin-left:auto;background:#111827;border:1px solid #263354;border-radius:4px;padding:6px 12px;color:#f0f4ff;font-family:'Lora',serif;font-size:.85rem;width:200px;}
+    .filter-chip{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:4px;border:1px solid #263354;background:#fff3df;color:#8899bb;text-transform:uppercase;cursor:pointer;}
+    .filter-chip.active{background:#00ff9d;color:#fff3df;border-color:#00ff9d;}
+    .search-box{margin-left:auto;background:#fff3df;border:1px solid #263354;border-radius:4px;padding:6px 12px;color:#f0f4ff;font-family:'Lora',serif;font-size:.85rem;width:200px;}
     .roster-section{padding:36px 24px;}
-    .roster-section.alt{background:#0f172a;}
+    .roster-section.alt{background:#fff3df;}
     .section-inner{max-width:1400px;margin:0 auto;}
     .section-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #263354;padding-bottom:12px;margin-bottom:22px;flex-wrap:wrap;}
     .section-title{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;font-style:italic;letter-spacing:-1px;text-transform:uppercase;line-height:1;}
     .section-count{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:#8899bb;letter-spacing:1px;}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px;}
     .player-card.hidden{display:none !important;}
-    .footer{border-top:3px solid #f5c842;padding:36px 24px;background:#0f172a;}
+    .footer{border-top:3px solid #f5c842;padding:36px 24px;background:#fff3df;}
     .footer-inner{max-width:1400px;margin:0 auto;font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:#8899bb;}
     .footer-inner a{color:#00ff9d;}
     @media(max-width:700px){.site-nav,.filter-bar{position:static;}}
   </style>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -105,10 +106,10 @@
       <span class="section-count">14 players</span>
     </div>
     <div class="grid">
-      <div class="player-card" data-name="mike trout" data-position-group="hitter" data-role="captain" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+      <div class="player-card" data-name="mike trout" data-position-group="hitter" data-role="captain" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
-      Mike Trout<span style="background:#f0f4ff;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Captain</span>
+      Mike Trout<span style="background:#f0f4ff;color:#fff3df;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Captain</span>
     </div>
     <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
       <strong style="color:#f0f4ff;">OF</strong> &middot; B/T: R/R &middot; 6-2 &middot; 235 lbs &middot; b. 1991
@@ -121,10 +122,10 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Captain. 3rd WBC.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/t/trouts01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Mike+Trout+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="aaron judge" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="aaron judge" data-position-group="hitter" data-role="star" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
-      Aaron Judge<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+      Aaron Judge<span style="background:#00ff9d;color:#fff3df;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
     </div>
     <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
       <strong style="color:#f0f4ff;">OF</strong> &middot; B/T: R/R &middot; 6-7 &middot; 282 lbs &middot; b. 1992
@@ -137,10 +138,10 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Tournament HR leader.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/j/judgaa01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Aaron+Judge+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="bobby witt jr" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="bobby witt jr" data-position-group="hitter" data-role="star" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
-      Bobby Witt Jr<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+      Bobby Witt Jr<span style="background:#00ff9d;color:#fff3df;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
     </div>
     <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
       <strong style="color:#f0f4ff;">SS</strong> &middot; B/T: R/R &middot; 6-1 &middot; 200 lbs &middot; b. 2000
@@ -153,10 +154,10 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">SS speed and power.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/w/wittbo01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Bobby+Witt+Jr+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="corbin carroll" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="corbin carroll" data-position-group="hitter" data-role="star" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
-      Corbin Carroll<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+      Corbin Carroll<span style="background:#00ff9d;color:#fff3df;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
     </div>
     <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
       <strong style="color:#f0f4ff;">OF</strong> &middot; B/T: L/L &middot; 5-10 &middot; 165 lbs &middot; b. 2000
@@ -169,10 +170,10 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Five-tool young star.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/c/carroco01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Corbin+Carroll+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="elly de la cruz" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="elly de la cruz" data-position-group="hitter" data-role="star" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
-      Elly De La Cruz<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+      Elly De La Cruz<span style="background:#00ff9d;color:#fff3df;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
     </div>
     <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
       <strong style="color:#f0f4ff;">SS</strong> &middot; B/T: S/R &middot; 6-5 &middot; 200 lbs &middot; b. 2001
@@ -185,10 +186,10 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Five-tool sensation.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/d/delaCel01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Elly+De+La+Cruz+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="mookie betts" data-position-group="hitter" data-role="star" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="mookie betts" data-position-group="hitter" data-role="star" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
-      Mookie Betts<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
+      Mookie Betts<span style="background:#00ff9d;color:#fff3df;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Star</span>
     </div>
     <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
       <strong style="color:#f0f4ff;">OF/2B</strong> &middot; B/T: R/R &middot; 5-10 &middot; 180 lbs &middot; b. 1992
@@ -201,7 +202,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran All-Star.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/b/bettsmo01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Mookie+Betts+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="adley rutschman" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="adley rutschman" data-position-group="hitter" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Adley Rutschman
@@ -217,7 +218,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Switch-hitting catcher.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/r/rutscad01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Adley+Rutschman+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="bo bichette" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="bo bichette" data-position-group="hitter" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Bo Bichette
@@ -233,7 +234,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">SS depth.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/b/bichebo01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Bo+Bichette+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="cal raleigh" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="cal raleigh" data-position-group="hitter" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Cal Raleigh
@@ -249,7 +250,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Switch-hitting catcher.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/r/ralehca01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Cal+Raleigh+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="gunnar henderson" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="gunnar henderson" data-position-group="hitter" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Gunnar Henderson
@@ -265,7 +266,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">All-Star young infielder.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/h/hendegu01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Gunnar+Henderson+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="pete alonso" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="pete alonso" data-position-group="hitter" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Pete Alonso
@@ -281,7 +282,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Power bat.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/a/alonspe01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Pete+Alonso+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="riley greene" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="riley greene" data-position-group="hitter" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Riley Greene
@@ -297,7 +298,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Tigers OF.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/g/greenri01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Riley+Greene+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="trea turner" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="trea turner" data-position-group="hitter" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Trea Turner
@@ -313,7 +314,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran middle infielder.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/t/turnetr01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Trea+Turner+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="will smith" data-position-group="hitter" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="will smith" data-position-group="hitter" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Will Smith
@@ -340,10 +341,10 @@
       <span class="section-count">15 players</span>
     </div>
     <div class="grid">
-      <div class="player-card" data-name="paul skenes" data-position-group="pitcher" data-role="ace" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+      <div class="player-card" data-name="paul skenes" data-position-group="pitcher" data-role="ace" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
-      Paul Skenes<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Ace</span>
+      Paul Skenes<span style="background:#00ff9d;color:#fff3df;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Ace</span>
     </div>
     <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
       <strong style="color:#f0f4ff;">SP</strong> &middot; B/T: R/R &middot; 6-6 &middot; 235 lbs &middot; b. 2002
@@ -356,10 +357,10 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Tournament rotation ace. Cy Young trajectory.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/s/skenepa01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Paul+Skenes+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="tarik skubal" data-position-group="pitcher" data-role="ace" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="tarik skubal" data-position-group="pitcher" data-role="ace" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
-      Tarik Skubal<span style="background:#00ff9d;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Ace</span>
+      Tarik Skubal<span style="background:#00ff9d;color:#fff3df;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Ace</span>
     </div>
     <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
       <strong style="color:#f0f4ff;">SP</strong> &middot; B/T: L/L &middot; 6-3 &middot; 240 lbs &middot; b. 1996
@@ -372,10 +373,10 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Cy Young winner. Tournament co-ace.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/s/skubata01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Tarik+Skubal+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="mason miller" data-position-group="pitcher" data-role="closer" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="mason miller" data-position-group="pitcher" data-role="closer" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
-      Mason Miller<span style="background:#D50032;color:#0a0f1e;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Closer</span>
+      Mason Miller<span style="background:#D50032;color:#fff3df;font-family:Arial,sans-serif;font-size:.62rem;font-weight:900;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;text-transform:uppercase;margin-left:8px;vertical-align:middle;">Closer</span>
     </div>
     <div style="font-family:'Courier New',monospace;font-size:.7rem;color:#8899bb;margin-top:4px;letter-spacing:.3px;">
       <strong style="color:#f0f4ff;">CL</strong> &middot; B/T: R/R &middot; 6-5 &middot; 200 lbs &middot; b. 1998
@@ -388,7 +389,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Closer. 100+ MPH velocity.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/m/millema04.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Mason+Miller+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="andres munoz" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="andres munoz" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Andres Munoz
@@ -404,7 +405,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">High-velocity setup.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/m/munozan01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Andres+Munoz+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="cole ragans" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="cole ragans" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Cole Ragans
@@ -420,7 +421,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Lefty rotation depth.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/r/raganco01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Cole+Ragans+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="devin williams" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="devin williams" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Devin Williams
@@ -436,7 +437,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Setup arm. Airbender changeup.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/w/willide06.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Devin+Williams+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="edwin diaz" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="edwin diaz" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Edwin Diaz
@@ -452,7 +453,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Setup. Career closer.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/d/diazed01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Edwin+Diaz+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="garrett crochet" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="garrett crochet" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Garrett Crochet
@@ -468,7 +469,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Hard-throwing lefty.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/c/crochga01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Garrett+Crochet+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="hunter brown" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="hunter brown" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Hunter Brown
@@ -484,7 +485,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Astros frontline.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/b/brownhu01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Hunter+Brown+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="hunter harvey" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="hunter harvey" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Hunter Harvey
@@ -500,7 +501,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Late-inning depth.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/h/harvehu01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Hunter+Harvey+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="jared jones" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="jared jones" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Jared Jones
@@ -516,7 +517,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Young rotation depth.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/j/jonesja01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Jared+Jones+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="logan webb" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="logan webb" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Logan Webb
@@ -532,7 +533,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Veteran rotation.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/w/webblo01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Logan+Webb+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="spencer strider" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="spencer strider" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Spencer Strider
@@ -548,7 +549,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">K specialist.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/s/stridsp01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Spencer+Strider+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="trevor megill" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="trevor megill" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Trevor Megill
@@ -564,7 +565,7 @@
   <div style="font-family:Georgia,serif;font-size:.82rem;color:#8899bb;line-height:1.5;font-style:italic;border-top:1px solid #1e2d4a;padding-top:10px;">Tall power arm.</div>
   <div style="margin-top:auto;padding-top:8px;"><a href="https://www.baseball-reference.com/players/m/megilltr01.shtml" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#00ff9d;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(0,255,157,.3);padding:4px 8px;border-radius:3px;display:inline-block;margin-right:6px;">BR &rarr;</a><a href="https://www.youtube.com/results?search_query=Trevor+Megill+WBC+2026+highlights" target="_blank" rel="noopener" style="font-family:'Courier New',monospace;font-size:.65rem;color:#D50032;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(213,0,50,.3);padding:4px 8px;border-radius:3px;display:inline-block;">Highlights &rarr;</a></div>
 </div>
-<div class="player-card" data-name="zack wheeler" data-position-group="pitcher" data-role="" style="background:#111827;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
+<div class="player-card" data-name="zack wheeler" data-position-group="pitcher" data-role="" style="background:#fff3df;border:1px solid #1e2d4a;border-top:4px solid #0A3161;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;">
   <div>
     <div style="font-family:Arial,sans-serif;font-size:1.15rem;font-weight:900;color:#f0f4ff;line-height:1.15;">
       Zack Wheeler
