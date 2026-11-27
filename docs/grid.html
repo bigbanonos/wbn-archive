@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Immaculate Grid Cracker | Classic Baseball World</title>
+<meta name="description" content="Pick two teams, or a team and a category, and see every player who fits, rarest first. Built on every MLB appearance since 1871.">
+<link rel="icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script data-goatcounter="https://bigbanonos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+:root{--ink:#0a0a0a;--paper:#fff8ec;--hot:#ff2d55;--acid:#c6ff3d;--cobalt:#1e4dff;--tang:#ff7a1a;--plum:#7b1fa2;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:Inter,sans-serif;font-size:15px;line-height:1.5}
+a{color:var(--cobalt)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-bottom:3px solid var(--ink);background:#fff;gap:10px;flex-wrap:wrap}
+.bbw{font-family:'Archivo Black',sans-serif;font-size:22px;text-decoration:none;color:var(--ink)}
+.nav .links a{margin-left:14px;font-weight:700;text-decoration:none;color:var(--ink);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 20px 60px}
+h1{font-family:'Archivo Black',sans-serif;font-size:clamp(38px,7vw,84px);line-height:.9;letter-spacing:-.03em;margin-bottom:10px}
+h1 span{background:var(--acid);padding:0 .1em}
+.lede{max-width:720px;margin-bottom:22px}
+.pick{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:end;margin-bottom:18px}
+.pick label{font:600 11px 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.12em;display:block;margin-bottom:6px}
+select{width:100%;padding:12px;border:3px solid var(--ink);background:#fff;font:700 16px Inter,sans-serif;border-radius:0}
+.x{font-family:'Archivo Black';font-size:28px;padding-bottom:6px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0 16px}
+.pill{font:600 12px Inter;text-transform:uppercase;letter-spacing:.06em;padding:8px 12px;border:2px solid var(--ink);background:var(--paper);cursor:pointer;border-radius:999px}
+.pill[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.count{font:600 13px 'IBM Plex Mono',monospace;margin:4px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card{border:3px solid var(--ink);background:#fff;padding:12px 14px;box-shadow:4px 4px 0 var(--ink)}
+.card h3{font-family:'Archivo Black';font-size:18px;line-height:1.1;margin-bottom:4px}
+.meta{font:500 12px 'IBM Plex Mono',monospace;color:#444}
+.tag{display:inline-block;font:600 10px 'IBM Plex Mono';text-transform:uppercase;border:1.5px solid var(--ink);padding:1px 5px;margin:4px 3px 0 0}
+.rare{background:var(--acid)}
+.stl{border-color:#c41e3a;box-shadow:4px 4px 0 #c41e3a}
+.note{margin-top:28px;font-size:13px;color:#444;border-top:2px solid var(--ink);padding-top:12px}
+@media(max-width:640px){.pick{grid-template-columns:1fr}.x{display:none}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="bbw" href="/index.html"><span style="color:#ff2d55">BIG</span><span style="color:#1e4dff">BA</span><span style="color:#ff7a1a">NO</span><span style="background:#c6ff3d;padding:0 3px">NOS</span> <span style="font-size:14px">Baseball</span></a>
+  <div class="links"><a href="/index.html">Home</a><a href="/leagues.html">Leagues</a><a href="https://bigbanonos.com/">bigbanonos.com</a></div>
+</nav>
+<div class="wrap">
+  <h1>Immaculate Grid <span>Cracker</span></h1>
+  <p class="lede">Pick a team and a second team or category. Every player who fits shows up, <b>rarest first</b>: fewest career games at the top, because that's where the rarity score lives. Every MLB appearance since 1871. Cardinals are the default, because of course.</p>
+  <div class="pick">
+    <div><label for="a">Team</label><select id="a"></select></div>
+    <div class="x">×</div>
+    <div><label for="b">Team or category</label><select id="b"></select></div>
+  </div>
+  <div class="bar" id="sort">
+    <button class="pill" data-s="rare" aria-pressed="true">Rarest first</button>
+    <button class="pill" data-s="famous" aria-pressed="false">Most famous first</button>
+    <button class="pill" data-s="recent" aria-pressed="false">Most recent first</button>
+  </div>
+  <div class="count" id="count"></div>
+  <div class="grid" id="out"></div>
+  <p class="note" id="note"></p>
+</div>
+<script>
+var CATS=[['MVP','MVP'],['CY','Cy Young'],['ROY','Rookie of the Year'],['GG','Gold Glove'],['SS','Silver Slugger'],['AS','All-Star'],['HOF','Hall of Fame'],
+['300HR','300+ HR career'],['2000H','2000+ hits career'],['.300car','.300 career AVG (3000+ AB)'],['300SB','300+ SB career'],['40HRszn','40+ HR season'],['200Hszn','200+ hit season'],['.300szn','.300 season (qualified)'],['30-30','30-30 season'],
+['200W','200+ wins career'],['2000K','2000+ K career'],['300SV','300+ saves career'],['20Wszn','20+ win season'],['200Kszn','200+ K season'],['40SVszn','40+ save season'],
+['intl','Born outside the US'],['pos:p','Pitched'],['pos:c','Played C'],['pos:1b','Played 1B'],['pos:2b','Played 2B'],['pos:3b','Played 3B'],['pos:ss','Played SS'],['pos:lf','Played LF'],['pos:cf','Played CF'],['pos:rf','Played RF'],['pos:dh','Played DH']];
+var D,sortBy='rare';
+function el(id){return document.getElementById(id)}
+fetch('/grid.json').then(function(r){return r.json()}).then(function(d){
+  D=d; var fr=Object.keys(d.franchises).sort(function(x,y){return d.franchises[x].localeCompare(d.franchises[y])});
+  var a=el('a'),b=el('b');
+  fr.forEach(function(f){a.add(new Option(d.franchises[f],f));});
+  var og=document.createElement('optgroup');og.label='Teams';fr.forEach(function(f){og.appendChild(new Option(d.franchises[f],f))});b.appendChild(og);
+  var oc=document.createElement('optgroup');oc.label='Categories';CATS.forEach(function(c){oc.appendChild(new Option(c[1],'cat:'+c[0]))});b.appendChild(oc);
+  a.value='STL'; b.value='CHC';
+  var q=new URLSearchParams(location.hash.slice(1)); if(q.get('a'))a.value=q.get('a'); if(q.get('b'))b.value=q.get('b'); if(!a.value)a.value='STL'; if(!b.value)b.value='CHC';
+  a.onchange=b.onchange=run; run();
+  el('note').textContent='Data: the Lahman Baseball Database, through the '+d.thru+' season. Counts every franchise under its current name (Brooklyn Dodgers count as Dodgers). Player pages and lineups for the current season come next.';
+});
+document.querySelectorAll('#sort .pill').forEach(function(btn){btn.onclick=function(){sortBy=btn.dataset.s;document.querySelectorAll('#sort .pill').forEach(function(x){x.setAttribute('aria-pressed',x===btn)});run();}});
+function fits(p,key){
+  if(key.indexOf('cat:')===0){var c=key.slice(4); if(c.indexOf('pos:')===0) return p.p.indexOf(c.slice(4))>=0; return p.x.indexOf(c)>=0;}
+  return !!p.t[key];
+}
+function run(){
+  var a=el('a').value,b=el('b').value; location.hash='a='+a+'&b='+b;
+  var list=D.players.filter(function(p){return p.t[a]&&fits(p,b)&&!(b===a)});
+  if(sortBy==='rare') list.sort(function(x,y){return x.g-y.g});
+  if(sortBy==='famous') list.sort(function(x,y){return (y.x.length-x.x.length)||(y.g-x.g)});
+  if(sortBy==='recent') list.sort(function(x,y){return y.y[1]-x.y[1]});
+  el('count').textContent=list.length+' player'+(list.length===1?'':'s');
+  el('out').innerHTML=list.slice(0,300).map(function(p,i){
+    var ta=p.t[a], tb=p.t[b];
+    var line=D.franchises[a]+' '+ta[0]+(ta[1]!==ta[0]?'–'+ta[1]:'')+' ('+ta[2]+' G)';
+    if(tb) line+='<br>'+D.franchises[b]+' '+tb[0]+(tb[1]!==tb[0]?'–'+tb[1]:'')+' ('+tb[2]+' G)';
+    var tags=p.x.filter(function(t){return ['MVP','CY','ROY','HOF','AS'].indexOf(t)>=0}).map(function(t){return '<span class="tag">'+t+'</span>'}).join('');
+    var rare=(sortBy==='rare'&&i<5)?'<span class="tag rare">rare pick</span>':'';
+    return '<div class="card'+(a==='STL'||b==='STL'?' stl':'')+'"><h3>'+p.n+'</h3><div class="meta">'+line+'<br>'+p.p.join(' · ').toUpperCase()+(p.c&&p.c!=='USA'?' · born '+p.c:'')+'</div>'+rare+tags+'</div>';
+  }).join('')||'<p>Nobody. That square is a trap.</p>';
+}
+</script>
+</body>
+</html>
