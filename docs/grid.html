@@ -58,6 +58,12 @@ select{width:100%;padding:12px;border:3px solid var(--ink);background:#fff;font:
   </div>
   <div class="count" id="count"></div>
   <div class="grid" id="out"></div>
+
+  <h2 id="bridge" style="font-family:'Archivo Black';font-size:clamp(28px,4.5vw,52px);line-height:1;margin:46px 0 8px">The Cardinals <span style="background:#c6ff3d;padding:0 .1em">Bridge</span></h2>
+  <p class="lede">Grid asks for Padres × Marlins? Find a Cardinal who played for both, and he answers that square <i>and</i> any Cardinals square. Each box is how many Cardinals played for both teams. Tap one to see them.</p>
+  <div style="overflow-x:auto;border:3px solid var(--ink);background:#fff"><table id="mx" style="border-collapse:collapse;font:600 11px 'IBM Plex Mono',monospace"></table></div>
+  <div class="count" id="bcount" style="margin-top:16px"></div>
+  <div class="grid" id="bout"></div>
   <p class="note" id="note"></p>
 </div>
 <script>
@@ -75,10 +81,38 @@ fetch('/grid.json').then(function(r){return r.json()}).then(function(d){
   var oc=document.createElement('optgroup');oc.label='Categories';CATS.forEach(function(c){oc.appendChild(new Option(c[1],'cat:'+c[0]))});b.appendChild(oc);
   a.value='STL'; b.value='CHC';
   var q=new URLSearchParams(location.hash.slice(1)); if(q.get('a'))a.value=q.get('a'); if(q.get('b'))b.value=q.get('b'); if(!a.value)a.value='STL'; if(!b.value)b.value='CHC';
-  a.onchange=b.onchange=run; run();
-  el('note').textContent='Data: the Lahman Baseball Database, through the '+d.thru+' season. Counts every franchise under its current name (Brooklyn Dodgers count as Dodgers). Player pages and lineups for the current season come next.';
+  a.onchange=b.onchange=run; run(); bridge();
+  el('note').textContent='Data: the Lahman Baseball Database through 2025, plus the Cardinals 2026 season and 2026 Cardinals trades (Arenado and Nootbaar to Arizona, Gray and Contreras to Boston, Donovan to Seattle). Other teams\' 2026 moves come with the full 2026 update. Counts every franchise under its current name (Brooklyn Dodgers count as Dodgers). Player pages and lineups for the current season come next.';
 });
 document.querySelectorAll('#sort .pill').forEach(function(btn){btn.onclick=function(){sortBy=btn.dataset.s;document.querySelectorAll('#sort .pill').forEach(function(x){x.setAttribute('aria-pressed',x===btn)});run();}});
+
+function abbr(f){return {ARI:'ARI',OAK:'ATH',ATL:'ATL',BAL:'BAL',BOS:'BOS',CHC:'CHC',CHW:'CWS',CIN:'CIN',CLE:'CLE',COL:'COL',DET:'DET',HOU:'HOU',KCR:'KC',ANA:'LAA',LAD:'LAD',FLA:'MIA',MIL:'MIL',MIN:'MIN',NYM:'NYM',NYY:'NYY',PHI:'PHI',PIT:'PIT',SDP:'SD',SFG:'SF',SEA:'SEA',TBD:'TB',TEX:'TEX',TOR:'TOR',WSN:'WSH'}[f]||f}
+function bridge(){
+  var st=D.players.filter(function(p){return p.t.STL});
+  var fr=Object.keys(D.franchises).filter(function(f){return f!=='STL'}).sort(function(x,y){return abbr(x).localeCompare(abbr(y))});
+  var h='<tr><th style="position:sticky;left:0;background:#fff"></th>'+fr.map(function(f){return '<th style="padding:6px 4px">'+abbr(f)+'</th>'}).join('')+'</tr>';
+  fr.forEach(function(a){
+    h+='<tr><th style="position:sticky;left:0;background:#fff;padding:4px 8px;text-align:left">'+abbr(a)+'</th>';
+    fr.forEach(function(b){
+      if(a===b){h+='<td style="background:#0a0a0a"></td>';return;}
+      var n=st.filter(function(p){return p.t[a]&&p.t[b]}).length;
+      var bg=n===0?'#ff2d55':n<3?'#ff7a1a':n<8?'#fff3df':'#c6ff3d';
+      h+='<td data-a="'+a+'" data-b="'+b+'" style="cursor:pointer;text-align:center;padding:5px 3px;border:1px solid #ddd;background:'+bg+(n===0?';color:#fff':'')+'">'+n+'</td>';
+    });
+    h+='</tr>';
+  });
+  var mx=el('mx'); mx.innerHTML=h;
+  mx.onclick=function(e){var td=e.target.closest('td[data-a]'); if(!td)return; showBridge(td.dataset.a,td.dataset.b);};
+}
+function showBridge(a,b){
+  var l=D.players.filter(function(p){return p.t.STL&&p.t[a]&&p.t[b]}).sort(function(x,y){return y.y[1]-x.y[1]});
+  el('bcount').textContent=l.length+' Cardinal'+(l.length===1?'':'s')+' who also played for the '+D.franchises[a]+' and the '+D.franchises[b];
+  el('bout').innerHTML=l.map(function(p){
+    function ln(f){var t=p.t[f];return D.franchises[f]+' '+t[0]+(t[1]!==t[0]?'–'+t[1]:'')+' ('+t[2]+' G)'}
+    return '<div class="card stl"><h3>'+p.n+'</h3><div class="meta">'+ln('STL')+'<br>'+ln(a)+'<br>'+ln(b)+'<br>'+p.p.join(' · ').toUpperCase()+'</div></div>';
+  }).join('')||'<p>No Cardinals bridge here. Red squares are the hard ones.</p>';
+  el('bcount').scrollIntoView({behavior:'smooth'});
+}
 function fits(p,key){
   if(key.indexOf('cat:')===0){var c=key.slice(4); if(c.indexOf('pos:')===0) return p.p.indexOf(c.slice(4))>=0; return p.x.indexOf(c)>=0;}
   return !!p.t[key];
